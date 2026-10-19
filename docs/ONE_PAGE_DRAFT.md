@@ -1,0 +1,15 @@
+# OxyProof — Evidence before certainty
+
+**A scientific screening agent for published oxygen-ion-conducting oxides.**
+
+Researchers need more than a material name and a plausible explanation. Temperature, prefactor convention, conductivity type and measurement conditions can change whether a calculated number means anything. OxyProof turns a screening request into a bounded, traceable decision: retrieve published records, select a supported regime, calculate with explicit units, audit the evidence, then rank within a provisional source group or abstain.
+
+The foundation is Jang, Kiyohara, Takamura and Kumagai's 2026 dataset, [Zenodo DOI 10.5281/zenodo.18947543](https://doi.org/10.5281/zenodo.18947543), containing 483 records from 84 reports. We verified the downloaded checksum and the CC BY 4.0 dataset license. A small attributed subset supports portable offline demonstrations. The [paper's Methods and Table 1](https://www.nature.com/articles/s41597-026-07100-x) establish Ea in meV, A in K·S/cm and sigma(T)=A/T·exp(−Ea/kBT). OxyProof preserves original fields and one-based source-row indices; it does not invent experiments or refit literature plots.
+
+In the baseline demonstration, a request at 600 °C compares three compositions from one published source. Row 1 selects its high-temperature regime and gives approximately 0.013243811986442925 S/cm. Every result includes parameters, units, source DOI/table, measurement interval, warnings, the selected equation and a source-code fingerprint. The React workbench exposes comparisons, temperature curves, evidence details and JSON export, all backed by FastAPI calculations.
+
+The adversarial demonstration reuses the same A without 1/T: the resulting K·S/cm quantity fails dimensional validation. Separate real-data cases with missing transition metadata or an out-of-range target produce explicit insufficiency. Unknown conductivity types never become total conductivity; bulk and total remain separate. Rankings are conditional and grouped by exact source, method, type and reported range. Missing atmosphere, preparation, density and statistical uncertainties remain visible limitations.
+
+Validation includes four independent 60-digit Decimal/SI reference calculations, domain/API/data/adapter tests, frontend component checks and genuine localhost HTTP requests. Eight fixed scientific guard cases are measured against an intentionally unsafe educational baseline; these are regression guards, not representative discovery accuracy or a general improvement claim. Final executed counts are in `docs/VALIDATION.md`.
+
+The offline mode is a deterministic orchestrator, clearly labelled as such. The optional real LLM tool-planning adapter is implemented but no API credential was configured, so live LLM performance is not claimed. No new material, experiment, confidence interval or autonomous lab execution is claimed. Next steps are browser verification, original-source condition review, a genuine optional model run and organizer-confirmed submission. This draft has not been published or typeset into a final one-page artifact.

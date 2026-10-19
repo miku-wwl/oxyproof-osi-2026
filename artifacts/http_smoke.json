@@ -1,0 +1,42 @@
+{
+  "status": "PASS",
+  "transport": "real localhost HTTP",
+  "base_url": "http://127.0.0.1:8000",
+  "checks": [
+    {
+      "check": "health",
+      "http_status": 200,
+      "source_scope": "FULL_DATASET",
+      "row_count": 483
+    },
+    {
+      "check": "real_screen",
+      "http_status": 200,
+      "candidate_rows": [
+        3,
+        2,
+        1
+      ],
+      "status": "CALCULATED_WITH_WARNINGS"
+    },
+    {
+      "check": "wrong_formula",
+      "http_status": 200,
+      "status": "REJECTED_WRONG_FORMULA"
+    },
+    {
+      "check": "ambiguous_regime",
+      "http_status": 200,
+      "status": "INSUFFICIENT_EVIDENCE"
+    },
+    {
+      "check": "outside_range",
+      "http_status": 200,
+      "status": "INSUFFICIENT_EVIDENCE"
+    },
+    {
+      "check": "invalid_unit",
+      "http_status": 422
+    }
+  ]
+}

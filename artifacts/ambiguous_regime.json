@@ -1,0 +1,169 @@
+{
+  "schema_version": "1.0",
+  "status": "INSUFFICIENT_EVIDENCE",
+  "research_request": {
+    "goal": "Find oxygen-ion conductors at 600 °C",
+    "temperature": null,
+    "temperature_unit": "C",
+    "conductivity_type": null,
+    "material_class": null,
+    "formula_query": null,
+    "row_ids": [
+      462
+    ],
+    "allow_extrapolation": false,
+    "top_n": 5,
+    "mode": "OFFLINE_DETERMINISTIC"
+  },
+  "resolved_plan": {
+    "temperature_k": 873.15,
+    "conductivity_type": "bulk",
+    "material_class": null,
+    "formula_query": null,
+    "row_ids": [
+      462
+    ],
+    "allow_extrapolation": false,
+    "top_n": 5
+  },
+  "runtime_mode": "OFFLINE_DETERMINISTIC",
+  "llm_model": null,
+  "llm_response_id": null,
+  "source": {
+    "dataset_doi": "10.5281/zenodo.18947543",
+    "dataset_record_id": "18947543",
+    "dataset_sha256": "8ec66b131bae79f8520f7cf40e91e2be2541995939bc43b744eaac627f4fad34",
+    "loaded_sha256": "6cad9e6cd6ee0cac98f1de979688788b5e3c1bade390da289c3722d46389d214",
+    "scope": "REAL_PUBLISHED_FIXTURE",
+    "row_count": 24,
+    "license": "CC-BY-4.0",
+    "accessed_date": "2026-10-20",
+    "article_url": "https://www.nature.com/articles/s41597-026-07100-x",
+    "dataset_url": "https://zenodo.org/records/18947543",
+    "attribution": "Jang, Seong-Hoon; Kiyohara, Shin; Takamura, Hitoshi; Kumagai, Yu (2026). Charting the Landscape of Oxygen Ion Conductors: A 60-Year Dataset. Zenodo. https://doi.org/10.5281/zenodo.18947543. CC BY 4.0."
+  },
+  "dataset_record_id": "18947543",
+  "equation": "sigma(T) = A/T * exp(-Ea/(k_B*T))",
+  "inputs_with_units": {
+    "temperature": {
+      "value": 873.15,
+      "unit": "K"
+    }
+  },
+  "computed_values_with_units": {
+    "location": "candidates[].computed_values_with_units.conductivity",
+    "unit": "S/cm"
+  },
+  "observations_vs_calculations": "The source provides experimentally derived fit parameters and citations. All displayed target-temperature conductivities are calculations. Proposed measurements are heuristics, not results.",
+  "code_version": {
+    "app_version": "0.1.0",
+    "git_base": "a2ad59c5bc923275584497d42f5ebc7977e1217f",
+    "calculation_source_sha256": "d0b806f06d5bb9a31cdc2b592b41512e95225952327ebe35d7ed947fec8e6d81"
+  },
+  "warnings": [
+    {
+      "code": "CONDITIONAL_SCREENING",
+      "message": "Group ranks are conditional model-derived screening, not experimental guarantees or discovery. No validated uncertainty intervals."
+    },
+    {
+      "code": "BOUNDED_PARSER",
+      "message": "Offline parser supports explicit C/K, bulk/total, known class and 'formula X'. Inspect resolved_plan; arbitrary prose is not fully understood."
+    }
+  ],
+  "trace": [
+    {
+      "step": "parse_goal",
+      "outcome": "OFFLINE_DETERMINISTIC",
+      "detail": "Rules parse explicit temperature, type, class and 'formula X'. Structured fields resolve missing values; unrecognized constraints require human review."
+    },
+    {
+      "step": "retrieve_records",
+      "outcome": "REAL_PUBLISHED_DATA",
+      "detail": "Matched 1 raw records from REAL_PUBLISHED_FIXTURE; type filter is bulk."
+    },
+    {
+      "step": "select_model_compute_audit",
+      "outcome": "COMPLETED",
+      "detail": "0 in-range calculations; 1 excluded or unranked. Incomplete regimes and unsupported extrapolations abstain."
+    },
+    {
+      "step": "rank_or_abstain",
+      "outcome": "INSUFFICIENT_EVIDENCE",
+      "detail": "0 comparison groups; top 5 per exact DOI/type/technique/range. Groups sorted lexically, never by global performance. Omitted in-group tail remains counted."
+    },
+    {
+      "step": "present_result",
+      "outcome": "AUDIT_JSON",
+      "detail": "Includes raw source fields, row IDs, units, code fingerprint, warnings and proposed measurement advice."
+    }
+  ],
+  "review_required": true,
+  "groups": [],
+  "candidates": [],
+  "excluded": [
+    {
+      "status": "INSUFFICIENT_EVIDENCE",
+      "row_id": 462,
+      "formula": "Sr0.85K0.15GeO2.925",
+      "source_doi": "10.1039/C2EE22978A",
+      "source_location": "Fig. 5(a)",
+      "conductivity_type": "(not clearly mentioned, probably total)",
+      "comparison_group": "10.1039/C2EE22978A | (not clearly mentioned, probably total) | two-probe AC | 673 - 1073 K",
+      "rank": null,
+      "regime": null,
+      "inputs_with_units": {},
+      "computed_values_with_units": {},
+      "warnings": [
+        {
+          "code": "TYPE_NOT_COMPARABLE",
+          "message": "Requested bulk; source reports (not clearly mentioned, probably total). Excluded before calculation."
+        },
+        {
+          "code": "AMBIGUOUS_REGIME",
+          "message": "Partial HT metadata: no defensible regime selection"
+        }
+      ],
+      "review_required": true,
+      "trace": [],
+      "observations_vs_calculations": "Source-reported fitted parameters; model-derived conductivity, not a new measurement.",
+      "next_measurement": "Heuristic proposal: establish conductivity type and resolve any incomplete regime metadata from the original temperature plot before comparison.",
+      "raw_source_record": {
+        "Reference": "Singh & Goodenough, Energy Environ. Sci. 5, 9626 (2012).",
+        "DOI": "10.1039/C2EE22978A",
+        "Year": "2012",
+        "Class": "a-SrSiO3",
+        "Formula": "Sr0.85K0.15GeO2.925",
+        "Parsed_Formula_SiteA1": "Sr",
+        "Parsed_Formula_nSiteA1": "0.85",
+        "Parsed_Formula_SiteA2": "K",
+        "Parsed_Formula_nSiteA2": "0.15",
+        "Parsed_Formula_SiteA3": "",
+        "Parsed_Formula_nSiteA3": "",
+        "Parsed_Formula_SiteB1": "Ge",
+        "Parsed_Formula_nSiteB1": "1",
+        "Parsed_Formula_SiteB2": "",
+        "Parsed_Formula_nSiteB2": "",
+        "Parsed_Formula_SiteB3": "",
+        "Parsed_Formula_nSiteB3": "",
+        "Parsed_Formula_SiteC1": "",
+        "Parsed_Formula_nSiteC1": "",
+        "Parsed_Formula_SiteC2": "",
+        "Parsed_Formula_nSiteC2": "",
+        "Parsed_Formula_O": "O",
+        "Parsed_Formula_nO": "2.925",
+        "Delta_O": "-0.025",
+        "Ea": "1438.550242",
+        "A": "725326248.3",
+        "EaHT": "730.000288",
+        "AHT": "54209.28329",
+        "T*": "",
+        "Type_of_conductivity": "(not clearly mentioned, probably total)",
+        "Measurement_temperature_range": "673 - 1073 K",
+        "Measurement": "two-probe AC",
+        "Source": "Fig. 5(a)",
+        "Plot type": "log sigma-1000/T"
+      }
+    }
+  ],
+  "matched_count": 1
+}

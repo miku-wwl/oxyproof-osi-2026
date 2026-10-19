@@ -1,0 +1,226 @@
+{
+  "methodology": "Eight hand-labeled, fixed guard cases using unchanged published records. Naive baseline accepts every case, reuses A without 1/T and ignores units/type/regime/range. Metric checks expected decision plus required warning; not representative scientific accuracy, LLM quality, or experimental validation. No randomized split or statistical interval.",
+  "source": {
+    "dataset_doi": "10.5281/zenodo.18947543",
+    "dataset_record_id": "18947543",
+    "dataset_sha256": "8ec66b131bae79f8520f7cf40e91e2be2541995939bc43b744eaac627f4fad34",
+    "loaded_sha256": "6cad9e6cd6ee0cac98f1de979688788b5e3c1bade390da289c3722d46389d214",
+    "scope": "REAL_PUBLISHED_FIXTURE",
+    "row_count": 24,
+    "license": "CC-BY-4.0",
+    "accessed_date": "2026-10-20",
+    "article_url": "https://www.nature.com/articles/s41597-026-07100-x",
+    "dataset_url": "https://zenodo.org/records/18947543",
+    "attribution": "Jang, Seong-Hoon; Kiyohara, Shin; Takamura, Hitoshi; Kumagai, Yu (2026). Charting the Landscape of Oxygen Ion Conductors: A 60-Year Dataset. Zenodo. https://doi.org/10.5281/zenodo.18947543. CC BY 4.0."
+  },
+  "sample_size": 8,
+  "baseline_correct_decisions": 1,
+  "audited_correct_decisions": 8,
+  "cases": [
+    {
+      "case": "valid_in_range",
+      "expected_status": "CALCULATED_WITH_WARNINGS",
+      "required_warning": null,
+      "baseline_status": "CALCULATED_WITH_WARNINGS",
+      "baseline_numeric_trace": {
+        "value_mislabelled_as_S_cm": 13.488081714939126,
+        "actual_unit": "K S/cm",
+        "assumed_temperature_k": 873.15,
+        "Ea_mev": 772.0,
+        "A_K_S_cm": 385385.727,
+        "parameter_fields": [
+          "Ea",
+          "A"
+        ]
+      },
+      "audited_status": "CALCULATED_WITH_WARNINGS",
+      "audited_warning_codes": [
+        "BOUNDED_PARSER",
+        "CONDITIONAL_SCREENING"
+      ],
+      "baseline_correct": true,
+      "audited_correct": true
+    },
+    {
+      "case": "outside_measured_range",
+      "expected_status": "INSUFFICIENT_EVIDENCE",
+      "required_warning": "OUTSIDE_MEASURED_RANGE",
+      "baseline_status": "CALCULATED_WITH_WARNINGS",
+      "baseline_numeric_trace": {
+        "value_mislabelled_as_S_cm": 17.53048127990703,
+        "actual_unit": "K S/cm",
+        "assumed_temperature_k": 873.15,
+        "Ea_mev": 831.6919733,
+        "A_K_S_cm": 1107333.313,
+        "parameter_fields": [
+          "Ea",
+          "A"
+        ]
+      },
+      "audited_status": "INSUFFICIENT_EVIDENCE",
+      "audited_warning_codes": [
+        "BOUNDED_PARSER",
+        "CONDITIONAL_SCREENING",
+        "MISSING_CONDITIONS",
+        "OUTSIDE_MEASURED_RANGE"
+      ],
+      "baseline_correct": false,
+      "audited_correct": true
+    },
+    {
+      "case": "missing_breakpoint",
+      "expected_status": "INSUFFICIENT_EVIDENCE",
+      "required_warning": "AMBIGUOUS_REGIME",
+      "baseline_status": "CALCULATED_WITH_WARNINGS",
+      "baseline_numeric_trace": {
+        "value_mislabelled_as_S_cm": 3.608222033792099,
+        "actual_unit": "K S/cm",
+        "assumed_temperature_k": 873.15,
+        "Ea_mev": 1438.550242,
+        "A_K_S_cm": 725326248.3,
+        "parameter_fields": [
+          "Ea",
+          "A"
+        ]
+      },
+      "audited_status": "INSUFFICIENT_EVIDENCE",
+      "audited_warning_codes": [
+        "AMBIGUOUS_REGIME",
+        "BOUNDED_PARSER",
+        "CONDITIONAL_SCREENING",
+        "TYPE_NOT_COMPARABLE"
+      ],
+      "baseline_correct": false,
+      "audited_correct": true
+    },
+    {
+      "case": "unknown_type_and_sentinel",
+      "expected_status": "INSUFFICIENT_EVIDENCE",
+      "required_warning": "TYPE_NOT_COMPARABLE",
+      "baseline_status": "CALCULATED_WITH_WARNINGS",
+      "baseline_numeric_trace": {
+        "value_mislabelled_as_S_cm": 0.6333258231519705,
+        "actual_unit": "K S/cm",
+        "assumed_temperature_k": 873.15,
+        "Ea_mev": 950.5381814,
+        "A_K_S_cm": 194127.0697,
+        "parameter_fields": [
+          "Ea",
+          "A"
+        ]
+      },
+      "audited_status": "INSUFFICIENT_EVIDENCE",
+      "audited_warning_codes": [
+        "AMBIGUOUS_REGIME",
+        "BOUNDED_PARSER",
+        "CONDITIONAL_SCREENING",
+        "TYPE_NOT_COMPARABLE"
+      ],
+      "baseline_correct": false,
+      "audited_correct": true
+    },
+    {
+      "case": "bulk_is_not_total",
+      "expected_status": "INSUFFICIENT_EVIDENCE",
+      "required_warning": "TYPE_NOT_COMPARABLE",
+      "baseline_status": "CALCULATED_WITH_WARNINGS",
+      "baseline_numeric_trace": {
+        "value_mislabelled_as_S_cm": 13.488081714939126,
+        "actual_unit": "K S/cm",
+        "assumed_temperature_k": 873.15,
+        "Ea_mev": 772.0,
+        "A_K_S_cm": 385385.727,
+        "parameter_fields": [
+          "Ea",
+          "A"
+        ]
+      },
+      "audited_status": "INSUFFICIENT_EVIDENCE",
+      "audited_warning_codes": [
+        "BOUNDED_PARSER",
+        "CONDITIONAL_SCREENING",
+        "TYPE_NOT_COMPARABLE"
+      ],
+      "baseline_correct": false,
+      "audited_correct": true
+    },
+    {
+      "case": "exact_transition",
+      "expected_status": "INSUFFICIENT_EVIDENCE",
+      "required_warning": "AT_TRANSITION",
+      "baseline_status": "CALCULATED_WITH_WARNINGS",
+      "baseline_numeric_trace": {
+        "value_mislabelled_as_S_cm": 5.701473427959444,
+        "actual_unit": "K S/cm",
+        "assumed_temperature_k": 805.5450205,
+        "Ea_mev": 772.0,
+        "A_K_S_cm": 385385.727,
+        "parameter_fields": [
+          "Ea",
+          "A"
+        ]
+      },
+      "audited_status": "INSUFFICIENT_EVIDENCE",
+      "audited_warning_codes": [
+        "AT_TRANSITION",
+        "BOUNDED_PARSER",
+        "CONDITIONAL_SCREENING",
+        "MISSING_CONDITIONS"
+      ],
+      "baseline_correct": false,
+      "audited_correct": true
+    },
+    {
+      "case": "temperature_without_unit",
+      "expected_status": "INSUFFICIENT_EVIDENCE",
+      "required_warning": "PLAN_REJECTED",
+      "baseline_status": "CALCULATED_WITH_WARNINGS",
+      "baseline_numeric_trace": {
+        "value_mislabelled_as_S_cm": 13.488081714939126,
+        "actual_unit": "K S/cm",
+        "assumed_temperature_k": 873.15,
+        "Ea_mev": 772.0,
+        "A_K_S_cm": 385385.727,
+        "parameter_fields": [
+          "Ea",
+          "A"
+        ]
+      },
+      "audited_status": "INSUFFICIENT_EVIDENCE",
+      "audited_warning_codes": [
+        "BOUNDED_PARSER",
+        "CONDITIONAL_SCREENING",
+        "PLAN_REJECTED"
+      ],
+      "baseline_correct": false,
+      "audited_correct": true
+    },
+    {
+      "case": "same_prefactor_wrong_dimensions",
+      "expected_status": "REJECTED_WRONG_FORMULA",
+      "baseline_status": "ACCEPTED_AS_CONDUCTIVITY",
+      "audited_status": "REJECTED_WRONG_FORMULA",
+      "baseline_correct": false,
+      "audited_correct": true,
+      "detail": {
+        "status": "REJECTED_WRONG_FORMULA",
+        "correct_equation": "sigma(T) = A/T * exp(-Ea/(k_B*T))",
+        "correct_value": {
+          "value": 0.013243811986442946,
+          "unit": "S/cm"
+        },
+        "wrong_expression": "A * exp(-Ea/(k_B*T))",
+        "wrong_quantity": {
+          "value": 11.563834435962658,
+          "unit": "K S/cm"
+        },
+        "numeric_ratio": {
+          "value": 873.15,
+          "unit": "K"
+        },
+        "warning": "Same numeric A reused without 1/T. The wrong quantity is NOT conductivity.",
+        "scope": "Educational counterexample for this dataset; not an accusation about any source paper."
+      }
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "method": "60-digit Decimal, SI energy per carrier, exact SI k_B and e",
+  "cases": [
+    {
+      "source_row_id": 1,
+      "source_doi": "10.1111/j.1151-2916.1998.tb02662.x",
+      "formula": "La0.95Sr0.05Ga0.95Mg0.05O2.95",
+      "regime": "LT",
+      "temperature_k": "700",
+      "activation_energy_mev": "772",
+      "prefactor_K_S_cm": "385385.727",
+      "exponent_decimal": "-12.7981256997666625312754053657788060956425978962481723139935",
+      "sigma_s_cm_decimal": "0.00152279771377997559372401061591251744494792292758364133882343",
+      "wrong_quantity_K_S_cm_decimal": "1.06595839964598291560680743113876221146354604930854893717640"
+    },
+    {
+      "source_row_id": 1,
+      "source_doi": "10.1111/j.1151-2916.1998.tb02662.x",
+      "formula": "La0.95Sr0.05Ga0.95Mg0.05O2.95",
+      "regime": "HT",
+      "temperature_k": "873.15",
+      "activation_energy_mev": "634",
+      "prefactor_K_S_cm": "52785.93227",
+      "exponent_decimal": "-8.42611749305703759062465586207972822071207391609460427353634",
+      "sigma_s_cm_decimal": "0.0132438119864429252018004584050147634342673100201495858553654",
+      "wrong_quantity_K_S_cm_decimal": "11.5638344359626401399520702563386406926305017440936108896123"
+    },
+    {
+      "source_row_id": 39,
+      "source_doi": "10.1016/S0167-2738(00)00770-0",
+      "formula": "Sr0.9Ce0.1CoO2.55",
+      "regime": "SINGLE",
+      "temperature_k": "1100",
+      "activation_energy_mev": "831.6919733",
+      "prefactor_K_S_cm": "1107333.313",
+      "exponent_decimal": "-8.77398597791599768857057277213305284161816126131458993033513",
+      "sigma_s_cm_decimal": "0.155737064991434737163014555255747584306281178016217708267326",
+      "wrong_quantity_K_S_cm_decimal": "171.310771490578210879316010781322342736909295817839479094059"
+    },
+    {
+      "source_row_id": 483,
+      "source_doi": "10.1016/0025-5408(89)90164-5",
+      "formula": "Bi2UO6",
+      "regime": "SINGLE",
+      "temperature_k": "600",
+      "activation_energy_mev": "855.8621639",
+      "prefactor_K_S_cm": "269310998.1",
+      "exponent_decimal": "-16.5531133175443615357704963390405526676222559100828668256740",
+      "sigma_s_cm_decimal": "0.0290520689988645706478882348521822121429195069173796920000169",
+      "wrong_quantity_K_S_cm_decimal": "17.4312413993187423887329409113093272857517041504278152000101"
+    }
+  ]
+}

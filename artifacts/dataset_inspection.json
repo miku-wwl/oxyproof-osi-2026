@@ -1,0 +1,288 @@
+{
+  "source": {
+    "dataset_doi": "10.5281/zenodo.18947543",
+    "dataset_record_id": "18947543",
+    "dataset_sha256": "8ec66b131bae79f8520f7cf40e91e2be2541995939bc43b744eaac627f4fad34",
+    "loaded_sha256": "8ec66b131bae79f8520f7cf40e91e2be2541995939bc43b744eaac627f4fad34",
+    "scope": "FULL_DATASET",
+    "row_count": 483,
+    "license": "CC-BY-4.0",
+    "accessed_date": "2026-10-20",
+    "article_url": "https://www.nature.com/articles/s41597-026-07100-x",
+    "dataset_url": "https://zenodo.org/records/18947543",
+    "attribution": "Jang, Seong-Hoon; Kiyohara, Shin; Takamura, Hitoshi; Kumagai, Yu (2026). Charting the Landscape of Oxygen Ion Conductors: A 60-Year Dataset. Zenodo. https://doi.org/10.5281/zenodo.18947543. CC BY 4.0."
+  },
+  "bytes": 122657,
+  "md5": "45f25ce4ef0240271ee5c35ea75400f1",
+  "rows": 483,
+  "columns": [
+    {
+      "name": "Reference",
+      "inferred_dtype": "str",
+      "missing": 0,
+      "distinct_nonmissing": 84
+    },
+    {
+      "name": "DOI",
+      "inferred_dtype": "str",
+      "missing": 0,
+      "distinct_nonmissing": 84
+    },
+    {
+      "name": "Year",
+      "inferred_dtype": "int64",
+      "missing": 0,
+      "distinct_nonmissing": 39
+    },
+    {
+      "name": "Class",
+      "inferred_dtype": "str",
+      "missing": 0,
+      "distinct_nonmissing": 21
+    },
+    {
+      "name": "Formula",
+      "inferred_dtype": "str",
+      "missing": 0,
+      "distinct_nonmissing": 452
+    },
+    {
+      "name": "Parsed_Formula_SiteA1",
+      "inferred_dtype": "str",
+      "missing": 0,
+      "distinct_nonmissing": 21
+    },
+    {
+      "name": "Parsed_Formula_nSiteA1",
+      "inferred_dtype": "float64",
+      "missing": 0,
+      "distinct_nonmissing": 97
+    },
+    {
+      "name": "Parsed_Formula_SiteA2",
+      "inferred_dtype": "str",
+      "missing": 224,
+      "distinct_nonmissing": 30
+    },
+    {
+      "name": "Parsed_Formula_nSiteA2",
+      "inferred_dtype": "float64",
+      "missing": 224,
+      "distinct_nonmissing": 71
+    },
+    {
+      "name": "Parsed_Formula_SiteA3",
+      "inferred_dtype": "str",
+      "missing": 454,
+      "distinct_nonmissing": 8
+    },
+    {
+      "name": "Parsed_Formula_nSiteA3",
+      "inferred_dtype": "float64",
+      "missing": 454,
+      "distinct_nonmissing": 17
+    },
+    {
+      "name": "Parsed_Formula_SiteB1",
+      "inferred_dtype": "str",
+      "missing": 93,
+      "distinct_nonmissing": 18
+    },
+    {
+      "name": "Parsed_Formula_nSiteB1",
+      "inferred_dtype": "float64",
+      "missing": 93,
+      "distinct_nonmissing": 60
+    },
+    {
+      "name": "Parsed_Formula_SiteB2",
+      "inferred_dtype": "str",
+      "missing": 279,
+      "distinct_nonmissing": 23
+    },
+    {
+      "name": "Parsed_Formula_nSiteB2",
+      "inferred_dtype": "float64",
+      "missing": 279,
+      "distinct_nonmissing": 32
+    },
+    {
+      "name": "Parsed_Formula_SiteB3",
+      "inferred_dtype": "str",
+      "missing": 473,
+      "distinct_nonmissing": 2
+    },
+    {
+      "name": "Parsed_Formula_nSiteB3",
+      "inferred_dtype": "float64",
+      "missing": 473,
+      "distinct_nonmissing": 2
+    },
+    {
+      "name": "Parsed_Formula_SiteC1",
+      "inferred_dtype": "str",
+      "missing": 471,
+      "distinct_nonmissing": 2
+    },
+    {
+      "name": "Parsed_Formula_nSiteC1",
+      "inferred_dtype": "float64",
+      "missing": 471,
+      "distinct_nonmissing": 2
+    },
+    {
+      "name": "Parsed_Formula_SiteC2",
+      "inferred_dtype": "str",
+      "missing": 482,
+      "distinct_nonmissing": 1
+    },
+    {
+      "name": "Parsed_Formula_nSiteC2",
+      "inferred_dtype": "float64",
+      "missing": 482,
+      "distinct_nonmissing": 1
+    },
+    {
+      "name": "Parsed_Formula_O",
+      "inferred_dtype": "str",
+      "missing": 0,
+      "distinct_nonmissing": 1
+    },
+    {
+      "name": "Parsed_Formula_nO",
+      "inferred_dtype": "float64",
+      "missing": 0,
+      "distinct_nonmissing": 167
+    },
+    {
+      "name": "Delta_O",
+      "inferred_dtype": "float64",
+      "missing": 0,
+      "distinct_nonmissing": 133
+    },
+    {
+      "name": "Ea",
+      "inferred_dtype": "float64",
+      "missing": 0,
+      "distinct_nonmissing": 476
+    },
+    {
+      "name": "A",
+      "inferred_dtype": "float64",
+      "missing": 0,
+      "distinct_nonmissing": 479
+    },
+    {
+      "name": "EaHT",
+      "inferred_dtype": "float64",
+      "missing": 368,
+      "distinct_nonmissing": 110
+    },
+    {
+      "name": "AHT",
+      "inferred_dtype": "float64",
+      "missing": 368,
+      "distinct_nonmissing": 113
+    },
+    {
+      "name": "T*",
+      "inferred_dtype": "float64",
+      "missing": 374,
+      "distinct_nonmissing": 85
+    },
+    {
+      "name": "Type_of_conductivity",
+      "inferred_dtype": "str",
+      "missing": 0,
+      "distinct_nonmissing": 3
+    },
+    {
+      "name": "Measurement_temperature_range",
+      "inferred_dtype": "str",
+      "missing": 0,
+      "distinct_nonmissing": 82
+    },
+    {
+      "name": "Measurement",
+      "inferred_dtype": "str",
+      "missing": 0,
+      "distinct_nonmissing": 7
+    },
+    {
+      "name": "Source",
+      "inferred_dtype": "str",
+      "missing": 0,
+      "distinct_nonmissing": 39
+    },
+    {
+      "name": "Plot type",
+      "inferred_dtype": "str",
+      "missing": 0,
+      "distinct_nonmissing": 8
+    }
+  ],
+  "categorical_counts": {
+    "Class": {
+      "Apatites": 62,
+      "BIMEVOX": 8,
+      "Bi2UO6": 1,
+      "Columbites": 5,
+      "Cuspidines": 21,
+      "Fluorites": 40,
+      "Garnets": 9,
+      "Melilites": 25,
+      "Perovskite-related, Dion-Jacobson": 1,
+      "Perovskite-related, Ruddlesden-Popper": 8,
+      "Perovskite-related, brownmillerites": 21,
+      "Perovskite-related, hexagonal": 19,
+      "Perovskite-related, others (A-site vacancies)": 1,
+      "Perovskite-related, others (Nd-layered)": 11,
+      "Perovskite-related, others (Ti-layered)": 6,
+      "Perovskite-related, others (V-layered)": 26,
+      "Perovskites": 57,
+      "Pyrochlores": 6,
+      "Scheelites": 81,
+      "a-SrSiO3": 22,
+      "d-Bi2O3": 53
+    },
+    "Type_of_conductivity": {
+      "(not clearly mentioned, probably total)": 174,
+      "bulk": 156,
+      "total": 153
+    },
+    "Measurement": {
+      "(not mentioned)": 1,
+      "AC": 328,
+      "DC": 12,
+      "four-probe AC": 12,
+      "four-probe DC": 24,
+      "two-probe AC": 104,
+      "vector impedance meter": 2
+    },
+    "Plot type": {
+      "-": 92,
+      "ln sigma-1/T": 28,
+      "ln sigmaT-1/T": 17,
+      "ln sigmaT-1000/T": 12,
+      "log sigma-1000/T": 294,
+      "log sigma-10000/T": 14,
+      "log sigmaT - 1000/T": 7,
+      "log sigmaT-1000/T": 19
+    }
+  },
+  "incomplete_ht_rows": [
+    66,
+    68,
+    72,
+    462,
+    463,
+    464
+  ],
+  "not_present": [
+    "parameter_uncertainty",
+    "parameter_covariance",
+    "atmosphere",
+    "preparation",
+    "sample_density"
+  ]
+}
