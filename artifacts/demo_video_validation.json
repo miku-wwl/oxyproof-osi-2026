@@ -1,0 +1,77 @@
+{
+  "status": "METADATA_AND_SCENE_EXTRACTION_PASS",
+  "video_path": ".local/demo/oxyproof-phase2.webm",
+  "video_sha256": "3169945007ec4bdf773e7907f2708774a8bc76945c3ad7bd5589f3225dd6b3a3",
+  "bytes": 31017276,
+  "duration_seconds": 204.4,
+  "resolution": "1440x1000",
+  "codec": "VP9/WebM",
+  "audio_streams": 0,
+  "runtime_mode": "OFFLINE_DETERMINISTIC",
+  "source_scope": "FULL_DATASET",
+  "capture_code_version": {
+    "app_version": "0.1.0",
+    "git_base": "6dea5cb87136744e6765f525777e54eb1b7426cc",
+    "calculation_source_sha256": "715adfe6f3bffaed9c24fb5bf8d4f987b9ea693a4b2fa2aab383c38f22818fff"
+  },
+  "frames": [
+    {
+      "position_s": 4.8469999999999995,
+      "path": ".local/demo/frames/scene-01.png",
+      "caption": "OxyProof \u2014 When the best material changes, can your AI explain why? A decision at one temperature does not establish the choice across an operating range."
+    },
+    {
+      "position_s": 20.338,
+      "path": ".local/demo/frames/scene-02.png",
+      "caption": "Published evidence: three bulk records from the same report and method, measured over 600\u20131100 K. Curves use original fitted parameters and explicit units."
+    },
+    {
+      "position_s": 38.412,
+      "path": ".local/demo/frames/scene-03.png",
+      "caption": "At 700 K, row 1 leads: 1 > 2 > 3. These are conditional model calculations from low-temperature fits, not new experimental observations."
+    },
+    {
+      "position_s": 58.549,
+      "path": ".local/demo/frames/scene-04.png",
+      "caption": "At 1000 K, row 3 leads: 3 > 2 > 1. Higher activation energy can be offset by a larger prefactor; selected high-temperature regimes matter."
+    },
+    {
+      "position_s": 78.615,
+      "path": ".local/demo/frames/scene-05.png",
+      "caption": "Continuous model crossings: 776.41, 817.91, 854.26 K. Each is checked inside BOTH measured ranges and fixed regimes. Published T* boundaries are separate events."
+    },
+    {
+      "position_s": 100.781,
+      "path": ".local/demo/frames/scene-06.png",
+      "caption": "At a published T*, the affected row is withheld. Fitted branches are not assumed continuous. The \u00b15 K neighborhood is a review heuristic, not uncertainty."
+    },
+    {
+      "position_s": 119.356,
+      "path": ".local/demo/frames/scene-07.png",
+      "caption": "Reusing this dataset\u2019s A without 1/T yields K\u00b7S/cm, not conductivity. This educational counterexample does not accuse a specific source paper."
+    },
+    {
+      "position_s": 139.8,
+      "path": ".local/demo/frames/scene-08.png",
+      "caption": "A humidity requirement cannot disappear silently: UNVERIFIED_CONSTRAINTS. OxyProof abstains and proposes controlled humidity exposure and conductivity measurements."
+    },
+    {
+      "position_s": 162.333,
+      "path": ".local/demo/frames/scene-09.png",
+      "caption": "Export: dataset/source DOIs, raw row IDs, formulas, parameters, units, regimes, evidence verdicts and code fingerprint. Runtime: OFFLINE_DETERMINISTIC."
+    },
+    {
+      "position_s": 184.386,
+      "path": ".local/demo/frames/scene-10.png",
+      "caption": "Our contribution is the auditable workflow on published evidence. No new material, experiment, validated uncertainty interval or humidity guarantee is claimed."
+    }
+  ],
+  "visual_review": {
+    "status": "PASS_REPRESENTATIVE_FRAMES",
+    "reviewer": "assistant via view_image",
+    "reviewed_scene_frames": 10,
+    "additional_tail_frame": ".local/demo/frames/end-202.png",
+    "scope": "All ten scene snapshots and near-end frame; not continuous human playback or listening",
+    "reviewed_at_utc": "2026-10-19T23:11:40.169859+00:00"
+  }
+}

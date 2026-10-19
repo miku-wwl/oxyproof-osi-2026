@@ -1,0 +1,248 @@
+{
+  "method": "60-digit Decimal/SI independent reference; regime fields explicitly chosen for endpoint checks",
+  "source": {
+    "dataset_doi": "10.5281/zenodo.18947543",
+    "dataset_record_id": "18947543",
+    "dataset_sha256": "8ec66b131bae79f8520f7cf40e91e2be2541995939bc43b744eaac627f4fad34",
+    "loaded_sha256": "8ec66b131bae79f8520f7cf40e91e2be2541995939bc43b744eaac627f4fad34",
+    "scope": "FULL_DATASET",
+    "row_count": 483,
+    "license": "CC-BY-4.0",
+    "accessed_date": "2026-10-20",
+    "article_url": "https://www.nature.com/articles/s41597-026-07100-x",
+    "dataset_url": "https://zenodo.org/records/18947543",
+    "attribution": "Jang, Seong-Hoon; Kiyohara, Shin; Takamura, Hitoshi; Kumagai, Yu (2026). Charting the Landscape of Oxygen Ion Conductors: A 60-Year Dataset. Zenodo. https://doi.org/10.5281/zenodo.18947543. CC BY 4.0."
+  },
+  "endpoint_values": [
+    {
+      "row_id": 1,
+      "formula": "La0.95Sr0.05Ga0.95Mg0.05O2.95",
+      "temperature_k": 700,
+      "regime": "LT",
+      "sigma_s_cm_decimal": "0.00152279771377997559372401061591251744494792292758364133882343"
+    },
+    {
+      "row_id": 2,
+      "formula": "La0.95Sr0.05Ga0.9Mg0.1O2.925",
+      "temperature_k": 700,
+      "regime": "LT",
+      "sigma_s_cm_decimal": "0.00105664991470504249494244685234545364240027565677695834114645"
+    },
+    {
+      "row_id": 3,
+      "formula": "La0.95Sr0.05Ga0.85Mg0.15O2.9",
+      "temperature_k": 700,
+      "regime": "LT",
+      "sigma_s_cm_decimal": "0.000646360239378387491155979521298680213999891713469135071608679"
+    },
+    {
+      "row_id": 1,
+      "formula": "La0.95Sr0.05Ga0.95Mg0.05O2.95",
+      "temperature_k": 1000,
+      "regime": "HT",
+      "sigma_s_cm_decimal": "0.0336743193864660949905276678787647148619547697928466381237189"
+    },
+    {
+      "row_id": 2,
+      "formula": "La0.95Sr0.05Ga0.9Mg0.1O2.925",
+      "temperature_k": 1000,
+      "regime": "HT",
+      "sigma_s_cm_decimal": "0.0487233949603676741899151067407626544237148970538788662876998"
+    },
+    {
+      "row_id": 3,
+      "formula": "La0.95Sr0.05Ga0.85Mg0.15O2.9",
+      "temperature_k": 1000,
+      "regime": "HT",
+      "sigma_s_cm_decimal": "0.0671195840659098152440025465176163191106114862004348608886075"
+    }
+  ],
+  "roots": [
+    {
+      "row_ids": [
+        1,
+        2
+      ],
+      "regimes": [
+        "LT",
+        "LT"
+      ],
+      "temperature_k_decimal": "776.407425051022215755014026579331223886418069542601059940311"
+    },
+    {
+      "row_ids": [
+        1,
+        3
+      ],
+      "regimes": [
+        "HT",
+        "LT"
+      ],
+      "temperature_k_decimal": "817.909825367824538986352001681924892242250926262001474380233"
+    },
+    {
+      "row_ids": [
+        2,
+        3
+      ],
+      "regimes": [
+        "HT",
+        "LT"
+      ],
+      "temperature_k_decimal": "854.261466339589211594060870847792583833548600634354731618609"
+    }
+  ],
+  "code_version": {
+    "app_version": "0.1.0",
+    "git_base": "6dea5cb87136744e6765f525777e54eb1b7426cc",
+    "calculation_source_sha256": "715adfe6f3bffaed9c24fb5bf8d4f987b9ea693a4b2fa2aab383c38f22818fff"
+  },
+  "equation": "sigma(T) = A/T * exp(-Ea/(k_B*T))",
+  "units": {
+    "temperature": "K",
+    "activation_energy": "meV",
+    "prefactor": "K S/cm",
+    "conductivity": "S/cm"
+  },
+  "source_records": [
+    {
+      "row_id": 1,
+      "formula": "La0.95Sr0.05Ga0.95Mg0.05O2.95",
+      "material_class": "Perovskites",
+      "source_doi": "10.1111/j.1151-2916.1998.tb02662.x",
+      "reference": "Huang et al., J. Am. Ceram. Soc., 81, 2565 (1998).",
+      "conductivity_type": "bulk",
+      "measurement": "two-probe AC",
+      "temperature_range_raw": "600 - 1100 K",
+      "raw": {
+        "Reference": "Huang et al., J. Am. Ceram. Soc., 81, 2565 (1998).",
+        "DOI": "10.1111/j.1151-2916.1998.tb02662.x",
+        "Year": "1998",
+        "Class": "Perovskites",
+        "Formula": "La0.95Sr0.05Ga0.95Mg0.05O2.95",
+        "Parsed_Formula_SiteA1": "La",
+        "Parsed_Formula_nSiteA1": "0.95",
+        "Parsed_Formula_SiteA2": "Sr",
+        "Parsed_Formula_nSiteA2": "0.05",
+        "Parsed_Formula_SiteA3": "",
+        "Parsed_Formula_nSiteA3": "",
+        "Parsed_Formula_SiteB1": "Ga",
+        "Parsed_Formula_nSiteB1": "0.95",
+        "Parsed_Formula_SiteB2": "Mg",
+        "Parsed_Formula_nSiteB2": "0.05",
+        "Parsed_Formula_SiteB3": "",
+        "Parsed_Formula_nSiteB3": "",
+        "Parsed_Formula_SiteC1": "",
+        "Parsed_Formula_nSiteC1": "",
+        "Parsed_Formula_SiteC2": "",
+        "Parsed_Formula_nSiteC2": "",
+        "Parsed_Formula_O": "O",
+        "Parsed_Formula_nO": "2.95",
+        "Delta_O": "-0.016666667",
+        "Ea": "772",
+        "A": "385385.727",
+        "EaHT": "634",
+        "AHT": "52785.93227",
+        "T*": "805.5450205",
+        "Type_of_conductivity": "bulk",
+        "Measurement_temperature_range": "600 - 1100 K",
+        "Measurement": "two-probe AC",
+        "Source": "Table 3",
+        "Plot type": "-"
+      }
+    },
+    {
+      "row_id": 2,
+      "formula": "La0.95Sr0.05Ga0.9Mg0.1O2.925",
+      "material_class": "Perovskites",
+      "source_doi": "10.1111/j.1151-2916.1998.tb02662.x",
+      "reference": "Huang et al., J. Am. Ceram. Soc., 81, 2565 (1998).",
+      "conductivity_type": "bulk",
+      "measurement": "two-probe AC",
+      "temperature_range_raw": "600 - 1100 K",
+      "raw": {
+        "Reference": "Huang et al., J. Am. Ceram. Soc., 81, 2565 (1998).",
+        "DOI": "10.1111/j.1151-2916.1998.tb02662.x",
+        "Year": "1998",
+        "Class": "Perovskites",
+        "Formula": "La0.95Sr0.05Ga0.9Mg0.1O2.925",
+        "Parsed_Formula_SiteA1": "La",
+        "Parsed_Formula_nSiteA1": "0.95",
+        "Parsed_Formula_SiteA2": "Sr",
+        "Parsed_Formula_nSiteA2": "0.05",
+        "Parsed_Formula_SiteA3": "",
+        "Parsed_Formula_nSiteA3": "",
+        "Parsed_Formula_SiteB1": "Ga",
+        "Parsed_Formula_nSiteB1": "0.9",
+        "Parsed_Formula_SiteB2": "Mg",
+        "Parsed_Formula_nSiteB2": "0.1",
+        "Parsed_Formula_SiteB3": "",
+        "Parsed_Formula_nSiteB3": "",
+        "Parsed_Formula_SiteC1": "",
+        "Parsed_Formula_nSiteC1": "",
+        "Parsed_Formula_SiteC2": "",
+        "Parsed_Formula_nSiteC2": "",
+        "Parsed_Formula_O": "O",
+        "Parsed_Formula_nO": "2.925",
+        "Delta_O": "-0.025",
+        "Ea": "996",
+        "A": "10962599.59",
+        "EaHT": "673",
+        "AHT": "120090.3914",
+        "T*": "830.3631709",
+        "Type_of_conductivity": "bulk",
+        "Measurement_temperature_range": "600 - 1100 K",
+        "Measurement": "two-probe AC",
+        "Source": "Table 3",
+        "Plot type": "-"
+      }
+    },
+    {
+      "row_id": 3,
+      "formula": "La0.95Sr0.05Ga0.85Mg0.15O2.9",
+      "material_class": "Perovskites",
+      "source_doi": "10.1111/j.1151-2916.1998.tb02662.x",
+      "reference": "Huang et al., J. Am. Ceram. Soc., 81, 2565 (1998).",
+      "conductivity_type": "bulk",
+      "measurement": "two-probe AC",
+      "temperature_range_raw": "600 - 1100 K",
+      "raw": {
+        "Reference": "Huang et al., J. Am. Ceram. Soc., 81, 2565 (1998).",
+        "DOI": "10.1111/j.1151-2916.1998.tb02662.x",
+        "Year": "1998",
+        "Class": "Perovskites",
+        "Formula": "La0.95Sr0.05Ga0.85Mg0.15O2.9",
+        "Parsed_Formula_SiteA1": "La",
+        "Parsed_Formula_nSiteA1": "0.95",
+        "Parsed_Formula_SiteA2": "Sr",
+        "Parsed_Formula_nSiteA2": "0.05",
+        "Parsed_Formula_SiteA3": "",
+        "Parsed_Formula_nSiteA3": "",
+        "Parsed_Formula_SiteB1": "Ga",
+        "Parsed_Formula_nSiteB1": "0.85",
+        "Parsed_Formula_SiteB2": "Mg",
+        "Parsed_Formula_nSiteB2": "0.15",
+        "Parsed_Formula_SiteB3": "",
+        "Parsed_Formula_nSiteB3": "",
+        "Parsed_Formula_SiteC1": "",
+        "Parsed_Formula_nSiteC1": "",
+        "Parsed_Formula_SiteC2": "",
+        "Parsed_Formula_nSiteC2": "",
+        "Parsed_Formula_O": "O",
+        "Parsed_Formula_nO": "2.9",
+        "Delta_O": "-0.033333333",
+        "Ea": "1118",
+        "A": "50677875.87",
+        "EaHT": "780",
+        "AHT": "572632.8272",
+        "T*": "874.9335546",
+        "Type_of_conductivity": "bulk",
+        "Measurement_temperature_range": "600 - 1100 K",
+        "Measurement": "two-probe AC",
+        "Source": "Table 3",
+        "Plot type": "-"
+      }
+    }
+  ],
+  "reference_source_sha256": "97e4de1ed454e13ad3866e44b1e01a735790c9050410adac197c71a30143f649"
+}

@@ -23,6 +23,7 @@ export type Request = {
   top_n: number
   allow_extrapolation: boolean
   mode: Mode
+  goal_origin?: 'GENERATED' | 'MANUAL'
 }
 export type Calculation = {
   status: string
@@ -42,6 +43,7 @@ export type Calculation = {
   observations_vs_calculations: string
 }
 export type Report = {
+  next_scientific_actions?: string[]
   status: string
   research_request: Request
   runtime_mode: Mode
@@ -68,7 +70,20 @@ export type Report = {
   }[]
   trace: { step: string; outcome: string; detail: string }[]
 }
-export type Catalog = { classes: string[]; source: Source }
+export type SourceGroup = {
+  id: string
+  source_doi: string
+  conductivity_type: string
+  measurement: string
+  temperature_range: string
+  row_ids: number[]
+}
+export type Catalog = {
+  classes: string[]
+  source: Source
+  comparison_groups?: SourceGroup[]
+  records?: { row_id: number; formula: string }[]
+}
 export type Health = { real_llm_status: string; source: Source }
 export type Curve = {
   row_id: number
@@ -82,4 +97,70 @@ export type Adversarial = {
     numeric_ratio: Quantity
     warning: string
   }
+}
+
+export type DecisionPoint = {
+  temperature_k: number
+  status: string
+  ordering: number[]
+  values: {
+    row_id: number
+    formula: string
+    conductivity_s_cm: number
+    regime: string
+    tie_with: number[]
+    warning_codes: string[]
+  }[]
+  excluded: { row_id: number; reasons: string[] }[]
+}
+export type TemperatureReport = {
+  trace: { step: string; outcome: string; detail: string }[]
+  status: string
+  evidence_verdicts: string[]
+  runtime_mode: string
+  source: Source
+  comparison_group: string
+  code_version: Record<string, string>
+  resolved_plan: Record<string, unknown>
+  warnings: Warning[]
+  interpretation: string[]
+  next_scientific_actions: string[]
+  curve_points: DecisionPoint[]
+  selected_rankings: DecisionPoint[]
+  materials: {
+    record: {
+      row_id: number
+      formula: string
+      source_doi: string
+      reference: string
+      raw: Record<string, string>
+    }
+    measured_range_k: number[]
+    transition_k: number | null
+    excluded_reason: string | null
+    validity_intervals: {
+      low_k: number
+      high_k: number
+      regime: string
+      activation_energy: Quantity
+      prefactor: Quantity
+    }[]
+  }[]
+  segments: {
+    low_k: number
+    high_k: number
+    ordering: number[]
+    regimes: Record<string, string>
+    status: string
+    review_neighborhood: boolean
+    tie_groups: number[][]
+  }[]
+  events: {
+    kind: string
+    temperature_k: number
+    row_ids: number[]
+    verdict: string
+    exact_continuous_crossing: boolean
+    explanation: string
+  }[]
 }

@@ -190,7 +190,8 @@
       "audited_warning_codes": [
         "BOUNDED_PARSER",
         "CONDITIONAL_SCREENING",
-        "PLAN_REJECTED"
+        "PLAN_REJECTED",
+        "UNVERIFIED_CONSTRAINTS"
       ],
       "baseline_correct": false,
       "audited_correct": true

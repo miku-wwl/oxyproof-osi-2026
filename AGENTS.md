@@ -150,3 +150,11 @@ Then report: (1) exactly what changed; (2) runnable commands; (3) test commands 
 - P2: real model tool-use/structured planning + evaluation + final submission package.
 - Cut P2 polish before sacrificing P0 reliability.
 - Do not ask for confirmation for routine safe local changes. Ask only when blocked by missing credentials/rights or before actions requiring approval.
+
+## 7. Phase 2 scientific and architectural contracts
+
+- Screening and interval requests use the independent coverage grammar in `docs/REQUEST_GRAMMAR.md`. Unknown text fails closed, including in REAL_LLM mode. Guided generated goals synchronize with controls; manual contradictions are preserved. No goal-origin label can bypass backend checks.
+- `science/temperature_decisions.py` computes measured-only fixed-regime intersections and analytic pair roots. Plot resolution cannot determine the interval map. Exact T* is withheld; a fit-boundary change is never labelled a continuous crossover. The 5 K neighborhood and numerical equality tolerances are engineering heuristics, not uncertainty bounds. See `docs/TEMPERATURE_DECISIONS.md`.
+- Tool selection is a small allowlisted planner/executor: screening, interval analysis and source-row evidence inspection. Independent deterministic validation controls all scientific results and explanations. No provider prose or source metadata can execute code or introduce citations.
+- Preserve the 24-row real fixture and original eight educational guards. The 49-case v2 benchmark is hand-selected decision-integrity evidence, not representative accuracy or statistical significance. Genuine Chromium tests are separate from mocked component/provider contracts.
+- Phase 2 handover uses the expanded status protocol in the owner's Phase 2 request. Registration, Slack rules, pre-event-work eligibility and public actions remain human gates. Initial development was October 20; do not conceal it.

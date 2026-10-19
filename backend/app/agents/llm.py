@@ -7,9 +7,15 @@ import httpx
 from pydantic import ValidationError
 
 from backend.app.schemas import GoalPlan, ScreenRequest
+from backend.app.science.decision_schemas import EvidenceGoalPlan, IntervalGoalPlan
 
 ENDPOINT = "https://api.openai.com/v1/responses"
 TOOL = "screen_published_records"
+TOOL_MODELS = {
+    TOOL: GoalPlan,
+    "analyze_temperature_interval": IntervalGoalPlan,
+    "inspect_scientific_evidence": EvidenceGoalPlan,
+}
 
 
 class LLMError(RuntimeError):
@@ -20,29 +26,34 @@ def configured() -> bool:
     return bool(os.environ.get("OPENAI_API_KEY") and os.environ.get("OXYPROOF_LLM_MODEL"))
 
 
-def plan_with_llm(request: ScreenRequest, classes: list[str]) -> tuple[GoalPlan, str, str]:
+def call_tools(goal: str, classes: list[str], tool_name: str | None = None):
     if not configured():
         raise LLMError("NOT_CONFIGURED: set OPENAI_API_KEY and OXYPROOF_LLM_MODEL")
     model = os.environ["OXYPROOF_LLM_MODEL"]
-    schema = GoalPlan.model_json_schema()
-    schema["required"] = list(schema["properties"])
+    tools = []
+    for name, contract in TOOL_MODELS.items():
+        if tool_name and name != tool_name:
+            continue
+        schema = contract.model_json_schema()
+        schema["required"] = list(schema["properties"])
+        tools.append(
+            {
+                "type": "function",
+                "name": name,
+                "description": "Bounded published-data research plan. Never calculate or invent citations. Report every unsupported constraint.",
+                "parameters": schema,
+                "strict": True,
+            }
+        )
     payload = {
         "model": model,
         "store": False,
         "max_output_tokens": 2000,
         "parallel_tool_calls": False,
-        "tool_choice": {"type": "function", "name": TOOL},
-        "tools": [
-            {
-                "type": "function",
-                "name": TOOL,
-                "description": "Plan screening of published records. No generated code, URLs or new science. Report all unsupported constraints explicitly.",
-                "parameters": schema,
-                "strict": True,
-            }
-        ],
+        "tool_choice": {"type": "function", "name": tool_name} if tool_name else "required",
+        "tools": tools,
         "instructions": (
-            "Parse a research goal for an oxygen-ion-conductor screening tool. "
+            "Choose screening for one temperature, interval analysis for between/from two temperatures, or evidence inspection for a row. "
             "Do not calculate, invent parameters or citations. Only temperature, exact material class, "
             "formula substring, and bulk/total are supported. List any other constraint as unsupported. "
             "Use null if a constraint is absent. Respect explicit units; never infer C from a bare number. "
@@ -50,7 +61,7 @@ def plan_with_llm(request: ScreenRequest, classes: list[str]) -> tuple[GoalPlan,
             "Allowed exact classes: " + json.dumps(classes)
         ),
         # Only the user goal is transmitted, never a dataset file, raw source record or secret.
-        "input": request.goal,
+        "input": goal,
     }
     try:
         # A single bounded call; no automatic retries or silent offline fallback.
@@ -77,13 +88,23 @@ def plan_with_llm(request: ScreenRequest, classes: list[str]) -> tuple[GoalPlan,
         if not isinstance(output, list) or any(not isinstance(item, dict) for item in output):
             raise LLMError("MALFORMED_MODEL_OUTPUT")
         calls = [item for item in output if item.get("type") == "function_call"]
-        if len(calls) != 1 or calls[0].get("name") != TOOL:
+        if (
+            len(calls) != 1
+            or calls[0].get("name") not in TOOL_MODELS
+            or (tool_name and calls[0].get("name") != tool_name)
+        ):
             raise LLMError("UNSUPPORTED_TOOL: exactly one allowlisted call is required")
-        plan = GoalPlan.model_validate_json(calls[0]["arguments"])
+        selected = calls[0]["name"]
+        plan = TOOL_MODELS[selected].model_validate_json(calls[0]["arguments"])
         response_id = body.get("id")
         if not isinstance(response_id, str) or not response_id:
             raise LLMError("MISSING_RESPONSE_ID")
-        return plan, model, response_id
+        return selected, plan, model, response_id
     except (httpx.HTTPError, ValueError, KeyError, TypeError, ValidationError) as exc:
         # Provider text may echo user data or credentials; do not expose it.
         raise LLMError(f"MODEL_RESPONSE_FAILED: {type(exc).__name__}") from exc
+
+
+def plan_with_llm(request: ScreenRequest, classes: list[str]) -> tuple[GoalPlan, str, str]:
+    _, plan, model, response_id = call_tools(request.goal, classes, TOOL)
+    return plan, model, response_id

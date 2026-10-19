@@ -92,6 +92,43 @@ function transport(fail = false) {
 }
 
 describe('workbench API contract', () => {
+  it('synchronizes generated text with temperature and type controls', async () => {
+    const fetchMock = transport()
+    render(<App />)
+    await waitFor(() => expect(screen.getByRole('button', { name: 'Run screening' })).toBeEnabled())
+    fireEvent.change(screen.getByLabelText('Temperature', { exact: true }), {
+      target: { value: '700' },
+    })
+    fireEvent.change(screen.getByLabelText('Conductivity type'), { target: { value: 'total' } })
+    expect(screen.getByLabelText('Research goal')).toHaveValue(
+      'Find total oxygen-ion conductors at 700 °C. Show source provenance.',
+    )
+    fireEvent.click(screen.getByRole('button', { name: 'Run screening' }))
+    await screen.findByText('Calculated. Cited. Conditional.')
+    const call = fetchMock.mock.calls.find(([p]) => p === '/api/screen')!
+    const body = JSON.parse(call[1]?.body as string)
+    expect(body.temperature).toBe(700)
+    expect(body.conductivity_type).toBe('total')
+  })
+
+  it('preserves a manual scientific requirement when controls change', async () => {
+    transport()
+    render(<App />)
+    fireEvent.change(screen.getByLabelText('Research goal'), {
+      target: { value: 'Find bulk conductors at 600 C that survive 10% humidity' },
+    })
+    fireEvent.change(screen.getByLabelText('Temperature', { exact: true }), {
+      target: { value: '700' },
+    })
+    expect(screen.getByLabelText('Research goal')).toHaveValue(
+      'Find bulk conductors at 600 C that survive 10% humidity',
+    )
+    expect(screen.getByTestId('goal-origin')).toHaveTextContent('Manual goal')
+    fireEvent.click(screen.getByRole('button', { name: 'Use synchronized goal' }))
+    expect(screen.getByLabelText('Research goal')).toHaveValue(
+      'Find bulk oxygen-ion conductors at 700 °C. Show source provenance.',
+    )
+  })
   it('has no candidate rankings before an API screening', async () => {
     const fetchMock = transport()
     render(<App />)

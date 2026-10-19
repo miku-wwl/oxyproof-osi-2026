@@ -41,3 +41,7 @@ The paper's derivation assumes temperature-independent mobile-defect concentrati
 | 483 | 600 | single | 855.8621639 | 269310998.1 | 0.0290520689988645706 |
 
 Production values agree within relative tolerance 2e-14 in focused tests. An additional independent algebraic test uses SYNTHETIC_TEST_ONLY parameters Ea=k_B*T*ln(2), A=2*T so sigma=1 S/cm. This validates arithmetic on published parameters, not experimental truth.
+
+## Phase 2 interval contract
+
+The directly re-retrieved article and units table confirm the same convention on October 20. `TEMPERATURE_DECISIONS.md` specifies interval intersections, analytic pair roots, open boundaries, tie tolerances and conservative evidence policy. All three flagship roots are in the common fixed regimes; none is inferred from visual sampling or assumed fit continuity. The source paper's original atmosphere, preparation and density remain unreviewed. Do not attach experimental certainty to computed switching points.

@@ -1,0 +1,47 @@
+{
+  "accessed_at_utc": "2026-10-19T22:48:57.237267+00:00",
+  "sources": [
+    {
+      "name": "agenda_2026",
+      "url": "https://llmhackathon.github.io/agenda/",
+      "status": "DIRECTLY_RETRIEVED",
+      "http_status": 200,
+      "bytes": 18659,
+      "sha256": "53ae9d375cf6b268ae93fcd9dad70a66560118d1f3d0a9d5312de66232e62f2f"
+    },
+    {
+      "name": "article",
+      "url": "https://www.nature.com/articles/s41597-026-07100-x",
+      "status": "DIRECTLY_RETRIEVED",
+      "http_status": 200,
+      "bytes": 567312,
+      "sha256": "b60ed121c65286cecf652f1e1e372736e10ceaefebd643e5fe287147ac1032d9"
+    },
+    {
+      "name": "units_table",
+      "url": "https://www.nature.com/articles/s41597-026-07100-x/tables/1",
+      "status": "DIRECTLY_RETRIEVED",
+      "http_status": 200,
+      "bytes": 167355,
+      "sha256": "9a63246b2e7dacbe17519025507b2ef3763364bb8b4b6fa78b3b615351827fa8"
+    },
+    {
+      "name": "zenodo_metadata",
+      "url": "https://zenodo.org/api/records/18947543",
+      "status": "DIRECTLY_RETRIEVED",
+      "http_status": 200,
+      "bytes": 5072,
+      "sha256": "7002604bbb8d08af2b6be9e0e5816e79a688d42b14b7ae20e24f1466ea046c2f",
+      "license": {
+        "id": "cc-by-4.0"
+      },
+      "files": [
+        {
+          "key": "oxygen_ion_conductor_dataset.csv",
+          "checksum": "md5:45f25ce4ef0240271ee5c35ea75400f1",
+          "size": 122657
+        }
+      ]
+    }
+  ]
+}

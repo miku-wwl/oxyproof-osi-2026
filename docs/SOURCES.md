@@ -30,3 +30,10 @@ The exact field list, inferred numeric/text types, missingness and categorical c
 - No per-record uncertainty/covariance, atmosphere, density or preparation columns. Absence is not evidence of matching conditions.
 
 The fallback arXiv v2 HTML endpoint returned 404; no claims rely on it. Public event evidence is recorded separately in `COMPETITION_RULES.md`.
+# Phase 2 re-verification (2026-10-20 NZDT)
+
+`scripts/verify_sources_v2.py` directly retrieved the [2026 agenda](https://llmhackathon.github.io/agenda/), [article](https://www.nature.com/articles/s41597-026-07100-x), [units Table 1](https://www.nature.com/articles/s41597-026-07100-x/tables/1) and [Zenodo metadata API](https://zenodo.org/api/records/18947543). HTTP status, UTC access time, sizes/hashes and dataset license metadata are in `artifacts/source_verification_v2.json`; full HTML is ignored under `.local/source-v2`.
+
+Manual inspection reconfirmed sigma*T=A*exp(-Ea/kBT), Ea in meV, A in K S/cm, and T* separating LT/HT fits. Zenodo metadata confirms CC BY 4.0, file size 122657 bytes and MD5 45f25ce4ef0240271ee5c35ea75400f1. A fresh `scripts/fetch_data.py --force` download passed SHA-256 and the exact 34-column/483-row schema. The web reader's Nature request returned a cookie-redirect 500; direct Python HTTPS retrieval succeeded. No model/provider call was involved.
+
+Implementation authorities: [OpenAI strict function calling](https://developers.openai.com/api/docs/guides/function-calling#strict-mode), fetched via official OpenAI documentation; [Playwright local web server](https://playwright.dev/docs/test-webserver) and [browser installation](https://playwright.dev/docs/browsers), directly read. These support implementation contracts, not live-integration or scientific-performance claims.

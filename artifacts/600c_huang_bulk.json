@@ -15,7 +15,8 @@
     ],
     "allow_extrapolation": false,
     "top_n": 5,
-    "mode": "OFFLINE_DETERMINISTIC"
+    "mode": "OFFLINE_DETERMINISTIC",
+    "goal_origin": "MANUAL"
   },
   "resolved_plan": {
     "temperature_k": 873.15,
@@ -61,8 +62,8 @@
   "observations_vs_calculations": "The source provides experimentally derived fit parameters and citations. All displayed target-temperature conductivities are calculations. Proposed measurements are heuristics, not results.",
   "code_version": {
     "app_version": "0.1.0",
-    "git_base": "a2ad59c5bc923275584497d42f5ebc7977e1217f",
-    "calculation_source_sha256": "d0b806f06d5bb9a31cdc2b592b41512e95225952327ebe35d7ed947fec8e6d81"
+    "git_base": "6dea5cb87136744e6765f525777e54eb1b7426cc",
+    "calculation_source_sha256": "715adfe6f3bffaed9c24fb5bf8d4f987b9ea693a4b2fa2aab383c38f22818fff"
   },
   "warnings": [
     {
@@ -71,14 +72,14 @@
     },
     {
       "code": "BOUNDED_PARSER",
-      "message": "Offline parser supports explicit C/K, bulk/total, known class and 'formula X'. Inspect resolved_plan; arbitrary prose is not fully understood."
+      "message": "Bounded grammar supports explicit C/K, bulk/total, known class, formula substring and provenance. Unresolved text is rejected; inspect request_coverage."
     }
   ],
   "trace": [
     {
       "step": "parse_goal",
       "outcome": "OFFLINE_DETERMINISTIC",
-      "detail": "Rules parse explicit temperature, type, class and 'formula X'. Structured fields resolve missing values; unrecognized constraints require human review."
+      "detail": "Coverage grammar accounts for every non-punctuation span; unresolved clauses fail closed."
     },
     {
       "step": "retrieve_records",
@@ -425,5 +426,54 @@
     }
   ],
   "excluded": [],
-  "matched_count": 3
+  "matched_count": 3,
+  "request_coverage": {
+    "grammar_version": "2.0",
+    "recognized": [
+      {
+        "start": 0,
+        "end": 4,
+        "text": "Find",
+        "field": "action"
+      },
+      {
+        "start": 5,
+        "end": 26,
+        "text": "oxygen-ion conductors",
+        "field": "domain"
+      },
+      {
+        "start": 27,
+        "end": 29,
+        "text": "at",
+        "field": "connector"
+      },
+      {
+        "start": 30,
+        "end": 36,
+        "text": "600 °C",
+        "field": "temperature"
+      }
+    ],
+    "unresolved": [],
+    "complete": true
+  },
+  "evidence_verdict": "SUPPORTED_CONDITIONAL_COMPARISON",
+  "validated_tool": "screen_published_records",
+  "validated_arguments": {
+    "temperature_k": 873.15,
+    "conductivity_type": "bulk",
+    "material_class": null,
+    "formula_query": null,
+    "row_ids": [
+      1,
+      2,
+      3
+    ],
+    "allow_extrapolation": false,
+    "top_n": 5
+  },
+  "next_scientific_actions": [
+    "Proposed action: verify original-source atmosphere, preparation, density and conductivity type; obtain evidence for every unresolved requirement before making a material recommendation. No experiment was executed."
+  ]
 }

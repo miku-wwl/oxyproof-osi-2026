@@ -52,7 +52,7 @@ def test_no_candidates_for_unknown_type(repo):
     "screen_request",
     [
         ScreenRequest(goal="Screen at 600"),
-        ScreenRequest(temperature=500),
+        ScreenRequest(goal="Find conductors at 600 C", temperature=500),
         ScreenRequest(goal="Find conductors at 900 °F"),
         ScreenRequest(goal="Find stable bulk conductors at 600 C"),
         ScreenRequest(goal="Find bulk and total at 600 C"),

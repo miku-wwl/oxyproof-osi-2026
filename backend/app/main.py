@@ -8,10 +8,12 @@ from fastapi.responses import FileResponse, JSONResponse
 from fastapi.staticfiles import StaticFiles
 
 from backend.app.agents.llm import LLMError, configured
+from backend.app.agents.workflow import run_research, run_temperature
 from backend.app.data.ingest import ROOT, DataError, Repository
-from backend.app.reports.audit import calculate_record, code_version, screen
+from backend.app.reports.audit import calculate_record, code_version, group_key, screen
 from backend.app.schemas import AuditReport, ScreenRequest
 from backend.app.science.conductivity import ScienceError, to_kelvin, wrong_equation_demo
+from backend.app.science.decision_schemas import AgentRequest, TemperatureReport, TemperatureRequest
 
 app = FastAPI(
     title="OxyProof",
@@ -68,6 +70,17 @@ def catalog():
         "classes": repo.classes(),
         "conductivity_types": ["bulk", "total"],
         "source": repo.source,
+        "comparison_groups": [
+            {
+                "id": key,
+                "row_ids": [r.row_id for r in repo.records if group_key(r) == key],
+                "source_doi": first.source_doi,
+                "conductivity_type": first.conductivity_type,
+                "measurement": first.measurement,
+                "temperature_range": first.temperature_range_raw,
+            }
+            for key, first in sorted({group_key(r): r for r in repo.records}.items())
+        ],
         "records": [
             {
                 "row_id": r.row_id,
@@ -114,6 +127,39 @@ def record_detail(row_id: int):
     if not record:
         raise HTTPException(404, "ROW_NOT_LOADED")
     return {"record": record, "source": repo.source, "code_version": code_version()}
+
+
+@app.post("/api/temperature-decisions", response_model=TemperatureReport)
+def temperature_decisions(request: TemperatureRequest):
+    return guarded_workflow(request.mode, lambda: run_temperature(request, repo_or_503()))
+
+
+@app.post("/api/research")
+def research(request: AgentRequest):
+    return guarded_workflow(request.mode, lambda: run_research(request, repo_or_503()))
+
+
+def guarded_workflow(mode, operation):
+    acquired = mode == "REAL_LLM" and llm_lock.acquire(blocking=False)
+    if mode == "REAL_LLM" and not acquired:
+        raise HTTPException(429, {"runtime_mode": "UNAVAILABLE", "code": "MODEL_BUSY"})
+    try:
+        return operation()
+    except ScienceError as exc:
+        raise HTTPException(422, {"code": exc.code, "message": str(exc)}) from exc
+    except LLMError as exc:
+        raise HTTPException(
+            503,
+            {
+                "runtime_mode": "UNAVAILABLE",
+                "code": "LLM_UNAVAILABLE",
+                "message": str(exc),
+                "fallback": "Select OFFLINE_DETERMINISTIC explicitly",
+            },
+        ) from exc
+    finally:
+        if acquired:
+            llm_lock.release()
 
 
 @app.get("/api/records/{row_id}/curve")

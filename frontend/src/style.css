@@ -1272,3 +1272,342 @@ footer a {
     display: none;
   }
 }
+
+.temperature-explorer {
+  margin-bottom: 26px;
+  border-top: 3px solid #167c78;
+}
+.temperature-explorer > h3 {
+  font-size: 24px;
+  letter-spacing: -0.6px;
+  margin: 16px 0 8px;
+}
+.explorer-intro {
+  color: #5f7471;
+  line-height: 1.7;
+  max-width: 800px;
+  margin-bottom: 20px;
+}
+.explorer-controls {
+  display: grid;
+  gap: 14px;
+}
+.explorer-controls label {
+  display: grid;
+  gap: 8px;
+  font-size: 11px;
+  color: #526966;
+  min-width: 0;
+}
+.explorer-controls input,
+.explorer-controls select {
+  padding: 11px;
+  background: #fff;
+  border: 1px solid #cddad4;
+  border-radius: 5px;
+  min-width: 0;
+  width: 100%;
+  color: #213b3c;
+}
+.interval-controls {
+  display: grid;
+  grid-template-columns: 1fr 1fr 90px 1.5fr;
+  gap: 12px;
+  align-items: end;
+}
+.interval-controls .primary {
+  justify-content: center;
+  height: 40px;
+}
+.record-selection {
+  margin: 15px 0;
+  color: #63766e;
+  font-size: 11px;
+}
+.record-selection summary {
+  cursor: pointer;
+}
+.record-selection > div {
+  display: grid;
+  gap: 7px;
+  padding: 12px 0;
+  max-height: 190px;
+  overflow: auto;
+}
+.record-selection label {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  overflow-wrap: anywhere;
+}
+.explorer-preset {
+  display: flex;
+  justify-content: space-between;
+  gap: 14px;
+  align-items: center;
+  flex-wrap: wrap;
+  border-top: 1px solid #e4e9e3;
+  padding-top: 14px;
+}
+.explorer-preset button,
+.temperature-scrubber button,
+.events-grid button,
+.goal-origin button {
+  border: 1px solid #b9cec3;
+  background: #eef6ef;
+  color: #246658;
+  border-radius: 5px;
+  padding: 9px 12px;
+  font-size: 11px;
+}
+.explorer-preset span {
+  font-size: 10px;
+  color: #718178;
+}
+.decision-output {
+  margin-top: 22px;
+}
+.decision-output .verdict {
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+}
+.decision-output .verdict strong {
+  font-size: 11px;
+  line-height: 1.6;
+}
+.decision-plot {
+  width: 100%;
+  display: block;
+  min-height: 230px;
+}
+.decision-plot-wrap {
+  width: 100%;
+  overflow-x: auto;
+}
+.curve-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 20px;
+  margin: 23px 0 8px;
+}
+.curve-legend span {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 10px;
+  overflow-wrap: anywhere;
+}
+.curve-legend i {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.temperature-scrubber {
+  border: 1px solid #d9e3db;
+  border-radius: 7px;
+  background: #f6f9f5;
+  padding: 20px;
+  margin: 20px 0;
+}
+.temperature-scrubber label {
+  display: block;
+  font-size: 12px;
+}
+.temperature-scrubber strong {
+  font-size: 19px;
+  margin: 0 7px;
+}
+.temperature-scrubber input {
+  display: block;
+  width: 100%;
+  accent-color: #167c78;
+  margin: 17px 0;
+}
+.temperature-scrubber button {
+  margin-right: 8px;
+}
+.ordering-panel {
+  padding: 20px;
+  background: #fcfdfb;
+  border: 1px solid #dfe8df;
+  border-radius: 7px;
+}
+.ordering-panel > p {
+  font-size: 10px;
+  color: #637970;
+  margin: 8px 0 17px;
+}
+.ordering-row {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding: 13px 0;
+  border-top: 1px solid #e7ede5;
+}
+.ordering-row strong {
+  flex: 1;
+  overflow-wrap: anywhere;
+  font-size: 13px;
+}
+.ordering-row small {
+  display: block;
+  font-weight: 400;
+  font-size: 10px;
+  color: #697d73;
+  margin-top: 5px;
+}
+.ordering-row .mono {
+  font-size: 12px;
+  white-space: nowrap;
+}
+.ordering-panel .exclusion {
+  color: #a2552d;
+  font-size: 12px;
+}
+.interval-map-title {
+  margin: 22px 0 8px;
+}
+.interval-map {
+  display: flex;
+  width: 100%;
+  height: 46px;
+  gap: 2px;
+  border-radius: 5px;
+  overflow: hidden;
+  margin: 14px 0;
+}
+.interval-map > div {
+  flex-basis: 0;
+  min-width: 1px;
+  display: grid;
+  place-items: center;
+  color: white;
+  font-size: 11px;
+}
+.interval-details {
+  font-size: 11px;
+  margin: 16px 0;
+}
+.interval-details summary {
+  cursor: pointer;
+  padding: 9px 0;
+  color: #276b5d;
+}
+.events-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin: 22px 0;
+}
+.events-grid article {
+  padding: 18px;
+  background: #f3f8f5;
+  border-left: 3px solid #167c78;
+  border-radius: 5px;
+}
+.events-grid article.regime-event {
+  border-color: #bd8646;
+  background: #fbf7ee;
+}
+.events-grid article > span {
+  font-size: 9px;
+  letter-spacing: 0.8px;
+  color: #68786a;
+}
+.events-grid h4 {
+  margin: 9px 0;
+  font-size: 17px;
+}
+.events-grid article > strong {
+  font-size: 9px;
+}
+.events-grid p {
+  font-size: 11px;
+  line-height: 1.7;
+  margin: 12px 0;
+  overflow-wrap: anywhere;
+}
+.decision-interpretation {
+  background: #eff5f0;
+  border-radius: 6px;
+  padding: 20px;
+}
+.decision-interpretation h3 {
+  margin-bottom: 14px;
+}
+.decision-interpretation p {
+  font-size: 12px;
+  line-height: 1.8;
+  margin-top: 9px;
+}
+.decision-warning {
+  font-size: 10px;
+  line-height: 1.7;
+  margin: 14px 0;
+  color: #806238;
+  overflow-wrap: anywhere;
+}
+.decision-warning strong {
+  display: block;
+  letter-spacing: 0.5px;
+}
+.material-evidence {
+  border-bottom: 1px solid #dce5dc;
+  padding: 12px 0;
+}
+.material-evidence p {
+  line-height: 1.8;
+  margin: 8px 0;
+}
+.goal-origin {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  align-items: center;
+  margin: 8px 0 15px;
+  font-size: 10px;
+  color: #6a7d73;
+}
+.goal-origin button {
+  font-size: 9px;
+  padding: 6px 9px;
+}
+@media (max-width: 700px) {
+  .decision-plot {
+    min-width: 680px;
+  }
+  .temperature-explorer > h3 {
+    font-size: 20px;
+  }
+  .interval-controls {
+    grid-template-columns: 1fr 1fr 70px;
+  }
+  .interval-controls .primary {
+    grid-column: 1 / -1;
+  }
+  .events-grid {
+    grid-template-columns: 1fr;
+  }
+  .decision-output .verdict {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .ordering-row {
+    flex-wrap: wrap;
+  }
+  .ordering-row strong {
+    font-size: 11px;
+    flex-basis: 75%;
+  }
+  .ordering-row .mono {
+    padding-left: 40px;
+  }
+  .temperature-scrubber {
+    padding: 14px;
+  }
+  .goal-origin {
+    align-items: flex-start;
+  }
+}

@@ -14,6 +14,7 @@ import {
 } from 'lucide-react'
 import { api, downloadReport, scientific } from './api'
 import { ComparisonPlot, TemperaturePlot } from './Plots'
+import TemperatureExplorer from './TemperatureExplorer'
 import type {
   Adversarial,
   Calculation,
@@ -34,6 +35,11 @@ const defaultRequest: Request = {
   top_n: 5,
   allow_extrapolation: false,
   mode: 'OFFLINE_DETERMINISTIC',
+  goal_origin: 'GENERATED',
+}
+
+function generatedGoal(r: Request) {
+  return `Find ${r.conductivity_type} oxygen-ion conductors${r.temperature === undefined ? '' : ` at ${r.temperature} ${r.temperature_unit === 'C' ? '°C' : 'K'}`}. Show source provenance.`
 }
 const seeds = [
   { name: '600 °C screening', request: defaultRequest },
@@ -81,6 +87,7 @@ export default function App() {
   const [catalog, setCatalog] = useState<Catalog | null>(null)
   const [health, setHealth] = useState<Health | null>(null)
   const [report, setReport] = useState<Report | null>(null)
+  const [decisionTrace, setDecisionTrace] = useState<Report['trace']>([])
   const [groupId, setGroupId] = useState('')
   const [selectedId, setSelectedId] = useState<number>()
   const [curve, setCurve] = useState<Curve | null>(null)
@@ -92,6 +99,11 @@ export default function App() {
   const [rowsInput, setRowsInput] = useState('1, 2, 3')
   const requestSequence = useRef(0)
   const detailSequence = useRef(0)
+  function updateRequest(patch: Partial<Request>) {
+    const next = { ...request, ...patch }
+    if (next.goal_origin === 'GENERATED') next.goal = generatedGoal(next)
+    setRequest(next)
+  }
 
   useEffect(() => {
     Promise.all([api<Catalog>('/api/catalog'), api<Health>('/api/health')])
@@ -103,6 +115,7 @@ export default function App() {
   }, [])
 
   async function run(input: Request, wrongFormula = showAdversarial) {
+    setDecisionTrace([])
     const sequence = ++requestSequence.current
     setBusy(true)
     setError('')
@@ -199,7 +212,7 @@ export default function App() {
         <div className="sidebar-label trace-title">ANALYSIS TRACE</div>
         <ol className="trace">
           {(
-            report?.trace ?? [
+            (decisionTrace.length ? decisionTrace : report?.trace) ?? [
               { step: 'parse_goal', outcome: 'READY', detail: 'Parse a bounded screening request' },
               {
                 step: 'retrieve_records',
@@ -220,8 +233,8 @@ export default function App() {
             ]
           ).map((step, i) => (
             <li key={i} title={step.detail}>
-              <span className={report ? 'done' : ''}>
-                {report ? <Check size={12} /> : `0${i + 1}`}
+              <span className={report || decisionTrace.length ? 'done' : ''}>
+                {report || decisionTrace.length ? <Check size={12} /> : `0${i + 1}`}
               </span>
               <div>
                 {step.step.replaceAll('_', ' ')}
@@ -280,6 +293,8 @@ export default function App() {
           </div>
         </section>
 
+        <TemperatureExplorer catalog={catalog} mode={request.mode} onTrace={setDecisionTrace} />
+
         <section className="request-card">
           <div className="section-heading">
             <div>
@@ -294,9 +309,21 @@ export default function App() {
           <textarea
             id="goal"
             value={request.goal}
-            onChange={(e) => setRequest({ ...request, goal: e.target.value })}
+            onChange={(e) =>
+              setRequest({ ...request, goal: e.target.value, goal_origin: 'MANUAL' })
+            }
             maxLength={2000}
           />
+          <div className="goal-origin" data-testid="goal-origin">
+            <span>
+              {request.goal_origin === 'GENERATED'
+                ? 'Generated goal · synchronized with controls'
+                : 'Manual goal · all constraints checked against controls'}
+            </span>
+            <button onClick={() => updateRequest({ goal_origin: 'GENERATED' })}>
+              Use synchronized goal
+            </button>
+          </div>
           <div className="input-row">
             <label>
               Temperature
@@ -305,8 +332,7 @@ export default function App() {
                 aria-label="Temperature"
                 value={request.temperature ?? ''}
                 onChange={(e) =>
-                  setRequest({
-                    ...request,
+                  updateRequest({
                     temperature: e.target.value === '' ? undefined : Number(e.target.value),
                   })
                 }
@@ -317,9 +343,7 @@ export default function App() {
               <select
                 aria-label="Temperature unit"
                 value={request.temperature_unit}
-                onChange={(e) =>
-                  setRequest({ ...request, temperature_unit: e.target.value as 'C' | 'K' })
-                }
+                onChange={(e) => updateRequest({ temperature_unit: e.target.value as 'C' | 'K' })}
               >
                 <option value="C">°C</option>
                 <option value="K">K</option>
@@ -331,7 +355,7 @@ export default function App() {
                 aria-label="Conductivity type"
                 value={request.conductivity_type}
                 onChange={(e) =>
-                  setRequest({ ...request, conductivity_type: e.target.value as 'bulk' | 'total' })
+                  updateRequest({ conductivity_type: e.target.value as 'bulk' | 'total' })
                 }
               >
                 <option value="bulk">Bulk</option>
@@ -407,9 +431,9 @@ export default function App() {
               </label>
             </div>
             <p>
-              Live LLM: {health?.real_llm_status ?? 'checking'}. Offline rules parse C/K,
-              bulk/total, class, and “formula X”; inspect the resolved plan. Goal and structured
-              inputs must agree.
+              Live LLM: {health?.real_llm_status ?? 'checking'}. Offline coverage grammar supports
+              C/K, bulk/total, class, “formula X” and provenance. Unknown clauses fail closed; goal
+              and controls must agree.
             </p>
           </details>
           <div className="seed-row">
@@ -527,6 +551,17 @@ export default function App() {
               <pre>{JSON.stringify(report.resolved_plan, null, 2)}</pre>
               <WarningList warnings={report.warnings} />
             </details>
+            {report.next_scientific_actions?.length ? (
+              <div className="measurement">
+                <FlaskConical size={17} />
+                <div>
+                  <strong>Next Scientific Action · proposed</strong>
+                  {report.next_scientific_actions.map((action, i) => (
+                    <p key={i}>{action}</p>
+                  ))}
+                </div>
+              </div>
+            ) : null}
 
             {report.groups.length > 0 && (
               <section className="card results-card">

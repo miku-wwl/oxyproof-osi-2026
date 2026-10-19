@@ -2,6 +2,7 @@
 
 import argparse
 import hashlib
+import json
 import sys
 import urllib.error
 import urllib.request
@@ -10,7 +11,14 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 
-from backend.app.data.ingest import DATA_URL, DATASET_MD5, DATASET_SHA256, FULL_PATH  # noqa: E402
+from backend.app.data.ingest import (  # noqa: E402
+    DATA_URL,
+    DATASET_MD5,
+    DATASET_SHA256,
+    FIXTURE_DIR,
+    FULL_PATH,
+    parse_csv,
+)
 
 
 def validate(data: bytes) -> None:
@@ -20,6 +28,8 @@ def validate(data: bytes) -> None:
         raise ValueError("SHA256_MISMATCH")
     if hashlib.md5(data, usedforsecurity=False).hexdigest() != DATASET_MD5:
         raise ValueError("MD5_MISMATCH")
+    columns = json.loads((FIXTURE_DIR / "manifest.json").read_text(encoding="utf-8"))["columns"]
+    parse_csv(data, columns, list(range(1, 484)))
 
 
 def main() -> None:

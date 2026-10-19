@@ -24,3 +24,5 @@ The official 2025 data describes first-place SKY (Materials Design Group) as ada
 - Review evidence, attribution and final claims before approving publication.
 
 No registration, organizer message, social post, commit, push or deployment is authorized by this file.
+
+Phase 2 recheck, October 20 NZDT: the public agenda still states October 21–22, deadline 00:00 UTC October 23 and optional up-to-four-minute video/presentation plus up-to-one-page write-up in a social-media submission. Direct HTTP evidence is in `artifacts/source_verification_v2.json`. No attendee Slack access or organizer confirmation occurred. Initial and Phase 2 engineering both began pre-event; eligibility remains unresolved. The earlier explicit approval pushed only the initial MVP, not Phase 2.

@@ -1,6 +1,6 @@
 from typing import Literal
 
-from pydantic import BaseModel, ConfigDict, Field, FiniteFloat, field_validator
+from pydantic import BaseModel, ConfigDict, Field, FiniteFloat, field_validator, model_validator
 
 Mode = Literal["OFFLINE_DETERMINISTIC", "REAL_LLM"]
 Verdict = Literal["CALCULATED", "EXTRAPOLATED", "INSUFFICIENT_EVIDENCE"]
@@ -21,6 +21,16 @@ class ScreenRequest(Contract):
     allow_extrapolation: bool = False
     top_n: int = Field(default=5, ge=1, le=20)
     mode: Mode = "OFFLINE_DETERMINISTIC"
+    goal_origin: Literal["GENERATED", "MANUAL"] = "MANUAL"
+
+    @model_validator(mode="before")
+    @classmethod
+    def structured_only_has_no_implied_text_constraint(cls, value):
+        # The legacy convenience default is 600 C only when no temperature is
+        # supplied. An absent goal must never invent a conflicting requirement.
+        if isinstance(value, dict) and "goal" not in value and value.get("temperature") is not None:
+            return {**value, "goal": "", "goal_origin": "GENERATED"}
+        return value
 
     @field_validator("row_ids")
     @classmethod
@@ -54,6 +64,20 @@ class ResolvedPlan(Contract):
 class WarningItem(Contract):
     code: str
     message: str
+
+
+class TextSpan(Contract):
+    start: int
+    end: int
+    text: str
+    field: str
+
+
+class RequestCoverage(Contract):
+    grammar_version: str = "2.0"
+    recognized: list[TextSpan] = Field(default_factory=list)
+    unresolved: list[TextSpan] = Field(default_factory=list)
+    complete: bool = False
 
 
 class Quantity(Contract):
@@ -148,3 +172,8 @@ class AuditReport(Contract):
     candidates: list[Calculation]
     excluded: list[Calculation]
     matched_count: int
+    request_coverage: RequestCoverage = Field(default_factory=RequestCoverage)
+    evidence_verdict: str = "INSUFFICIENT_EVIDENCE"
+    validated_tool: str = "screen_published_records"
+    validated_arguments: dict = Field(default_factory=dict)
+    next_scientific_actions: list[str] = Field(default_factory=list)

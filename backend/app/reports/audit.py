@@ -4,7 +4,13 @@ from collections import defaultdict
 
 from backend.app import __version__
 from backend.app.agents.llm import plan_with_llm
-from backend.app.agents.planner import PlanError, offline_plan, resolve_plan
+from backend.app.agents.planner import (
+    PlanError,
+    interpret,
+    offline_plan,
+    resolve_plan,
+    validate_model_coverage,
+)
 from backend.app.data.ingest import ROOT, Repository
 from backend.app.schemas import (
     AuditReport,
@@ -153,7 +159,8 @@ def calculate_record(record: Record, t: float, allow_extrapolation: bool = False
     return result
 
 
-def screen(request: ScreenRequest, repository: Repository) -> AuditReport:
+def screen(request: ScreenRequest, repository: Repository, *, model_plan=None) -> AuditReport:
+    coverage = interpret(request.goal, repository.classes()).coverage
     trace = []
     warnings = [
         warn(
@@ -164,7 +171,7 @@ def screen(request: ScreenRequest, repository: Repository) -> AuditReport:
     proposed = None
     model = response_id = None
     if request.mode == "REAL_LLM":
-        proposed, model, response_id = plan_with_llm(request, repository.classes())
+        proposed, model, response_id = model_plan or plan_with_llm(request, repository.classes())
         trace.append(
             TraceStep(
                 step="parse_goal",
@@ -178,13 +185,13 @@ def screen(request: ScreenRequest, repository: Repository) -> AuditReport:
             TraceStep(
                 step="parse_goal",
                 outcome="OFFLINE_DETERMINISTIC",
-                detail="Rules parse explicit temperature, type, class and 'formula X'. Structured fields resolve missing values; unrecognized constraints require human review.",
+                detail="Coverage grammar accounts for every non-punctuation span; unresolved clauses fail closed.",
             )
         )
         warnings.append(
             warn(
                 "BOUNDED_PARSER",
-                "Offline parser supports explicit C/K, bulk/total, known class and 'formula X'. Inspect resolved_plan; arbitrary prose is not fully understood.",
+                "Bounded grammar supports explicit C/K, bulk/total, known class, formula substring and provenance. Unresolved text is rejected; inspect request_coverage.",
             )
         )
     plan = None
@@ -192,7 +199,9 @@ def screen(request: ScreenRequest, repository: Repository) -> AuditReport:
     excluded = []
     groups = []
     matched_count = 0
+    evidence_verdict = "INSUFFICIENT_EVIDENCE"
     try:
+        validate_model_coverage(request.goal, proposed, repository.classes())
         plan = resolve_plan(request, proposed, repository.classes())
         matched = [
             r
@@ -290,8 +299,13 @@ def screen(request: ScreenRequest, repository: Repository) -> AuditReport:
                 detail=f"{len(groups)} comparison groups; top {plan.top_n} per exact DOI/type/technique/range. Groups sorted lexically, never by global performance. Omitted in-group tail remains counted.",
             )
         )
-    except PlanError as exc:
+        if candidates:
+            evidence_verdict = "SUPPORTED_CONDITIONAL_COMPARISON"
+    except (PlanError, ScienceError) as exc:
         warnings.append(warn("PLAN_REJECTED", str(exc)))
+        if exc.code != "PLAN_REJECTED":
+            warnings.append(warn(exc.code, str(exc)))
+        evidence_verdict = exc.code
         trace.append(TraceStep(step="parse_goal", outcome="INSUFFICIENT_EVIDENCE", detail=str(exc)))
     trace.append(
         TraceStep(
@@ -323,4 +337,13 @@ def screen(request: ScreenRequest, repository: Repository) -> AuditReport:
         candidates=candidates,
         excluded=excluded,
         matched_count=matched_count,
+        request_coverage=coverage,
+        evidence_verdict=evidence_verdict,
+        validated_arguments=plan.model_dump() if plan else {},
+        next_scientific_actions=[
+            "Proposed measurement: measure ionic conductivity and stability before, during and after exposure to the requested water-vapor fraction at the operating temperature; document exposure duration and sample preparation. No experiment was executed."
+            if any(word in request.goal.lower() for word in ("humidity", "wet"))
+            and evidence_verdict == "UNVERIFIED_CONSTRAINTS"
+            else "Proposed action: verify original-source atmosphere, preparation, density and conductivity type; obtain evidence for every unresolved requirement before making a material recommendation. No experiment was executed."
+        ],
     )
