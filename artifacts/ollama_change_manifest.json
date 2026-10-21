@@ -1,0 +1,426 @@
+{
+  "phase": "2.6.1",
+  "executed_at_utc": "2026-10-21T04:25:21.718761+00:00",
+  "statuses": {
+    "OLLAMA_SERVER_STATUS": "READY",
+    "OLLAMA_MODEL_STATUS": "READY",
+    "OLLAMA_MODEL": "phi4-mini:latest",
+    "OLLAMA_TOOL_CALLING_STATUS": "FAIL",
+    "LOCAL_LLM_STATUS": "FAILED",
+    "LOCAL_SCREENING_STATUS": "FAIL",
+    "LOCAL_TEMPERATURE_STATUS": "NOT_RUN",
+    "LOCAL_CONSTRAINT_REFUSAL_STATUS": "NOT_RUN",
+    "REAL_MODEL_REQUESTS_ATTEMPTED": 3,
+    "REAL_MODEL_REQUESTS_SUCCEEDED": 0,
+    "AGENT_TRACE_STATUS": "PARTIAL",
+    "SCIENTIFIC_INTEGRITY_STATUS": "PASS",
+    "BACKEND_TEST_STATUS": "PASS",
+    "FRONTEND_TEST_STATUS": "PASS",
+    "BROWSER_E2E_STATUS": "PASS",
+    "BENCHMARK_STATUS": "PASS",
+    "RELEASE_READINESS": "NO_GO",
+    "SUBMISSION_STATUS": "NOT_SUBMITTED",
+    "SPRINT_STATUS": "PARTIAL",
+    "EVENT_RULES_STATUS": "PARTIAL",
+    "SCIENCE_DATA_STATUS": "VERIFIED_REAL",
+    "REAL_LLM_STATUS": "FAILED",
+    "OFFLINE_DEMO_STATUS": "PASS",
+    "TEST_STATUS": "PASS",
+    "SUBMISSION_READINESS": "PARTIAL"
+  },
+  "entry_git_head": "3a470d21f5a610beefe92bb3d81cd2dfaa14862f",
+  "current_git_head": "3a470d21f5a610beefe92bb3d81cd2dfaa14862f",
+  "branch": "main",
+  "origin": "git@github.com:miku-wwl/oxyproof-osi-2026.git",
+  "code_version": {
+    "app_version": "0.1.0",
+    "git_base": "3a470d21f5a610beefe92bb3d81cd2dfaa14862f",
+    "calculation_source_sha256": "36beba240ad32d80b2c0e7aad13d220c4e3f780d6f19ff51ff64f630e4d9ebb8"
+  },
+  "changed_file_count": 48,
+  "staged_file_count": 0,
+  "changes": [
+    {
+      "path": ".env.example",
+      "bytes": 375,
+      "sha256": "a884ba4eded6df9f0ce31883a38b260c4265c9ddc5a457c30f41022af51f1796"
+    },
+    {
+      "path": "README.md",
+      "bytes": 12998,
+      "sha256": "bb5ed8b63243ef59501aee641ceb38e32419b0fef692066c4500a9444f0f8e9f"
+    },
+    {
+      "path": "artifacts/327c_bismuth_bulk.json",
+      "bytes": 11434,
+      "sha256": "f66b7b4ef8dfcc487080af3dc383d1e9b81947b58dd15aa76592b49507309902"
+    },
+    {
+      "path": "artifacts/600c_huang_bulk.json",
+      "bytes": 20000,
+      "sha256": "05191843c475cca65e2d1edd4027d7acbecfd9679e627ad96fffe26fbc0e2091"
+    },
+    {
+      "path": "artifacts/827c_cobalt_bulk.json",
+      "bytes": 11552,
+      "sha256": "a0f697dd708b34cbd8cc6fd47a7ca9ec2a9de15afb6bac347f4d432969a0ae8c"
+    },
+    {
+      "path": "artifacts/ambiguous_regime.json",
+      "bytes": 9460,
+      "sha256": "dfead723eef835597bce3f45e5a319663c30405631bd9e5c4f308425b954c36d"
+    },
+    {
+      "path": "artifacts/browser/agent-refusal.png",
+      "bytes": 79028,
+      "sha256": "3b22e0991e90eb45d52b3245b785448d54f1991d85e19790cf3276de7e011564"
+    },
+    {
+      "path": "artifacts/browser/agent-screening.png",
+      "bytes": 85589,
+      "sha256": "21deab62e91a58b7ffc86f2f2419308bb49c5e8c8767cb34f29846dd4aac1172"
+    },
+    {
+      "path": "artifacts/browser/agent-temperature.png",
+      "bytes": 105375,
+      "sha256": "ad6be64679b29a1a5f38ab1882875bf3e2846bf8ab50c1807998ec32ac5c97f3"
+    },
+    {
+      "path": "artifacts/browser/humidity-abstention.png",
+      "bytes": 197294,
+      "sha256": "f48c269b10e0dc3e6b0bbc9c9f2787fad41533c9735eaf0a1c174e09f80e5d66"
+    },
+    {
+      "path": "artifacts/browser_e2e_results.json",
+      "bytes": 27492,
+      "sha256": "ccec38c820d119d556311e42e5e5e41b2dfe29b6389c1a22af2da80518d7e3fe"
+    },
+    {
+      "path": "artifacts/humidity_refusal_v2.json",
+      "bytes": 6486,
+      "sha256": "661c62d629ef3998baeb008fb0368b98004f21e92c358638256a65f9dee80f9a"
+    },
+    {
+      "path": "artifacts/ollama_change_manifest.json",
+      "bytes": null,
+      "sha256": null
+    },
+    {
+      "path": "artifacts/ollama_diagnostic_1.json",
+      "bytes": 9212,
+      "sha256": "5755b97f3bead85fb181f2e9d6d84b3b3511f5d58c4b963a8f237dac60cdb774"
+    },
+    {
+      "path": "artifacts/ollama_diagnostic_2.json",
+      "bytes": 2312,
+      "sha256": "a4fdb80035ba365b8ca024318327ecda8c2c202f6554c0a594878ad8e2431c54"
+    },
+    {
+      "path": "artifacts/ollama_http_offline.json",
+      "bytes": 241389,
+      "sha256": "0fcfe2b3a9a989dcdd24887ed61525509b05c5e7f5f6b59405a75bc43e6f0d8c"
+    },
+    {
+      "path": "artifacts/ollama_performance.json",
+      "bytes": 5705,
+      "sha256": "639697046ff04325f158956a27841752020b31dc0359800cc2303bb446848592"
+    },
+    {
+      "path": "artifacts/ollama_real_agent_acceptance.json",
+      "bytes": 7348,
+      "sha256": "9aa80f4df34dec8e424b04834b735121ceb302663aeaccbac96aa7087861b515"
+    },
+    {
+      "path": "artifacts/ollama_regression.json",
+      "bytes": 11746,
+      "sha256": "0078bece2cbd4b12339def88dd369b6b6c7ca9fee72a4031e4965512eb20b0cb"
+    },
+    {
+      "path": "artifacts/out_of_range.json",
+      "bytes": 10340,
+      "sha256": "bfb4244a9b53755c551a08c32635ffcb5deaa56772cfe43fa036ef05c6f1b371"
+    },
+    {
+      "path": "artifacts/rank_reversal_reference_v2.json",
+      "bytes": 8691,
+      "sha256": "af9cf506c8535d7b141a934473797cc60695c34947586ccc22dadacefc592477"
+    },
+    {
+      "path": "artifacts/real_agent_acceptance.json",
+      "bytes": 242365,
+      "sha256": "497c23bfdbe8879fd47dff95607710273cd6358feee96f4f5cf84ebba26617d6"
+    },
+    {
+      "path": "artifacts/scientific_acceptance.json",
+      "bytes": 8302,
+      "sha256": "a628f4c50197493c0ec166faf18cf07a8f711d544059c381cf02c09df68145b1"
+    },
+    {
+      "path": "artifacts/scientific_benchmark_v2.json",
+      "bytes": 38792,
+      "sha256": "43a2374adccc3af360c12374bc305cce6094a462ba8c36a24d786ac8de6b6236"
+    },
+    {
+      "path": "artifacts/temperature_decision_flagship.json",
+      "bytes": 147004,
+      "sha256": "29883f4934ab271fbb2d4fa5de5dfb9e3f79bc3fdad31922ada5f14a579f5420"
+    },
+    {
+      "path": "backend/app/agents/llm.py",
+      "bytes": 6850,
+      "sha256": "1d5af959fe8dab783b0a12b55551c6bde022031374aa927a6f297a34ebaafe1f"
+    },
+    {
+      "path": "backend/app/agents/ollama.py",
+      "bytes": 8780,
+      "sha256": "c5af0564495d393343b44c9a3ca79705872de8109ef8cc6bb889ead0ac96889e"
+    },
+    {
+      "path": "backend/app/agents/trace.py",
+      "bytes": 6080,
+      "sha256": "ccd523daefeab67cd68f05aabcf61ab38a611afd8c936e200f110792a7596f4b"
+    },
+    {
+      "path": "backend/app/agents/workflow.py",
+      "bytes": 7881,
+      "sha256": "3a092f06fd09c3dae7afa3bbcbf33dccb7a3df08ee6635621fcc4cde867d91a7"
+    },
+    {
+      "path": "backend/app/main.py",
+      "bytes": 8631,
+      "sha256": "aceefcfc6df8de19fb47e63aa4282fef2a2a14ba6a2ca102874382e466d987ae"
+    },
+    {
+      "path": "backend/app/reports/audit.py",
+      "bytes": 15415,
+      "sha256": "69dce835eabf16f2ae6c3fa83a47971ae002c93eb93b867ee71409f3cecf6351"
+    },
+    {
+      "path": "backend/app/schemas.py",
+      "bytes": 7826,
+      "sha256": "e9fe37e961cde7348ea7dd01cb4cc819b29f2ed541fd98ed45088d8edf2d26a7"
+    },
+    {
+      "path": "backend/app/science/temperature_decisions.py",
+      "bytes": 22395,
+      "sha256": "93bf4843387047c9baa5900968f3988141050d24347143211437bbc8d115fb59"
+    },
+    {
+      "path": "docs/OLLAMA_AGENT_DEMO.md",
+      "bytes": 2542,
+      "sha256": "802460f70e62cd552e0c24400a53b7f02fea5470e8d2d8a00c69645872b5fda3"
+    },
+    {
+      "path": "docs/OLLAMA_REAL_AGENT_ACCEPTANCE.md",
+      "bytes": 13706,
+      "sha256": "64c2cd4883b5f083654bd487f436b80e7be2c813289c20ee31411d2999058b2d"
+    },
+    {
+      "path": "docs/REAL_AGENT_ACCEPTANCE.md",
+      "bytes": 12458,
+      "sha256": "a5c1a91443069629d815855c5ecd1df93b1fdd979924fb2708f8e8e1f5f961f8"
+    },
+    {
+      "path": "docs/REAL_AGENT_DEMO_SCRIPT.md",
+      "bytes": 4275,
+      "sha256": "8895124b304ca3ac591d8ad7cd21a059baa4ee1b06cdf35764631c869b2b8d1e"
+    },
+    {
+      "path": "frontend/playwright.config.ts",
+      "bytes": 990,
+      "sha256": "55eb43d5c92d7166a410e40e0daa1e0e2a8965c98d577aa8fa858ca4b74c867b"
+    },
+    {
+      "path": "frontend/src/App.tsx",
+      "bytes": 31895,
+      "sha256": "8ce7a3075bf354309ebc88a89bf23d914148f0830183b1b7b45bee850821a2e2"
+    },
+    {
+      "path": "frontend/src/ResearchAgent.test.tsx",
+      "bytes": 2511,
+      "sha256": "49d7ba8b83ee9df20360f76fc338482763851af914344cad8e54ac7ff4dfede7"
+    },
+    {
+      "path": "frontend/src/ResearchAgent.tsx",
+      "bytes": 8143,
+      "sha256": "a1f538cf24f93b673063158c19fdbb464a0ac8889052298c07b98058cb2a7f03"
+    },
+    {
+      "path": "frontend/src/api.ts",
+      "bytes": 870,
+      "sha256": "be15f10dbadf52da82edb987d3526a1527128858d17efd43846855ca91785e4f"
+    },
+    {
+      "path": "frontend/src/types.ts",
+      "bytes": 5079,
+      "sha256": "f315660c08154d0b3fc4027a686d93601bfddedf3a33d8f34bdc273b80d66ee7"
+    },
+    {
+      "path": "scripts/accept_real_agent.py",
+      "bytes": 15601,
+      "sha256": "d874d6e0201698ce633edf6b1b27a8954261bc70ddc17cd9a19dfba49622f63b"
+    },
+    {
+      "path": "scripts/browser_e2e.py",
+      "bytes": 1230,
+      "sha256": "32c0de839f3b4e4010b6f7051fb3979d984c3e7119453d0c2909d81466d3df63"
+    },
+    {
+      "path": "scripts/validate_v2.py",
+      "bytes": 5791,
+      "sha256": "6c7a26afc50e2c79087fe55cc5ea9b6c61b83274dcf5078acc43b0cdc3de429e"
+    },
+    {
+      "path": "tests/conftest.py",
+      "bytes": 799,
+      "sha256": "31d24ee94acf7387d54f397152a6d0f15b2e7464455c0dc3552cc0c8c4b79b69"
+    },
+    {
+      "path": "tests/test_ollama.py",
+      "bytes": 13271,
+      "sha256": "190cf3a1fe5c0460ce4b66bed4d1e95608537cb031a0c9252719ad3fe41dc22a"
+    }
+  ],
+  "self_hash_policy": "Manifest lists itself; self size/hash omitted to avoid circular hashing.",
+  "protected_files": [
+    {
+      "path": "backend/app/science/conductivity.py",
+      "sha256": "120c1846f63a77244154234b0e1979b0ecbfb3a30ca99ca38fdb8db6fd400b2e",
+      "git_diff": "UNCHANGED"
+    },
+    {
+      "path": "backend/app/agents/planner.py",
+      "sha256": "b9a514b21096f81fadf2405541c7f28a72feaccc2df7bcdf0b30de4650d06173",
+      "git_diff": "UNCHANGED"
+    },
+    {
+      "path": "backend/app/data/fixtures/published_subset.csv",
+      "sha256": "6cad9e6cd6ee0cac98f1de979688788b5e3c1bade390da289c3722d46389d214",
+      "git_diff": "UNCHANGED"
+    },
+    {
+      "path": "backend/app/data/fixtures/manifest.json",
+      "sha256": "1bd64fdbcad25ee4883c54097800792081e0fc04f005421a08675dd86204eb90",
+      "git_diff": "UNCHANGED"
+    },
+    {
+      "path": "benchmarks/scientific_cases.json",
+      "sha256": "076ca9310f4afb9c2efbeb3aac15e0a3fb11cc43a2bee3c2f8c4454d008476bd",
+      "git_diff": "UNCHANGED"
+    },
+    {
+      "path": "benchmarks/reference_v2.py",
+      "sha256": "97e4de1ed454e13ad3866e44b1e01a735790c9050410adac197c71a30143f649",
+      "git_diff": "UNCHANGED"
+    },
+    {
+      "path": "benchmarks/evaluate.py",
+      "sha256": "b12cdb711c5cfac95b62a80a90c6915783d0c89e07c7fd1eb869aa4dbee8f702",
+      "git_diff": "UNCHANGED"
+    },
+    {
+      "path": "uv.lock",
+      "sha256": "68a61962e9f323c82c8cc79660a12136b2803e8dc6d855aefe8bd44e6a289926",
+      "git_diff": "UNCHANGED"
+    },
+    {
+      "path": "frontend/package-lock.json",
+      "sha256": "042895f31250fa53d1d3e3f9754abe8ddc59718e784957e6062c199154c659ec",
+      "git_diff": "UNCHANGED"
+    },
+    {
+      "path": "output/pdf/oxyproof-one-page-submission.pdf",
+      "sha256": "2d695fb59b31530ec9233044bc911da3a5c0574c3372c219e6cab32abda6c959",
+      "git_diff": "UNCHANGED"
+    }
+  ],
+  "protected_media": [
+    {
+      "path": ".local/demo/oxyproof-phase2.webm",
+      "sha256": "3169945007ec4bdf773e7907f2708774a8bc76945c3ad7bd5589f3225dd6b3a3",
+      "hash_matches_prior": true
+    },
+    {
+      "path": ".local/demo-phase25/oxyproof-phase2.webm",
+      "sha256": "e39fe0b000d984748e84782486d889c803b6d6e880e7dcc9c1cc4e48e7cb8c05",
+      "hash_matches_prior": true
+    }
+  ],
+  "validation": {
+    "status": "PASS",
+    "stage_count": 16,
+    "backend_passed": 212,
+    "frontend_passed": 11,
+    "browser_stats": {
+      "startTime": "2026-10-21T04:19:53.561Z",
+      "duration": 25231.271,
+      "expected": 18,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    "benchmark": "49/49",
+    "legacy_guards": "8/8; intentionally unsafe baseline 1/8",
+    "offline_demos": "5/5",
+    "agent_offline_scenarios": "3/3",
+    "independent_science": "3 roots; 6 endpoint values; 6 side checks; 80 Decimal digits",
+    "live_native_acceptance": "FAILED, primary A FAIL, B/C NOT_RUN",
+    "mock_evidence": "37 local-provider backend cases and synthetic UI identity do not count as live acceptance."
+  },
+  "scientific_source": {
+    "dataset_doi": "10.5281/zenodo.18947543",
+    "dataset_record_id": "18947543",
+    "dataset_sha256": "8ec66b131bae79f8520f7cf40e91e2be2541995939bc43b744eaac627f4fad34",
+    "loaded_sha256": "8ec66b131bae79f8520f7cf40e91e2be2541995939bc43b744eaac627f4fad34",
+    "scope": "FULL_DATASET",
+    "row_count": 483,
+    "license": "CC-BY-4.0",
+    "accessed_date": "2026-10-20",
+    "article_url": "https://www.nature.com/articles/s41597-026-07100-x",
+    "dataset_url": "https://zenodo.org/records/18947543",
+    "attribution": "Jang, Seong-Hoon; Kiyohara, Shin; Takamura, Hitoshi; Kumagai, Yu (2026). Charting the Landscape of Oxygen Ion Conductors: A 60-Year Dataset. Zenodo. https://doi.org/10.5281/zenodo.18947543. CC BY 4.0."
+  },
+  "security_scan": {
+    "status": "PASS",
+    "scope": "Changed text files only, three credential/private-key patterns; not a universal security audit.",
+    "files_scanned": 43
+  },
+  "public_actions": {
+    "committed": false,
+    "pushed": false,
+    "deployed": false,
+    "published": false,
+    "submitted": false,
+    "paid_calls": 0,
+    "cloud_llm_calls": 0
+  },
+  "ollama_changes": {
+    "model_downloads": 0,
+    "permanent_startup_changes": false,
+    "model_unload": false,
+    "requests_attempted": 3,
+    "primary_requests": 1,
+    "diagnostic_requests": 2,
+    "http_200_completed": 3,
+    "native_plans_accepted": 0
+  },
+  "handover_service": {
+    "url": "http://127.0.0.1:8000",
+    "pid": 57288,
+    "provider_configuration": "ollama, process environment only",
+    "health_status": "CONFIGURED_NOT_VERIFIED",
+    "actual_http_offline_checks": "3/3 PASS; zero extra inference calls"
+  },
+  "limitations": [
+    "No passing local scientific tool trace.",
+    "Native-response failure cause unresolved; metadata advertises tools but observed responses did not call them.",
+    "B/C live scenarios blocked by systemic error stop, not scientific success.",
+    "Original source conditions and uncertainty remain unverified.",
+    "Registration/Slack rules/pre-event eligibility remain human gates."
+  ],
+  "temporary_validation_failures": [
+    "Offline wording caused an ambiguous component query; wording corrected.",
+    "REAL_LLM selected-runtime clarification initially changed offline badge text; legacy offline label restored.",
+    "Ignored finalization helper initially used deprecated instance.model_fields; changed to class.model_fields, subsequent run warning-free."
+  ]
+}

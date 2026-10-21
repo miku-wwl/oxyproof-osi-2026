@@ -1,5 +1,6 @@
 export async function api<T>(path: string, init?: RequestInit): Promise<T> {
-  const response = await fetch(path, { ...init, signal: AbortSignal.timeout(35000) })
+  // CPU planning can legitimately take up to the provider's 180 s timeout.
+  const response = await fetch(path, { ...init, signal: AbortSignal.timeout(190000) })
   const body = await response.json()
   if (!response.ok) {
     const detail = body.detail ?? body

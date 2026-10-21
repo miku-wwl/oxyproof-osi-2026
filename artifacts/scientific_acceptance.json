@@ -1,6 +1,6 @@
 {
   "status": "PASS",
-  "executed_at_utc": "2026-10-21T03:33:08.274669+00:00",
+  "executed_at_utc": "2026-10-21T04:20:26.218790+00:00",
   "method": "Independent 80-digit Decimal SI arithmetic; exact CSV strings; 40/80 digit stability; no production calculator/constants/regime selector in reference functions",
   "dataset_sha256": "8ec66b131bae79f8520f7cf40e91e2be2541995939bc43b744eaac627f4fad34",
   "row_count": 483,
@@ -252,8 +252,8 @@
   ],
   "code_version": {
     "app_version": "0.1.0",
-    "git_base": "ff17b2b02e578101952143db8541c06d84ba3ea8",
-    "calculation_source_sha256": "8ef09808461bdd153bd440bd96fc8f83389652d6d06864dea5b56058f60727ef"
+    "git_base": "3a470d21f5a610beefe92bb3d81cd2dfaa14862f",
+    "calculation_source_sha256": "36beba240ad32d80b2c0e7aad13d220c4e3f780d6f19ff51ff64f630e4d9ebb8"
   },
   "qualification": "Model-derived crossover temperatures; uncertainty bounds unavailable; experimental confirmation required.",
   "interpretation": "Conditional model comparison, not experimental superiority; no uncertainty bounds or measured crossings."

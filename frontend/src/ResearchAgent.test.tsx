@@ -21,6 +21,23 @@ const trace: ExecutionTrace = {
   provider_metadata: {},
 }
 afterEach(cleanup)
+it('labels local native inference without inventing a provider response ID', () => {
+  render(
+    <ExecutionTraceView
+      trace={{
+        ...trace,
+        model: 'phi4-mini:latest',
+        response_id: null,
+        local_invocation_id: 'SYNTHETIC_LOCAL_INVOCATION',
+        provider_metadata: { provider: 'Ollama Local' },
+      }}
+    />,
+  )
+  expect(screen.getByText(/REAL_LLM — Ollama Local — phi4-mini:latest/)).toHaveTextContent(
+    'Local invocation: SYNTHETIC_LOCAL_INVOCATION',
+  )
+  expect(screen.queryByText(/response ID unavailable/)).not.toBeInTheDocument()
+})
 it('renders provider identity only from a returned execution trace', () => {
   render(<ExecutionTraceView trace={trace} />)
   expect(screen.getByText(/Provider plan received/)).toHaveTextContent('SYNTHETIC_MODEL')

@@ -1,0 +1,191 @@
+{
+  "phase": "2.6.1",
+  "executed_at_utc": "2026-10-21T04:12:45.038861+00:00",
+  "status": "FAILED",
+  "provider": "Ollama Local",
+  "model": "phi4-mini:latest",
+  "endpoint": "http://127.0.0.1:11434/api/chat",
+  "real_provider_requests_attempted": 3,
+  "real_provider_requests_succeeded": 0,
+  "max_primary_requests": 3,
+  "automatic_retries": 0,
+  "source": {
+    "dataset_doi": "10.5281/zenodo.18947543",
+    "dataset_record_id": "18947543",
+    "dataset_sha256": "8ec66b131bae79f8520f7cf40e91e2be2541995939bc43b744eaac627f4fad34",
+    "loaded_sha256": "8ec66b131bae79f8520f7cf40e91e2be2541995939bc43b744eaac627f4fad34",
+    "scope": "FULL_DATASET",
+    "row_count": 483,
+    "license": "CC-BY-4.0",
+    "accessed_date": "2026-10-20",
+    "article_url": "https://www.nature.com/articles/s41597-026-07100-x",
+    "dataset_url": "https://zenodo.org/records/18947543",
+    "attribution": "Jang, Seong-Hoon; Kiyohara, Shin; Takamura, Hitoshi; Kumagai, Yu (2026). Charting the Landscape of Oxygen Ion Conductors: A 60-Year Dataset. Zenodo. https://doi.org/10.5281/zenodo.18947543. CC BY 4.0."
+  },
+  "code_version": {
+    "app_version": "0.1.0",
+    "git_base": "3a470d21f5a610beefe92bb3d81cd2dfaa14862f",
+    "calculation_source_sha256": "390a216e87abf35642ad1c5608a1988c3fed1e93878fb91f89fd51a067e9e0b4"
+  },
+  "live_scenarios": [
+    {
+      "scenario": "A",
+      "request": "Find promising published bulk oxygen-ion conductors around 600 degrees Celsius, show their conductivity estimates, and tell me what evidence supports the comparison.",
+      "status": "FAIL",
+      "error": "NATIVE_TOOL_CALL_REQUIRED: exactly one call, no prose/JSON fallback",
+      "provider_evidence": {
+        "provider": "Ollama Local",
+        "requested_model": "phi4-mini:latest",
+        "returned_model": "phi4-mini:latest",
+        "local_invocation_id": "d4668013-73c4-48f3-9408-cd2da3c17de5",
+        "response_id": null,
+        "started_at_utc": "2026-10-21T04:12:45.366934+00:00",
+        "endpoint": "http://127.0.0.1:11434/api/chat",
+        "inference_protocol": "NATIVE_TOOL_CALLING",
+        "execution_status": "FAILED",
+        "http_status": 200,
+        "provider_created_at": "2026-10-21T04:13:25.1901493Z",
+        "received_at_utc": "2026-10-21T04:13:25.192968+00:00",
+        "usage": {
+          "prompt_eval_count": 744,
+          "eval_count": 298,
+          "total_duration": 39799030500,
+          "load_duration": 11248700,
+          "prompt_eval_duration": 8217489000,
+          "eval_duration": 31420119000
+        },
+        "native_tool_call_count": 0,
+        "wall_seconds": 39.813
+      }
+    },
+    {
+      "scenario": "B",
+      "request": "How does the ranking of the three comparable Huang materials change from 700 K to 1000 K? Explain the change using their published activation energies.",
+      "status": "NOT_RUN",
+      "blocker": "SYSTEMIC_PROVIDER_FAILURE: diagnostic required before more calls"
+    },
+    {
+      "scenario": "C",
+      "request": "Find oxygen-ion conductors at 600 \u00b0C that survive 10% humidity and remain stable for 10,000 operating hours.",
+      "status": "NOT_RUN",
+      "blocker": "SYSTEMIC_PROVIDER_FAILURE: diagnostic required before more calls"
+    }
+  ],
+  "preflight": {
+    "version": {
+      "version": "0.35.1"
+    },
+    "tags": {
+      "models": [
+        {
+          "name": "phi4-mini:latest",
+          "model": "phi4-mini:latest",
+          "modified_at": "2026-10-06T13:16:21.6659477+13:00",
+          "size": 2491876774,
+          "digest": "78fad5d182a7c33065e153a5f8ba210754207ba9d91973f57dffa7f487363753",
+          "details": {
+            "parent_model": "",
+            "format": "gguf",
+            "family": "phi3",
+            "families": [
+              "phi3"
+            ],
+            "parameter_size": "3.8B",
+            "quantization_level": "Q4_K_M",
+            "context_length": 131072,
+            "embedding_length": 3072
+          },
+          "capabilities": [
+            "completion",
+            "tools"
+          ]
+        }
+      ]
+    },
+    "ps": {
+      "models": [
+        {
+          "name": "phi4-mini:latest",
+          "model": "phi4-mini:latest",
+          "size": 3094704290,
+          "digest": "78fad5d182a7c33065e153a5f8ba210754207ba9d91973f57dffa7f487363753",
+          "details": {
+            "parent_model": "",
+            "format": "gguf",
+            "family": "phi3",
+            "families": [
+              "phi3"
+            ],
+            "parameter_size": "3.8B",
+            "quantization_level": "Q4_K_M"
+          },
+          "expires_at": "2319-01-31T16:47:42.772413407+13:00",
+          "size_vram": 0,
+          "context_length": 4096
+        }
+      ]
+    }
+  },
+  "selection_scope": "A uses owner-defined evaluation rows [1,2,3]; B uses the named published Huang demonstration, not autonomous material discovery.",
+  "limitations": [
+    "Curated-fit comparisons remain conditional; no validated uncertainty, humidity or lifetime evidence.",
+    "Local invocation IDs are application-generated, never provider Response IDs."
+  ],
+  "model_digest": "78fad5d182a7c33065e153a5f8ba210754207ba9d91973f57dffa7f487363753",
+  "postflight_ps": {
+    "models": [
+      {
+        "name": "phi4-mini:latest",
+        "model": "phi4-mini:latest",
+        "size": 3094704290,
+        "digest": "78fad5d182a7c33065e153a5f8ba210754207ba9d91973f57dffa7f487363753",
+        "details": {
+          "parent_model": "",
+          "format": "gguf",
+          "family": "phi3",
+          "families": [
+            "phi3"
+          ],
+          "parameter_size": "3.8B",
+          "quantization_level": "Q4_K_M"
+        },
+        "expires_at": "2319-01-31T17:00:42.046541907+13:00",
+        "size_vram": 0,
+        "context_length": 4096
+      }
+    ]
+  },
+  "diagnostic_evidence": [
+    {
+      "path": "artifacts/ollama_diagnostic_1.json",
+      "status": "FAIL",
+      "classification": "DIAGNOSTIC_NATIVE_FORMAT_CUE"
+    },
+    {
+      "path": "artifacts/ollama_diagnostic_2.json",
+      "status": "FAIL",
+      "classification": "DIAGNOSTIC_2_MINIMAL_NATIVE_TOOL"
+    }
+  ],
+  "diagnostic_requests_attempted": 2,
+  "total_real_model_requests_attempted": 3,
+  "completed_http_inferences": 3,
+  "accepted_native_plans": 0,
+  "total_successful_scientific_acceptance_scenarios": 0,
+  "success_definition": "Accepted native typed tool plan, not HTTP 200 or ordinary text generation.",
+  "stop_reason": "SYSTEMIC_NATIVE_TOOL_CALL_FAILURE; both authorized diagnostics exhausted; B/C deliberately NOT_RUN.",
+  "final_code_version": {
+    "app_version": "0.1.0",
+    "git_base": "3a470d21f5a610beefe92bb3d81cd2dfaa14862f",
+    "calculation_source_sha256": "36beba240ad32d80b2c0e7aad13d220c4e3f780d6f19ff51ff64f630e4d9ebb8"
+  },
+  "model_selected_tool": null,
+  "deterministically_expected_tool": "screen_published_records",
+  "tool_agreement": null,
+  "executed_scientific_tool": null,
+  "scientific_result": null,
+  "independent_audit_verdict": "NO_SCIENTIFIC_EXECUTION: provider failed before typed plan validation",
+  "original_failure_preserved": true,
+  "primary_requests_attempted": 1,
+  "evidence_stage": "POST_DIAGNOSTIC_AGGREGATION"
+}

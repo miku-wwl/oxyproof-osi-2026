@@ -3,7 +3,9 @@
 from backend.app.schemas import ExecutionTrace
 
 
-def execution_trace(result, tool_name, *, question=None, model_selected=False):
+def execution_trace(
+    result, tool_name, *, question=None, model_selected=False, provider_metadata=None
+):
     evidence = tool_name == "inspect_scientific_evidence"
     if evidence:
         mode = result["runtime_mode"]
@@ -90,12 +92,32 @@ def execution_trace(result, tool_name, *, question=None, model_selected=False):
                 if w.code not in {"CONDITIONAL_SCREENING", "BOUNDED_PARSER"}
             )
         explanation.extend(result.next_scientific_actions)
+    metadata = provider_metadata or {}
+    selected = (
+        (metadata.get("model_selected_tool") or tool_name)
+        if mode == "REAL_LLM" and model_selected
+        else None
+    )
+    refused = status == "ABSTAINED" and "UNVERIFIED_CONSTRAINTS" in verdicts
     return ExecutionTrace(
         research_question=goal or "Structured scientific request",
         runtime_mode=mode,
         planning_source=mode,
         model=model,
         response_id=response_id,
+        local_invocation_id=metadata.get("local_invocation_id"),
+        provider_metadata=metadata,
+        model_selected_tool=selected,
+        deterministically_expected_tool=tool_name,
+        tool_agreement=selected == tool_name if selected else None,
+        executed_scientific_tool=tool_name,
+        refusal_origin=(
+            "BOTH_MODEL_PLAN_AND_INDEPENDENT_VALIDATOR"
+            if metadata.get("raw_model_arguments", {}).get("unsupported_constraints")
+            else "INDEPENDENT_VALIDATOR"
+        )
+        if refused
+        else None,
         tool_name=tool_name,
         tool_selection="MODEL_SELECTED"
         if model_selected and mode == "REAL_LLM"

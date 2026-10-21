@@ -4,7 +4,7 @@
 
 A local FastAPI + React research workbench. Uses the real [Jang et al. dataset](https://doi.org/10.5281/zenodo.18947543), explicit units and temperature regimes, conditional source-group rankings, abstention, provenance export and an adversarial wrong-equation demonstration. No cloud infrastructure or paid model is needed for deterministic analysis.
 
-Phase 2 adds analytic rank-reversal analysis and the Temperature Decision Explorer. Phase 2.6 adds a research-agent execution panel, seven-part audited trace, bounded natural-question support and an explicitly authorized live-acceptance runner. The optional `REAL_LLM` planner remains **NOT_CONFIGURED / not live-verified; 0 real provider calls**. `OFFLINE_DETERMINISTIC` is a bounded grammar/state machine, not an LLM. See [current Agent acceptance](docs/REAL_AGENT_ACCEPTANCE.md) and [demo script](docs/REAL_AGENT_DEMO_SCRIPT.md); earlier validation/handover documents are historical.
+Phase 2 adds analytic rank-reversal analysis and the Temperature Decision Explorer. Phase 2.6 adds the research-agent panel and audited execution traces. Phase 2.6.1 adds explicit local Ollama configuration, native tool parsing and bounded CPU inference. **Live local acceptance FAILED:** 3 genuine inference responses (1 primary + 2 diagnostics), 0 native tool calls; B/C withheld after systemic failure. The offline workflow remains working and is clearly labelled as deterministic. See [current Ollama evidence](docs/OLLAMA_REAL_AGENT_ACCEPTANCE.md) and [demo gate](docs/OLLAMA_AGENT_DEMO.md). OpenAI remains a separate optional adapter; no cloud call was made.
 
 ## Start locally (Windows PowerShell or POSIX)
 
@@ -107,6 +107,7 @@ The **Research Agent execution** panel runs the exact Phase 2.6 screening, Huang
 ```sh
 uv run --offline --no-sync python scripts/accept_real_agent.py
 uv run --offline --no-sync python scripts/validate_v2.py --browser --phase26
+uv run --offline --no-sync python scripts/validate_v2.py --browser --phase261
 ```
 
 The second command records separate Phase 2.6 validation logs. Real acceptance requires usable `OPENAI_API_KEY` / `OXYPROOF_LLM_MODEL` configuration and explicit paid-use authorization; the default runner cannot trigger billable requests merely because credentials exist. See the Agent acceptance document before using its live flags.
@@ -133,6 +134,8 @@ Missing crossover metadata abstains, even where values look like sentinel placeh
 [Sources/schema](docs/SOURCES.md) · [Science assumptions/reference values](docs/SCIENCE_ASSUMPTIONS.md) · [Decisions](docs/DECISIONS.md) · [Competition evidence](docs/COMPETITION_RULES.md).
 
 ## Optional real LLM
+
+Local provider selection is explicit: `OXYPROOF_LLM_PROVIDER=ollama`, `OXYPROOF_LLM_MODEL=phi4-mini:latest`, `OXYPROOF_OLLAMA_BASE_URL=http://127.0.0.1:11434`. No OpenAI key is needed, and there is no cloud fallback. Native tool acceptance currently failed; follow the [Ollama report](docs/OLLAMA_REAL_AGENT_ACCEPTANCE.md) before any further inference. Omitted provider preserves the separate OpenAI configuration below.
 
 The [OpenAI Responses function-calling adapter](https://developers.openai.com/api/docs/guides/function-calling) permits exactly one allowlisted typed plan: `screen_published_records`, `analyze_temperature_interval` or `inspect_scientific_evidence`. An explicit model, 25-second transport timeout, bounded output and no retries are enforced. The independent grammar verifies tool intent and field completeness; a model cannot broaden accepted constraints or introduce code/URLs. Only the goal text is sent. All scientific values, explanations and citations come from deterministic validated outputs, never provider prose.
 

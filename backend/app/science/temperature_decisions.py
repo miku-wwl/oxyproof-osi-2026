@@ -155,8 +155,11 @@ def analyze_temperature_interval(
     *,
     model: str | None = None,
     response_id: str | None = None,
+    provider_metadata: dict | None = None,
 ) -> TemperatureReport:
-    if request.mode == "REAL_LLM" and (not model or not response_id):
+    if request.mode == "REAL_LLM" and (
+        not model or not (response_id or (provider_metadata or {}).get("local_invocation_id"))
+    ):
         from backend.app.agents.llm import LLMError
 
         raise LLMError("UNVALIDATED_MODEL_PLAN: REAL_LLM requires a validated provider response")
@@ -490,5 +493,7 @@ def analyze_temperature_interval(
         report.trace.append(
             TraceStep(step="validate_or_abstain", outcome=exc.code, detail=str(exc))
         )
-    report.execution_trace = execution_trace(report, "analyze_temperature_interval")
+    report.execution_trace = execution_trace(
+        report, "analyze_temperature_interval", provider_metadata=provider_metadata
+    )
     return report

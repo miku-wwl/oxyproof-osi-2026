@@ -1,5 +1,11 @@
 export type Mode = 'OFFLINE_DETERMINISTIC' | 'REAL_LLM'
 export type ExecutionTrace = {
+  local_invocation_id?: string | null
+  model_selected_tool?: string | null
+  deterministically_expected_tool?: string | null
+  tool_agreement?: boolean | null
+  executed_scientific_tool?: string | null
+  refusal_origin?: string | null
   research_question: string
   runtime_mode: Mode
   planning_source: Mode

@@ -160,7 +160,10 @@ def calculate_record(record: Record, t: float, allow_extrapolation: bool = False
     return result
 
 
-def screen(request: ScreenRequest, repository: Repository, *, model_plan=None) -> AuditReport:
+def screen(
+    request: ScreenRequest, repository: Repository, *, model_plan=None, provider_metadata=None
+) -> AuditReport:
+    telemetry = provider_metadata if provider_metadata is not None else {}
     coverage = interpret(request.goal, repository.classes()).coverage
     trace = []
     warnings = [
@@ -172,7 +175,9 @@ def screen(request: ScreenRequest, repository: Repository, *, model_plan=None) -
     proposed = None
     model = response_id = None
     if request.mode == "REAL_LLM":
-        proposed, model, response_id = model_plan or plan_with_llm(request, repository.classes())
+        proposed, model, response_id = model_plan or plan_with_llm(
+            request, repository.classes(), telemetry=telemetry
+        )
         trace.append(
             TraceStep(
                 step="parse_goal",
@@ -355,5 +360,7 @@ def screen(request: ScreenRequest, repository: Repository, *, model_plan=None) -
                 "Around is interpreted as a nominal point temperature, not an interval or uncertainty range.",
             )
         )
-    report.execution_trace = execution_trace(report, "screen_published_records")
+    report.execution_trace = execution_trace(
+        report, "screen_published_records", provider_metadata=telemetry
+    )
     return report

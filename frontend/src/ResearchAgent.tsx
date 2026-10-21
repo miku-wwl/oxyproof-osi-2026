@@ -40,13 +40,19 @@ export function ExecutionTraceView({ trace }: { trace: ExecutionTrace }) {
           <dt>2 · Planning and model</dt>
           <dd>
             {trace.planning_source === 'REAL_LLM'
-              ? `Provider plan received · ${trace.model ?? 'model unavailable'} · ${trace.response_id ?? 'response ID unavailable'}`
+              ? `REAL_LLM — ${String(trace.provider_metadata.provider ?? 'Provider plan received')} — ${trace.model ?? 'model unavailable'} · ${trace.local_invocation_id ? `Local invocation: ${trace.local_invocation_id}` : (trace.response_id ?? 'response ID unavailable')}`
               : 'Offline deterministic coverage grammar · no model call'}
           </dd>
         </div>
         <div>
           <dt>3 · Scientific tool</dt>
           <dd>{trace.tool_name}</dd>
+          <dd>
+            Model selected: {trace.model_selected_tool ?? 'none'} · Independent expectation:{' '}
+            {trace.deterministically_expected_tool ?? trace.tool_name} · Agreement:{' '}
+            {trace.tool_agreement == null ? 'not applicable' : String(trace.tool_agreement)}
+          </dd>
+          {trace.refusal_origin && <dd>Refusal origin: {trace.refusal_origin}</dd>}
         </div>
       </dl>
       <details>
@@ -202,9 +208,9 @@ export default function ResearchAgent({
         </button>
       </div>
       <p className="subtle">
-        OpenAI planning: {providerStatus}. REAL_LLM uses the configured API when run. Offline mode
-        makes no model call. Named Huang demo means rows 1–3; “around” is a nominal point, not an
-        uncertainty interval.
+        Provider planning: {providerStatus}. REAL_LLM uses the explicitly configured provider when
+        run. Offline mode makes no model call. Named Huang demo means rows 1–3; “around” is a
+        nominal point, not an uncertainty interval.
       </p>
       {busy && (
         <p role="status">

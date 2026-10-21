@@ -18,8 +18,19 @@ if __name__ == "__main__":
         action="store_true",
         help="Write separate Phase 2.6 evidence and run agent acceptance",
     )
+    parser.add_argument(
+        "--phase261",
+        action="store_true",
+        help="Separate Ollama sprint regression evidence; never activates inference",
+    )
     args = parser.parse_args()
-    logs = ROOT / (".local/validation-agent" if args.phase26 else ".local/validation-v2")
+    logs = ROOT / (
+        ".local/validation-ollama"
+        if args.phase261
+        else ".local/validation-agent"
+        if args.phase26
+        else ".local/validation-v2"
+    )
     logs.mkdir(parents=True, exist_ok=True)
     npm = Path(shutil.which("npm") or "npm").resolve()
     npm_cli = (
@@ -92,7 +103,7 @@ if __name__ == "__main__":
                 ["uv", "run", "--offline", "--no-sync", "python", "scripts/browser_e2e.py"],
             )
         )
-    if args.phase26:
+    if args.phase26 or args.phase261:
         commands.extend(
             [
                 (
@@ -157,7 +168,9 @@ if __name__ == "__main__":
     (
         ROOT
         / (
-            "artifacts/real_agent_validation.json"
+            "artifacts/ollama_regression.json"
+            if args.phase261
+            else "artifacts/real_agent_validation.json"
             if args.phase26
             else "artifacts/phase2_validation.json"
         )

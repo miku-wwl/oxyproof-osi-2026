@@ -24,12 +24,33 @@ class LLMError(RuntimeError):
 
 
 def configured() -> bool:
+    if provider() == "ollama":
+        try:
+            from backend.app.agents.ollama import local_endpoint
+
+            local_endpoint()
+            return bool(os.environ.get("OXYPROOF_LLM_MODEL"))
+        except (LLMError, ValueError):
+            return False
+    if provider() != "openai":
+        return False
     return bool(os.environ.get("OPENAI_API_KEY") and os.environ.get("OXYPROOF_LLM_MODEL"))
+
+
+def provider() -> str:
+    # An omitted selector preserves the existing OpenAI configuration contract.
+    return os.environ.get("OXYPROOF_LLM_PROVIDER", "openai").strip().lower()
 
 
 def call_tools(
     goal: str, classes: list[str], tool_name: str | None = None, *, telemetry: dict | None = None
 ):
+    if provider() == "ollama":
+        from backend.app.agents.ollama import call_ollama
+
+        return call_ollama(goal, classes, tool_name, telemetry=telemetry)
+    if provider() != "openai":
+        raise LLMError("UNSUPPORTED_PROVIDER: select openai or ollama explicitly")
     if not configured():
         raise LLMError("NOT_CONFIGURED: set OPENAI_API_KEY and OXYPROOF_LLM_MODEL")
     model = os.environ["OXYPROOF_LLM_MODEL"]
@@ -128,6 +149,6 @@ def call_tools(
         raise LLMError(f"MODEL_RESPONSE_FAILED: {type(exc).__name__}") from exc
 
 
-def plan_with_llm(request: ScreenRequest, classes: list[str]) -> tuple[GoalPlan, str, str]:
-    _, plan, model, response_id = call_tools(request.goal, classes, TOOL)
+def plan_with_llm(request: ScreenRequest, classes: list[str], *, telemetry=None):
+    _, plan, model, response_id = call_tools(request.goal, classes, TOOL, telemetry=telemetry)
     return plan, model, response_id

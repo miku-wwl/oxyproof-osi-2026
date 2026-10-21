@@ -1,0 +1,171 @@
+{
+  "phase": "2.6.1",
+  "executed_at_utc": "2026-10-21T04:12:45.038861+00:00",
+  "model": "phi4-mini:latest",
+  "model_digest": "78fad5d182a7c33065e153a5f8ba210754207ba9d91973f57dffa7f487363753",
+  "version": {
+    "version": "0.35.1"
+  },
+  "preflight_ps": {
+    "models": [
+      {
+        "name": "phi4-mini:latest",
+        "model": "phi4-mini:latest",
+        "size": 3094704290,
+        "digest": "78fad5d182a7c33065e153a5f8ba210754207ba9d91973f57dffa7f487363753",
+        "details": {
+          "parent_model": "",
+          "format": "gguf",
+          "family": "phi3",
+          "families": [
+            "phi3"
+          ],
+          "parameter_size": "3.8B",
+          "quantization_level": "Q4_K_M"
+        },
+        "expires_at": "2319-01-31T16:47:42.772413407+13:00",
+        "size_vram": 0,
+        "context_length": 4096
+      }
+    ]
+  },
+  "postflight_ps": {
+    "models": [
+      {
+        "name": "phi4-mini:latest",
+        "model": "phi4-mini:latest",
+        "size": 3094704290,
+        "digest": "78fad5d182a7c33065e153a5f8ba210754207ba9d91973f57dffa7f487363753",
+        "details": {
+          "parent_model": "",
+          "format": "gguf",
+          "family": "phi3",
+          "families": [
+            "phi3"
+          ],
+          "parameter_size": "3.8B",
+          "quantization_level": "Q4_K_M"
+        },
+        "expires_at": "2319-01-31T17:00:42.046541907+13:00",
+        "size_vram": 0,
+        "context_length": 4096
+      }
+    ]
+  },
+  "observed_windows_memory": {
+    "observed_at": "2026-10-21T04:19:27.3355571Z",
+    "processes": [
+      {
+        "Name": "ollama.exe",
+        "ProcessId": 36816,
+        "WorkingSetSize": 22355968
+      },
+      {
+        "Name": "llama-server.exe",
+        "ProcessId": 38560,
+        "WorkingSetSize": 2975260672
+      }
+    ],
+    "note": "Observed working set after inference; not peak memory or whole-system CPU utilization"
+  },
+  "measurements": [
+    {
+      "request": "primary_A",
+      "provider": "Ollama Local",
+      "requested_model": "phi4-mini:latest",
+      "returned_model": "phi4-mini:latest",
+      "local_invocation_id": "d4668013-73c4-48f3-9408-cd2da3c17de5",
+      "response_id": null,
+      "started_at_utc": "2026-10-21T04:12:45.366934+00:00",
+      "endpoint": "http://127.0.0.1:11434/api/chat",
+      "inference_protocol": "NATIVE_TOOL_CALLING",
+      "execution_status": "FAILED",
+      "http_status": 200,
+      "provider_created_at": "2026-10-21T04:13:25.1901493Z",
+      "received_at_utc": "2026-10-21T04:13:25.192968+00:00",
+      "usage": {
+        "prompt_eval_count": 744,
+        "eval_count": 298,
+        "total_duration": 39799030500,
+        "load_duration": 11248700,
+        "prompt_eval_duration": 8217489000,
+        "eval_duration": 31420119000
+      },
+      "native_tool_call_count": 0,
+      "wall_seconds": 39.813,
+      "durations_seconds": {
+        "total_seconds": 39.7990305,
+        "load_seconds": 0.0112487,
+        "prompt_eval_seconds": 8.217489,
+        "eval_seconds": 31.420119
+      },
+      "generation_tokens_per_second": 9.48436891661677
+    },
+    {
+      "request": "diagnostic_1",
+      "provider": "Ollama Local",
+      "requested_model": "phi4-mini:latest",
+      "returned_model": "phi4-mini:latest",
+      "local_invocation_id": "c58e90bb-f0f8-4a06-a265-c3c7550dab10",
+      "response_id": null,
+      "started_at_utc": "2026-10-21T04:14:30.512610+00:00",
+      "endpoint": "http://127.0.0.1:11434/api/chat",
+      "inference_protocol": "NATIVE_TOOL_CALLING",
+      "execution_status": "FAILED",
+      "http_status": 200,
+      "provider_created_at": "2026-10-21T04:14:46.1935443Z",
+      "received_at_utc": "2026-10-21T04:14:46.196136+00:00",
+      "usage": {
+        "prompt_eval_count": 765,
+        "eval_count": 90,
+        "total_duration": 15556965100,
+        "load_duration": 6298900,
+        "prompt_eval_duration": 8118345000,
+        "eval_duration": 7374309000
+      },
+      "native_tool_call_count": 0,
+      "wall_seconds": 15.687,
+      "durations_seconds": {
+        "total_seconds": 15.5569651,
+        "load_seconds": 0.0062989,
+        "prompt_eval_seconds": 8.118345,
+        "eval_seconds": 7.374309
+      },
+      "generation_tokens_per_second": 12.204533333224848
+    },
+    {
+      "request": "diagnostic_2",
+      "provider": "Ollama Local",
+      "requested_model": "phi4-mini:latest",
+      "returned_model": "phi4-mini:latest",
+      "local_invocation_id": "400a8c79-b699-40fb-8a83-87d80ef273e1",
+      "response_id": null,
+      "endpoint": "http://127.0.0.1:11434/api/chat",
+      "started_at_utc": "2026-10-21T04:15:13.477362+00:00",
+      "http_status": 200,
+      "wall_seconds": 2.11,
+      "native_tool_call_count": 0,
+      "usage": {
+        "prompt_eval_count": 112,
+        "eval_count": 11,
+        "total_duration": 2023400400,
+        "load_duration": 6791900,
+        "prompt_eval_duration": 1292717000,
+        "eval_duration": 692445000
+      },
+      "durations_seconds": {
+        "total_seconds": 2.0234004,
+        "load_seconds": 0.0067919,
+        "prompt_eval_seconds": 1.292717,
+        "eval_seconds": 0.692445
+      },
+      "generation_tokens_per_second": 15.885738217475756
+    }
+  ],
+  "notes": [
+    "Three distinct warm-resident requests; not a representative latency benchmark.",
+    "Windows working set is one post-inference observation, not measured peak.",
+    "Ollama model allocation and process working set measure different things.",
+    "Native plans accepted=0; scientific Agent verification failed."
+  ]
+}

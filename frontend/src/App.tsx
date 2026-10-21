@@ -268,7 +268,8 @@ export default function App() {
           </div>
           <div className="mode-badge">
             <span />
-            {report?.runtime_mode ?? request.mode}
+            {report?.runtime_mode ??
+              (request.mode === 'REAL_LLM' ? 'Selected runtime: REAL_LLM' : request.mode)}
           </div>
         </header>
         <section className="intro">

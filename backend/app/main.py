@@ -7,7 +7,7 @@ from fastapi.exceptions import RequestValidationError
 from fastapi.responses import FileResponse, JSONResponse
 from fastapi.staticfiles import StaticFiles
 
-from backend.app.agents.llm import LLMError, configured
+from backend.app.agents.llm import LLMError, configured, provider
 from backend.app.agents.workflow import run_research, run_temperature
 from backend.app.data.ingest import ROOT, DataError, Repository
 from backend.app.reports.audit import calculate_record, code_version, group_key, screen
@@ -63,6 +63,7 @@ def health():
         "status": "ok",
         "runtime_mode": "OFFLINE_DETERMINISTIC",
         "real_llm_status": "CONFIGURED_NOT_VERIFIED" if configured() else "NOT_CONFIGURED",
+        "llm_provider": provider(),
         "source": repo.source,
         "code_version": code_version(),
     }

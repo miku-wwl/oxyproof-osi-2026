@@ -17,7 +17,12 @@ export default defineConfig({
   },
   webServer: {
     // Regression cannot inherit billable provider configuration.
-    env: { OPENAI_API_KEY: '', OXYPROOF_LLM_MODEL: '' },
+    env: {
+      OPENAI_API_KEY: '',
+      OXYPROOF_LLM_MODEL: '',
+      OXYPROOF_LLM_PROVIDER: 'openai',
+      OXYPROOF_OLLAMA_BASE_URL: '',
+    },
     command:
       'uv run --offline --no-sync python -m uvicorn backend.app.main:app --host 127.0.0.1 --port 8011',
     cwd: path.resolve(import.meta.dirname, '..'),

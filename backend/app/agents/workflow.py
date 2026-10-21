@@ -54,12 +54,13 @@ def run_temperature(request: TemperatureRequest, repository: Repository):
             parsed = interpret(request.goal, repository.classes(), interval=True)
             if not parsed.plan.unsupported_constraints:
                 raise LLMError("MODEL_PLAN_CONFLICT: interval plan not independently supported")
-    report = analyze_temperature_interval(request, repository, model=model, response_id=response_id)
-    report.execution_trace.provider_metadata = telemetry
+    report = analyze_temperature_interval(
+        request, repository, model=model, response_id=response_id, provider_metadata=telemetry
+    )
     return report
 
 
-def run_research(request: AgentRequest, repository: Repository):
+def run_research(request: AgentRequest, repository: Repository, *, provider_metadata=None):
     evidence = re.fullmatch(
         r"\s*inspect(?: scientific)? evidence (?:for )?row (\d+)(?: with source provenance)?[.!]?\s*",
         request.goal,
@@ -75,15 +76,33 @@ def run_research(request: AgentRequest, repository: Repository):
     )
     model = response_id = None
     plan = None
-    telemetry = {}
+    telemetry = provider_metadata if provider_metadata is not None else {}
     if request.mode == "REAL_LLM":
+        telemetry.update(
+            deterministically_expected_tool=expected,
+            model_selected_tool=None,
+            tool_agreement=None,
+            executed_scientific_tool=None,
+        )
         selected, plan, model, response_id = call_tools(
             request.goal, repository.classes(), telemetry=telemetry
         )
         if selected != expected:
-            raise LLMError(
+            telemetry.update(
+                deterministically_expected_tool=expected,
+                tool_agreement=False,
+                executed_scientific_tool=None,
+            )
+            error = LLMError(
                 "MODEL_TOOL_CONFLICT: selected tool disagrees with independently supported intent"
             )
+            error.telemetry = telemetry
+            raise error
+        telemetry.update(
+            model_selected_tool=selected,
+            deterministically_expected_tool=expected,
+            tool_agreement=True,
+        )
     if expected == "inspect_scientific_evidence":
         row_id = int(evidence.group(1))
         if plan and (plan.row_id != row_id or plan.unsupported_constraints):
@@ -125,7 +144,7 @@ def run_research(request: AgentRequest, repository: Repository):
                 }
             )
         result = analyze_temperature_interval(
-            args, repository, model=model, response_id=response_id
+            args, repository, model=model, response_id=response_id, provider_metadata=telemetry
         )
         arguments = result.validated_arguments
     else:
@@ -135,11 +154,15 @@ def run_research(request: AgentRequest, repository: Repository):
 
         args = ScreenRequest(goal=request.goal, row_ids=request.row_ids, mode=request.mode)
         result = audit.screen(
-            args, repository, model_plan=(plan, model, response_id) if plan else None
+            args,
+            repository,
+            model_plan=(plan, model, response_id) if plan else None,
+            provider_metadata=telemetry,
         )
         arguments = result.validated_arguments
-    compact = execution_trace(result, expected, question=request.goal, model_selected=True)
-    compact.provider_metadata = telemetry
+    compact = execution_trace(
+        result, expected, question=request.goal, model_selected=True, provider_metadata=telemetry
+    )
     if hasattr(result, "execution_trace"):
         result.execution_trace = compact
     return {

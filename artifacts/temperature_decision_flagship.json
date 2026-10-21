@@ -6,6 +6,12 @@
     "planning_source": "OFFLINE_DETERMINISTIC",
     "model": null,
     "response_id": null,
+    "local_invocation_id": null,
+    "model_selected_tool": null,
+    "deterministically_expected_tool": "analyze_temperature_interval",
+    "tool_agreement": null,
+    "executed_scientific_tool": "analyze_temperature_interval",
+    "refusal_origin": null,
     "tool_name": "analyze_temperature_interval",
     "tool_selection": "DETERMINISTIC_SELECTED",
     "validated_arguments": {
@@ -180,8 +186,8 @@
   },
   "code_version": {
     "app_version": "0.1.0",
-    "git_base": "ff17b2b02e578101952143db8541c06d84ba3ea8",
-    "calculation_source_sha256": "8ef09808461bdd153bd440bd96fc8f83389652d6d06864dea5b56058f60727ef"
+    "git_base": "3a470d21f5a610beefe92bb3d81cd2dfaa14862f",
+    "calculation_source_sha256": "36beba240ad32d80b2c0e7aad13d220c4e3f780d6f19ff51ff64f630e4d9ebb8"
   },
   "equation": "sigma(T) = A/T * exp(-Ea/(k_B*T))",
   "crossover_qualification": "Model-derived crossover temperatures; uncertainty bounds unavailable; experimental confirmation required.",

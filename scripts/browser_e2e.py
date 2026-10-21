@@ -16,6 +16,8 @@ if __name__ == "__main__":
     # Real model acceptance uses the explicitly authorized CLI, never this regression suite.
     env.pop("OPENAI_API_KEY", None)
     env.pop("OXYPROOF_LLM_MODEL", None)
+    env["OXYPROOF_LLM_PROVIDER"] = "openai"
+    env.pop("OXYPROOF_OLLAMA_BASE_URL", None)
     cli = ROOT / "frontend/node_modules/playwright/cli.js"
     if args.install:
         subprocess.run(["node", str(cli), "install", "chromium"], env=env, check=True, timeout=300)

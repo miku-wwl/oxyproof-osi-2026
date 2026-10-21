@@ -1,0 +1,260 @@
+{
+  "executed_at_utc": "2026-10-21T04:20:26.296531+00:00",
+  "status": "PASS",
+  "checks": [
+    {
+      "name": "lock",
+      "command": [
+        "uv",
+        "lock",
+        "--check",
+        "--offline"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.047,
+      "log_path": ".local/validation-ollama/lock.txt",
+      "output": "Resolved 31 packages in 1ms\n"
+    },
+    {
+      "name": "backend_lint",
+      "command": [
+        "uv",
+        "run",
+        "--offline",
+        "--no-sync",
+        "python",
+        "-m",
+        "ruff",
+        "check",
+        "backend",
+        "scripts",
+        "tests",
+        "benchmarks"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.266,
+      "log_path": ".local/validation-ollama/backend_lint.txt",
+      "output": "All checks passed!\n"
+    },
+    {
+      "name": "backend_format",
+      "command": [
+        "uv",
+        "run",
+        "--offline",
+        "--no-sync",
+        "python",
+        "-m",
+        "ruff",
+        "format",
+        "--check",
+        "backend",
+        "scripts",
+        "tests",
+        "benchmarks"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.219,
+      "log_path": ".local/validation-ollama/backend_format.txt",
+      "output": "50 files already formatted\n"
+    },
+    {
+      "name": "pytest",
+      "command": [
+        "uv",
+        "run",
+        "--offline",
+        "--no-sync",
+        "python",
+        "-m",
+        "pytest",
+        "-q"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 20.515,
+      "log_path": ".local/validation-ollama/pytest.txt",
+      "output": "........................................................................ [ 33%]\n........................................................................ [ 67%]\n....................................................................     [100%]\n============================== warnings summary ===============================\n.venv\\Lib\\site-packages\\fastapi\\testclient.py:1\n  D:\\workshop\\oct\\oxyproof-osi-2026\\.venv\\Lib\\site-packages\\fastapi\\testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.\n    from starlette.testclient import TestClient as TestClient  # noqa\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n212 passed, 1 warning in 13.79s\n"
+    },
+    {
+      "name": "frontend_build",
+      "command": [
+        "node",
+        "D:\\node\\node_modules\\npm\\bin\\npm-cli.js",
+        "run",
+        "build",
+        "--prefix",
+        "frontend"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 8.891,
+      "log_path": ".local/validation-ollama/frontend_build.txt",
+      "output": "vite v7.3.7 building client environment for production...\ntransforming...\n\u2713 1583 modules transformed.\nrendering chunks...\ncomputing gzip size...\ndist/index.html                   0.56 kB \u2502 gzip:  0.36 kB\ndist/assets/index-DURsp6Hw.css   21.86 kB \u2502 gzip:  5.53 kB\ndist/assets/index-zrL-aRQ6.js   267.42 kB \u2502 gzip: 83.22 kB\n\u2713 built in 3.62s\nnpm notice run oxyproof-dashboard@0.1.0 build\nnpm notice run tsc -b && vite build\n"
+    },
+    {
+      "name": "frontend_lint",
+      "command": [
+        "node",
+        "D:\\node\\node_modules\\npm\\bin\\npm-cli.js",
+        "run",
+        "lint",
+        "--prefix",
+        "frontend"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 4.187,
+      "log_path": ".local/validation-ollama/frontend_lint.txt",
+      "output": "npm notice run oxyproof-dashboard@0.1.0 lint\nnpm notice run eslint . --max-warnings 0\n"
+    },
+    {
+      "name": "frontend_components",
+      "command": [
+        "node",
+        "D:\\node\\node_modules\\npm\\bin\\npm-cli.js",
+        "run",
+        "test",
+        "--prefix",
+        "frontend"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 5.172,
+      "log_path": ".local/validation-ollama/frontend_components.txt",
+      "output": "\n RUN  v4.1.12 D:/workshop/oct/oxyproof-osi-2026/frontend\n\n\n Test Files  2 passed (2)\n      Tests  11 passed (11)\n   Start at  17:19:40\n   Duration  3.39s (transform 457ms, setup 420ms, import 751ms, tests 1.64s, environment 1.91s)\n\nnpm notice run oxyproof-dashboard@0.1.0 test\nnpm notice run vitest run\n"
+    },
+    {
+      "name": "reference_values",
+      "command": [
+        "uv",
+        "run",
+        "--offline",
+        "--no-sync",
+        "python",
+        "scripts/reference_values.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.203,
+      "log_path": ".local/validation-ollama/reference_values.txt",
+      "output": "row=1 T=700 K regime=LT sigma=0.00152279771377997559372401061591251744494792292758364133882343 S/cm\nrow=1 T=873.15 K regime=HT sigma=0.0132438119864429252018004584050147634342673100201495858553654 S/cm\nrow=39 T=1100 K regime=SINGLE sigma=0.155737064991434737163014555255747584306281178016217708267326 S/cm\nrow=483 T=600 K regime=SINGLE sigma=0.0290520689988645706478882348521822121429195069173796920000169 S/cm\n"
+    },
+    {
+      "name": "legacy_demo",
+      "command": [
+        "uv",
+        "run",
+        "--offline",
+        "--no-sync",
+        "python",
+        "scripts/demo.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.907,
+      "log_path": ".local/validation-ollama/legacy_demo.txt",
+      "output": "{\"case\": \"600c_huang_bulk\", \"status\": \"CALCULATED_WITH_WARNINGS\", \"candidates\": 3, \"excluded\": 0, \"mode\": \"OFFLINE_DETERMINISTIC\"}\n{\"case\": \"827c_cobalt_bulk\", \"status\": \"CALCULATED_WITH_WARNINGS\", \"candidates\": 1, \"excluded\": 0, \"mode\": \"OFFLINE_DETERMINISTIC\"}\n{\"case\": \"327c_bismuth_bulk\", \"status\": \"CALCULATED_WITH_WARNINGS\", \"candidates\": 1, \"excluded\": 0, \"mode\": \"OFFLINE_DETERMINISTIC\"}\n{\"case\": \"ambiguous_regime\", \"status\": \"INSUFFICIENT_EVIDENCE\", \"candidates\": 0, \"excluded\": 1, \"mode\": \"OFFLINE_DETERMINISTIC\"}\n{\"case\": \"out_of_range\", \"status\": \"INSUFFICIENT_EVIDENCE\", \"candidates\": 0, \"excluded\": 1, \"mode\": \"OFFLINE_DETERMINISTIC\"}\nOFFLINE_DEMO=PASS cases=5 real_published_fixture=true network_calls=0\n"
+    },
+    {
+      "name": "legacy_guards",
+      "command": [
+        "uv",
+        "run",
+        "--offline",
+        "--no-sync",
+        "python",
+        "benchmarks/evaluate.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 1.156,
+      "log_path": ".local/validation-ollama/legacy_guards.txt",
+      "output": "MEASURED guard_cases=8 baseline_correct=1 audited_correct=8\n"
+    },
+    {
+      "name": "scientific_benchmark",
+      "command": [
+        "uv",
+        "run",
+        "--offline",
+        "--no-sync",
+        "python",
+        "benchmarks/evaluate_v2.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 3.531,
+      "log_path": ".local/validation-ollama/scientific_benchmark.txt",
+      "output": "SCIENTIFIC_BENCHMARK_V2 cases=49 passed=49 failed=0 live_model_calls=0\n"
+    },
+    {
+      "name": "phase2_demo",
+      "command": [
+        "uv",
+        "run",
+        "--offline",
+        "--no-sync",
+        "python",
+        "scripts/phase2_demo.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.86,
+      "log_path": ".local/validation-ollama/phase2_demo.txt",
+      "output": "PHASE2_OFFLINE_DEMO=PASS scope=FULL_DATASET rows=483 selected_orders=1>2>3;3>2>1 continuous_model_crossings=3\n"
+    },
+    {
+      "name": "data_inspection",
+      "command": [
+        "uv",
+        "run",
+        "--offline",
+        "--no-sync",
+        "python",
+        "scripts/inspect_data.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 1.687,
+      "log_path": ".local/validation-ollama/data_inspection.txt",
+      "output": "INSPECTED_REAL rows=483 columns=34 source_dois=84\n"
+    },
+    {
+      "name": "browser_e2e",
+      "command": [
+        "uv",
+        "run",
+        "--offline",
+        "--no-sync",
+        "python",
+        "scripts/browser_e2e.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 26.609,
+      "log_path": ".local/validation-ollama/browser_e2e.txt",
+      "output": "\nRunning 18 tests using 1 worker\n\n  ok  1 e2e\\research.spec.ts:14:1 \u203a default screening uses real API calculations (1.3s)\n  ok  2 e2e\\research.spec.ts:21:1 \u203a generated goal follows temperature controls (914ms)\n  ok  3 e2e\\research.spec.ts:30:1 \u203a generated goal follows conductivity type (916ms)\n  ok  4 e2e\\research.spec.ts:39:1 \u203a manual contradictions are reported (1.0s)\n  ok  5 e2e\\research.spec.ts:50:1 \u203a humidity constraint abstains visibly (1.3s)\n  ok  6 e2e\\research.spec.ts:62:1 \u203a flagship reversal, plot and slider use backend values (1.4s)\n  ok  7 e2e\\research.spec.ts:86:1 \u203a exact regime boundary withholds its row (912ms)\n  ok  8 e2e\\research.spec.ts:93:1 \u203a continuous root displays a numerical tie rather than a strict winner (904ms)\n  ok  9 e2e\\research.spec.ts:100:1 \u203a wrong-formula audit retains dimensional rejection (922ms)\n  ok 10 e2e\\research.spec.ts:106:1 \u203a out-of-range refusal (911ms)\n  ok 11 e2e\\research.spec.ts:112:1 \u203a source DOI navigation is inspectable (941ms)\n  ok 12 e2e\\research.spec.ts:124:1 \u203a export contains real interval provenance and results (1.2s)\n  ok 13 e2e\\research.spec.ts:147:1 \u203a responsive mobile viewport has no horizontal overflow (962ms)\n  ok 14 e2e\\research.spec.ts:158:1 \u203a API failure injection is displayed without candidates (651ms)\n  ok 15 e2e\\research.spec.ts:172:1 \u203a offline agent screening shows an actual audited execution and export (1.2s)\n  ok 16 e2e\\research.spec.ts:190:1 \u203a offline agent selects Huang interval by its explicit named source selection (1.2s)\n  ok 17 e2e\\research.spec.ts:210:1 \u203a offline agent preserves humidity and lifetime in its refusal (1.0s)\n  ok 18 e2e\\research.spec.ts:222:1 \u203a unconfigured real agent fails without fallback and permits explicit offline run (1.0s)\n\n  18 passed (25.2s)\n[WebServer] INFO:     Started server process [58924]\n[WebServer] INFO:     Waiting for application startup.\n[WebServer] INFO:     Application startup complete.\n[WebServer] INFO:     Uvicorn running on http://127.0.0.1:8011 (Press CTRL+C to quit)\n(node:35504) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.\n(Use `node --trace-warnings ...` to show where the warning was created)\n"
+    },
+    {
+      "name": "agent_acceptance",
+      "command": [
+        "uv",
+        "run",
+        "--offline",
+        "--no-sync",
+        "python",
+        "scripts/accept_real_agent.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 6.563,
+      "log_path": ".local/validation-ollama/agent_acceptance.txt",
+      "output": "REAL_AGENT_STATUS=NOT_CONFIGURED real_requests=0 offline_scenarios=3/3 live_scenarios=NOT_RUN,NOT_RUN,NOT_RUN\n"
+    },
+    {
+      "name": "independent_science",
+      "command": [
+        "uv",
+        "run",
+        "--offline",
+        "--no-sync",
+        "python",
+        "scripts/verify_final_science.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.672,
+      "log_path": ".local/validation-ollama/independent_science.txt",
+      "output": "FINAL_SCIENCE=PASS roots=3 endpoint_values=6 precision=80 independent_side_checks=6\n"
+    }
+  ],
+  "note": "Local Windows execution; no live model, external deployment or statistically representative benchmark."
+}

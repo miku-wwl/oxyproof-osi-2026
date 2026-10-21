@@ -1,0 +1,80 @@
+{
+  "classification": "DIAGNOSTIC_2_MINIMAL_NATIVE_TOOL",
+  "local_invocation_id": "400a8c79-b699-40fb-8a83-87d80ef273e1",
+  "response_id": null,
+  "started_at_utc": "2026-10-21T04:15:13.477362+00:00",
+  "request_number_total": 3,
+  "request": {
+    "model": "phi4-mini:latest",
+    "stream": false,
+    "keep_alive": -1,
+    "options": {
+      "temperature": 0,
+      "num_predict": 256,
+      "num_ctx": 4096
+    },
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a helpful assistant with some tools. Call the provided tool for the requested source row. Use native tool calling; do not answer in prose."
+      },
+      {
+        "role": "user",
+        "content": "Inspect scientific evidence row 1."
+      }
+    ],
+    "tools": [
+      {
+        "type": "function",
+        "function": {
+          "name": "inspect_scientific_evidence",
+          "description": "Inspect published source evidence for a row.",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "row_id": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 483
+              },
+              "unsupported_constraints": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            },
+            "required": [
+              "row_id",
+              "unsupported_constraints"
+            ],
+            "additionalProperties": false
+          }
+        }
+      }
+    ]
+  },
+  "scientific_execution": "NOT_EXECUTED",
+  "untrusted_provider_text_is_scientific_evidence": false,
+  "http_status": 200,
+  "raw_provider_response": {
+    "model": "phi4-mini:latest",
+    "created_at": "2026-10-21T04:15:15.5908787Z",
+    "message": {
+      "role": "assistant",
+      "content": "{k: 1, unsupported_constraints: []}"
+    },
+    "done": true,
+    "done_reason": "stop",
+    "total_duration": 2023400400,
+    "load_duration": 6791900,
+    "prompt_eval_count": 112,
+    "prompt_eval_cached_count": 1,
+    "prompt_eval_duration": 1292717000,
+    "eval_count": 11,
+    "eval_duration": 692445000
+  },
+  "native_tool_call_count": 0,
+  "status": "FAIL",
+  "wall_seconds": 2.11
+}

@@ -4,6 +4,17 @@ from fastapi.testclient import TestClient
 from backend.app.data.ingest import Repository
 
 
+@pytest.fixture(autouse=True)
+def isolate_provider_configuration(monkeypatch):
+    for name in (
+        "OPENAI_API_KEY",
+        "OXYPROOF_LLM_MODEL",
+        "OXYPROOF_LLM_PROVIDER",
+        "OXYPROOF_OLLAMA_BASE_URL",
+    ):
+        monkeypatch.delenv(name, raising=False)
+
+
 @pytest.fixture(scope="session")
 def repo():
     return Repository(fixture_only=True)

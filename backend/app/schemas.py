@@ -145,6 +145,12 @@ class ExecutionTrace(Contract):
     planning_source: Literal["OFFLINE_DETERMINISTIC", "REAL_LLM"]
     model: str | None = None
     response_id: str | None = None
+    local_invocation_id: str | None = None
+    model_selected_tool: str | None = None
+    deterministically_expected_tool: str | None = None
+    tool_agreement: bool | None = None
+    executed_scientific_tool: str | None = None
+    refusal_origin: str | None = None
     tool_name: str
     tool_selection: Literal["MODEL_SELECTED", "FIXED_ENDPOINT", "DETERMINISTIC_SELECTED"]
     validated_arguments: dict
@@ -161,10 +167,17 @@ class ExecutionTrace(Contract):
     def honest_runtime_evidence(self):
         if self.planning_source != self.runtime_mode:
             raise ValueError("Planning source must match the execution runtime")
-        if self.runtime_mode == "REAL_LLM" and (not self.model or not self.response_id):
+        local_identity = (
+            self.provider_metadata.get("provider") == "Ollama Local"
+            and self.local_invocation_id
+            and self.local_invocation_id == self.provider_metadata.get("local_invocation_id")
+        )
+        if self.runtime_mode == "REAL_LLM" and (
+            not self.model or not (self.response_id or local_identity)
+        ):
             raise ValueError("Real planning trace requires model and provider response identity")
         if self.runtime_mode == "OFFLINE_DETERMINISTIC" and (
-            self.model or self.response_id or self.provider_metadata
+            self.model or self.response_id or self.local_invocation_id or self.provider_metadata
         ):
             raise ValueError("Offline trace cannot claim provider execution")
         if self.tool_selection == "MODEL_SELECTED" and self.runtime_mode != "REAL_LLM":
