@@ -1,0 +1,80 @@
+{
+  "technical_status": "PASS",
+  "visual_review": "PASS",
+  "verified_at_utc": "2026-10-21T08:51:50.691573+00:00",
+  "media": [
+    {
+      "file": "oxyproof-browser-demo-cursor-clean.mp4",
+      "bytes": 6928527,
+      "sha256": "b212cf611e3dee8ddbd15e7d35a324ec2363ec1bcb8a6269be1472ff13f01b40",
+      "duration_s": 195,
+      "width": 1920,
+      "height": 1080,
+      "fps": 30,
+      "frames": 5850,
+      "audio_streams": 0,
+      "full_decode": "PASS"
+    },
+    {
+      "file": "oxyproof-browser-demo-cursor-subtitled.mp4",
+      "bytes": 7251098,
+      "sha256": "cc4759afadddb2a8236f2d7acf6450204d0e484c0b30f49e37c5355797022e8b",
+      "duration_s": 195,
+      "width": 1920,
+      "height": 1080,
+      "fps": 30,
+      "frames": 5850,
+      "audio_streams": 0,
+      "full_decode": "PASS"
+    }
+  ],
+  "protected_files_unchanged": 21,
+  "timeline_s": 195,
+  "annotated_actions": 12,
+  "overlay_nonempty_frames": 441,
+  "subtitle_area_annotation_alpha": "ZERO on all 441 nonempty overlays",
+  "maximum_annotation_canvas_fraction": 0.01407986111111111,
+  "checkbox_state_changes": [
+    {
+      "row": "row-1",
+      "source_times_s": [
+        3.2,
+        3.8
+      ],
+      "observed_green_checkbox_pixels_before_after": [
+        0,
+        99
+      ],
+      "state_change": "unchecked -> checked"
+    },
+    {
+      "row": "row-2",
+      "source_times_s": [
+        5.2,
+        5.8
+      ],
+      "observed_green_checkbox_pixels_before_after": [
+        0,
+        99
+      ],
+      "state_change": "unchecked -> checked"
+    },
+    {
+      "row": "row-3",
+      "source_times_s": [
+        7.2,
+        7.8
+      ],
+      "observed_green_checkbox_pixels_before_after": [
+        0,
+        101
+      ],
+      "state_change": "unchecked -> checked"
+    }
+  ],
+  "original_srt_sha256": "9e68287a08d5c9425b1478a853af9c6401996c35e1e74b04a16d20f1ef73f67a",
+  "application_tests": "NOT_RUN: media-only edit",
+  "new_browser_actions": 0,
+  "new_model_calls": 0,
+  "visual_evidence": "review/cursor/visual-review.json"
+}

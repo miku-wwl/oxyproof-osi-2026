@@ -1,0 +1,1773 @@
+{
+  "created_at_utc": "2026-10-21T12:10:44.892331+00:00",
+  "render_configuration": {
+    "engineering_labels": false,
+    "introductory_engineering_note": false,
+    "cursor_glyphs": true,
+    "click_rings": true,
+    "control_outlines": true,
+    "slider_endpoints": true,
+    "interpolated_motion": false,
+    "native_mouse_capture_claim": false
+  },
+  "annotation_plan": "output\\osi-final\\browser-demo\\review\\cursor\\annotation-plan.json",
+  "annotation_plan_sha256": "c2fd35052b49a667592e18f37c0588b8f27c0dafb1c20d012be0fd8d94c2fbae",
+  "active_frames": [
+    122,
+    123,
+    124,
+    125,
+    126,
+    127,
+    128,
+    129,
+    130,
+    131,
+    132,
+    133,
+    134,
+    135,
+    136,
+    137,
+    138,
+    139,
+    140,
+    141,
+    142,
+    143,
+    144,
+    145,
+    146,
+    147,
+    148,
+    183,
+    184,
+    185,
+    186,
+    187,
+    188,
+    189,
+    190,
+    191,
+    192,
+    193,
+    194,
+    195,
+    196,
+    197,
+    198,
+    199,
+    200,
+    201,
+    202,
+    203,
+    204,
+    205,
+    457,
+    458,
+    459,
+    460,
+    461,
+    462,
+    463,
+    464,
+    465,
+    466,
+    467,
+    468,
+    469,
+    470,
+    471,
+    472,
+    473,
+    474,
+    475,
+    476,
+    514,
+    515,
+    516,
+    517,
+    518,
+    519,
+    520,
+    521,
+    522,
+    523,
+    524,
+    525,
+    526,
+    527,
+    528,
+    529,
+    530,
+    531,
+    532,
+    533,
+    534,
+    577,
+    578,
+    579,
+    580,
+    581,
+    582,
+    583,
+    584,
+    585,
+    586,
+    587,
+    588,
+    589,
+    590,
+    591,
+    592,
+    593,
+    845,
+    846,
+    847,
+    848,
+    849,
+    850,
+    851,
+    852,
+    853,
+    854,
+    855,
+    856,
+    857,
+    858,
+    859,
+    860,
+    861,
+    862,
+    863,
+    864,
+    865,
+    866,
+    1412,
+    1413,
+    1414,
+    1415,
+    1416,
+    1417,
+    1418,
+    1419,
+    1420,
+    1421,
+    1422,
+    1423,
+    1424,
+    1425,
+    1426,
+    1427,
+    1428,
+    1429,
+    1430,
+    1431,
+    1432,
+    1433,
+    1434,
+    1435,
+    1436,
+    1437,
+    1438,
+    1439,
+    1440,
+    1441,
+    1442,
+    1443,
+    1444,
+    1445,
+    1446,
+    1447,
+    1448,
+    1449,
+    1450,
+    1451,
+    1452,
+    1453,
+    1454,
+    1455,
+    1456,
+    1457,
+    1458,
+    1459,
+    1460,
+    1461,
+    1462,
+    1463,
+    1464,
+    1465,
+    1561,
+    1562,
+    1563,
+    1564,
+    1565,
+    1566,
+    1567,
+    1568,
+    1569,
+    1570,
+    1571,
+    1572,
+    1573,
+    1574,
+    1575,
+    1576,
+    1577,
+    1578,
+    1579,
+    1580,
+    1581,
+    1582,
+    1583,
+    1584,
+    1585,
+    1586,
+    1587,
+    1588,
+    1589,
+    1590,
+    1591,
+    1592,
+    1593,
+    1594,
+    1595,
+    1596,
+    1597,
+    1598,
+    1599,
+    1600,
+    1601,
+    1602,
+    1603,
+    1604,
+    1605,
+    1606,
+    1607,
+    1608,
+    1609,
+    1610,
+    1611,
+    1612,
+    1613,
+    1614,
+    1615,
+    1711,
+    1712,
+    1713,
+    1714,
+    1715,
+    1716,
+    1717,
+    1718,
+    1719,
+    1720,
+    1721,
+    1722,
+    1723,
+    1724,
+    1725,
+    1726,
+    1727,
+    1728,
+    1729,
+    1730,
+    1731,
+    1732,
+    1733,
+    1734,
+    1735,
+    1736,
+    1737,
+    1738,
+    1739,
+    1740,
+    1741,
+    1742,
+    1743,
+    1744,
+    1745,
+    1746,
+    1747,
+    1748,
+    1749,
+    1750,
+    1751,
+    1752,
+    1753,
+    1754,
+    1755,
+    1756,
+    1757,
+    1758,
+    1759,
+    1760,
+    1761,
+    1762,
+    1763,
+    1764,
+    1765,
+    3249,
+    3250,
+    3251,
+    3252,
+    3253,
+    3254,
+    3255,
+    3256,
+    3257,
+    3258,
+    3259,
+    3260,
+    3261,
+    3262,
+    3263,
+    3264,
+    3265,
+    3266,
+    3267,
+    3268,
+    3269,
+    3270,
+    4088,
+    4089,
+    4090,
+    4091,
+    4092,
+    4093,
+    4094,
+    4095,
+    4096,
+    4097,
+    4098,
+    4099,
+    4100,
+    4101,
+    4102,
+    4103,
+    4104,
+    4105,
+    4106,
+    4107,
+    4108,
+    4109,
+    5318,
+    5319,
+    5320,
+    5321,
+    5322,
+    5323,
+    5324,
+    5325,
+    5326,
+    5327,
+    5328,
+    5329,
+    5330,
+    5331,
+    5332,
+    5333,
+    5334,
+    5335,
+    5336,
+    5337,
+    5338,
+    5339,
+    5340,
+    5341,
+    5342
+  ],
+  "nonempty_overlay_frames": 363,
+  "retained_effect_frame_comparisons": 363,
+  "retained_effects_pixel_identical_outside_removed_tag_footprint": true,
+  "cursor_tail_uncovered_by_tag_removal_frames": [
+    1594,
+    1595,
+    1596,
+    1597,
+    1598,
+    1599,
+    1600,
+    1601,
+    1602,
+    1603,
+    1604,
+    1605,
+    1606,
+    1607,
+    1608,
+    1609,
+    1610,
+    1611,
+    1612,
+    1613,
+    1614,
+    1615,
+    1711,
+    1712,
+    1713,
+    1714,
+    1715,
+    1716,
+    1717,
+    1718
+  ],
+  "maximum_annotation_canvas_fraction": 0.010543016975308642,
+  "subtitle_strip_alpha": "ZERO",
+  "unchanged_annotations": [
+    {
+      "id": "A1:source-selector",
+      "take": "A1",
+      "label": "source-selector",
+      "kind": "logged_target",
+      "logged_kind": "element-click",
+      "call_interval_s": [
+        4.0475847,
+        4.9136989
+      ],
+      "video_interval_s": [
+        4.05,
+        4.94
+      ],
+      "target_rect_output_px": [
+        344,
+        521,
+        1818,
+        560
+      ],
+      "source_point": {
+        "height": 1088,
+        "width": 1934,
+        "x": 1090.4039611816406,
+        "y": 545.9974117279053
+      },
+      "output_point": [
+        1082.5106543271716,
+        541.9831027547763
+      ],
+      "label_text": "Logged target",
+      "reason": "",
+      "native_cursor_claim": false,
+      "click_ring_duration_s": 0.4
+    },
+    {
+      "id": "A1:select-published-Huang-group",
+      "take": "A1",
+      "label": "select-published-Huang-group",
+      "kind": "control_highlight",
+      "logged_kind": "ui-step",
+      "call_interval_s": [
+        6.0072859,
+        6.3542865
+      ],
+      "video_interval_s": [
+        6.08,
+        6.85
+      ],
+      "target_rect_output_px": [
+        344,
+        521,
+        1818,
+        560
+      ],
+      "source_point": null,
+      "output_point": null,
+      "label_text": "Control highlight · source selected",
+      "reason": "selectOption has no pointer event/coordinates; highlight the verified selected control",
+      "native_cursor_claim": false,
+      "click_ring_duration_s": 0
+    },
+    {
+      "id": "A2:row-1",
+      "take": "A2",
+      "label": "row-1",
+      "kind": "control_highlight",
+      "logged_kind": "element-click",
+      "call_interval_s": [
+        15.0582284,
+        15.4459539
+      ],
+      "video_interval_s": [
+        15.22,
+        15.9
+      ],
+      "target_rect_output_px": [
+        346,
+        528,
+        667,
+        551
+      ],
+      "source_point": {
+        "height": 1088,
+        "width": 1934,
+        "x": 358.7973303794861,
+        "y": 576.2278418540955
+      },
+      "output_point": null,
+      "label_text": "Control highlight · row 1",
+      "reason": "Logged pre-scroll center maps to row 2 after automatic scrolling; omit pointer",
+      "native_cursor_claim": false,
+      "click_ring_duration_s": 0,
+      "control_tracking": {
+        "method": "Vertical template registration of actual control-label pixels; not pointer tracking",
+        "reference_frame": {
+          "file": ".local\\browser-demo-capture\\A2\\frame_000038.jpg",
+          "t": 3.1690821000002325,
+          "sha256": "85a7f31948e463e966fee22d84501a4ea90ad245781a7928c319b8ed0a23e1cb"
+        },
+        "template_box_output_px": [
+          373,
+          532,
+          417,
+          547
+        ],
+        "score": "mean absolute grayscale pixel difference",
+        "after_reference_frame": {
+          "file": ".local\\browser-demo-capture\\A2\\frame_000042.jpg",
+          "t": 3.6520773999998344,
+          "sha256": "1f8043c3f41c52869fdd774d7c48aa32b93717ae26be083e94493774cbcf7202"
+        },
+        "after_template_box_output_px": [
+          373,
+          532,
+          417,
+          547
+        ],
+        "maximum_allowed_score": 8,
+        "rect_by_output_frame": {
+          "457": [
+            346,
+            528,
+            667,
+            551
+          ],
+          "458": [
+            346,
+            528,
+            667,
+            551
+          ],
+          "459": [
+            346,
+            528,
+            667,
+            551
+          ],
+          "460": [
+            346,
+            528,
+            667,
+            551
+          ],
+          "461": [
+            346,
+            528,
+            667,
+            551
+          ],
+          "462": [
+            346,
+            528,
+            667,
+            551
+          ],
+          "463": [
+            346,
+            528,
+            667,
+            551
+          ],
+          "464": [
+            346,
+            528,
+            667,
+            551
+          ],
+          "465": [
+            346,
+            528,
+            667,
+            551
+          ],
+          "466": [
+            346,
+            528,
+            667,
+            551
+          ],
+          "467": [
+            346,
+            528,
+            667,
+            551
+          ],
+          "468": [
+            346,
+            528,
+            667,
+            551
+          ],
+          "469": [
+            346,
+            528,
+            667,
+            551
+          ],
+          "470": [
+            346,
+            528,
+            667,
+            551
+          ],
+          "471": [
+            346,
+            528,
+            667,
+            551
+          ],
+          "472": [
+            346,
+            528,
+            667,
+            551
+          ],
+          "473": [
+            346,
+            528,
+            667,
+            551
+          ],
+          "474": [
+            346,
+            528,
+            667,
+            551
+          ],
+          "475": [
+            346,
+            528,
+            667,
+            551
+          ],
+          "476": [
+            346,
+            528,
+            667,
+            551
+          ]
+        }
+      }
+    },
+    {
+      "id": "A2:row-2",
+      "take": "A2",
+      "label": "row-2",
+      "kind": "control_highlight",
+      "logged_kind": "element-click",
+      "call_interval_s": [
+        17.096852,
+        17.3870363
+      ],
+      "video_interval_s": [
+        17.13,
+        17.83
+      ],
+      "target_rect_output_px": [
+        346,
+        557,
+        667,
+        578
+      ],
+      "source_point": {
+        "height": 1088,
+        "width": 1934,
+        "x": 358.7973303794861,
+        "y": 571.297299861908
+      },
+      "output_point": null,
+      "label_text": "Control highlight · row 2",
+      "reason": "Pre-scroll center becomes stale after this click too; track the actual row label instead of drawing a pointer",
+      "native_cursor_claim": false,
+      "click_ring_duration_s": 0,
+      "control_tracking": {
+        "method": "Vertical template registration of actual control-label pixels; not pointer tracking",
+        "reference_frame": {
+          "file": ".local\\browser-demo-capture\\A2\\frame_000059.jpg",
+          "t": 5.120485700000078,
+          "sha256": "1f8043c3f41c52869fdd774d7c48aa32b93717ae26be083e94493774cbcf7202"
+        },
+        "template_box_output_px": [
+          373,
+          560,
+          417,
+          574
+        ],
+        "score": "mean absolute grayscale pixel difference",
+        "after_reference_frame": {
+          "file": ".local\\browser-demo-capture\\A2\\frame_000064.jpg",
+          "t": 5.660968100000173,
+          "sha256": "913c5459fe6cdce16df81485180fbd096bee528b9014daa2300b09c8322b605c"
+        },
+        "after_template_box_output_px": [
+          373,
+          533,
+          417,
+          547
+        ],
+        "maximum_allowed_score": 8,
+        "rect_by_output_frame": {
+          "514": [
+            346,
+            557,
+            667,
+            578
+          ],
+          "515": [
+            346,
+            557,
+            667,
+            578
+          ],
+          "516": [
+            346,
+            557,
+            667,
+            578
+          ],
+          "517": [
+            346,
+            530,
+            667,
+            551
+          ],
+          "518": [
+            346,
+            530,
+            667,
+            551
+          ],
+          "519": [
+            346,
+            530,
+            667,
+            551
+          ],
+          "520": [
+            346,
+            530,
+            667,
+            551
+          ],
+          "521": [
+            346,
+            530,
+            667,
+            551
+          ],
+          "522": [
+            346,
+            530,
+            667,
+            551
+          ],
+          "523": [
+            346,
+            530,
+            667,
+            551
+          ],
+          "524": [
+            346,
+            530,
+            667,
+            551
+          ],
+          "525": [
+            346,
+            530,
+            667,
+            551
+          ],
+          "526": [
+            346,
+            530,
+            667,
+            551
+          ],
+          "527": [
+            346,
+            530,
+            667,
+            551
+          ],
+          "528": [
+            346,
+            530,
+            667,
+            551
+          ],
+          "529": [
+            346,
+            530,
+            667,
+            551
+          ],
+          "530": [
+            346,
+            530,
+            667,
+            551
+          ],
+          "531": [
+            346,
+            530,
+            667,
+            551
+          ],
+          "532": [
+            346,
+            530,
+            667,
+            551
+          ],
+          "533": [
+            346,
+            530,
+            667,
+            551
+          ],
+          "534": [
+            346,
+            530,
+            667,
+            551
+          ]
+        }
+      }
+    },
+    {
+      "id": "A2:row-3",
+      "take": "A2",
+      "label": "row-3",
+      "kind": "control_highlight",
+      "logged_kind": "element-click",
+      "call_interval_s": [
+        19.0526772,
+        19.3391095
+      ],
+      "video_interval_s": [
+        19.22,
+        19.78
+      ],
+      "target_rect_output_px": [
+        346,
+        528,
+        667,
+        551
+      ],
+      "source_point": {
+        "height": 1088,
+        "width": 1934,
+        "x": 358.7973303794861,
+        "y": 571.2152075767517
+      },
+      "output_point": null,
+      "label_text": "Control highlight · row 3",
+      "reason": "Logged pre-scroll center maps to row 4 after automatic scrolling; omit pointer",
+      "native_cursor_claim": false,
+      "click_ring_duration_s": 0,
+      "control_tracking": {
+        "method": "Vertical template registration of actual control-label pixels; not pointer tracking",
+        "reference_frame": {
+          "file": ".local\\browser-demo-capture\\A2\\frame_000083.jpg",
+          "t": 7.168771599999629,
+          "sha256": "37b7baebca5f38697987ec1adb082f0c20d43c345c3d27b56bfed60dbe39cc4a"
+        },
+        "template_box_output_px": [
+          373,
+          532,
+          417,
+          547
+        ],
+        "score": "mean absolute grayscale pixel difference",
+        "after_reference_frame": {
+          "file": ".local\\browser-demo-capture\\A2\\frame_000087.jpg",
+          "t": 7.763690399999731,
+          "sha256": "9827fd02cd80b14018dba03f439d7473e04080d6d26d9d1e61be8fd59560137e"
+        },
+        "after_template_box_output_px": [
+          373,
+          532,
+          417,
+          547
+        ],
+        "maximum_allowed_score": 8,
+        "rect_by_output_frame": {
+          "577": [
+            346,
+            528,
+            667,
+            551
+          ],
+          "578": [
+            346,
+            528,
+            667,
+            551
+          ],
+          "579": [
+            346,
+            528,
+            667,
+            551
+          ],
+          "580": [
+            346,
+            528,
+            667,
+            551
+          ],
+          "581": [
+            346,
+            528,
+            667,
+            551
+          ],
+          "582": [
+            346,
+            528,
+            667,
+            551
+          ],
+          "583": [
+            346,
+            528,
+            667,
+            551
+          ],
+          "584": [
+            346,
+            528,
+            667,
+            551
+          ],
+          "585": [
+            346,
+            528,
+            667,
+            551
+          ],
+          "586": [
+            346,
+            528,
+            667,
+            551
+          ],
+          "587": [
+            346,
+            528,
+            667,
+            551
+          ],
+          "588": [
+            346,
+            528,
+            667,
+            551
+          ],
+          "589": [
+            346,
+            528,
+            667,
+            551
+          ],
+          "590": [
+            346,
+            528,
+            667,
+            551
+          ],
+          "591": [
+            346,
+            528,
+            667,
+            551
+          ],
+          "592": [
+            346,
+            528,
+            667,
+            551
+          ],
+          "593": [
+            346,
+            528,
+            667,
+            551
+          ]
+        }
+      }
+    },
+    {
+      "id": "A2:analyze-interval",
+      "take": "A2",
+      "label": "analyze-interval",
+      "kind": "logged_target",
+      "logged_kind": "element-click",
+      "call_interval_s": [
+        28.1104512,
+        28.8025591
+      ],
+      "video_interval_s": [
+        28.14,
+        28.9
+      ],
+      "target_rect_output_px": [
+        1238,
+        517,
+        1818,
+        560
+      ],
+      "source_point": {
+        "height": 1088,
+        "width": 1934,
+        "x": 1541.7423400878906,
+        "y": 542.8787212371826
+      },
+      "output_point": [
+        1530.5818474502328,
+        538.8867538062634
+      ],
+      "label_text": "Logged target",
+      "reason": "",
+      "native_cursor_claim": false,
+      "click_ring_duration_s": 0.4
+    },
+    {
+      "id": "B:drag-1",
+      "take": "B",
+      "label": "actual-slider-drag-first-step",
+      "kind": "drag_endpoints",
+      "call_interval_s": [
+        47.0577618,
+        48.4656722
+      ],
+      "video_interval_s": [
+        47.0577618,
+        48.8656722
+      ],
+      "source_from_css": [
+        377,
+        492
+      ],
+      "source_to_css": [
+        862,
+        492
+      ],
+      "output_endpoints": [
+        [
+          374.2709410548087,
+          488.37251538694386
+        ],
+        [
+          855.7600827300931,
+          488.37251538694386
+        ]
+      ],
+      "target_rect_output_px": [
+        364,
+        476,
+        1799,
+        501
+      ],
+      "before_index": "0",
+      "after_index": "31",
+      "label_text": "Logged drag endpoints · no measured pointer path",
+      "native_cursor_claim": false,
+      "intermediate_pointer_samples": 0,
+      "connecting_trajectory_added": false,
+      "reason": "Two recorded endpoints only; display separate endpoint pointers with a gap, without inventing an intervening pointer trajectory"
+    },
+    {
+      "id": "B:drag-2",
+      "take": "B",
+      "label": "actual-slider-drag-second-step",
+      "kind": "drag_endpoints",
+      "call_interval_s": [
+        52.0018852,
+        53.435403
+      ],
+      "video_interval_s": [
+        52.0018852,
+        53.835403
+      ],
+      "source_from_css": [
+        858,
+        492
+      ],
+      "source_to_css": [
+        1305,
+        492
+      ],
+      "output_endpoints": [
+        [
+          851.789038262668,
+          488.37251538694386
+        ],
+        [
+          1295.5532574974147,
+          488.37251538694386
+        ]
+      ],
+      "target_rect_output_px": [
+        364,
+        476,
+        1799,
+        501
+      ],
+      "before_index": "31",
+      "after_index": "60",
+      "label_text": "Logged drag endpoints · no measured pointer path",
+      "native_cursor_claim": false,
+      "intermediate_pointer_samples": 0,
+      "connecting_trajectory_added": false,
+      "reason": "Two recorded endpoints only; display separate endpoint pointers with a gap, without inventing an intervening pointer trajectory"
+    },
+    {
+      "id": "B:drag-3",
+      "take": "B",
+      "label": "actual-slider-drag-to-1000K",
+      "kind": "drag_endpoints",
+      "call_interval_s": [
+        57.0190534,
+        58.4410953
+      ],
+      "video_interval_s": [
+        57.0190534,
+        58.8410953
+      ],
+      "source_from_css": [
+        1308,
+        492
+      ],
+      "source_to_css": [
+        1804,
+        492
+      ],
+      "output_endpoints": [
+        [
+          1298.5315408479835,
+          488.37251538694386
+        ],
+        [
+          1790.9410548086869,
+          488.37251538694386
+        ]
+      ],
+      "target_rect_output_px": [
+        364,
+        476,
+        1799,
+        501
+      ],
+      "before_index": "60",
+      "after_index": "92",
+      "label_text": "Logged drag endpoints · no measured pointer path",
+      "native_cursor_claim": false,
+      "intermediate_pointer_samples": 0,
+      "connecting_trajectory_added": false,
+      "reason": "Two recorded endpoints only; display separate endpoint pointers with a gap, without inventing an intervening pointer trajectory"
+    },
+    {
+      "id": "C:Replay-B",
+      "take": "C",
+      "label": "Replay-B",
+      "kind": "control_highlight",
+      "logged_kind": "element-click",
+      "call_interval_s": [
+        108.0502753,
+        108.4463071
+      ],
+      "video_interval_s": [
+        108.28,
+        109.02
+      ],
+      "target_rect_output_px": [
+        422,
+        521,
+        495,
+        559
+      ],
+      "source_point": null,
+      "output_point": null,
+      "label_text": "Control highlight · Replay B",
+      "reason": "Point null: locator auto-scrolls into view; use visible Replay B control",
+      "native_cursor_claim": false,
+      "click_ring_duration_s": 0,
+      "control_tracking": {
+        "method": "Vertical template registration of actual control-label pixels; not pointer tracking",
+        "reference_frame": {
+          "file": ".local\\browser-demo-capture\\C\\frame_000160.jpg",
+          "t": 13.241397499999962,
+          "sha256": "504981e4cfaff534e0cddf279864cc1f7acfe66b65f075c4e9fcf00a99045f7a"
+        },
+        "template_box_output_px": [
+          434,
+          532,
+          484,
+          548
+        ],
+        "score": "mean absolute grayscale pixel difference",
+        "after_reference_frame": {
+          "file": ".local\\browser-demo-capture\\C\\frame_000165.jpg",
+          "t": 14.073565899999812,
+          "sha256": "490340a35fb72e81944b5666c5a0ea9c0b6874d4559f0ba6319560bc3699cf39"
+        },
+        "after_template_box_output_px": [
+          434,
+          657,
+          484,
+          673
+        ],
+        "maximum_allowed_score": 16,
+        "rect_by_output_frame": {
+          "3249": [
+            422,
+            521,
+            495,
+            559
+          ],
+          "3250": [
+            422,
+            521,
+            495,
+            559
+          ],
+          "3251": [
+            422,
+            521,
+            495,
+            559
+          ],
+          "3252": [
+            422,
+            521,
+            495,
+            559
+          ],
+          "3253": [
+            422,
+            521,
+            495,
+            559
+          ],
+          "3254": [
+            422,
+            521,
+            495,
+            559
+          ],
+          "3255": [
+            422,
+            521,
+            495,
+            559
+          ],
+          "3256": [
+            422,
+            521,
+            495,
+            559
+          ],
+          "3257": [
+            422,
+            521,
+            495,
+            559
+          ],
+          "3258": [
+            422,
+            521,
+            495,
+            559
+          ],
+          "3259": [
+            422,
+            521,
+            495,
+            559
+          ],
+          "3260": [
+            422,
+            521,
+            495,
+            559
+          ],
+          "3261": [
+            422,
+            521,
+            495,
+            559
+          ],
+          "3262": [
+            422,
+            521,
+            495,
+            559
+          ],
+          "3263": [
+            422,
+            521,
+            495,
+            559
+          ],
+          "3264": [
+            422,
+            646,
+            495,
+            684
+          ],
+          "3265": [
+            422,
+            646,
+            495,
+            684
+          ],
+          "3266": [
+            422,
+            646,
+            495,
+            684
+          ],
+          "3267": [
+            422,
+            646,
+            495,
+            684
+          ],
+          "3268": [
+            422,
+            646,
+            495,
+            684
+          ],
+          "3269": [
+            422,
+            646,
+            495,
+            684
+          ],
+          "3270": [
+            422,
+            646,
+            495,
+            684
+          ]
+        }
+      }
+    },
+    {
+      "id": "D:Replay-C",
+      "take": "D",
+      "label": "Replay-C",
+      "kind": "control_highlight",
+      "logged_kind": "element-click",
+      "call_interval_s": [
+        136.0793663,
+        136.4764526
+      ],
+      "video_interval_s": [
+        136.25,
+        136.98
+      ],
+      "target_rect_output_px": [
+        500,
+        521,
+        574,
+        559
+      ],
+      "source_point": {
+        "height": 1088,
+        "width": 1934,
+        "x": 541.8181266784668,
+        "y": 1065.5112037658691
+      },
+      "output_point": null,
+      "label_text": "Control highlight · Replay C",
+      "reason": "Pre-scroll point at bottom edge is invalid after auto-scroll and overlaps existing subtitles; omit pointer",
+      "native_cursor_claim": false,
+      "click_ring_duration_s": 0,
+      "control_tracking": {
+        "method": "Vertical template registration of actual control-label pixels; not pointer tracking",
+        "reference_frame": {
+          "file": ".local\\browser-demo-capture\\D\\frame_000015.jpg",
+          "t": 1.1937552000004799,
+          "sha256": "62cb1ebf4dd4aaef6b0bea98d6254c2f7b671382053bb6ef86bdde2030af7ba0"
+        },
+        "template_box_output_px": [
+          510,
+          532,
+          560,
+          548
+        ],
+        "score": "mean absolute grayscale pixel difference",
+        "after_reference_frame": {
+          "file": ".local\\browser-demo-capture\\D\\frame_000021.jpg",
+          "t": 2.0385949000008403,
+          "sha256": "9508fb7ff11223217af1568f7b77602b63014f4d2d9caa9cee45af2c7de90d7b"
+        },
+        "after_template_box_output_px": [
+          510,
+          274,
+          560,
+          290
+        ],
+        "maximum_allowed_score": 16,
+        "rect_by_output_frame": {
+          "4088": [
+            500,
+            521,
+            574,
+            559
+          ],
+          "4089": [
+            500,
+            521,
+            574,
+            559
+          ],
+          "4090": [
+            500,
+            521,
+            574,
+            559
+          ],
+          "4091": [
+            500,
+            521,
+            574,
+            559
+          ],
+          "4092": [
+            500,
+            521,
+            574,
+            559
+          ],
+          "4093": [
+            500,
+            521,
+            574,
+            559
+          ],
+          "4094": [
+            500,
+            521,
+            574,
+            559
+          ],
+          "4095": [
+            500,
+            521,
+            574,
+            559
+          ],
+          "4096": [
+            500,
+            521,
+            574,
+            559
+          ],
+          "4097": [
+            500,
+            263,
+            574,
+            301
+          ],
+          "4098": [
+            500,
+            263,
+            574,
+            301
+          ],
+          "4099": [
+            500,
+            263,
+            574,
+            301
+          ],
+          "4100": [
+            500,
+            263,
+            574,
+            301
+          ],
+          "4101": [
+            500,
+            263,
+            574,
+            301
+          ],
+          "4102": [
+            500,
+            263,
+            574,
+            301
+          ],
+          "4103": [
+            500,
+            263,
+            574,
+            301
+          ],
+          "4104": [
+            500,
+            263,
+            574,
+            301
+          ],
+          "4105": [
+            500,
+            263,
+            574,
+            301
+          ],
+          "4106": [
+            500,
+            263,
+            574,
+            301
+          ],
+          "4107": [
+            500,
+            263,
+            574,
+            301
+          ],
+          "4108": [
+            500,
+            263,
+            574,
+            301
+          ],
+          "4109": [
+            500,
+            263,
+            574,
+            301
+          ]
+        }
+      }
+    },
+    {
+      "id": "E:Export-JSON",
+      "take": "E",
+      "label": "Export-JSON",
+      "kind": "control_highlight",
+      "logged_kind": "element-click",
+      "call_interval_s": [
+        177.1134568,
+        177.3998851
+      ],
+      "video_interval_s": [
+        177.25,
+        178.08
+      ],
+      "target_rect_output_px": [
+        1653,
+        520,
+        1800,
+        561
+      ],
+      "source_point": null,
+      "output_point": null,
+      "label_text": "Control highlight · Export JSON",
+      "reason": "Point null: control becomes visible after locator auto-scroll; use actual export control",
+      "native_cursor_claim": false,
+      "click_ring_duration_s": 0,
+      "control_tracking": {
+        "method": "Vertical template registration of actual control-label pixels; not pointer tracking",
+        "reference_frame": {
+          "file": ".local\\browser-demo-capture\\E\\frame_000149.jpg",
+          "t": 12.247618599999695,
+          "sha256": "5670a9500035fc35b1765371f9bb3ec5babd6c6ee2600f454badea7243156b1a"
+        },
+        "template_box_output_px": [
+          1678,
+          532,
+          1789,
+          548
+        ],
+        "score": "mean absolute grayscale pixel difference",
+        "after_reference_frame": {
+          "file": ".local\\browser-demo-capture\\E\\frame_000153.jpg",
+          "t": 13.15844039999973,
+          "sha256": "a4f8e237daed780e05c64e00a6a63d8bf3199438b0e67f94468b402b99d0b93a"
+        },
+        "after_template_box_output_px": [
+          1678,
+          532,
+          1789,
+          548
+        ],
+        "maximum_allowed_score": 16,
+        "rect_by_output_frame": {
+          "5318": [
+            1653,
+            520,
+            1800,
+            561
+          ],
+          "5319": [
+            1653,
+            520,
+            1800,
+            561
+          ],
+          "5320": [
+            1653,
+            520,
+            1800,
+            561
+          ],
+          "5321": [
+            1653,
+            520,
+            1800,
+            561
+          ],
+          "5322": [
+            1653,
+            520,
+            1800,
+            561
+          ],
+          "5323": [
+            1653,
+            520,
+            1800,
+            561
+          ],
+          "5324": [
+            1653,
+            520,
+            1800,
+            561
+          ],
+          "5325": [
+            1653,
+            520,
+            1800,
+            561
+          ],
+          "5326": [
+            1653,
+            520,
+            1800,
+            561
+          ],
+          "5327": [
+            1653,
+            520,
+            1800,
+            561
+          ],
+          "5328": [
+            1653,
+            520,
+            1800,
+            561
+          ],
+          "5329": [
+            1653,
+            520,
+            1800,
+            561
+          ],
+          "5330": [
+            1653,
+            520,
+            1800,
+            561
+          ],
+          "5331": [
+            1653,
+            520,
+            1800,
+            561
+          ],
+          "5332": [
+            1653,
+            520,
+            1800,
+            561
+          ],
+          "5333": [
+            1653,
+            520,
+            1800,
+            561
+          ],
+          "5334": [
+            1653,
+            520,
+            1800,
+            561
+          ],
+          "5335": [
+            1653,
+            520,
+            1800,
+            561
+          ],
+          "5336": [
+            1653,
+            520,
+            1800,
+            561
+          ],
+          "5337": [
+            1653,
+            520,
+            1800,
+            561
+          ],
+          "5338": [
+            1653,
+            520,
+            1800,
+            561
+          ],
+          "5339": [
+            1653,
+            520,
+            1800,
+            561
+          ],
+          "5340": [
+            1653,
+            520,
+            1800,
+            561
+          ],
+          "5341": [
+            1653,
+            520,
+            1800,
+            561
+          ],
+          "5342": [
+            1653,
+            520,
+            1800,
+            561
+          ]
+        }
+      }
+    }
+  ],
+  "protected_files": 441,
+  "new_browser_actions": 0,
+  "new_model_calls": 0,
+  "method": "Recompose accepted original browser MP4s with identical verified effect layers; omit all overlay text tags and introduction. No erasure/inpainting."
+}

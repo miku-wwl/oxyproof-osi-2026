@@ -1,0 +1,32 @@
+[
+  {
+    "path": "D:\\workshop\\oct\\oxyproof-osi-2026\\output\\osi-final\\browser-demo\\review\\__pycache__\\render_cursor_demo.cpython-312.pyc",
+    "before_sha256": "1ca51227c6c98a5c4409255983d39d42708020c094cea86ac689cfa1c9561aed",
+    "after_sha256": "36214ac28077c471ef1b6efdb378b9951145b3b69325f0b81337a4f4c93cc628",
+    "scope": "derived Python cache refreshed by first import; subsequent bytecode writes disabled"
+  },
+  {
+    "path": "C:\\Users\\weila\\.codex\\skills\\codex-iab-video-recording\\MANIFEST-SHA256.txt",
+    "before_sha256": "c3c596e6a5d616889cefab6a91be5fdd17b80628540a4684831d23417cb7a4b4",
+    "after_sha256": "a5deec548d9e234b6e90143c9ff98f13f6db011720110a91d298c69990d22cb4",
+    "scope": "outside polish scope; concurrent installed-skill edit observed; no skill writes performed by this task"
+  },
+  {
+    "path": "C:\\Users\\weila\\.codex\\skills\\codex-iab-video-recording\\SKILL.md",
+    "before_sha256": "967bef63c017bb5b944075f4fa30afc1217efc43272a3a0441d8b70c89d79eee",
+    "after_sha256": "6cb77f7570b35d1e9245debb826015613b7267c929e6a0ca9e3dff1752352c7a",
+    "scope": "outside polish scope; concurrent installed-skill edit observed; no skill writes performed by this task"
+  },
+  {
+    "path": "C:\\Users\\weila\\.codex\\skills\\codex-iab-video-recording\\scripts\\capture_iab.mjs",
+    "before_sha256": "2bea168120e39e68d33c1d5f692d54e5c14708259ce89f2f8fb8896d33c87fb1",
+    "after_sha256": "a0633b7cbf98559043c3628108e0902df62175e7db1f68daf8c3f61fc3ed6903",
+    "scope": "outside polish scope; concurrent installed-skill edit observed; no skill writes performed by this task"
+  },
+  {
+    "path": "C:\\Users\\weila\\.codex\\skills\\codex-iab-video-recording\\scripts\\render_iab.py",
+    "before_sha256": "8822ad7a91d649a49dc1a88c075ed6e4b03fc4990ebf96686905ca3752b55163",
+    "after_sha256": "067235328e0f5cf1d4cdb454ed165bf5a5be2b22058ba395501b1a57c6fe946c",
+    "scope": "outside polish scope; concurrent installed-skill edit observed; no skill writes performed by this task"
+  }
+]

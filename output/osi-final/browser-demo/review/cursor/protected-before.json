@@ -1,0 +1,23 @@
+{
+  "output\\osi-final\\browser-demo\\oxyproof-browser-demo-clean.mp4": "bc4f6f41cafb8da90c42ebf271f196a1894c4f429ad3264560de7b0c936bd7c2",
+  "output\\osi-final\\browser-demo\\oxyproof-browser-demo-subtitled.mp4": "c005ccba5bfdccb6a6ac90bfc628bd79d04203cd240cdbae1e7cedf244e321d1",
+  "output\\osi-final\\browser-demo\\oxyproof-browser-demo.srt": "9e68287a08d5c9425b1478a853af9c6401996c35e1e74b04a16d20f1ef73f67a",
+  "output\\osi-final\\browser-demo\\BROWSER_DEMO_NARRATION.md": "4b35e8d304274a1d055afe32120ba303117548aa340cc84f53c63eb060e53da9",
+  "output\\osi-final\\browser-demo\\BROWSER_DEMO_ACCEPTANCE.md": "7d971d5bf632b15bb3494e46dcac722ca9bad1d1052119463148baa09f3b3052",
+  "output\\osi-final\\browser-demo\\review\\recording-provenance.json": "3fce12ab29d6bc14cb6fa48e94fb5059d2a3f39c74dbfa2c44d9aca0586037b8",
+  "output\\osi-final\\browser-demo\\review\\slider-operation-proof.json": "eb437c25ce619af9777074086c61e94b4d6cee3e09dbd9a471598c587c470f17",
+  "output\\osi-final\\browser-demo\\review\\exported-decision.json": "190430d6355326281c501057df5a2167782209768ad88ddd62fd66bad29e224c",
+  "output\\osi-final\\video\\oxyproof-final-clean.mp4": "d6e39ff1588b7e339a6f88f98fe71d27c7293bbc6e327abd148780871b949616",
+  "output\\osi-final\\video\\oxyproof-final-subtitled.mp4": "62be7bf54248f1955f9257bed5751a3a8a5ba874e5da7bbdbb04777b04fd5301",
+  "output\\osi-final\\submission\\oxyproof-one-page-final.pdf": "a713d2c30a0c3acbfa5f633b41ac65290a957bb18a4ebcbb3dcb438cac9f7c75",
+  "output\\osi-final\\submission\\SUBMISSION_FINAL.md": "1a89ce07e8a3a94038a3832280e0ab048661d233171d5eaec5421d8dbd789c06",
+  "output\\osi-final\\submission\\SOCIAL_POST_FINAL.md": "ffa935094552474d5d04f6f99f070b60bc84c9646f3aa233c66b1abd83e8eef7",
+  "output\\osi-final\\oxyproof-final-review-package.zip": "3f6c860d17b49b16a25294f511b37ff29db4df9a6c3fc17ae008f00d415788ef",
+  "artifacts\\deepseek_live_acceptance.json": "982aa62af7b8956ba2bcaabad133e0eb990867cac941b2a5a7a8661e16297d59",
+  "artifacts\\deepseek_live_capture_original.json": "9663b81b3c9f2864e24550b838fe0c8a6f48329dca899a7e984a770f7c030c38",
+  ".local\\deepseek-phase262-budget.json": "8ea7ba015e1a01ce7a1a964b22eaea901fb6c4272a4044f78bd0bf3436b84213",
+  "AGENTS.md": "f8fdf3a5f3e997b6a697be78fe44416feb7160c5034c4c1e894aca814b04716b",
+  "pyproject.toml": "212d669c23b1f9d34949697640f3e48db4c5a5ee7f5d199cc30abd0290378c29",
+  "uv.lock": "68a61962e9f323c82c8cc79660a12136b2803e8dc6d855aefe8bd44e6a289926",
+  "frontend\\package-lock.json": "042895f31250fa53d1d3e3f9754abe8ddc59718e784957e6062c199154c659ec"
+}

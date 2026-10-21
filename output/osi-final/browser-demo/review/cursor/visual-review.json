@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "reviewer": "Codex visual inspection of actual decoded final MP4 frames",
+  "summary": "Reviewed both 26-frame final decoded contact sheets (52 representative frames), followed by eight full-resolution final frames covering the scrolled row-2 selection, Analyze pointer/ring, Replay B after reflow, Replay C after reflow, slider endpoint at 1000 K, Export, downloaded JSON and source-group pointer. Indicators align with the actual controls, dynamically highlighted controls follow the observed page reflow, scientific values and replay labels remain readable, and original subtitles remain unobstructed. This is agent visual QA, not owner approval or a claim of full browser playback.",
+  "contact_sheets": ["clean-contact.jpg", "subtitled-contact.jpg"],
+  "full_resolution_frames": [
+    "clean-qa-08.jpg",
+    "subtitled-qa-11.jpg",
+    "clean-qa-20.jpg",
+    "subtitled-qa-22.jpg",
+    "subtitled-qa-18.jpg",
+    "clean-qa-23.jpg",
+    "subtitled-qa-25.jpg",
+    "clean-qa-02.jpg"
+  ],
+  "native_mouse_capture_claimed": false,
+  "cursor_trajectory_invented": false,
+  "browser_continuous_playback": "NOT_RUN in this annotation revision"
+}

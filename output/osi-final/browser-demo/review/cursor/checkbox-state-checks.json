@@ -1,0 +1,38 @@
+[
+  {
+    "row": "row-1",
+    "source_times_s": [
+      3.2,
+      3.8
+    ],
+    "observed_green_checkbox_pixels_before_after": [
+      0,
+      99
+    ],
+    "state_change": "unchecked -> checked"
+  },
+  {
+    "row": "row-2",
+    "source_times_s": [
+      5.2,
+      5.8
+    ],
+    "observed_green_checkbox_pixels_before_after": [
+      0,
+      99
+    ],
+    "state_change": "unchecked -> checked"
+  },
+  {
+    "row": "row-3",
+    "source_times_s": [
+      7.2,
+      7.8
+    ],
+    "observed_green_checkbox_pixels_before_after": [
+      0,
+      101
+    ],
+    "state_change": "unchecked -> checked"
+  }
+]

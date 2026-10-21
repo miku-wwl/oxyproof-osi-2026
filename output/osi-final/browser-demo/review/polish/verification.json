@@ -1,0 +1,53 @@
+{
+  "technical_status": "PASS",
+  "visual_review": "PASS",
+  "verified_at_utc": "2026-10-21T12:22:07.671764+00:00",
+  "media": [
+    {
+      "file": "oxyproof-browser-demo-final-clean.mp4",
+      "bytes": 12539257,
+      "sha256": "9c43d639724a690da405bbd7e7d4f4575000db0b17f676495614d72c7f517e73",
+      "width": 1920,
+      "height": 1080,
+      "fps": 30,
+      "frames": 5850,
+      "duration_s": 195,
+      "audio_streams": 0,
+      "codec": "h264",
+      "pixel_format": "yuv420p",
+      "color_range": "tv",
+      "full_decode": "PASS",
+      "black_frame_detection": "NONE",
+      "packet_timestamp_check": "PASS: all 5850 frames at n/30 seconds, no gaps/duplicates",
+      "faststart": true
+    },
+    {
+      "file": "oxyproof-browser-demo-final-subtitled.mp4",
+      "bytes": 13231080,
+      "sha256": "745218cf82db2ffe6913cc008e8cb8b73993a41daaa605ae7d18ab8d3818e9a3",
+      "width": 1920,
+      "height": 1080,
+      "fps": 30,
+      "frames": 5850,
+      "duration_s": 195,
+      "audio_streams": 0,
+      "codec": "h264",
+      "pixel_format": "yuv420p",
+      "color_range": "tv",
+      "full_decode": "PASS",
+      "black_frame_detection": "NONE",
+      "packet_timestamp_check": "PASS: all 5850 frames at n/30 seconds, no gaps/duplicates",
+      "faststart": true
+    }
+  ],
+  "protected_files_unchanged": 441,
+  "subtitle_cues": 25,
+  "srt_sha256": "9e68287a08d5c9425b1478a853af9c6401996c35e1e74b04a16d20f1ef73f67a",
+  "subtitle_timing": "Original burned-in subtitle footage retained without retiming; annotation alpha zero below y=996",
+  "scientific_disclosures": "PRESERVED",
+  "new_browser_actions": 0,
+  "new_model_calls": 0,
+  "application_tests": "NOT_RUN: media-only edit",
+  "browser_continuous_playback": "NOT_RUN in this polish revision",
+  "visual_evidence": "visual-review.json"
+}

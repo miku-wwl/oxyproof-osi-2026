@@ -1,0 +1,25 @@
+{
+  "status": "PASS",
+  "reviewer": "Codex visual inspection of actual decoded final MP4 frames",
+  "reviewed_at_utc": "2026-10-21T12:23:36.218755+00:00",
+  "contact_sheets": [
+    "clean-contact.jpg",
+    "subtitled-contact.jpg"
+  ],
+  "representative_frames_reviewed": 68,
+  "full_resolution_frames": [
+    "clean-qa-14.jpg",
+    "clean-qa-08.jpg",
+    "clean-qa-24.jpg",
+    "clean-qa-28.jpg",
+    "subtitled-qa-17.jpg",
+    "subtitled-qa-31.jpg",
+    "subtitled-qa-22.jpg",
+    "subtitled-qa-25.jpg",
+    "subtitled-qa-33.jpg"
+  ],
+  "findings": "Engineering labels and opening reconstruction notice absent. Retained white arrows, ring and control outlines align with source controls. Slider endpoint markers remain minimal; no invented connecting trajectory. Reflowed B/C highlights align with visible controls. Recorded DeepSeek labeling, independent audit, unsupported constraints, model-derived crossing disclosures, no uncertainty bounds, source DOI and downloaded JSON remain readable. No double pointers or unexpected overlays observed in reviewed frames. Original subtitles remain legible.",
+  "native_mouse_capture_claimed": false,
+  "continuous_browser_playback": "NOT_RUN in this polish revision",
+  "owner_review": "PENDING; owner narration next"
+}
