@@ -1,0 +1,5550 @@
+{
+  "schema_version": "2.0",
+  "execution_trace": {
+    "research_question": "Compare bulk conductors between 600 K and 1100 K with source provenance",
+    "runtime_mode": "OFFLINE_DETERMINISTIC",
+    "planning_source": "OFFLINE_DETERMINISTIC",
+    "model": null,
+    "response_id": null,
+    "local_invocation_id": null,
+    "model_selected_tool": null,
+    "deterministically_expected_tool": "analyze_temperature_interval",
+    "tool_agreement": null,
+    "executed_scientific_tool": "analyze_temperature_interval",
+    "refusal_origin": null,
+    "tool_name": "analyze_temperature_interval",
+    "tool_selection": "DETERMINISTIC_SELECTED",
+    "validated_arguments": {
+      "temperature_min_k": 600,
+      "temperature_max_k": 1100,
+      "row_ids": [
+        1,
+        2,
+        3
+      ],
+      "comparison_group": "10.1111/j.1151-2916.1998.tb02662.x | bulk | two-probe AC | 600 - 1100 K",
+      "conductivity_type": "bulk",
+      "evidence_policy": "MEASURED_ONLY",
+      "points": 81
+    },
+    "execution_status": "COMPUTED",
+    "scientific_result": {
+      "status": "CALCULATED_WITH_WARNINGS",
+      "source_scope": "FULL_DATASET",
+      "selected_rankings": [
+        {
+          "temperature_k": 700,
+          "ordering": [
+            1,
+            2,
+            3
+          ],
+          "status": "SUPPORTED_CONDITIONAL_COMPARISON"
+        },
+        {
+          "temperature_k": 1000,
+          "ordering": [
+            3,
+            2,
+            1
+          ],
+          "status": "SUPPORTED_CONDITIONAL_COMPARISON"
+        }
+      ],
+      "continuous_crossings_k": [
+        776.4074250510221,
+        817.9098253678244,
+        854.261466339589
+      ]
+    },
+    "evidence_verdicts": [
+      "SUPPORTED_CONDITIONAL_COMPARISON",
+      "SUPPORTED_MODEL_RANK_REVERSAL",
+      "REGIME_BOUNDARY_REVIEW"
+    ],
+    "grounded_explanation": [
+      "At 700 K, conditional model order (row IDs): 1 > 2 > 3. Equality uses numerical tolerance only.",
+      "At 1000 K, conditional model order (row IDs): 3 > 2 > 1. Equality uses numerical tolerance only.",
+      "Ordering depends on activation-energy differences and prefactor ratios within each valid regime. Regime-boundary events are reviewed separately from continuous roots.",
+      "The curated dataset does not establish humidity tolerance, phase stability, lifetime, cost, toxicity or sample-to-sample uncertainty. No material was discovered or measured by this tool.",
+      "Model-derived crossover temperatures; uncertainty bounds unavailable; experimental confirmation required.",
+      "Row 1: curated Ea=772 meV, EaHT=634 meV; source DOI 10.1111/j.1151-2916.1998.tb02662.x. Prefactor ratios and regime selection also affect the order.",
+      "Row 2: curated Ea=996 meV, EaHT=673 meV; source DOI 10.1111/j.1151-2916.1998.tb02662.x. Prefactor ratios and regime selection also affect the order.",
+      "Row 3: curated Ea=1118 meV, EaHT=780 meV; source DOI 10.1111/j.1151-2916.1998.tb02662.x. Prefactor ratios and regime selection also affect the order.",
+      "Review original atmosphere, preparation and density and verify bulk versus total separation.",
+      "Repeat conductivity measurements bracketing reported transitions and predicted fixed-regime crossings. These are bounded proposals; no experiment was executed."
+    ],
+    "explanation_source": "DETERMINISTIC_VALIDATED_RESULTS",
+    "provider_metadata": {}
+  },
+  "status": "CALCULATED_WITH_WARNINGS",
+  "evidence_verdicts": [
+    "SUPPORTED_CONDITIONAL_COMPARISON",
+    "SUPPORTED_MODEL_RANK_REVERSAL",
+    "REGIME_BOUNDARY_REVIEW"
+  ],
+  "research_request": {
+    "goal": "Compare bulk conductors between 600 K and 1100 K with source provenance",
+    "temperature_min": 600,
+    "temperature_max": 1100,
+    "temperature_unit": "K",
+    "conductivity_type": "bulk",
+    "row_ids": [
+      1,
+      2,
+      3
+    ],
+    "comparison_group": "10.1111/j.1151-2916.1998.tb02662.x | bulk | two-probe AC | 600 - 1100 K",
+    "max_materials": 12,
+    "evidence_policy": "MEASURED_ONLY",
+    "points": 81,
+    "selected_temperatures": [
+      700,
+      1000
+    ],
+    "mode": "OFFLINE_DETERMINISTIC"
+  },
+  "resolved_plan": {
+    "temperature_min_k": 600,
+    "temperature_max_k": 1100,
+    "row_ids": [
+      1,
+      2,
+      3
+    ],
+    "comparison_group": "10.1111/j.1151-2916.1998.tb02662.x | bulk | two-probe AC | 600 - 1100 K",
+    "conductivity_type": "bulk",
+    "evidence_policy": "MEASURED_ONLY",
+    "points": 81
+  },
+  "request_coverage": {
+    "grammar_version": "2.6",
+    "recognized": [
+      {
+        "start": 0,
+        "end": 7,
+        "text": "Compare",
+        "field": "action"
+      },
+      {
+        "start": 8,
+        "end": 12,
+        "text": "bulk",
+        "field": "conductivity_type"
+      },
+      {
+        "start": 13,
+        "end": 23,
+        "text": "conductors",
+        "field": "domain"
+      },
+      {
+        "start": 24,
+        "end": 48,
+        "text": "between 600 K and 1100 K",
+        "field": "temperature_interval"
+      },
+      {
+        "start": 49,
+        "end": 71,
+        "text": "with source provenance",
+        "field": "presentation"
+      }
+    ],
+    "unresolved": [],
+    "complete": true
+  },
+  "runtime_mode": "OFFLINE_DETERMINISTIC",
+  "llm_model": null,
+  "llm_response_id": null,
+  "validated_tool": "analyze_temperature_interval",
+  "validated_arguments": {
+    "temperature_min_k": 600,
+    "temperature_max_k": 1100,
+    "row_ids": [
+      1,
+      2,
+      3
+    ],
+    "comparison_group": "10.1111/j.1151-2916.1998.tb02662.x | bulk | two-probe AC | 600 - 1100 K",
+    "conductivity_type": "bulk",
+    "evidence_policy": "MEASURED_ONLY",
+    "points": 81
+  },
+  "source": {
+    "dataset_doi": "10.5281/zenodo.18947543",
+    "dataset_record_id": "18947543",
+    "dataset_sha256": "8ec66b131bae79f8520f7cf40e91e2be2541995939bc43b744eaac627f4fad34",
+    "loaded_sha256": "8ec66b131bae79f8520f7cf40e91e2be2541995939bc43b744eaac627f4fad34",
+    "scope": "FULL_DATASET",
+    "row_count": 483,
+    "license": "CC-BY-4.0",
+    "accessed_date": "2026-10-20",
+    "article_url": "https://www.nature.com/articles/s41597-026-07100-x",
+    "dataset_url": "https://zenodo.org/records/18947543",
+    "attribution": "Jang, Seong-Hoon; Kiyohara, Shin; Takamura, Hitoshi; Kumagai, Yu (2026). Charting the Landscape of Oxygen Ion Conductors: A 60-Year Dataset. Zenodo. https://doi.org/10.5281/zenodo.18947543. CC BY 4.0."
+  },
+  "code_version": {
+    "app_version": "0.1.0",
+    "git_base": "4286620b13f57c5a5f30af9e00302b0c19259b07",
+    "calculation_source_sha256": "bfae21de3cb91a3fc8cec766b2a1d113cc452ce4f84cdbbdb723ed941404ffa8"
+  },
+  "equation": "sigma(T) = A/T * exp(-Ea/(k_B*T))",
+  "crossover_qualification": "Model-derived crossover temperatures; uncertainty bounds unavailable; experimental confirmation required.",
+  "ratio_equation": "ln(sigma_i/sigma_j) = ln(A_i)-ln(A_j) - (Ea_i-Ea_j)/(1000*k_B*T); Ea in meV",
+  "ordering_semantics": "Descending computed sigma, row ID breaks exact arithmetic ties. tie_with/tie_groups annotate relative 1e-10 numerical equality, not scientific uncertainty. Segment limits are open.",
+  "units": {
+    "temperature": "K",
+    "conductivity": "S/cm",
+    "activation_energy": "meV",
+    "prefactor": "K S/cm"
+  },
+  "comparison_group": "10.1111/j.1151-2916.1998.tb02662.x | bulk | two-probe AC | 600 - 1100 K",
+  "materials": [
+    {
+      "record": {
+        "row_id": 1,
+        "formula": "La0.95Sr0.05Ga0.95Mg0.05O2.95",
+        "material_class": "Perovskites",
+        "source_doi": "10.1111/j.1151-2916.1998.tb02662.x",
+        "reference": "Huang et al., J. Am. Ceram. Soc., 81, 2565 (1998).",
+        "conductivity_type": "bulk",
+        "measurement": "two-probe AC",
+        "temperature_range_raw": "600 - 1100 K",
+        "raw": {
+          "Reference": "Huang et al., J. Am. Ceram. Soc., 81, 2565 (1998).",
+          "DOI": "10.1111/j.1151-2916.1998.tb02662.x",
+          "Year": "1998",
+          "Class": "Perovskites",
+          "Formula": "La0.95Sr0.05Ga0.95Mg0.05O2.95",
+          "Parsed_Formula_SiteA1": "La",
+          "Parsed_Formula_nSiteA1": "0.95",
+          "Parsed_Formula_SiteA2": "Sr",
+          "Parsed_Formula_nSiteA2": "0.05",
+          "Parsed_Formula_SiteA3": "",
+          "Parsed_Formula_nSiteA3": "",
+          "Parsed_Formula_SiteB1": "Ga",
+          "Parsed_Formula_nSiteB1": "0.95",
+          "Parsed_Formula_SiteB2": "Mg",
+          "Parsed_Formula_nSiteB2": "0.05",
+          "Parsed_Formula_SiteB3": "",
+          "Parsed_Formula_nSiteB3": "",
+          "Parsed_Formula_SiteC1": "",
+          "Parsed_Formula_nSiteC1": "",
+          "Parsed_Formula_SiteC2": "",
+          "Parsed_Formula_nSiteC2": "",
+          "Parsed_Formula_O": "O",
+          "Parsed_Formula_nO": "2.95",
+          "Delta_O": "-0.016666667",
+          "Ea": "772",
+          "A": "385385.727",
+          "EaHT": "634",
+          "AHT": "52785.93227",
+          "T*": "805.5450205",
+          "Type_of_conductivity": "bulk",
+          "Measurement_temperature_range": "600 - 1100 K",
+          "Measurement": "two-probe AC",
+          "Source": "Table 3",
+          "Plot type": "-"
+        }
+      },
+      "measured_range_k": [
+        600,
+        1100
+      ],
+      "transition_k": 805.5450205,
+      "validity_intervals": [
+        {
+          "low_k": 600,
+          "high_k": 805.5450205,
+          "low_inclusive": true,
+          "high_inclusive": false,
+          "regime": "LT",
+          "activation_energy": {
+            "value": 772,
+            "unit": "meV"
+          },
+          "prefactor": {
+            "value": 385385.727,
+            "unit": "K S/cm"
+          }
+        },
+        {
+          "low_k": 805.5450205,
+          "high_k": 1100,
+          "low_inclusive": false,
+          "high_inclusive": true,
+          "regime": "HT",
+          "activation_energy": {
+            "value": 634,
+            "unit": "meV"
+          },
+          "prefactor": {
+            "value": 52785.93227,
+            "unit": "K S/cm"
+          }
+        }
+      ],
+      "excluded_reason": null
+    },
+    {
+      "record": {
+        "row_id": 2,
+        "formula": "La0.95Sr0.05Ga0.9Mg0.1O2.925",
+        "material_class": "Perovskites",
+        "source_doi": "10.1111/j.1151-2916.1998.tb02662.x",
+        "reference": "Huang et al., J. Am. Ceram. Soc., 81, 2565 (1998).",
+        "conductivity_type": "bulk",
+        "measurement": "two-probe AC",
+        "temperature_range_raw": "600 - 1100 K",
+        "raw": {
+          "Reference": "Huang et al., J. Am. Ceram. Soc., 81, 2565 (1998).",
+          "DOI": "10.1111/j.1151-2916.1998.tb02662.x",
+          "Year": "1998",
+          "Class": "Perovskites",
+          "Formula": "La0.95Sr0.05Ga0.9Mg0.1O2.925",
+          "Parsed_Formula_SiteA1": "La",
+          "Parsed_Formula_nSiteA1": "0.95",
+          "Parsed_Formula_SiteA2": "Sr",
+          "Parsed_Formula_nSiteA2": "0.05",
+          "Parsed_Formula_SiteA3": "",
+          "Parsed_Formula_nSiteA3": "",
+          "Parsed_Formula_SiteB1": "Ga",
+          "Parsed_Formula_nSiteB1": "0.9",
+          "Parsed_Formula_SiteB2": "Mg",
+          "Parsed_Formula_nSiteB2": "0.1",
+          "Parsed_Formula_SiteB3": "",
+          "Parsed_Formula_nSiteB3": "",
+          "Parsed_Formula_SiteC1": "",
+          "Parsed_Formula_nSiteC1": "",
+          "Parsed_Formula_SiteC2": "",
+          "Parsed_Formula_nSiteC2": "",
+          "Parsed_Formula_O": "O",
+          "Parsed_Formula_nO": "2.925",
+          "Delta_O": "-0.025",
+          "Ea": "996",
+          "A": "10962599.59",
+          "EaHT": "673",
+          "AHT": "120090.3914",
+          "T*": "830.3631709",
+          "Type_of_conductivity": "bulk",
+          "Measurement_temperature_range": "600 - 1100 K",
+          "Measurement": "two-probe AC",
+          "Source": "Table 3",
+          "Plot type": "-"
+        }
+      },
+      "measured_range_k": [
+        600,
+        1100
+      ],
+      "transition_k": 830.3631709,
+      "validity_intervals": [
+        {
+          "low_k": 600,
+          "high_k": 830.3631709,
+          "low_inclusive": true,
+          "high_inclusive": false,
+          "regime": "LT",
+          "activation_energy": {
+            "value": 996,
+            "unit": "meV"
+          },
+          "prefactor": {
+            "value": 10962599.59,
+            "unit": "K S/cm"
+          }
+        },
+        {
+          "low_k": 830.3631709,
+          "high_k": 1100,
+          "low_inclusive": false,
+          "high_inclusive": true,
+          "regime": "HT",
+          "activation_energy": {
+            "value": 673,
+            "unit": "meV"
+          },
+          "prefactor": {
+            "value": 120090.3914,
+            "unit": "K S/cm"
+          }
+        }
+      ],
+      "excluded_reason": null
+    },
+    {
+      "record": {
+        "row_id": 3,
+        "formula": "La0.95Sr0.05Ga0.85Mg0.15O2.9",
+        "material_class": "Perovskites",
+        "source_doi": "10.1111/j.1151-2916.1998.tb02662.x",
+        "reference": "Huang et al., J. Am. Ceram. Soc., 81, 2565 (1998).",
+        "conductivity_type": "bulk",
+        "measurement": "two-probe AC",
+        "temperature_range_raw": "600 - 1100 K",
+        "raw": {
+          "Reference": "Huang et al., J. Am. Ceram. Soc., 81, 2565 (1998).",
+          "DOI": "10.1111/j.1151-2916.1998.tb02662.x",
+          "Year": "1998",
+          "Class": "Perovskites",
+          "Formula": "La0.95Sr0.05Ga0.85Mg0.15O2.9",
+          "Parsed_Formula_SiteA1": "La",
+          "Parsed_Formula_nSiteA1": "0.95",
+          "Parsed_Formula_SiteA2": "Sr",
+          "Parsed_Formula_nSiteA2": "0.05",
+          "Parsed_Formula_SiteA3": "",
+          "Parsed_Formula_nSiteA3": "",
+          "Parsed_Formula_SiteB1": "Ga",
+          "Parsed_Formula_nSiteB1": "0.85",
+          "Parsed_Formula_SiteB2": "Mg",
+          "Parsed_Formula_nSiteB2": "0.15",
+          "Parsed_Formula_SiteB3": "",
+          "Parsed_Formula_nSiteB3": "",
+          "Parsed_Formula_SiteC1": "",
+          "Parsed_Formula_nSiteC1": "",
+          "Parsed_Formula_SiteC2": "",
+          "Parsed_Formula_nSiteC2": "",
+          "Parsed_Formula_O": "O",
+          "Parsed_Formula_nO": "2.9",
+          "Delta_O": "-0.033333333",
+          "Ea": "1118",
+          "A": "50677875.87",
+          "EaHT": "780",
+          "AHT": "572632.8272",
+          "T*": "874.9335546",
+          "Type_of_conductivity": "bulk",
+          "Measurement_temperature_range": "600 - 1100 K",
+          "Measurement": "two-probe AC",
+          "Source": "Table 3",
+          "Plot type": "-"
+        }
+      },
+      "measured_range_k": [
+        600,
+        1100
+      ],
+      "transition_k": 874.9335546,
+      "validity_intervals": [
+        {
+          "low_k": 600,
+          "high_k": 874.9335546,
+          "low_inclusive": true,
+          "high_inclusive": false,
+          "regime": "LT",
+          "activation_energy": {
+            "value": 1118,
+            "unit": "meV"
+          },
+          "prefactor": {
+            "value": 50677875.87,
+            "unit": "K S/cm"
+          }
+        },
+        {
+          "low_k": 874.9335546,
+          "high_k": 1100,
+          "low_inclusive": false,
+          "high_inclusive": true,
+          "regime": "HT",
+          "activation_energy": {
+            "value": 780,
+            "unit": "meV"
+          },
+          "prefactor": {
+            "value": 572632.8272,
+            "unit": "K S/cm"
+          }
+        }
+      ],
+      "excluded_reason": null
+    }
+  ],
+  "segments": [
+    {
+      "low_k": 600,
+      "high_k": 776.4074250510221,
+      "endpoint_policy": "Open interval; evaluate boundaries separately. T* is withheld.",
+      "ordering": [
+        1,
+        2,
+        3
+      ],
+      "regimes": {
+        "1": "LT",
+        "2": "LT",
+        "3": "LT"
+      },
+      "status": "SUPPORTED_CONDITIONAL_COMPARISON",
+      "review_neighborhood": false,
+      "tie_groups": []
+    },
+    {
+      "low_k": 776.4074250510221,
+      "high_k": 800.5450205,
+      "endpoint_policy": "Open interval; evaluate boundaries separately. T* is withheld.",
+      "ordering": [
+        2,
+        1,
+        3
+      ],
+      "regimes": {
+        "1": "LT",
+        "2": "LT",
+        "3": "LT"
+      },
+      "status": "SUPPORTED_CONDITIONAL_COMPARISON",
+      "review_neighborhood": false,
+      "tie_groups": []
+    },
+    {
+      "low_k": 800.5450205,
+      "high_k": 805.5450205,
+      "endpoint_policy": "Open interval; evaluate boundaries separately. T* is withheld.",
+      "ordering": [
+        2,
+        1,
+        3
+      ],
+      "regimes": {
+        "1": "LT",
+        "2": "LT",
+        "3": "LT"
+      },
+      "status": "SUPPORTED_CONDITIONAL_COMPARISON",
+      "review_neighborhood": true,
+      "tie_groups": []
+    },
+    {
+      "low_k": 805.5450205,
+      "high_k": 810.5450205,
+      "endpoint_policy": "Open interval; evaluate boundaries separately. T* is withheld.",
+      "ordering": [
+        2,
+        1,
+        3
+      ],
+      "regimes": {
+        "1": "HT",
+        "2": "LT",
+        "3": "LT"
+      },
+      "status": "SUPPORTED_CONDITIONAL_COMPARISON",
+      "review_neighborhood": true,
+      "tie_groups": []
+    },
+    {
+      "low_k": 810.5450205,
+      "high_k": 817.9098253678244,
+      "endpoint_policy": "Open interval; evaluate boundaries separately. T* is withheld.",
+      "ordering": [
+        2,
+        1,
+        3
+      ],
+      "regimes": {
+        "1": "HT",
+        "2": "LT",
+        "3": "LT"
+      },
+      "status": "SUPPORTED_CONDITIONAL_COMPARISON",
+      "review_neighborhood": false,
+      "tie_groups": []
+    },
+    {
+      "low_k": 817.9098253678244,
+      "high_k": 825.3631709,
+      "endpoint_policy": "Open interval; evaluate boundaries separately. T* is withheld.",
+      "ordering": [
+        2,
+        3,
+        1
+      ],
+      "regimes": {
+        "1": "HT",
+        "2": "LT",
+        "3": "LT"
+      },
+      "status": "SUPPORTED_CONDITIONAL_COMPARISON",
+      "review_neighborhood": false,
+      "tie_groups": []
+    },
+    {
+      "low_k": 825.3631709,
+      "high_k": 830.3631709,
+      "endpoint_policy": "Open interval; evaluate boundaries separately. T* is withheld.",
+      "ordering": [
+        2,
+        3,
+        1
+      ],
+      "regimes": {
+        "1": "HT",
+        "2": "LT",
+        "3": "LT"
+      },
+      "status": "SUPPORTED_CONDITIONAL_COMPARISON",
+      "review_neighborhood": true,
+      "tie_groups": []
+    },
+    {
+      "low_k": 830.3631709,
+      "high_k": 835.3631709,
+      "endpoint_policy": "Open interval; evaluate boundaries separately. T* is withheld.",
+      "ordering": [
+        2,
+        3,
+        1
+      ],
+      "regimes": {
+        "1": "HT",
+        "2": "HT",
+        "3": "LT"
+      },
+      "status": "SUPPORTED_CONDITIONAL_COMPARISON",
+      "review_neighborhood": true,
+      "tie_groups": []
+    },
+    {
+      "low_k": 835.3631709,
+      "high_k": 854.261466339589,
+      "endpoint_policy": "Open interval; evaluate boundaries separately. T* is withheld.",
+      "ordering": [
+        2,
+        3,
+        1
+      ],
+      "regimes": {
+        "1": "HT",
+        "2": "HT",
+        "3": "LT"
+      },
+      "status": "SUPPORTED_CONDITIONAL_COMPARISON",
+      "review_neighborhood": false,
+      "tie_groups": []
+    },
+    {
+      "low_k": 854.261466339589,
+      "high_k": 869.9335546,
+      "endpoint_policy": "Open interval; evaluate boundaries separately. T* is withheld.",
+      "ordering": [
+        3,
+        2,
+        1
+      ],
+      "regimes": {
+        "1": "HT",
+        "2": "HT",
+        "3": "LT"
+      },
+      "status": "SUPPORTED_CONDITIONAL_COMPARISON",
+      "review_neighborhood": false,
+      "tie_groups": []
+    },
+    {
+      "low_k": 869.9335546,
+      "high_k": 874.9335546,
+      "endpoint_policy": "Open interval; evaluate boundaries separately. T* is withheld.",
+      "ordering": [
+        3,
+        2,
+        1
+      ],
+      "regimes": {
+        "1": "HT",
+        "2": "HT",
+        "3": "LT"
+      },
+      "status": "SUPPORTED_CONDITIONAL_COMPARISON",
+      "review_neighborhood": true,
+      "tie_groups": []
+    },
+    {
+      "low_k": 874.9335546,
+      "high_k": 879.9335546,
+      "endpoint_policy": "Open interval; evaluate boundaries separately. T* is withheld.",
+      "ordering": [
+        3,
+        2,
+        1
+      ],
+      "regimes": {
+        "1": "HT",
+        "2": "HT",
+        "3": "HT"
+      },
+      "status": "SUPPORTED_CONDITIONAL_COMPARISON",
+      "review_neighborhood": true,
+      "tie_groups": []
+    },
+    {
+      "low_k": 879.9335546,
+      "high_k": 1100,
+      "endpoint_policy": "Open interval; evaluate boundaries separately. T* is withheld.",
+      "ordering": [
+        3,
+        2,
+        1
+      ],
+      "regimes": {
+        "1": "HT",
+        "2": "HT",
+        "3": "HT"
+      },
+      "status": "SUPPORTED_CONDITIONAL_COMPARISON",
+      "review_neighborhood": false,
+      "tie_groups": []
+    }
+  ],
+  "events": [
+    {
+      "kind": "CONTINUOUS_MODEL_CROSSOVER",
+      "temperature_k": 776.4074250510221,
+      "row_ids": [
+        1,
+        2
+      ],
+      "verdict": "SUPPORTED_MODEL_RANK_REVERSAL",
+      "exact_continuous_crossing": true,
+      "left_ordering": [
+        1,
+        2,
+        3
+      ],
+      "right_ordering": [
+        2,
+        1,
+        3
+      ],
+      "explanation": "Within joint measured fixed regimes LT/LT: ln(A_i)-ln(A_j)=-3.3480000002; delta Ea=-0.224 eV. T=delta Ea/[k_B*delta ln(A)]. Model-derived root, not an observed crossing or an uncertainty estimate."
+    },
+    {
+      "kind": "PUBLISHED_REGIME_BOUNDARY",
+      "temperature_k": 805.5450205,
+      "row_ids": [
+        1
+      ],
+      "verdict": "REGIME_BOUNDARY_REVIEW",
+      "exact_continuous_crossing": false,
+      "left_ordering": [
+        2,
+        1,
+        3
+      ],
+      "right_ordering": [
+        2,
+        1,
+        3
+      ],
+      "explanation": "Published T* changes the selected fit. Exact T* is withheld; continuity between fits is not assumed. The ±5 K review neighborhood is an engineering heuristic, not an uncertainty interval."
+    },
+    {
+      "kind": "CONTINUOUS_MODEL_CROSSOVER",
+      "temperature_k": 817.9098253678244,
+      "row_ids": [
+        1,
+        3
+      ],
+      "verdict": "SUPPORTED_MODEL_RANK_REVERSAL",
+      "exact_continuous_crossing": true,
+      "left_ordering": [
+        2,
+        1,
+        3
+      ],
+      "right_ordering": [
+        2,
+        3,
+        1
+      ],
+      "explanation": "Within joint measured fixed regimes HT/LT: ln(A_i)-ln(A_j)=-6.86700000004; delta Ea=-0.484 eV. T=delta Ea/[k_B*delta ln(A)]. Model-derived root, not an observed crossing or an uncertainty estimate."
+    },
+    {
+      "kind": "PUBLISHED_REGIME_BOUNDARY",
+      "temperature_k": 830.3631709,
+      "row_ids": [
+        2
+      ],
+      "verdict": "REGIME_BOUNDARY_REVIEW",
+      "exact_continuous_crossing": false,
+      "left_ordering": [
+        2,
+        3,
+        1
+      ],
+      "right_ordering": [
+        2,
+        3,
+        1
+      ],
+      "explanation": "Published T* changes the selected fit. Exact T* is withheld; continuity between fits is not assumed. The ±5 K review neighborhood is an engineering heuristic, not an uncertainty interval."
+    },
+    {
+      "kind": "CONTINUOUS_MODEL_CROSSOVER",
+      "temperature_k": 854.261466339589,
+      "row_ids": [
+        2,
+        3
+      ],
+      "verdict": "SUPPORTED_MODEL_RANK_REVERSAL",
+      "exact_continuous_crossing": true,
+      "left_ordering": [
+        2,
+        3,
+        1
+      ],
+      "right_ordering": [
+        3,
+        2,
+        1
+      ],
+      "explanation": "Within joint measured fixed regimes HT/LT: ln(A_i)-ln(A_j)=-6.04500000008; delta Ea=-0.445 eV. T=delta Ea/[k_B*delta ln(A)]. Model-derived root, not an observed crossing or an uncertainty estimate."
+    },
+    {
+      "kind": "PUBLISHED_REGIME_BOUNDARY",
+      "temperature_k": 874.9335546,
+      "row_ids": [
+        3
+      ],
+      "verdict": "REGIME_BOUNDARY_REVIEW",
+      "exact_continuous_crossing": false,
+      "left_ordering": [
+        3,
+        2,
+        1
+      ],
+      "right_ordering": [
+        3,
+        2,
+        1
+      ],
+      "explanation": "Published T* changes the selected fit. Exact T* is withheld; continuity between fits is not assumed. The ±5 K review neighborhood is an engineering heuristic, not an uncertainty interval."
+    }
+  ],
+  "rejected_crossovers": [
+    {
+      "row_ids": [
+        1,
+        2
+      ],
+      "candidate_temperature_k": 787.2630359359241,
+      "fixed_regime_overlap_k": [
+        805.5450205,
+        830.3631709
+      ],
+      "reason": "Outside open joint measured and fixed-regime interval; not a supported crossing."
+    },
+    {
+      "row_ids": [
+        1,
+        2
+      ],
+      "candidate_temperature_k": 550.5793269633008,
+      "fixed_regime_overlap_k": [
+        830.3631709,
+        1100
+      ],
+      "reason": "Outside open joint measured and fixed-regime interval; not a supported crossing."
+    },
+    {
+      "row_ids": [
+        1,
+        3
+      ],
+      "candidate_temperature_k": 822.9479955153151,
+      "fixed_regime_overlap_k": [
+        600,
+        805.5450205
+      ],
+      "reason": "Outside open joint measured and fixed-regime interval; not a supported crossing."
+    },
+    {
+      "row_ids": [
+        1,
+        3
+      ],
+      "candidate_temperature_k": 710.6793815566845,
+      "fixed_regime_overlap_k": [
+        874.9335546,
+        1100
+      ],
+      "reason": "Outside open joint measured and fixed-regime interval; not a supported crossing."
+    },
+    {
+      "row_ids": [
+        2,
+        3
+      ],
+      "candidate_temperature_k": 924.7231947002324,
+      "fixed_regime_overlap_k": [
+        600,
+        830.3631709
+      ],
+      "reason": "Outside open joint measured and fixed-regime interval; not a supported crossing."
+    },
+    {
+      "row_ids": [
+        2,
+        3
+      ],
+      "candidate_temperature_k": 794.9317790289832,
+      "fixed_regime_overlap_k": [
+        874.9335546,
+        1100
+      ],
+      "reason": "Outside open joint measured and fixed-regime interval; not a supported crossing."
+    }
+  ],
+  "selected_rankings": [
+    {
+      "temperature_k": 700,
+      "status": "SUPPORTED_CONDITIONAL_COMPARISON",
+      "ordering": [
+        1,
+        2,
+        3
+      ],
+      "values": [
+        {
+          "row_id": 1,
+          "formula": "La0.95Sr0.05Ga0.95Mg0.05O2.95",
+          "conductivity_s_cm": 0.001522797713779979,
+          "regime": "LT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 2,
+          "formula": "La0.95Sr0.05Ga0.9Mg0.1O2.925",
+          "conductivity_s_cm": 0.0010566499147050459,
+          "regime": "LT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 3,
+          "formula": "La0.95Sr0.05Ga0.85Mg0.15O2.9",
+          "conductivity_s_cm": 0.0006463602393783875,
+          "regime": "LT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        }
+      ],
+      "excluded": []
+    },
+    {
+      "temperature_k": 1000,
+      "status": "SUPPORTED_CONDITIONAL_COMPARISON",
+      "ordering": [
+        3,
+        2,
+        1
+      ],
+      "values": [
+        {
+          "row_id": 3,
+          "formula": "La0.95Sr0.05Ga0.85Mg0.15O2.9",
+          "conductivity_s_cm": 0.06711958406590988,
+          "regime": "HT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 2,
+          "formula": "La0.95Sr0.05Ga0.9Mg0.1O2.925",
+          "conductivity_s_cm": 0.04872339496036764,
+          "regime": "HT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 1,
+          "formula": "La0.95Sr0.05Ga0.95Mg0.05O2.95",
+          "conductivity_s_cm": 0.03367431938646613,
+          "regime": "HT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        }
+      ],
+      "excluded": []
+    }
+  ],
+  "curve_points": [
+    {
+      "temperature_k": 600,
+      "status": "SUPPORTED_CONDITIONAL_COMPARISON",
+      "ordering": [
+        1,
+        2,
+        3
+      ],
+      "values": [
+        {
+          "row_id": 1,
+          "formula": "La0.95Sr0.05Ga0.95Mg0.05O2.95",
+          "conductivity_s_cm": 0.0002104891805621504,
+          "regime": "LT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 2,
+          "formula": "La0.95Sr0.05Ga0.9Mg0.1O2.925",
+          "conductivity_s_cm": 0.00007865575673776751,
+          "regime": "LT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 3,
+          "formula": "La0.95Sr0.05Ga0.85Mg0.15O2.9",
+          "conductivity_s_cm": 0.0000343463402325269,
+          "regime": "LT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        }
+      ],
+      "excluded": []
+    },
+    {
+      "temperature_k": 606.25,
+      "status": "SUPPORTED_CONDITIONAL_COMPARISON",
+      "ordering": [
+        1,
+        2,
+        3
+      ],
+      "values": [
+        {
+          "row_id": 1,
+          "formula": "La0.95Sr0.05Ga0.95Mg0.05O2.95",
+          "conductivity_s_cm": 0.00024298526725339485,
+          "regime": "LT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 2,
+          "formula": "La0.95Sr0.05Ga0.9Mg0.1O2.925",
+          "conductivity_s_cm": 0.000094946238274894,
+          "regime": "LT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 3,
+          "formula": "La0.95Sr0.05Ga0.85Mg0.15O2.9",
+          "conductivity_s_cm": 0.00004248075241672863,
+          "regime": "LT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        }
+      ],
+      "excluded": []
+    },
+    {
+      "temperature_k": 612.5,
+      "status": "SUPPORTED_CONDITIONAL_COMPARISON",
+      "ordering": [
+        1,
+        2,
+        3
+      ],
+      "values": [
+        {
+          "row_id": 1,
+          "formula": "La0.95Sr0.05Ga0.95Mg0.05O2.95",
+          "conductivity_s_cm": 0.00027964816078781694,
+          "regime": "LT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 2,
+          "formula": "La0.95Sr0.05Ga0.9Mg0.1O2.925",
+          "conductivity_s_cm": 0.00011415922549114696,
+          "regime": "LT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 3,
+          "formula": "La0.95Sr0.05Ga0.85Mg0.15O2.9",
+          "conductivity_s_cm": 0.00005230874890504926,
+          "regime": "LT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        }
+      ],
+      "excluded": []
+    },
+    {
+      "temperature_k": 618.75,
+      "status": "SUPPORTED_CONDITIONAL_COMPARISON",
+      "ordering": [
+        1,
+        2,
+        3
+      ],
+      "values": [
+        {
+          "row_id": 1,
+          "formula": "La0.95Sr0.05Ga0.95Mg0.05O2.95",
+          "conductivity_s_cm": 0.0003208974442502536,
+          "regime": "LT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 2,
+          "formula": "La0.95Sr0.05Ga0.9Mg0.1O2.925",
+          "conductivity_s_cm": 0.00013673593570605737,
+          "regime": "LT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 3,
+          "formula": "La0.95Sr0.05Ga0.85Mg0.15O2.9",
+          "conductivity_s_cm": 0.00006413362670801684,
+          "regime": "LT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        }
+      ],
+      "excluded": []
+    },
+    {
+      "temperature_k": 625,
+      "status": "SUPPORTED_CONDITIONAL_COMPARISON",
+      "ordering": [
+        1,
+        2,
+        3
+      ],
+      "values": [
+        {
+          "row_id": 1,
+          "formula": "La0.95Sr0.05Ga0.95Mg0.05O2.95",
+          "conductivity_s_cm": 0.00036718217866298753,
+          "regime": "LT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 2,
+          "formula": "La0.95Sr0.05Ga0.9Mg0.1O2.925",
+          "conductivity_s_cm": 0.00016317101620154853,
+          "regime": "LT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 3,
+          "formula": "La0.95Sr0.05Ga0.85Mg0.15O2.9",
+          "conductivity_s_cm": 0.00007830385945140654,
+          "regime": "LT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        }
+      ],
+      "excluded": []
+    },
+    {
+      "temperature_k": 631.25,
+      "status": "SUPPORTED_CONDITIONAL_COMPARISON",
+      "ordering": [
+        1,
+        2,
+        3
+      ],
+      "values": [
+        {
+          "row_id": 1,
+          "formula": "La0.95Sr0.05Ga0.95Mg0.05O2.95",
+          "conductivity_s_cm": 0.00041898185077136315,
+          "regime": "LT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 2,
+          "formula": "La0.95Sr0.05Ga0.9Mg0.1O2.925",
+          "conductivity_s_cm": 0.0001940172579746685,
+          "regime": "LT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 3,
+          "formula": "La0.95Sr0.05Ga0.85Mg0.15O2.9",
+          "conductivity_s_cm": 0.00009521837311563632,
+          "regime": "LT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        }
+      ],
+      "excluded": []
+    },
+    {
+      "temperature_k": 637.5,
+      "status": "SUPPORTED_CONDITIONAL_COMPARISON",
+      "ordering": [
+        1,
+        2,
+        3
+      ],
+      "values": [
+        {
+          "row_id": 1,
+          "formula": "La0.95Sr0.05Ga0.95Mg0.05O2.95",
+          "conductivity_s_cm": 0.0004768072758236886,
+          "regime": "LT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 2,
+          "formula": "La0.95Sr0.05Ga0.9Mg0.1O2.925",
+          "conductivity_s_cm": 0.0002298905354994412,
+          "regime": "LT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 3,
+          "formula": "La0.95Sr0.05Ga0.85Mg0.15O2.9",
+          "conductivity_s_cm": 0.00011533224497095407,
+          "regime": "LT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        }
+      ],
+      "excluded": []
+    },
+    {
+      "temperature_k": 643.75,
+      "status": "SUPPORTED_CONDITIONAL_COMPARISON",
+      "ordering": [
+        1,
+        2,
+        3
+      ],
+      "values": [
+        {
+          "row_id": 1,
+          "formula": "La0.95Sr0.05Ga0.95Mg0.05O2.95",
+          "conductivity_s_cm": 0.0005412014513999932,
+          "regime": "LT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 2,
+          "formula": "La0.95Sr0.05Ga0.9Mg0.1O2.925",
+          "conductivity_s_cm": 0.00027147496709945066,
+          "regime": "LT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 3,
+          "formula": "La0.95Sr0.05Ga0.85Mg0.15O2.9",
+          "conductivity_s_cm": 0.00013916283895962523,
+          "regime": "LT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        }
+      ],
+      "excluded": []
+    },
+    {
+      "temperature_k": 650,
+      "status": "SUPPORTED_CONDITIONAL_COMPARISON",
+      "ordering": [
+        1,
+        2,
+        3
+      ],
+      "values": [
+        {
+          "row_id": 1,
+          "formula": "La0.95Sr0.05Ga0.95Mg0.05O2.95",
+          "conductivity_s_cm": 0.0006127403586089167,
+          "regime": "LT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 2,
+          "formula": "La0.95Sr0.05Ga0.9Mg0.1O2.925",
+          "conductivity_s_cm": 0.0003195282892422797,
+          "regime": "LT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 3,
+          "formula": "La0.95Sr0.05Ga0.85Mg0.15O2.9",
+          "conductivity_s_cm": 0.00016729638936463008,
+          "regime": "LT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        }
+      ],
+      "excluded": []
+    },
+    {
+      "temperature_k": 656.25,
+      "status": "SUPPORTED_CONDITIONAL_COMPARISON",
+      "ordering": [
+        1,
+        2,
+        3
+      ],
+      "values": [
+        {
+          "row_id": 1,
+          "formula": "La0.95Sr0.05Ga0.95Mg0.05O2.95",
+          "conductivity_s_cm": 0.0006920337072524922,
+          "regime": "LT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 2,
+          "formula": "La0.95Sr0.05Ga0.9Mg0.1O2.925",
+          "conductivity_s_cm": 0.00037488743680075455,
+          "regime": "LT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 3,
+          "formula": "La0.95Sr0.05Ga0.85Mg0.15O2.9",
+          "conductivity_s_cm": 0.00020039504306403288,
+          "regime": "LT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        }
+      ],
+      "excluded": []
+    },
+    {
+      "temperature_k": 662.5,
+      "status": "SUPPORTED_CONDITIONAL_COMPARISON",
+      "ordering": [
+        1,
+        2,
+        3
+      ],
+      "values": [
+        {
+          "row_id": 1,
+          "formula": "La0.95Sr0.05Ga0.95Mg0.05O2.95",
+          "conductivity_s_cm": 0.0007797256218521686,
+          "regime": "LT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 2,
+          "formula": "La0.95Sr0.05Ga0.9Mg0.1O2.925",
+          "conductivity_s_cm": 0.0004384743200940231,
+          "regime": "LT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 3,
+          "formula": "La0.95Sr0.05Ga0.85Mg0.15O2.9",
+          "conductivity_s_cm": 0.00023920436901150405,
+          "regime": "LT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        }
+      ],
+      "excluded": []
+    },
+    {
+      "temperature_k": 668.75,
+      "status": "SUPPORTED_CONDITIONAL_COMPARISON",
+      "ordering": [
+        1,
+        2,
+        3
+      ],
+      "values": [
+        {
+          "row_id": 1,
+          "formula": "La0.95Sr0.05Ga0.95Mg0.05O2.95",
+          "conductivity_s_cm": 0.0008764952657331519,
+          "regime": "LT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 2,
+          "formula": "La0.95Sr0.05Ga0.9Mg0.1O2.925",
+          "conductivity_s_cm": 0.000511301788332958,
+          "regime": "LT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 3,
+          "formula": "La0.95Sr0.05Ga0.85Mg0.15O2.9",
+          "conductivity_s_cm": 0.00028456134181781566,
+          "regime": "LT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        }
+      ],
+      "excluded": []
+    },
+    {
+      "temperature_k": 675,
+      "status": "SUPPORTED_CONDITIONAL_COMPARISON",
+      "ordering": [
+        1,
+        2,
+        3
+      ],
+      "values": [
+        {
+          "row_id": 1,
+          "formula": "La0.95Sr0.05Ga0.95Mg0.05O2.95",
+          "conductivity_s_cm": 0.0009830574006751585,
+          "regime": "LT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 2,
+          "formula": "La0.95Sr0.05Ga0.9Mg0.1O2.925",
+          "conductivity_s_cm": 0.0005944797679579245,
+          "regime": "LT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 3,
+          "formula": "La0.95Sr0.05Ga0.85Mg0.15O2.9",
+          "conductivity_s_cm": 0.00033740280444782383,
+          "regime": "LT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        }
+      ],
+      "excluded": []
+    },
+    {
+      "temperature_k": 681.25,
+      "status": "SUPPORTED_CONDITIONAL_COMPARISON",
+      "ordering": [
+        1,
+        2,
+        3
+      ],
+      "values": [
+        {
+          "row_id": 1,
+          "formula": "La0.95Sr0.05Ga0.95Mg0.05O2.95",
+          "conductivity_s_cm": 0.0011001628799536857,
+          "regime": "LT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 2,
+          "formula": "La0.95Sr0.05Ga0.9Mg0.1O2.925",
+          "conductivity_s_cm": 0.0006892215632803413,
+          "regime": "LT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 3,
+          "formula": "La0.95Sr0.05Ga0.85Mg0.15O2.9",
+          "conductivity_s_cm": 0.00039877441310557163,
+          "regime": "LT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        }
+      ],
+      "excluded": []
+    },
+    {
+      "temperature_k": 687.5,
+      "status": "SUPPORTED_CONDITIONAL_COMPARISON",
+      "ordering": [
+        1,
+        2,
+        3
+      ],
+      "values": [
+        {
+          "row_id": 1,
+          "formula": "La0.95Sr0.05Ga0.95Mg0.05O2.95",
+          "conductivity_s_cm": 0.0012285990729139474,
+          "regime": "LT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 2,
+          "formula": "La0.95Sr0.05Ga0.9Mg0.1O2.925",
+          "conductivity_s_cm": 0.0007968503058297879,
+          "regime": "LT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 3,
+          "formula": "La0.95Sr0.05Ga0.85Mg0.15O2.9",
+          "conductivity_s_cm": 0.0004698400653703365,
+          "regime": "LT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        }
+      ],
+      "excluded": []
+    },
+    {
+      "temperature_k": 693.75,
+      "status": "SUPPORTED_CONDITIONAL_COMPARISON",
+      "ordering": [
+        1,
+        2,
+        3
+      ],
+      "values": [
+        {
+          "row_id": 1,
+          "formula": "La0.95Sr0.05Ga0.95Mg0.05O2.95",
+          "conductivity_s_cm": 0.0013691902195378351,
+          "regime": "LT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 2,
+          "formula": "La0.95Sr0.05Ga0.9Mg0.1O2.925",
+          "conductivity_s_cm": 0.0009188055378719762,
+          "regime": "LT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 3,
+          "formula": "La0.95Sr0.05Ga0.85Mg0.15O2.9",
+          "conductivity_s_cm": 0.0005518918105829054,
+          "regime": "LT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        }
+      ],
+      "excluded": []
+    },
+    {
+      "temperature_k": 700,
+      "status": "SUPPORTED_CONDITIONAL_COMPARISON",
+      "ordering": [
+        1,
+        2,
+        3
+      ],
+      "values": [
+        {
+          "row_id": 1,
+          "formula": "La0.95Sr0.05Ga0.95Mg0.05O2.95",
+          "conductivity_s_cm": 0.001522797713779979,
+          "regime": "LT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 2,
+          "formula": "La0.95Sr0.05Ga0.9Mg0.1O2.925",
+          "conductivity_s_cm": 0.0010566499147050459,
+          "regime": "LT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 3,
+          "formula": "La0.95Sr0.05Ga0.85Mg0.15O2.9",
+          "conductivity_s_cm": 0.0006463602393783875,
+          "regime": "LT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        }
+      ],
+      "excluded": []
+    },
+    {
+      "temperature_k": 706.25,
+      "status": "SUPPORTED_CONDITIONAL_COMPARISON",
+      "ordering": [
+        1,
+        2,
+        3
+      ],
+      "values": [
+        {
+          "row_id": 1,
+          "formula": "La0.95Sr0.05Ga0.95Mg0.05O2.95",
+          "conductivity_s_cm": 0.0016903203147606745,
+          "regime": "LT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 2,
+          "formula": "La0.95Sr0.05Ga0.9Mg0.1O2.925",
+          "conductivity_s_cm": 0.0012120760095669242,
+          "regime": "LT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 3,
+          "formula": "La0.95Sr0.05Ga0.85Mg0.15O2.9",
+          "conductivity_s_cm": 0.0007548253471340791,
+          "regime": "LT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        }
+      ],
+      "excluded": []
+    },
+    {
+      "temperature_k": 712.5,
+      "status": "SUPPORTED_CONDITIONAL_COMPARISON",
+      "ordering": [
+        1,
+        2,
+        3
+      ],
+      "values": [
+        {
+          "row_id": 1,
+          "formula": "La0.95Sr0.05Ga0.95Mg0.05O2.95",
+          "conductivity_s_cm": 0.001872694285208807,
+          "regime": "LT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 2,
+          "formula": "La0.95Sr0.05Ga0.9Mg0.1O2.925",
+          "conductivity_s_cm": 0.0013869132042986835,
+          "regime": "LT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 3,
+          "formula": "La0.95Sr0.05Ga0.85Mg0.15O2.9",
+          "conductivity_s_cm": 0.0008790278639626022,
+          "regime": "LT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        }
+      ],
+      "excluded": []
+    },
+    {
+      "temperature_k": 718.75,
+      "status": "SUPPORTED_CONDITIONAL_COMPARISON",
+      "ordering": [
+        1,
+        2,
+        3
+      ],
+      "values": [
+        {
+          "row_id": 1,
+          "formula": "La0.95Sr0.05Ga0.95Mg0.05O2.95",
+          "conductivity_s_cm": 0.0020708934568455743,
+          "regime": "LT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 2,
+          "formula": "La0.95Sr0.05Ga0.9Mg0.1O2.925",
+          "conductivity_s_cm": 0.0015831346483106416,
+          "regime": "LT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 3,
+          "formula": "La0.95Sr0.05Ga0.85Mg0.15O2.9",
+          "conductivity_s_cm": 0.0010208810417462754,
+          "regime": "LT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        }
+      ],
+      "excluded": []
+    },
+    {
+      "temperature_k": 725,
+      "status": "SUPPORTED_CONDITIONAL_COMPARISON",
+      "ordering": [
+        1,
+        2,
+        3
+      ],
+      "values": [
+        {
+          "row_id": 1,
+          "formula": "La0.95Sr0.05Ga0.95Mg0.05O2.95",
+          "conductivity_s_cm": 0.0022859292226882944,
+          "regime": "LT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 2,
+          "formula": "La0.95Sr0.05Ga0.9Mg0.1O2.925",
+          "conductivity_s_cm": 0.0018028642678917224,
+          "regime": "LT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 3,
+          "formula": "La0.95Sr0.05Ga0.85Mg0.15O2.9",
+          "conductivity_s_cm": 0.0011824828865921425,
+          "regime": "LT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        }
+      ],
+      "excluded": []
+    },
+    {
+      "temperature_k": 731.25,
+      "status": "SUPPORTED_CONDITIONAL_COMPARISON",
+      "ordering": [
+        1,
+        2,
+        3
+      ],
+      "values": [
+        {
+          "row_id": 1,
+          "formula": "La0.95Sr0.05Ga0.95Mg0.05O2.95",
+          "conductivity_s_cm": 0.0025188504565312343,
+          "regime": "LT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 2,
+          "formula": "La0.95Sr0.05Ga0.9Mg0.1O2.925",
+          "conductivity_s_cm": 0.0020483838074888665,
+          "regime": "LT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 3,
+          "formula": "La0.95Sr0.05Ga0.85Mg0.15O2.9",
+          "conductivity_s_cm": 0.0013661288230019972,
+          "regime": "LT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        }
+      ],
+      "excluded": []
+    },
+    {
+      "temperature_k": 737.5,
+      "status": "SUPPORTED_CONDITIONAL_COMPARISON",
+      "ordering": [
+        1,
+        2,
+        3
+      ],
+      "values": [
+        {
+          "row_id": 1,
+          "formula": "La0.95Sr0.05Ga0.95Mg0.05O2.95",
+          "conductivity_s_cm": 0.0027707433601266546,
+          "regime": "LT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 2,
+          "formula": "La0.95Sr0.05Ga0.9Mg0.1O2.925",
+          "conductivity_s_cm": 0.0023221398842637143,
+          "regime": "LT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 3,
+          "formula": "La0.95Sr0.05Ga0.85Mg0.15O2.9",
+          "conductivity_s_cm": 0.0015743247740112477,
+          "regime": "LT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        }
+      ],
+      "excluded": []
+    },
+    {
+      "temperature_k": 743.75,
+      "status": "SUPPORTED_CONDITIONAL_COMPARISON",
+      "ordering": [
+        1,
+        2,
+        3
+      ],
+      "values": [
+        {
+          "row_id": 1,
+          "formula": "La0.95Sr0.05Ga0.95Mg0.05O2.95",
+          "conductivity_s_cm": 0.0030427312388425476,
+          "regime": "LT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 2,
+          "formula": "La0.95Sr0.05Ga0.9Mg0.1O2.925",
+          "conductivity_s_cm": 0.0026267510370065156,
+          "regime": "LT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 3,
+          "formula": "La0.95Sr0.05Ga0.85Mg0.15O2.9",
+          "conductivity_s_cm": 0.0018098006395664004,
+          "regime": "LT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        }
+      ],
+      "excluded": []
+    },
+    {
+      "temperature_k": 750,
+      "status": "SUPPORTED_CONDITIONAL_COMPARISON",
+      "ordering": [
+        1,
+        2,
+        3
+      ],
+      "values": [
+        {
+          "row_id": 1,
+          "formula": "La0.95Sr0.05Ga0.95Mg0.05O2.95",
+          "conductivity_s_cm": 0.0033359742068134225,
+          "regime": "LT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 2,
+          "formula": "La0.95Sr0.05Ga0.9Mg0.1O2.925",
+          "conductivity_s_cm": 0.0029650147503528183,
+          "regime": "LT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 3,
+          "formula": "La0.95Sr0.05Ga0.85Mg0.15O2.9",
+          "conductivity_s_cm": 0.0020755241534955353,
+          "regime": "LT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        }
+      ],
+      "excluded": []
+    },
+    {
+      "temperature_k": 756.25,
+      "status": "SUPPORTED_CONDITIONAL_COMPARISON",
+      "ordering": [
+        1,
+        2,
+        3
+      ],
+      "values": [
+        {
+          "row_id": 1,
+          "formula": "La0.95Sr0.05Ga0.95Mg0.05O2.95",
+          "conductivity_s_cm": 0.0036516688228264405,
+          "regime": "LT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 2,
+          "formula": "La0.95Sr0.05Ga0.9Mg0.1O2.925",
+          "conductivity_s_cm": 0.0033399144352045445,
+          "regime": "LT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 3,
+          "formula": "La0.95Sr0.05Ga0.85Mg0.15O2.9",
+          "conductivity_s_cm": 0.002374715097590126,
+          "regime": "LT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        }
+      ],
+      "excluded": []
+    },
+    {
+      "temperature_k": 762.5,
+      "status": "SUPPORTED_CONDITIONAL_COMPARISON",
+      "ordering": [
+        1,
+        2,
+        3
+      ],
+      "values": [
+        {
+          "row_id": 1,
+          "formula": "La0.95Sr0.05Ga0.95Mg0.05O2.95",
+          "conductivity_s_cm": 0.003991047658395942,
+          "regime": "LT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 2,
+          "formula": "La0.95Sr0.05Ga0.9Mg0.1O2.925",
+          "conductivity_s_cm": 0.003754626346301117,
+          "regime": "LT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 3,
+          "formula": "La0.95Sr0.05Ga0.85Mg0.15O2.9",
+          "conductivity_s_cm": 0.0027108598495688857,
+          "regime": "LT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        }
+      ],
+      "excluded": []
+    },
+    {
+      "temperature_k": 768.75,
+      "status": "SUPPORTED_CONDITIONAL_COMPARISON",
+      "ordering": [
+        1,
+        2,
+        3
+      ],
+      "values": [
+        {
+          "row_id": 1,
+          "formula": "La0.95Sr0.05Ga0.95Mg0.05O2.95",
+          "conductivity_s_cm": 0.004355378799675745,
+          "regime": "LT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 2,
+          "formula": "La0.95Sr0.05Ga0.9Mg0.1O2.925",
+          "conductivity_s_cm": 0.004212526418016769,
+          "regime": "LT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 3,
+          "formula": "La0.95Sr0.05Ga0.85Mg0.15O2.9",
+          "conductivity_s_cm": 0.0030877262400460987,
+          "regime": "LT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        }
+      ],
+      "excluded": []
+    },
+    {
+      "temperature_k": 775,
+      "status": "SUPPORTED_CONDITIONAL_COMPARISON",
+      "ordering": [
+        1,
+        2,
+        3
+      ],
+      "values": [
+        {
+          "row_id": 1,
+          "formula": "La0.95Sr0.05Ga0.95Mg0.05O2.95",
+          "conductivity_s_cm": 0.00474596528503941,
+          "regime": "LT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 2,
+          "formula": "La0.95Sr0.05Ga0.9Mg0.1O2.925",
+          "conductivity_s_cm": 0.004717196999672905,
+          "regime": "LT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 3,
+          "formula": "La0.95Sr0.05Ga0.85Mg0.15O2.9",
+          "conductivity_s_cm": 0.0035093786920840603,
+          "regime": "LT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        }
+      ],
+      "excluded": []
+    },
+    {
+      "temperature_k": 776.4074250510221,
+      "status": "SUPPORTED_CONDITIONAL_COMPARISON",
+      "ordering": [
+        2,
+        1,
+        3
+      ],
+      "values": [
+        {
+          "row_id": 2,
+          "formula": "La0.95Sr0.05Ga0.9Mg0.1O2.925",
+          "conductivity_s_cm": 0.004837678739887652,
+          "regime": "LT",
+          "tie_with": [
+            1
+          ],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 1,
+          "formula": "La0.95Sr0.05Ga0.95Mg0.05O2.95",
+          "conductivity_s_cm": 0.0048376787398876474,
+          "regime": "LT",
+          "tie_with": [
+            2
+          ],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 3,
+          "formula": "La0.95Sr0.05Ga0.85Mg0.15O2.9",
+          "conductivity_s_cm": 0.0036109493672383816,
+          "regime": "LT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        }
+      ],
+      "excluded": []
+    },
+    {
+      "temperature_k": 781.25,
+      "status": "SUPPORTED_CONDITIONAL_COMPARISON",
+      "ordering": [
+        2,
+        1,
+        3
+      ],
+      "values": [
+        {
+          "row_id": 2,
+          "formula": "La0.95Sr0.05Ga0.9Mg0.1O2.925",
+          "conductivity_s_cm": 0.00527243347194561,
+          "regime": "LT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 1,
+          "formula": "La0.95Sr0.05Ga0.95Mg0.05O2.95",
+          "conductivity_s_cm": 0.0051641444803237424,
+          "regime": "LT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 3,
+          "formula": "La0.95Sr0.05Ga0.85Mg0.15O2.9",
+          "conductivity_s_cm": 0.0039801936154796776,
+          "regime": "LT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        }
+      ],
+      "excluded": []
+    },
+    {
+      "temperature_k": 787.5,
+      "status": "SUPPORTED_CONDITIONAL_COMPARISON",
+      "ordering": [
+        2,
+        1,
+        3
+      ],
+      "values": [
+        {
+          "row_id": 2,
+          "formula": "La0.95Sr0.05Ga0.9Mg0.1O2.925",
+          "conductivity_s_cm": 0.005882250726315586,
+          "regime": "LT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 1,
+          "formula": "La0.95Sr0.05Ga0.95Mg0.05O2.95",
+          "conductivity_s_cm": 0.005611287393881273,
+          "regime": "LT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 3,
+          "formula": "La0.95Sr0.05Ga0.85Mg0.15O2.9",
+          "conductivity_s_cm": 0.004504875026626611,
+          "regime": "LT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        }
+      ],
+      "excluded": []
+    },
+    {
+      "temperature_k": 793.75,
+      "status": "SUPPORTED_CONDITIONAL_COMPARISON",
+      "ordering": [
+        2,
+        1,
+        3
+      ],
+      "values": [
+        {
+          "row_id": 2,
+          "formula": "La0.95Sr0.05Ga0.9Mg0.1O2.925",
+          "conductivity_s_cm": 0.006550889489944771,
+          "regime": "LT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 1,
+          "formula": "La0.95Sr0.05Ga0.95Mg0.05O2.95",
+          "conductivity_s_cm": 0.00608879793372198,
+          "regime": "LT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 3,
+          "formula": "La0.95Sr0.05Ga0.85Mg0.15O2.9",
+          "conductivity_s_cm": 0.005088470363608684,
+          "regime": "LT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        }
+      ],
+      "excluded": []
+    },
+    {
+      "temperature_k": 800,
+      "status": "SUPPORTED_CONDITIONAL_COMPARISON",
+      "ordering": [
+        2,
+        1,
+        3
+      ],
+      "values": [
+        {
+          "row_id": 2,
+          "formula": "La0.95Sr0.05Ga0.9Mg0.1O2.925",
+          "conductivity_s_cm": 0.0072828224788674305,
+          "regime": "LT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 1,
+          "formula": "La0.95Sr0.05Ga0.95Mg0.05O2.95",
+          "conductivity_s_cm": 0.006598112109143927,
+          "regime": "LT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 3,
+          "formula": "La0.95Sr0.05Ga0.85Mg0.15O2.9",
+          "conductivity_s_cm": 0.005736386465124211,
+          "regime": "LT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        }
+      ],
+      "excluded": []
+    },
+    {
+      "temperature_k": 800.5450205,
+      "status": "SUPPORTED_CONDITIONAL_COMPARISON",
+      "ordering": [
+        2,
+        1,
+        3
+      ],
+      "values": [
+        {
+          "row_id": 2,
+          "formula": "La0.95Sr0.05Ga0.9Mg0.1O2.925",
+          "conductivity_s_cm": 0.007349803368185739,
+          "regime": "LT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 1,
+          "formula": "La0.95Sr0.05Ga0.95Mg0.05O2.95",
+          "conductivity_s_cm": 0.006644081750287046,
+          "regime": "LT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS",
+            "NEAR_TRANSITION"
+          ]
+        },
+        {
+          "row_id": 3,
+          "formula": "La0.95Sr0.05Ga0.85Mg0.15O2.9",
+          "conductivity_s_cm": 0.005796123729327494,
+          "regime": "LT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        }
+      ],
+      "excluded": []
+    },
+    {
+      "temperature_k": 805.5450205,
+      "status": "PARTIAL_EVIDENCE",
+      "ordering": [
+        2,
+        3
+      ],
+      "values": [
+        {
+          "row_id": 2,
+          "formula": "La0.95Sr0.05Ga0.9Mg0.1O2.925",
+          "conductivity_s_cm": 0.007988973461075794,
+          "regime": "LT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 3,
+          "formula": "La0.95Sr0.05Ga0.85Mg0.15O2.9",
+          "conductivity_s_cm": 0.006369716906295615,
+          "regime": "LT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        }
+      ],
+      "excluded": [
+        {
+          "row_id": 1,
+          "reasons": [
+            "AT_TRANSITION"
+          ]
+        }
+      ]
+    },
+    {
+      "temperature_k": 806.25,
+      "status": "SUPPORTED_CONDITIONAL_COMPARISON",
+      "ordering": [
+        2,
+        1,
+        3
+      ],
+      "values": [
+        {
+          "row_id": 2,
+          "formula": "La0.95Sr0.05Ga0.9Mg0.1O2.925",
+          "conductivity_s_cm": 0.008082760362948903,
+          "regime": "LT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 1,
+          "formula": "La0.95Sr0.05Ga0.95Mg0.05O2.95",
+          "conductivity_s_cm": 0.007128295332400277,
+          "regime": "HT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS",
+            "NEAR_TRANSITION"
+          ]
+        },
+        {
+          "row_id": 3,
+          "formula": "La0.95Sr0.05Ga0.85Mg0.15O2.9",
+          "conductivity_s_cm": 0.006454405680918076,
+          "regime": "LT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        }
+      ],
+      "excluded": []
+    },
+    {
+      "temperature_k": 810.5450205,
+      "status": "SUPPORTED_CONDITIONAL_COMPARISON",
+      "ordering": [
+        2,
+        1,
+        3
+      ],
+      "values": [
+        {
+          "row_id": 2,
+          "formula": "La0.95Sr0.05Ga0.9Mg0.1O2.925",
+          "conductivity_s_cm": 0.008674467144467232,
+          "regime": "LT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 1,
+          "formula": "La0.95Sr0.05Ga0.95Mg0.05O2.95",
+          "conductivity_s_cm": 0.007441804530102472,
+          "regime": "HT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS",
+            "NEAR_TRANSITION"
+          ]
+        },
+        {
+          "row_id": 3,
+          "formula": "La0.95Sr0.05Ga0.85Mg0.15O2.9",
+          "conductivity_s_cm": 0.006991661105529081,
+          "regime": "LT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        }
+      ],
+      "excluded": []
+    },
+    {
+      "temperature_k": 812.5,
+      "status": "SUPPORTED_CONDITIONAL_COMPARISON",
+      "ordering": [
+        2,
+        1,
+        3
+      ],
+      "values": [
+        {
+          "row_id": 2,
+          "formula": "La0.95Sr0.05Ga0.9Mg0.1O2.925",
+          "conductivity_s_cm": 0.008955657526685597,
+          "regime": "LT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 1,
+          "formula": "La0.95Sr0.05Ga0.95Mg0.05O2.95",
+          "conductivity_s_cm": 0.007587822115463415,
+          "regime": "HT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 3,
+          "formula": "La0.95Sr0.05Ga0.85Mg0.15O2.9",
+          "conductivity_s_cm": 0.0072487020806067054,
+          "regime": "LT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        }
+      ],
+      "excluded": []
+    },
+    {
+      "temperature_k": 817.9098253678244,
+      "status": "SUPPORTED_CONDITIONAL_COMPARISON",
+      "ordering": [
+        2,
+        1,
+        3
+      ],
+      "values": [
+        {
+          "row_id": 2,
+          "formula": "La0.95Sr0.05Ga0.9Mg0.1O2.925",
+          "conductivity_s_cm": 0.009774126328679383,
+          "regime": "LT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 1,
+          "formula": "La0.95Sr0.05Ga0.95Mg0.05O2.95",
+          "conductivity_s_cm": 0.008002873837989,
+          "regime": "HT",
+          "tie_with": [
+            3
+          ],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 3,
+          "formula": "La0.95Sr0.05Ga0.85Mg0.15O2.9",
+          "conductivity_s_cm": 0.008002873837988986,
+          "regime": "LT",
+          "tie_with": [
+            1
+          ],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        }
+      ],
+      "excluded": []
+    },
+    {
+      "temperature_k": 818.75,
+      "status": "SUPPORTED_CONDITIONAL_COMPARISON",
+      "ordering": [
+        2,
+        3,
+        1
+      ],
+      "values": [
+        {
+          "row_id": 2,
+          "formula": "La0.95Sr0.05Ga0.9Mg0.1O2.925",
+          "conductivity_s_cm": 0.009906717610594388,
+          "regime": "LT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 3,
+          "formula": "La0.95Sr0.05Ga0.85Mg0.15O2.9",
+          "conductivity_s_cm": 0.008125857727129511,
+          "regime": "LT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 1,
+          "formula": "La0.95Sr0.05Ga0.95Mg0.05O2.95",
+          "conductivity_s_cm": 0.008068798584474459,
+          "regime": "HT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        }
+      ],
+      "excluded": []
+    },
+    {
+      "temperature_k": 825,
+      "status": "SUPPORTED_CONDITIONAL_COMPARISON",
+      "ordering": [
+        2,
+        3,
+        1
+      ],
+      "values": [
+        {
+          "row_id": 2,
+          "formula": "La0.95Sr0.05Ga0.9Mg0.1O2.925",
+          "conductivity_s_cm": 0.010941398818657216,
+          "regime": "LT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 3,
+          "formula": "La0.95Sr0.05Ga0.85Mg0.15O2.9",
+          "conductivity_s_cm": 0.009092878980540123,
+          "regime": "LT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 1,
+          "formula": "La0.95Sr0.05Ga0.95Mg0.05O2.95",
+          "conductivity_s_cm": 0.008571781113098727,
+          "regime": "HT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        }
+      ],
+      "excluded": []
+    },
+    {
+      "temperature_k": 825.3631709,
+      "status": "SUPPORTED_CONDITIONAL_COMPARISON",
+      "ordering": [
+        2,
+        3,
+        1
+      ],
+      "values": [
+        {
+          "row_id": 2,
+          "formula": "La0.95Sr0.05Ga0.9Mg0.1O2.925",
+          "conductivity_s_cm": 0.011004211353164303,
+          "regime": "LT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS",
+            "NEAR_TRANSITION"
+          ]
+        },
+        {
+          "row_id": 3,
+          "formula": "La0.95Sr0.05Ga0.85Mg0.15O2.9",
+          "conductivity_s_cm": 0.009151987476147356,
+          "regime": "LT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 1,
+          "formula": "La0.95Sr0.05Ga0.95Mg0.05O2.95",
+          "conductivity_s_cm": 0.008601696285186236,
+          "regime": "HT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        }
+      ],
+      "excluded": []
+    },
+    {
+      "temperature_k": 830.3631709,
+      "status": "PARTIAL_EVIDENCE",
+      "ordering": [
+        3,
+        1
+      ],
+      "values": [
+        {
+          "row_id": 3,
+          "formula": "La0.95Sr0.05Ga0.85Mg0.15O2.9",
+          "conductivity_s_cm": 0.009999974287841334,
+          "regime": "LT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 1,
+          "formula": "La0.95Sr0.05Ga0.95Mg0.05O2.95",
+          "conductivity_s_cm": 0.009021358254812617,
+          "regime": "HT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        }
+      ],
+      "excluded": [
+        {
+          "row_id": 2,
+          "reasons": [
+            "AT_TRANSITION"
+          ]
+        }
+      ]
+    },
+    {
+      "temperature_k": 831.25,
+      "status": "SUPPORTED_CONDITIONAL_COMPARISON",
+      "ordering": [
+        2,
+        3,
+        1
+      ],
+      "values": [
+        {
+          "row_id": 2,
+          "formula": "La0.95Sr0.05Ga0.9Mg0.1O2.925",
+          "conductivity_s_cm": 0.012007453827275666,
+          "regime": "HT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS",
+            "NEAR_TRANSITION"
+          ]
+        },
+        {
+          "row_id": 3,
+          "formula": "La0.95Sr0.05Ga0.85Mg0.15O2.9",
+          "conductivity_s_cm": 0.010157212797469948,
+          "regime": "LT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 1,
+          "formula": "La0.95Sr0.05Ga0.95Mg0.05O2.95",
+          "conductivity_s_cm": 0.009097322948920065,
+          "regime": "HT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        }
+      ],
+      "excluded": []
+    },
+    {
+      "temperature_k": 835.3631709,
+      "status": "SUPPORTED_CONDITIONAL_COMPARISON",
+      "ordering": [
+        2,
+        3,
+        1
+      ],
+      "values": [
+        {
+          "row_id": 2,
+          "formula": "La0.95Sr0.05Ga0.9Mg0.1O2.925",
+          "conductivity_s_cm": 0.012514053699912608,
+          "regime": "HT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS",
+            "NEAR_TRANSITION"
+          ]
+        },
+        {
+          "row_id": 3,
+          "formula": "La0.95Sr0.05Ga0.85Mg0.15O2.9",
+          "conductivity_s_cm": 0.010914554594818502,
+          "regime": "LT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 1,
+          "formula": "La0.95Sr0.05Ga0.95Mg0.05O2.95",
+          "conductivity_s_cm": 0.009455760253008635,
+          "regime": "HT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        }
+      ],
+      "excluded": []
+    },
+    {
+      "temperature_k": 837.5,
+      "status": "SUPPORTED_CONDITIONAL_COMPARISON",
+      "ordering": [
+        2,
+        3,
+        1
+      ],
+      "values": [
+        {
+          "row_id": 2,
+          "formula": "La0.95Sr0.05Ga0.9Mg0.1O2.925",
+          "conductivity_s_cm": 0.012783446538527076,
+          "regime": "HT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 3,
+          "formula": "La0.95Sr0.05Ga0.85Mg0.15O2.9",
+          "conductivity_s_cm": 0.01132676299134873,
+          "regime": "LT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 1,
+          "formula": "La0.95Sr0.05Ga0.95Mg0.05O2.95",
+          "conductivity_s_cm": 0.009645973702858388,
+          "regime": "HT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        }
+      ],
+      "excluded": []
+    },
+    {
+      "temperature_k": 843.75,
+      "status": "SUPPORTED_CONDITIONAL_COMPARISON",
+      "ordering": [
+        2,
+        3,
+        1
+      ],
+      "values": [
+        {
+          "row_id": 2,
+          "formula": "La0.95Sr0.05Ga0.9Mg0.1O2.925",
+          "conductivity_s_cm": 0.013596216361815433,
+          "regime": "HT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 3,
+          "formula": "La0.95Sr0.05Ga0.85Mg0.15O2.9",
+          "conductivity_s_cm": 0.012609906418350799,
+          "regime": "LT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 1,
+          "formula": "La0.95Sr0.05Ga0.95Mg0.05O2.95",
+          "conductivity_s_cm": 0.01021827885174456,
+          "regime": "HT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        }
+      ],
+      "excluded": []
+    },
+    {
+      "temperature_k": 850,
+      "status": "SUPPORTED_CONDITIONAL_COMPARISON",
+      "ordering": [
+        2,
+        3,
+        1
+      ],
+      "values": [
+        {
+          "row_id": 2,
+          "formula": "La0.95Sr0.05Ga0.9Mg0.1O2.925",
+          "conductivity_s_cm": 0.014446772770799024,
+          "regime": "HT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 3,
+          "formula": "La0.95Sr0.05Ga0.85Mg0.15O2.9",
+          "conductivity_s_cm": 0.01401550905405205,
+          "regime": "LT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 1,
+          "formula": "La0.95Sr0.05Ga0.95Mg0.05O2.95",
+          "conductivity_s_cm": 0.010814779254655335,
+          "regime": "HT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        }
+      ],
+      "excluded": []
+    },
+    {
+      "temperature_k": 854.261466339589,
+      "status": "SUPPORTED_CONDITIONAL_COMPARISON",
+      "ordering": [
+        2,
+        3,
+        1
+      ],
+      "values": [
+        {
+          "row_id": 2,
+          "formula": "La0.95Sr0.05Ga0.9Mg0.1O2.925",
+          "conductivity_s_cm": 0.015048893727068368,
+          "regime": "HT",
+          "tie_with": [
+            3
+          ],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 3,
+          "formula": "La0.95Sr0.05Ga0.85Mg0.15O2.9",
+          "conductivity_s_cm": 0.015048893727068368,
+          "regime": "LT",
+          "tie_with": [
+            2
+          ],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 1,
+          "formula": "La0.95Sr0.05Ga0.95Mg0.05O2.95",
+          "conductivity_s_cm": 0.011235641460998048,
+          "regime": "HT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        }
+      ],
+      "excluded": []
+    },
+    {
+      "temperature_k": 856.25,
+      "status": "SUPPORTED_CONDITIONAL_COMPARISON",
+      "ordering": [
+        3,
+        2,
+        1
+      ],
+      "values": [
+        {
+          "row_id": 3,
+          "formula": "La0.95Sr0.05Ga0.85Mg0.15O2.9",
+          "conductivity_s_cm": 0.015552941925922667,
+          "regime": "LT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 2,
+          "formula": "La0.95Sr0.05Ga0.9Mg0.1O2.925",
+          "conductivity_s_cm": 0.015336123440257273,
+          "regime": "HT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 1,
+          "formula": "La0.95Sr0.05Ga0.95Mg0.05O2.95",
+          "conductivity_s_cm": 0.011436010683545248,
+          "regime": "HT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        }
+      ],
+      "excluded": []
+    },
+    {
+      "temperature_k": 862.5,
+      "status": "SUPPORTED_CONDITIONAL_COMPARISON",
+      "ordering": [
+        3,
+        2,
+        1
+      ],
+      "values": [
+        {
+          "row_id": 3,
+          "formula": "La0.95Sr0.05Ga0.85Mg0.15O2.9",
+          "conductivity_s_cm": 0.0172320968670467,
+          "regime": "LT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 2,
+          "formula": "La0.95Sr0.05Ga0.9Mg0.1O2.925",
+          "conductivity_s_cm": 0.016265273364458096,
+          "regime": "HT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 1,
+          "formula": "La0.95Sr0.05Ga0.95Mg0.05O2.95",
+          "conductivity_s_cm": 0.012082503368650828,
+          "regime": "HT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        }
+      ],
+      "excluded": []
+    },
+    {
+      "temperature_k": 868.75,
+      "status": "SUPPORTED_CONDITIONAL_COMPARISON",
+      "ordering": [
+        3,
+        2,
+        1
+      ],
+      "values": [
+        {
+          "row_id": 3,
+          "formula": "La0.95Sr0.05Ga0.85Mg0.15O2.9",
+          "conductivity_s_cm": 0.019063402056842305,
+          "regime": "LT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 2,
+          "formula": "La0.95Sr0.05Ga0.9Mg0.1O2.925",
+          "conductivity_s_cm": 0.01723522399077869,
+          "regime": "HT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 1,
+          "formula": "La0.95Sr0.05Ga0.95Mg0.05O2.95",
+          "conductivity_s_cm": 0.01275478155908215,
+          "regime": "HT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        }
+      ],
+      "excluded": []
+    },
+    {
+      "temperature_k": 869.9335546,
+      "status": "SUPPORTED_CONDITIONAL_COMPARISON",
+      "ordering": [
+        3,
+        2,
+        1
+      ],
+      "values": [
+        {
+          "row_id": 3,
+          "formula": "La0.95Sr0.05Ga0.85Mg0.15O2.9",
+          "conductivity_s_cm": 0.019428221377381975,
+          "regime": "LT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS",
+            "NEAR_TRANSITION"
+          ]
+        },
+        {
+          "row_id": 2,
+          "formula": "La0.95Sr0.05Ga0.9Mg0.1O2.925",
+          "conductivity_s_cm": 0.01742357909543655,
+          "regime": "HT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 1,
+          "formula": "La0.95Sr0.05Ga0.95Mg0.05O2.95",
+          "conductivity_s_cm": 0.012885036525384187,
+          "regime": "HT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        }
+      ],
+      "excluded": []
+    },
+    {
+      "temperature_k": 874.9335546,
+      "status": "PARTIAL_EVIDENCE",
+      "ordering": [
+        2,
+        1
+      ],
+      "values": [
+        {
+          "row_id": 2,
+          "formula": "La0.95Sr0.05Ga0.9Mg0.1O2.925",
+          "conductivity_s_cm": 0.018235992922324393,
+          "regime": "HT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 1,
+          "formula": "La0.95Sr0.05Ga0.95Mg0.05O2.95",
+          "conductivity_s_cm": 0.013445796173303106,
+          "regime": "HT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        }
+      ],
+      "excluded": [
+        {
+          "row_id": 3,
+          "reasons": [
+            "AT_TRANSITION"
+          ]
+        }
+      ]
+    },
+    {
+      "temperature_k": 875,
+      "status": "SUPPORTED_CONDITIONAL_COMPARISON",
+      "ordering": [
+        3,
+        2,
+        1
+      ],
+      "values": [
+        {
+          "row_id": 3,
+          "formula": "La0.95Sr0.05Ga0.85Mg0.15O2.9",
+          "conductivity_s_cm": 0.021050669850327206,
+          "regime": "HT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS",
+            "NEAR_TRANSITION"
+          ]
+        },
+        {
+          "row_id": 2,
+          "formula": "La0.95Sr0.05Ga0.9Mg0.1O2.925",
+          "conductivity_s_cm": 0.018246972369805898,
+          "regime": "HT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 1,
+          "formula": "La0.95Sr0.05Ga0.95Mg0.05O2.95",
+          "conductivity_s_cm": 0.013453363098957507,
+          "regime": "HT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        }
+      ],
+      "excluded": []
+    },
+    {
+      "temperature_k": 879.9335546,
+      "status": "SUPPORTED_CONDITIONAL_COMPARISON",
+      "ordering": [
+        3,
+        2,
+        1
+      ],
+      "values": [
+        {
+          "row_id": 3,
+          "formula": "La0.95Sr0.05Ga0.85Mg0.15O2.9",
+          "conductivity_s_cm": 0.02218262442177468,
+          "regime": "HT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS",
+            "NEAR_TRANSITION"
+          ]
+        },
+        {
+          "row_id": 2,
+          "formula": "La0.95Sr0.05Ga0.9Mg0.1O2.925",
+          "conductivity_s_cm": 0.019075785463673528,
+          "regime": "HT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 1,
+          "formula": "La0.95Sr0.05Ga0.95Mg0.05O2.95",
+          "conductivity_s_cm": 0.014023713709820605,
+          "regime": "HT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        }
+      ],
+      "excluded": []
+    },
+    {
+      "temperature_k": 881.25,
+      "status": "SUPPORTED_CONDITIONAL_COMPARISON",
+      "ordering": [
+        3,
+        2,
+        1
+      ],
+      "values": [
+        {
+          "row_id": 3,
+          "formula": "La0.95Sr0.05Ga0.85Mg0.15O2.9",
+          "conductivity_s_cm": 0.02249247624447941,
+          "regime": "HT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 2,
+          "formula": "La0.95Sr0.05Ga0.9Mg0.1O2.925",
+          "conductivity_s_cm": 0.019301510323049633,
+          "regime": "HT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 1,
+          "formula": "La0.95Sr0.05Ga0.95Mg0.05O2.95",
+          "conductivity_s_cm": 0.01417875901938259,
+          "regime": "HT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        }
+      ],
+      "excluded": []
+    },
+    {
+      "temperature_k": 887.5,
+      "status": "SUPPORTED_CONDITIONAL_COMPARISON",
+      "ordering": [
+        3,
+        2,
+        1
+      ],
+      "values": [
+        {
+          "row_id": 3,
+          "formula": "La0.95Sr0.05Ga0.85Mg0.15O2.9",
+          "conductivity_s_cm": 0.02400942169941359,
+          "regime": "HT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 2,
+          "formula": "La0.95Sr0.05Ga0.9Mg0.1O2.925",
+          "conductivity_s_cm": 0.02039982362931051,
+          "regime": "HT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 1,
+          "formula": "La0.95Sr0.05Ga0.95Mg0.05O2.95",
+          "conductivity_s_cm": 0.014931473146520456,
+          "regime": "HT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        }
+      ],
+      "excluded": []
+    },
+    {
+      "temperature_k": 893.75,
+      "status": "SUPPORTED_CONDITIONAL_COMPARISON",
+      "ordering": [
+        3,
+        2,
+        1
+      ],
+      "values": [
+        {
+          "row_id": 3,
+          "formula": "La0.95Sr0.05Ga0.85Mg0.15O2.9",
+          "conductivity_s_cm": 0.025604029297028704,
+          "regime": "HT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 2,
+          "formula": "La0.95Sr0.05Ga0.9Mg0.1O2.925",
+          "conductivity_s_cm": 0.021542891230652308,
+          "regime": "HT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 1,
+          "formula": "La0.95Sr0.05Ga0.95Mg0.05O2.95",
+          "conductivity_s_cm": 0.015712001725948936,
+          "regime": "HT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        }
+      ],
+      "excluded": []
+    },
+    {
+      "temperature_k": 900,
+      "status": "SUPPORTED_CONDITIONAL_COMPARISON",
+      "ordering": [
+        3,
+        2,
+        1
+      ],
+      "values": [
+        {
+          "row_id": 3,
+          "formula": "La0.95Sr0.05Ga0.85Mg0.15O2.9",
+          "conductivity_s_cm": 0.027278844555027746,
+          "regime": "HT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 2,
+          "formula": "La0.95Sr0.05Ga0.9Mg0.1O2.925",
+          "conductivity_s_cm": 0.022731684458842175,
+          "regime": "HT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 1,
+          "formula": "La0.95Sr0.05Ga0.95Mg0.05O2.95",
+          "conductivity_s_cm": 0.016520833063451746,
+          "regime": "HT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        }
+      ],
+      "excluded": []
+    },
+    {
+      "temperature_k": 906.25,
+      "status": "SUPPORTED_CONDITIONAL_COMPARISON",
+      "ordering": [
+        3,
+        2,
+        1
+      ],
+      "values": [
+        {
+          "row_id": 3,
+          "formula": "La0.95Sr0.05Ga0.85Mg0.15O2.9",
+          "conductivity_s_cm": 0.029036433597473738,
+          "regime": "HT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 2,
+          "formula": "La0.95Sr0.05Ga0.9Mg0.1O2.925",
+          "conductivity_s_cm": 0.023967166283034143,
+          "regime": "HT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 1,
+          "formula": "La0.95Sr0.05Ga0.95Mg0.05O2.95",
+          "conductivity_s_cm": 0.017358447182344566,
+          "regime": "HT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        }
+      ],
+      "excluded": []
+    },
+    {
+      "temperature_k": 912.5,
+      "status": "SUPPORTED_CONDITIONAL_COMPARISON",
+      "ordering": [
+        3,
+        2,
+        1
+      ],
+      "values": [
+        {
+          "row_id": 3,
+          "formula": "La0.95Sr0.05Ga0.85Mg0.15O2.9",
+          "conductivity_s_cm": 0.030879381311340298,
+          "regime": "HT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 2,
+          "formula": "La0.95Sr0.05Ga0.9Mg0.1O2.925",
+          "conductivity_s_cm": 0.02525029057939012,
+          "regime": "HT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 1,
+          "formula": "La0.95Sr0.05Ga0.95Mg0.05O2.95",
+          "conductivity_s_cm": 0.0182253154973929,
+          "regime": "HT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        }
+      ],
+      "excluded": []
+    },
+    {
+      "temperature_k": 918.75,
+      "status": "SUPPORTED_CONDITIONAL_COMPARISON",
+      "ordering": [
+        3,
+        2,
+        1
+      ],
+      "values": [
+        {
+          "row_id": 3,
+          "formula": "La0.95Sr0.05Ga0.85Mg0.15O2.9",
+          "conductivity_s_cm": 0.03281028949252623,
+          "regime": "HT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 2,
+          "formula": "La0.95Sr0.05Ga0.9Mg0.1O2.925",
+          "conductivity_s_cm": 0.026582001423248576,
+          "regime": "HT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 1,
+          "formula": "La0.95Sr0.05Ga0.95Mg0.05O2.95",
+          "conductivity_s_cm": 0.019121900505336697,
+          "regime": "HT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        }
+      ],
+      "excluded": []
+    },
+    {
+      "temperature_k": 925,
+      "status": "SUPPORTED_CONDITIONAL_COMPARISON",
+      "ordering": [
+        3,
+        2,
+        1
+      ],
+      "values": [
+        {
+          "row_id": 3,
+          "formula": "La0.95Sr0.05Ga0.85Mg0.15O2.9",
+          "conductivity_s_cm": 0.03483177498471234,
+          "regime": "HT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 2,
+          "formula": "La0.95Sr0.05Ga0.9Mg0.1O2.925",
+          "conductivity_s_cm": 0.02796323240437526,
+          "regime": "HT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 1,
+          "formula": "La0.95Sr0.05Ga0.95Mg0.05O2.95",
+          "conductivity_s_cm": 0.020048655491998822,
+          "regime": "HT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        }
+      ],
+      "excluded": []
+    },
+    {
+      "temperature_k": 931.25,
+      "status": "SUPPORTED_CONDITIONAL_COMPARISON",
+      "ordering": [
+        3,
+        2,
+        1
+      ],
+      "values": [
+        {
+          "row_id": 3,
+          "formula": "La0.95Sr0.05Ga0.85Mg0.15O2.9",
+          "conductivity_s_cm": 0.03694646781433933,
+          "regime": "HT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 2,
+          "formula": "La0.95Sr0.05Ga0.9Mg0.1O2.925",
+          "conductivity_s_cm": 0.029394905965753296,
+          "regime": "HT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 1,
+          "formula": "La0.95Sr0.05Ga0.95Mg0.05O2.95",
+          "conductivity_s_cm": 0.021006024255916442,
+          "regime": "HT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        }
+      ],
+      "excluded": []
+    },
+    {
+      "temperature_k": 937.5,
+      "status": "SUPPORTED_CONDITIONAL_COMPARISON",
+      "ordering": [
+        3,
+        2,
+        1
+      ],
+      "values": [
+        {
+          "row_id": 3,
+          "formula": "La0.95Sr0.05Ga0.85Mg0.15O2.9",
+          "conductivity_s_cm": 0.03915700932488302,
+          "regime": "HT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 2,
+          "formula": "La0.95Sr0.05Ga0.9Mg0.1O2.925",
+          "conductivity_s_cm": 0.03087793276629802,
+          "regime": "HT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 1,
+          "formula": "La0.95Sr0.05Ga0.95Mg0.05O2.95",
+          "conductivity_s_cm": 0.021994440848401048,
+          "regime": "HT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        }
+      ],
+      "excluded": []
+    },
+    {
+      "temperature_k": 943.75,
+      "status": "SUPPORTED_CONDITIONAL_COMPARISON",
+      "ordering": [
+        3,
+        2,
+        1
+      ],
+      "values": [
+        {
+          "row_id": 3,
+          "formula": "La0.95Sr0.05Ga0.85Mg0.15O2.9",
+          "conductivity_s_cm": 0.041466050313495185,
+          "regime": "HT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 2,
+          "formula": "La0.95Sr0.05Ga0.9Mg0.1O2.925",
+          "conductivity_s_cm": 0.032413211067811344,
+          "regime": "HT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 1,
+          "formula": "La0.95Sr0.05Ga0.95Mg0.05O2.95",
+          "conductivity_s_cm": 0.023014329329900614,
+          "regime": "HT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        }
+      ],
+      "excluded": []
+    },
+    {
+      "temperature_k": 950,
+      "status": "SUPPORTED_CONDITIONAL_COMPARISON",
+      "ordering": [
+        3,
+        2,
+        1
+      ],
+      "values": [
+        {
+          "row_id": 3,
+          "formula": "La0.95Sr0.05Ga0.85Mg0.15O2.9",
+          "conductivity_s_cm": 0.04387624917296704,
+          "regime": "HT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 2,
+          "formula": "La0.95Sr0.05Ga0.9Mg0.1O2.925",
+          "conductivity_s_cm": 0.03400162614642498,
+          "regime": "HT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 1,
+          "formula": "La0.95Sr0.05Ga0.95Mg0.05O2.95",
+          "conductivity_s_cm": 0.024066103542507534,
+          "regime": "HT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        }
+      ],
+      "excluded": []
+    },
+    {
+      "temperature_k": 956.25,
+      "status": "SUPPORTED_CONDITIONAL_COMPARISON",
+      "ordering": [
+        3,
+        2,
+        1
+      ],
+      "values": [
+        {
+          "row_id": 3,
+          "formula": "La0.95Sr0.05Ga0.85Mg0.15O2.9",
+          "conductivity_s_cm": 0.046390270041858056,
+          "regime": "HT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 2,
+          "formula": "La0.95Sr0.05Ga0.9Mg0.1O2.925",
+          "conductivity_s_cm": 0.03564404972871761,
+          "regime": "HT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 1,
+          "formula": "La0.95Sr0.05Ga0.95Mg0.05O2.95",
+          "conductivity_s_cm": 0.025150166898428552,
+          "regime": "HT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        }
+      ],
+      "excluded": []
+    },
+    {
+      "temperature_k": 962.5,
+      "status": "SUPPORTED_CONDITIONAL_COMPARISON",
+      "ordering": [
+        3,
+        2,
+        1
+      ],
+      "values": [
+        {
+          "row_id": 3,
+          "formula": "La0.95Sr0.05Ga0.85Mg0.15O2.9",
+          "conductivity_s_cm": 0.049010780965516046,
+          "regime": "HT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 2,
+          "formula": "La0.95Sr0.05Ga0.9Mg0.1O2.925",
+          "conductivity_s_cm": 0.03734133945262984,
+          "regime": "HT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 1,
+          "formula": "La0.95Sr0.05Ga0.95Mg0.05O2.95",
+          "conductivity_s_cm": 0.026266912184207437,
+          "regime": "HT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        }
+      ],
+      "excluded": []
+    },
+    {
+      "temperature_k": 968.75,
+      "status": "SUPPORTED_CONDITIONAL_COMPARISON",
+      "ordering": [
+        3,
+        2,
+        1
+      ],
+      "values": [
+        {
+          "row_id": 3,
+          "formula": "La0.95Sr0.05Ga0.85Mg0.15O2.9",
+          "conductivity_s_cm": 0.051740452070594065,
+          "regime": "HT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 2,
+          "formula": "La0.95Sr0.05Ga0.9Mg0.1O2.925",
+          "conductivity_s_cm": 0.03909433835324365,
+          "regime": "HT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 1,
+          "formula": "La0.95Sr0.05Ga0.95Mg0.05O2.95",
+          "conductivity_s_cm": 0.02741672138046795,
+          "regime": "HT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        }
+      ],
+      "excluded": []
+    },
+    {
+      "temperature_k": 975,
+      "status": "SUPPORTED_CONDITIONAL_COMPARISON",
+      "ordering": [
+        3,
+        2,
+        1
+      ],
+      "values": [
+        {
+          "row_id": 3,
+          "formula": "La0.95Sr0.05Ga0.85Mg0.15O2.9",
+          "conductivity_s_cm": 0.05458195375555336,
+          "regime": "HT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 2,
+          "formula": "La0.95Sr0.05Ga0.9Mg0.1O2.925",
+          "conductivity_s_cm": 0.04090387437344094,
+          "regime": "HT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 1,
+          "formula": "La0.95Sr0.05Ga0.95Mg0.05O2.95",
+          "conductivity_s_cm": 0.028599965496923566,
+          "regime": "HT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        }
+      ],
+      "excluded": []
+    },
+    {
+      "temperature_k": 981.25,
+      "status": "SUPPORTED_CONDITIONAL_COMPARISON",
+      "ordering": [
+        3,
+        2,
+        1
+      ],
+      "values": [
+        {
+          "row_id": 3,
+          "formula": "La0.95Sr0.05Ga0.85Mg0.15O2.9",
+          "conductivity_s_cm": 0.05753795489951497,
+          "regime": "HT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 2,
+          "formula": "La0.95Sr0.05Ga0.9Mg0.1O2.925",
+          "conductivity_s_cm": 0.04277075989939848,
+          "regime": "HT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 1,
+          "formula": "La0.95Sr0.05Ga0.95Mg0.05O2.95",
+          "conductivity_s_cm": 0.029817004422379965,
+          "regime": "HT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        }
+      ],
+      "excluded": []
+    },
+    {
+      "temperature_k": 987.5,
+      "status": "SUPPORTED_CONDITIONAL_COMPARISON",
+      "ordering": [
+        3,
+        2,
+        1
+      ],
+      "values": [
+        {
+          "row_id": 3,
+          "formula": "La0.95Sr0.05Ga0.85Mg0.15O2.9",
+          "conductivity_s_cm": 0.060611121091706334,
+          "regime": "HT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 2,
+          "formula": "La0.95Sr0.05Ga0.9Mg0.1O2.925",
+          "conductivity_s_cm": 0.044695791320835565,
+          "regime": "HT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 1,
+          "formula": "La0.95Sr0.05Ga0.95Mg0.05O2.95",
+          "conductivity_s_cm": 0.03106818678944085,
+          "regime": "HT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        }
+      ],
+      "excluded": []
+    },
+    {
+      "temperature_k": 993.75,
+      "status": "SUPPORTED_CONDITIONAL_COMPARISON",
+      "ordering": [
+        3,
+        2,
+        1
+      ],
+      "values": [
+        {
+          "row_id": 3,
+          "formula": "La0.95Sr0.05Ga0.85Mg0.15O2.9",
+          "conductivity_s_cm": 0.06380411288362331,
+          "regime": "HT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 2,
+          "formula": "La0.95Sr0.05Ga0.9Mg0.1O2.925",
+          "conductivity_s_cm": 0.04667974861587855,
+          "regime": "HT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 1,
+          "formula": "La0.95Sr0.05Ga0.95Mg0.05O2.95",
+          "conductivity_s_cm": 0.032353849853609465,
+          "regime": "HT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        }
+      ],
+      "excluded": []
+    },
+    {
+      "temperature_k": 1000,
+      "status": "SUPPORTED_CONDITIONAL_COMPARISON",
+      "ordering": [
+        3,
+        2,
+        1
+      ],
+      "values": [
+        {
+          "row_id": 3,
+          "formula": "La0.95Sr0.05Ga0.85Mg0.15O2.9",
+          "conductivity_s_cm": 0.06711958406590988,
+          "regime": "HT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 2,
+          "formula": "La0.95Sr0.05Ga0.9Mg0.1O2.925",
+          "conductivity_s_cm": 0.04872339496036764,
+          "regime": "HT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 1,
+          "formula": "La0.95Sr0.05Ga0.95Mg0.05O2.95",
+          "conductivity_s_cm": 0.03367431938646613,
+          "regime": "HT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        }
+      ],
+      "excluded": []
+    },
+    {
+      "temperature_k": 1006.25,
+      "status": "SUPPORTED_CONDITIONAL_COMPARISON",
+      "ordering": [
+        3,
+        2,
+        1
+      ],
+      "values": [
+        {
+          "row_id": 3,
+          "formula": "La0.95Sr0.05Ga0.85Mg0.15O2.9",
+          "conductivity_s_cm": 0.07056017997183676,
+          "regime": "HT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 2,
+          "formula": "La0.95Sr0.05Ga0.9Mg0.1O2.925",
+          "conductivity_s_cm": 0.05082747636139125,
+          "regime": "HT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 1,
+          "formula": "La0.95Sr0.05Ga0.95Mg0.05O2.95",
+          "conductivity_s_cm": 0.03502990958258883,
+          "regime": "HT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        }
+      ],
+      "excluded": []
+    },
+    {
+      "temperature_k": 1012.5,
+      "status": "SUPPORTED_CONDITIONAL_COMPARISON",
+      "ordering": [
+        3,
+        2,
+        1
+      ],
+      "values": [
+        {
+          "row_id": 3,
+          "formula": "La0.95Sr0.05Ga0.85Mg0.15O2.9",
+          "conductivity_s_cm": 0.07412853580913782,
+          "regime": "HT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 2,
+          "formula": "La0.95Sr0.05Ga0.9Mg0.1O2.925",
+          "conductivity_s_cm": 0.05299272131479345,
+          "regime": "HT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 1,
+          "formula": "La0.95Sr0.05Ga0.95Mg0.05O2.95",
+          "conductivity_s_cm": 0.03642092297987313,
+          "regime": "HT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        }
+      ],
+      "excluded": []
+    },
+    {
+      "temperature_k": 1018.75,
+      "status": "SUPPORTED_CONDITIONAL_COMPARISON",
+      "ordering": [
+        3,
+        2,
+        1
+      ],
+      "values": [
+        {
+          "row_id": 3,
+          "formula": "La0.95Sr0.05Ga0.85Mg0.15O2.9",
+          "conductivity_s_cm": 0.07782727502184983,
+          "regime": "HT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 2,
+          "formula": "La0.95Sr0.05Ga0.9Mg0.1O2.925",
+          "conductivity_s_cm": 0.05521984048636983,
+          "regime": "HT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 1,
+          "formula": "La0.95Sr0.05Ga0.95Mg0.05O2.95",
+          "conductivity_s_cm": 0.03784765039289863,
+          "regime": "HT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        }
+      ],
+      "excluded": []
+    },
+    {
+      "temperature_k": 1025,
+      "status": "SUPPORTED_CONDITIONAL_COMPARISON",
+      "ordering": [
+        3,
+        2,
+        1
+      ],
+      "values": [
+        {
+          "row_id": 3,
+          "formula": "La0.95Sr0.05Ga0.85Mg0.15O2.9",
+          "conductivity_s_cm": 0.08165900768368305,
+          "regime": "HT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 2,
+          "formula": "La0.95Sr0.05Ga0.9Mg0.1O2.925",
+          "conductivity_s_cm": 0.057509526416431596,
+          "regime": "HT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 1,
+          "formula": "La0.95Sr0.05Ga0.95Mg0.05O2.95",
+          "conductivity_s_cm": 0.039310370858981245,
+          "regime": "HT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        }
+      ],
+      "excluded": []
+    },
+    {
+      "temperature_k": 1031.25,
+      "status": "SUPPORTED_CONDITIONAL_COMPARISON",
+      "ordering": [
+        3,
+        2,
+        1
+      ],
+      "values": [
+        {
+          "row_id": 3,
+          "formula": "La0.95Sr0.05Ga0.85Mg0.15O2.9",
+          "conductivity_s_cm": 0.08562632892433096,
+          "regime": "HT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 2,
+          "formula": "La0.95Sr0.05Ga0.9Mg0.1O2.925",
+          "conductivity_s_cm": 0.05986245324739045,
+          "regime": "HT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 1,
+          "formula": "La0.95Sr0.05Ga0.95Mg0.05O2.95",
+          "conductivity_s_cm": 0.04080935159654303,
+          "regime": "HT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        }
+      ],
+      "excluded": []
+    },
+    {
+      "temperature_k": 1037.5,
+      "status": "SUPPORTED_CONDITIONAL_COMPARISON",
+      "ordering": [
+        3,
+        2,
+        1
+      ],
+      "values": [
+        {
+          "row_id": 3,
+          "formula": "La0.95Sr0.05Ga0.85Mg0.15O2.9",
+          "conductivity_s_cm": 0.08973181739002616,
+          "regime": "HT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 2,
+          "formula": "La0.95Sr0.05Ga0.9Mg0.1O2.925",
+          "conductivity_s_cm": 0.06227927647399046,
+          "regime": "HT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 1,
+          "formula": "La0.95Sr0.05Ga0.95Mg0.05O2.95",
+          "conductivity_s_cm": 0.042344847975428146,
+          "regime": "HT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        }
+      ],
+      "excluded": []
+    },
+    {
+      "temperature_k": 1043.75,
+      "status": "SUPPORTED_CONDITIONAL_COMPARISON",
+      "ordering": [
+        3,
+        2,
+        1
+      ],
+      "values": [
+        {
+          "row_id": 3,
+          "formula": "La0.95Sr0.05Ga0.85Mg0.15O2.9",
+          "conductivity_s_cm": 0.09397803373952646,
+          "regime": "HT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 2,
+          "formula": "La0.95Sr0.05Ga0.9Mg0.1O2.925",
+          "conductivity_s_cm": 0.06476063271578708,
+          "regime": "HT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 1,
+          "formula": "La0.95Sr0.05Ga0.95Mg0.05O2.95",
+          "conductivity_s_cm": 0.04391710349878661,
+          "regime": "HT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        }
+      ],
+      "excluded": []
+    },
+    {
+      "temperature_k": 1050,
+      "status": "SUPPORTED_CONDITIONAL_COMPARISON",
+      "ordering": [
+        3,
+        2,
+        1
+      ],
+      "values": [
+        {
+          "row_id": 3,
+          "formula": "La0.95Sr0.05Ga0.85Mg0.15O2.9",
+          "conductivity_s_cm": 0.0983675191766208,
+          "regime": "HT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 2,
+          "formula": "La0.95Sr0.05Ga0.9Mg0.1O2.925",
+          "conductivity_s_cm": 0.06730713951145342,
+          "regime": "HT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 1,
+          "formula": "La0.95Sr0.05Ga0.95Mg0.05O2.95",
+          "conductivity_s_cm": 0.04552634979614726,
+          "regime": "HT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        }
+      ],
+      "excluded": []
+    },
+    {
+      "temperature_k": 1056.25,
+      "status": "SUPPORTED_CONDITIONAL_COMPARISON",
+      "ordering": [
+        3,
+        2,
+        1
+      ],
+      "values": [
+        {
+          "row_id": 3,
+          "formula": "La0.95Sr0.05Ga0.85Mg0.15O2.9",
+          "conductivity_s_cm": 0.10290279402012555,
+          "regime": "HT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 2,
+          "formula": "La0.95Sr0.05Ga0.9Mg0.1O2.925",
+          "conductivity_s_cm": 0.06991939513447101,
+          "regime": "HT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 1,
+          "formula": "La0.95Sr0.05Ga0.95Mg0.05O2.95",
+          "conductivity_s_cm": 0.04717280662729613,
+          "regime": "HT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        }
+      ],
+      "excluded": []
+    },
+    {
+      "temperature_k": 1062.5,
+      "status": "SUPPORTED_CONDITIONAL_COMPARISON",
+      "ordering": [
+        3,
+        2,
+        1
+      ],
+      "values": [
+        {
+          "row_id": 3,
+          "formula": "La0.95Sr0.05Ga0.85Mg0.15O2.9",
+          "conductivity_s_cm": 0.10758635631225935,
+          "regime": "HT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 2,
+          "formula": "La0.95Sr0.05Ga0.9Mg0.1O2.925",
+          "conductivity_s_cm": 0.07259797842974916,
+          "regime": "HT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 1,
+          "formula": "La0.95Sr0.05Ga0.95Mg0.05O2.95",
+          "conductivity_s_cm": 0.0488566818965799,
+          "regime": "HT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        }
+      ],
+      "excluded": []
+    },
+    {
+      "temperature_k": 1068.75,
+      "status": "SUPPORTED_CONDITIONAL_COMPARISON",
+      "ordering": [
+        3,
+        2,
+        1
+      ],
+      "values": [
+        {
+          "row_id": 3,
+          "formula": "La0.95Sr0.05Ga0.85Mg0.15O2.9",
+          "conductivity_s_cm": 0.11242068046616308,
+          "regime": "HT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 2,
+          "formula": "La0.95Sr0.05Ga0.9Mg0.1O2.925",
+          "conductivity_s_cm": 0.07534344867069644,
+          "regime": "HT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 1,
+          "formula": "La0.95Sr0.05Ga0.95Mg0.05O2.95",
+          "conductivity_s_cm": 0.0505781716772486,
+          "regime": "HT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        }
+      ],
+      "excluded": []
+    },
+    {
+      "temperature_k": 1075,
+      "status": "SUPPORTED_CONDITIONAL_COMPARISON",
+      "ordering": [
+        3,
+        2,
+        1
+      ],
+      "values": [
+        {
+          "row_id": 3,
+          "formula": "La0.95Sr0.05Ga0.85Mg0.15O2.9",
+          "conductivity_s_cm": 0.11740821595325589,
+          "regime": "HT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 2,
+          "formula": "La0.95Sr0.05Ga0.9Mg0.1O2.925",
+          "conductivity_s_cm": 0.07815634543625556,
+          "regime": "HT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 1,
+          "formula": "La0.95Sr0.05Ga0.95Mg0.05O2.95",
+          "conductivity_s_cm": 0.05233746024545718,
+          "regime": "HT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        }
+      ],
+      "excluded": []
+    },
+    {
+      "temperature_k": 1081.25,
+      "status": "SUPPORTED_CONDITIONAL_COMPARISON",
+      "ordering": [
+        3,
+        2,
+        1
+      ],
+      "values": [
+        {
+          "row_id": 3,
+          "formula": "La0.95Sr0.05Ga0.85Mg0.15O2.9",
+          "conductivity_s_cm": 0.12255138603101437,
+          "regime": "HT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 2,
+          "formula": "La0.95Sr0.05Ga0.9Mg0.1O2.925",
+          "conductivity_s_cm": 0.08103718850740504,
+          "regime": "HT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 1,
+          "formula": "La0.95Sr0.05Ga0.95Mg0.05O2.95",
+          "conductivity_s_cm": 0.05413472012354506,
+          "regime": "HT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        }
+      ],
+      "excluded": []
+    },
+    {
+      "temperature_k": 1087.5,
+      "status": "SUPPORTED_CONDITIONAL_COMPARISON",
+      "ordering": [
+        3,
+        2,
+        1
+      ],
+      "values": [
+        {
+          "row_id": 3,
+          "formula": "La0.95Sr0.05Ga0.85Mg0.15O2.9",
+          "conductivity_s_cm": 0.1278525865116751,
+          "regime": "HT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 2,
+          "formula": "La0.95Sr0.05Ga0.9Mg0.1O2.925",
+          "conductivity_s_cm": 0.0839864777826118,
+          "regime": "HT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 1,
+          "formula": "La0.95Sr0.05Ga0.95Mg0.05O2.95",
+          "conductivity_s_cm": 0.05597011213221416,
+          "regime": "HT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        }
+      ],
+      "excluded": []
+    },
+    {
+      "temperature_k": 1093.75,
+      "status": "SUPPORTED_CONDITIONAL_COMPARISON",
+      "ordering": [
+        3,
+        2,
+        1
+      ],
+      "values": [
+        {
+          "row_id": 3,
+          "formula": "La0.95Sr0.05Ga0.85Mg0.15O2.9",
+          "conductivity_s_cm": 0.1333141845722765,
+          "regime": "HT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 2,
+          "formula": "La0.95Sr0.05Ga0.9Mg0.1O2.925",
+          "conductivity_s_cm": 0.08700469321172008,
+          "regime": "HT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 1,
+          "formula": "La0.95Sr0.05Ga0.95Mg0.05O2.95",
+          "conductivity_s_cm": 0.057843785451231415,
+          "regime": "HT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        }
+      ],
+      "excluded": []
+    },
+    {
+      "temperature_k": 1100,
+      "status": "SUPPORTED_CONDITIONAL_COMPARISON",
+      "ordering": [
+        3,
+        2,
+        1
+      ],
+      "values": [
+        {
+          "row_id": 3,
+          "formula": "La0.95Sr0.05Ga0.85Mg0.15O2.9",
+          "conductivity_s_cm": 0.1389385176063714,
+          "regime": "HT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 2,
+          "formula": "La0.95Sr0.05Ga0.9Mg0.1O2.925",
+          "conductivity_s_cm": 0.09009229474774841,
+          "regime": "HT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 1,
+          "formula": "La0.95Sr0.05Ga0.95Mg0.05O2.95",
+          "conductivity_s_cm": 0.05975587768828273,
+          "regime": "HT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        }
+      ],
+      "excluded": []
+    }
+  ],
+  "boundary_rankings": [
+    {
+      "temperature_k": 600,
+      "status": "SUPPORTED_CONDITIONAL_COMPARISON",
+      "ordering": [
+        1,
+        2,
+        3
+      ],
+      "values": [
+        {
+          "row_id": 1,
+          "formula": "La0.95Sr0.05Ga0.95Mg0.05O2.95",
+          "conductivity_s_cm": 0.0002104891805621504,
+          "regime": "LT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 2,
+          "formula": "La0.95Sr0.05Ga0.9Mg0.1O2.925",
+          "conductivity_s_cm": 0.00007865575673776751,
+          "regime": "LT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 3,
+          "formula": "La0.95Sr0.05Ga0.85Mg0.15O2.9",
+          "conductivity_s_cm": 0.0000343463402325269,
+          "regime": "LT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        }
+      ],
+      "excluded": []
+    },
+    {
+      "temperature_k": 776.4074250510221,
+      "status": "SUPPORTED_CONDITIONAL_COMPARISON",
+      "ordering": [
+        2,
+        1,
+        3
+      ],
+      "values": [
+        {
+          "row_id": 2,
+          "formula": "La0.95Sr0.05Ga0.9Mg0.1O2.925",
+          "conductivity_s_cm": 0.004837678739887652,
+          "regime": "LT",
+          "tie_with": [
+            1
+          ],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 1,
+          "formula": "La0.95Sr0.05Ga0.95Mg0.05O2.95",
+          "conductivity_s_cm": 0.0048376787398876474,
+          "regime": "LT",
+          "tie_with": [
+            2
+          ],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 3,
+          "formula": "La0.95Sr0.05Ga0.85Mg0.15O2.9",
+          "conductivity_s_cm": 0.0036109493672383816,
+          "regime": "LT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        }
+      ],
+      "excluded": []
+    },
+    {
+      "temperature_k": 800.5450205,
+      "status": "SUPPORTED_CONDITIONAL_COMPARISON",
+      "ordering": [
+        2,
+        1,
+        3
+      ],
+      "values": [
+        {
+          "row_id": 2,
+          "formula": "La0.95Sr0.05Ga0.9Mg0.1O2.925",
+          "conductivity_s_cm": 0.007349803368185739,
+          "regime": "LT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 1,
+          "formula": "La0.95Sr0.05Ga0.95Mg0.05O2.95",
+          "conductivity_s_cm": 0.006644081750287046,
+          "regime": "LT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS",
+            "NEAR_TRANSITION"
+          ]
+        },
+        {
+          "row_id": 3,
+          "formula": "La0.95Sr0.05Ga0.85Mg0.15O2.9",
+          "conductivity_s_cm": 0.005796123729327494,
+          "regime": "LT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        }
+      ],
+      "excluded": []
+    },
+    {
+      "temperature_k": 805.5450205,
+      "status": "PARTIAL_EVIDENCE",
+      "ordering": [
+        2,
+        3
+      ],
+      "values": [
+        {
+          "row_id": 2,
+          "formula": "La0.95Sr0.05Ga0.9Mg0.1O2.925",
+          "conductivity_s_cm": 0.007988973461075794,
+          "regime": "LT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 3,
+          "formula": "La0.95Sr0.05Ga0.85Mg0.15O2.9",
+          "conductivity_s_cm": 0.006369716906295615,
+          "regime": "LT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        }
+      ],
+      "excluded": [
+        {
+          "row_id": 1,
+          "reasons": [
+            "AT_TRANSITION"
+          ]
+        }
+      ]
+    },
+    {
+      "temperature_k": 810.5450205,
+      "status": "SUPPORTED_CONDITIONAL_COMPARISON",
+      "ordering": [
+        2,
+        1,
+        3
+      ],
+      "values": [
+        {
+          "row_id": 2,
+          "formula": "La0.95Sr0.05Ga0.9Mg0.1O2.925",
+          "conductivity_s_cm": 0.008674467144467232,
+          "regime": "LT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 1,
+          "formula": "La0.95Sr0.05Ga0.95Mg0.05O2.95",
+          "conductivity_s_cm": 0.007441804530102472,
+          "regime": "HT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS",
+            "NEAR_TRANSITION"
+          ]
+        },
+        {
+          "row_id": 3,
+          "formula": "La0.95Sr0.05Ga0.85Mg0.15O2.9",
+          "conductivity_s_cm": 0.006991661105529081,
+          "regime": "LT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        }
+      ],
+      "excluded": []
+    },
+    {
+      "temperature_k": 817.9098253678244,
+      "status": "SUPPORTED_CONDITIONAL_COMPARISON",
+      "ordering": [
+        2,
+        1,
+        3
+      ],
+      "values": [
+        {
+          "row_id": 2,
+          "formula": "La0.95Sr0.05Ga0.9Mg0.1O2.925",
+          "conductivity_s_cm": 0.009774126328679383,
+          "regime": "LT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 1,
+          "formula": "La0.95Sr0.05Ga0.95Mg0.05O2.95",
+          "conductivity_s_cm": 0.008002873837989,
+          "regime": "HT",
+          "tie_with": [
+            3
+          ],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 3,
+          "formula": "La0.95Sr0.05Ga0.85Mg0.15O2.9",
+          "conductivity_s_cm": 0.008002873837988986,
+          "regime": "LT",
+          "tie_with": [
+            1
+          ],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        }
+      ],
+      "excluded": []
+    },
+    {
+      "temperature_k": 825.3631709,
+      "status": "SUPPORTED_CONDITIONAL_COMPARISON",
+      "ordering": [
+        2,
+        3,
+        1
+      ],
+      "values": [
+        {
+          "row_id": 2,
+          "formula": "La0.95Sr0.05Ga0.9Mg0.1O2.925",
+          "conductivity_s_cm": 0.011004211353164303,
+          "regime": "LT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS",
+            "NEAR_TRANSITION"
+          ]
+        },
+        {
+          "row_id": 3,
+          "formula": "La0.95Sr0.05Ga0.85Mg0.15O2.9",
+          "conductivity_s_cm": 0.009151987476147356,
+          "regime": "LT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 1,
+          "formula": "La0.95Sr0.05Ga0.95Mg0.05O2.95",
+          "conductivity_s_cm": 0.008601696285186236,
+          "regime": "HT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        }
+      ],
+      "excluded": []
+    },
+    {
+      "temperature_k": 830.3631709,
+      "status": "PARTIAL_EVIDENCE",
+      "ordering": [
+        3,
+        1
+      ],
+      "values": [
+        {
+          "row_id": 3,
+          "formula": "La0.95Sr0.05Ga0.85Mg0.15O2.9",
+          "conductivity_s_cm": 0.009999974287841334,
+          "regime": "LT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 1,
+          "formula": "La0.95Sr0.05Ga0.95Mg0.05O2.95",
+          "conductivity_s_cm": 0.009021358254812617,
+          "regime": "HT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        }
+      ],
+      "excluded": [
+        {
+          "row_id": 2,
+          "reasons": [
+            "AT_TRANSITION"
+          ]
+        }
+      ]
+    },
+    {
+      "temperature_k": 835.3631709,
+      "status": "SUPPORTED_CONDITIONAL_COMPARISON",
+      "ordering": [
+        2,
+        3,
+        1
+      ],
+      "values": [
+        {
+          "row_id": 2,
+          "formula": "La0.95Sr0.05Ga0.9Mg0.1O2.925",
+          "conductivity_s_cm": 0.012514053699912608,
+          "regime": "HT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS",
+            "NEAR_TRANSITION"
+          ]
+        },
+        {
+          "row_id": 3,
+          "formula": "La0.95Sr0.05Ga0.85Mg0.15O2.9",
+          "conductivity_s_cm": 0.010914554594818502,
+          "regime": "LT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 1,
+          "formula": "La0.95Sr0.05Ga0.95Mg0.05O2.95",
+          "conductivity_s_cm": 0.009455760253008635,
+          "regime": "HT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        }
+      ],
+      "excluded": []
+    },
+    {
+      "temperature_k": 854.261466339589,
+      "status": "SUPPORTED_CONDITIONAL_COMPARISON",
+      "ordering": [
+        2,
+        3,
+        1
+      ],
+      "values": [
+        {
+          "row_id": 2,
+          "formula": "La0.95Sr0.05Ga0.9Mg0.1O2.925",
+          "conductivity_s_cm": 0.015048893727068368,
+          "regime": "HT",
+          "tie_with": [
+            3
+          ],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 3,
+          "formula": "La0.95Sr0.05Ga0.85Mg0.15O2.9",
+          "conductivity_s_cm": 0.015048893727068368,
+          "regime": "LT",
+          "tie_with": [
+            2
+          ],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 1,
+          "formula": "La0.95Sr0.05Ga0.95Mg0.05O2.95",
+          "conductivity_s_cm": 0.011235641460998048,
+          "regime": "HT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        }
+      ],
+      "excluded": []
+    },
+    {
+      "temperature_k": 869.9335546,
+      "status": "SUPPORTED_CONDITIONAL_COMPARISON",
+      "ordering": [
+        3,
+        2,
+        1
+      ],
+      "values": [
+        {
+          "row_id": 3,
+          "formula": "La0.95Sr0.05Ga0.85Mg0.15O2.9",
+          "conductivity_s_cm": 0.019428221377381975,
+          "regime": "LT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS",
+            "NEAR_TRANSITION"
+          ]
+        },
+        {
+          "row_id": 2,
+          "formula": "La0.95Sr0.05Ga0.9Mg0.1O2.925",
+          "conductivity_s_cm": 0.01742357909543655,
+          "regime": "HT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 1,
+          "formula": "La0.95Sr0.05Ga0.95Mg0.05O2.95",
+          "conductivity_s_cm": 0.012885036525384187,
+          "regime": "HT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        }
+      ],
+      "excluded": []
+    },
+    {
+      "temperature_k": 874.9335546,
+      "status": "PARTIAL_EVIDENCE",
+      "ordering": [
+        2,
+        1
+      ],
+      "values": [
+        {
+          "row_id": 2,
+          "formula": "La0.95Sr0.05Ga0.9Mg0.1O2.925",
+          "conductivity_s_cm": 0.018235992922324393,
+          "regime": "HT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 1,
+          "formula": "La0.95Sr0.05Ga0.95Mg0.05O2.95",
+          "conductivity_s_cm": 0.013445796173303106,
+          "regime": "HT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        }
+      ],
+      "excluded": [
+        {
+          "row_id": 3,
+          "reasons": [
+            "AT_TRANSITION"
+          ]
+        }
+      ]
+    },
+    {
+      "temperature_k": 879.9335546,
+      "status": "SUPPORTED_CONDITIONAL_COMPARISON",
+      "ordering": [
+        3,
+        2,
+        1
+      ],
+      "values": [
+        {
+          "row_id": 3,
+          "formula": "La0.95Sr0.05Ga0.85Mg0.15O2.9",
+          "conductivity_s_cm": 0.02218262442177468,
+          "regime": "HT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS",
+            "NEAR_TRANSITION"
+          ]
+        },
+        {
+          "row_id": 2,
+          "formula": "La0.95Sr0.05Ga0.9Mg0.1O2.925",
+          "conductivity_s_cm": 0.019075785463673528,
+          "regime": "HT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 1,
+          "formula": "La0.95Sr0.05Ga0.95Mg0.05O2.95",
+          "conductivity_s_cm": 0.014023713709820605,
+          "regime": "HT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        }
+      ],
+      "excluded": []
+    },
+    {
+      "temperature_k": 1100,
+      "status": "SUPPORTED_CONDITIONAL_COMPARISON",
+      "ordering": [
+        3,
+        2,
+        1
+      ],
+      "values": [
+        {
+          "row_id": 3,
+          "formula": "La0.95Sr0.05Ga0.85Mg0.15O2.9",
+          "conductivity_s_cm": 0.1389385176063714,
+          "regime": "HT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 2,
+          "formula": "La0.95Sr0.05Ga0.9Mg0.1O2.925",
+          "conductivity_s_cm": 0.09009229474774841,
+          "regime": "HT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        },
+        {
+          "row_id": 1,
+          "formula": "La0.95Sr0.05Ga0.95Mg0.05O2.95",
+          "conductivity_s_cm": 0.05975587768828273,
+          "regime": "HT",
+          "tie_with": [],
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ]
+        }
+      ],
+      "excluded": []
+    }
+  ],
+  "warnings": [
+    {
+      "code": "MISSING_CONDITIONS",
+      "message": "Atmosphere, preparation and density are not dataset columns; sample comparability needs original-paper review."
+    },
+    {
+      "code": "PARTIAL_OR_ABSENT_EVIDENCE",
+      "message": "Some temperatures or records are withheld. Inspect excluded reasons and valid intervals; no ranking outside measurement bounds."
+    },
+    {
+      "code": "REJECTED_CROSSOVER_CANDIDATES",
+      "message": "Analytic candidates outside fixed-regime evidence or the requested interval are retained separately and never plotted as supported switches."
+    }
+  ],
+  "trace": [
+    {
+      "step": "interpret_constraints",
+      "outcome": "COVERAGE_CHECKED",
+      "detail": "Unknown text fails closed; structured fields and explicit natural-language fields must agree."
+    },
+    {
+      "step": "retrieve_and_validate",
+      "outcome": "REAL_PUBLISHED_DATA",
+      "detail": "3 exact-group records; validate measurement range and every fit prerequisite."
+    },
+    {
+      "step": "execute_allowlisted_tool",
+      "outcome": "analyze_temperature_interval",
+      "detail": "Deterministic interval intersections, analytic pair roots, boundary-aware sampling and conditional ordering."
+    },
+    {
+      "step": "independent_evidence_audit",
+      "outcome": "CALCULATED_WITH_WARNINGS",
+      "detail": "Exact-source grouping, measured-only policy, strict T* exclusion and original raw records attached."
+    },
+    {
+      "step": "validated_explanation",
+      "outcome": "TEMPLATE_FROM_VALIDATED_OUTPUT",
+      "detail": "Only deterministic templates and existing DOI/parameters are shown; no model-generated arithmetic or citations."
+    }
+  ],
+  "interpretation": [
+    "At 700 K, conditional model order (row IDs): 1 > 2 > 3. Equality uses numerical tolerance only.",
+    "At 1000 K, conditional model order (row IDs): 3 > 2 > 1. Equality uses numerical tolerance only.",
+    "Ordering depends on activation-energy differences and prefactor ratios within each valid regime. Regime-boundary events are reviewed separately from continuous roots.",
+    "The curated dataset does not establish humidity tolerance, phase stability, lifetime, cost, toxicity or sample-to-sample uncertainty. No material was discovered or measured by this tool."
+  ],
+  "next_scientific_actions": [
+    "Review original atmosphere, preparation and density and verify bulk versus total separation.",
+    "Repeat conductivity measurements bracketing reported transitions and predicted fixed-regime crossings. These are bounded proposals; no experiment was executed."
+  ],
+  "review_required": true,
+  "observations_vs_calculations": "Published fitted parameters; all curves and rankings are model computations, not new observations. No validated uncertainty interval or stability guarantee."
+}

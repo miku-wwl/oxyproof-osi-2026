@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "reviewer": "Agent visual inspection of decoded final assets",
+  "media_sha256": {
+    "clean": "d6e39ff1588b7e339a6f88f98fe71d27c7293bbc6e327abd148780871b949616",
+    "subtitled": "62be7bf54248f1955f9257bed5751a3a8a5ba874e5da7bbdbb04777b04fd5301"
+  },
+  "pdf_sha256": "a713d2c30a0c3acbfa5f633b41ac65290a957bb18a4ebcbb3dcb438cac9f7c75",
+  "inspected": [
+    "four contact sheets covering 23 subtitled samples",
+    "full-resolution clean ranking and closing",
+    "full-resolution subtitled abstention and source metadata",
+    "final one-page PDF render"
+  ],
+  "limits": "Representative visual inspection, not every frame or human narration listening; full media decode and actual browser ending separately verified"
+}

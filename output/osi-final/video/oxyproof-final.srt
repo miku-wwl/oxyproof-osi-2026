@@ -1,0 +1,199 @@
+1
+00:00:00,500 --> 00:00:05,100
+What if the best material changes when the
+operating temperature changes?
+
+2
+00:00:05,300 --> 00:00:10,100
+Oxygen-ion conductors matter to electrochemical
+technologies, but selection is conditional.
+
+3
+00:00:10,300 --> 00:00:15,100
+A choice at one temperature may change across a
+device's working range.
+
+4
+00:00:15,300 --> 00:00:20,100
+Researchers also need comparable measurements,
+explicit models and traceable evidence.
+
+5
+00:00:20,300 --> 00:00:24,800
+OxyProof brings those checks into a research
+workbench that makes its limits visible.
+
+6
+00:00:25,200 --> 00:00:30,800
+We start with three published bulk-conductivity
+records from the same curated source group.
+
+7
+00:00:31,000 --> 00:00:35,400
+They share a reported method and measured range:
+600 to 1100 kelvin.
+
+8
+00:00:35,600 --> 00:00:39,800
+At 700 kelvin, row one leads: one, then two, then
+three.
+
+9
+00:00:40,000 --> 00:00:48,700
+Move the actual temperature control, and the
+conditional model ordering begins to change.
+
+10
+00:00:49,000 --> 00:00:54,300
+At 1000 kelvin, row three leads: three, then two,
+then one.
+
+11
+00:00:54,500 --> 00:00:59,800
+The result follows activation energies,
+prefactors and the selected temperature regimes.
+
+12
+00:01:00,000 --> 00:01:05,100
+Analytical crossings are audited separately from
+changes in the selected fitted regime.
+
+13
+00:01:05,300 --> 00:01:10,700
+The model intersections are near 776, 818 and 854
+kelvin, inside valid joint regimes.
+
+14
+00:01:10,900 --> 00:01:16,300
+These are calculated intersections of fitted
+models, not experimentally measured crossovers.
+
+15
+00:01:16,500 --> 00:01:20,700
+At a published T-star boundary, the affected
+source row is withheld.
+
+16
+00:01:20,900 --> 00:01:24,800
+No uncertainty bounds are available. Experimental
+confirmation is needed.
+
+17
+00:01:25,300 --> 00:01:30,500
+Next, we load saved traces from three genuine
+DeepSeek API acceptance calls.
+
+18
+00:01:30,700 --> 00:01:35,700
+These executions were captured earlier; playback
+makes no new model request.
+
+19
+00:01:35,900 --> 00:01:41,000
+Scenario B asks how the named Huang group's
+ranking changes with temperature.
+
+20
+00:01:41,200 --> 00:01:46,300
+DeepSeek Flash selected the allowlisted
+temperature-interval analysis tool.
+
+21
+00:01:46,500 --> 00:01:51,500
+The interface shows the real provider identity
+and the model-selected operation.
+
+22
+00:01:51,700 --> 00:01:57,000
+Validated arguments retain 700 to 1000 kelvin,
+bulk conductivity and three source rows.
+
+23
+00:01:57,200 --> 00:02:03,000
+The model selects the tool. The validated physics
+engine supplies the numerical results.
+
+24
+00:02:03,200 --> 00:02:09,600
+Independent auditing controls the verdict and
+explains the validated result.
+
+25
+00:02:10,300 --> 00:02:15,400
+Now add demanding requirements: 600 degrees
+Celsius and ten percent humidity.
+
+26
+00:02:15,600 --> 00:02:20,700
+Also require stability for ten thousand operating
+hours, rather than just conductivity.
+
+27
+00:02:20,900 --> 00:02:26,000
+The recorded model proposed screening and flagged
+unsupported requirements.
+
+28
+00:02:26,200 --> 00:02:31,300
+Independent validation checked the original
+request, retaining humidity and lifetime.
+
+29
+00:02:31,500 --> 00:02:36,600
+The available records do not establish those
+properties, so scientific execution was blocked.
+
+30
+00:02:36,800 --> 00:02:42,000
+No scientific calculation tool ran, and no
+unsupported recommendation was produced.
+
+31
+00:02:42,200 --> 00:02:46,100
+The result is insufficient evidence, with a
+proposed future measurement.
+
+32
+00:02:46,300 --> 00:02:49,800
+When evidence is missing, OxyProof refuses to
+guess.
+
+33
+00:02:50,300 --> 00:02:56,000
+Every result remains tied to the published
+dataset, original source rows and explicit units.
+
+34
+00:02:56,200 --> 00:03:01,800
+The parameters, selected regimes and evidence
+limits remain visible for researcher review.
+
+35
+00:03:02,000 --> 00:03:08,800
+Shared source metadata supports comparison, but
+sample conditions still need review.
+
+36
+00:03:09,000 --> 00:03:14,600
+The actual JSON export preserves the source
+records and deterministic calculation trace.
+
+37
+00:03:14,800 --> 00:03:19,700
+Warnings and code fingerprints travel with the
+report, supporting offline reproduction.
+
+38
+00:03:20,300 --> 00:03:25,200
+OxyProof explains when the answer changes and why
+it changes.
+
+39
+00:03:25,400 --> 00:03:29,800
+It also shows where the evidence stops, so a
+researcher can decide what to check next.
+
+40
+00:03:30,000 --> 00:03:34,600
+AI can assist scientific decision-making without
+being allowed to invent the science.

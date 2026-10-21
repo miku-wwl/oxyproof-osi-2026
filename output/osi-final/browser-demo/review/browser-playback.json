@@ -1,0 +1,54 @@
+{
+  "status": "PARTIAL",
+  "browser": "ChatGPT in-app browser",
+  "browser_id": "2",
+  "review_tab_id": "3",
+  "url": "http://127.0.0.1:8017/browser-demo/review/PLAYER.html",
+  "summary": "Actual IAB playback started and advanced, but continuous attempts stalled at 4.3262 seconds, 8.681073 seconds, and 161.089563 seconds after seeking to 156. The media element reported readyState 2 and error null. Seeking to 42, 156 and 193 seconds displayed decoded frames with readyState 4; a real browser-player guard screenshot was saved. Full continuous playback to 195 seconds was not verified. Both final MP4s separately passed complete FFmpeg decoding; this does not substitute for continuous-browser-playback evidence. Windows QA also encountered WinError 1455; the exact cause of browser stalls remains unconfirmed.",
+  "events": [
+    {
+      "stage": "initial-buffering",
+      "time_s": 4.3262,
+      "readyState": 2,
+      "error": null,
+      "buffered_to_s": 110.367,
+      "continuous_to_end": false
+    },
+    {
+      "stage": "second-play-attempt",
+      "error": null,
+      "paused": false,
+      "readyState": 2,
+      "time_s": 8.681073,
+      "continuous_to_end": false
+    },
+    {
+      "stage": "seek-to-C-guard",
+      "error": null,
+      "paused": true,
+      "readyState": 4,
+      "time_s": 156
+    },
+    {
+      "stage": "tail-continuous-attempt",
+      "ended": false,
+      "error": null,
+      "paused": false,
+      "readyState": 2,
+      "time_s": 161.089563,
+      "full_continuous_play": false
+    },
+    {
+      "stage": "seek-to-closing-url",
+      "ended": false,
+      "error": null,
+      "paused": true,
+      "readyState": 4,
+      "time_s": 193
+    }
+  ],
+  "full_continuous_playback_to_end": false,
+  "ffmpeg_full_decode": "PASS",
+  "system_pointer_captured": false,
+  "viewport_override_reset": true
+}

@@ -1,0 +1,496 @@
+{
+  "skill_display_name": "IAB Browser Video",
+  "skill_id": "codex-iab-video-recording",
+  "skill_path": "C:/Users/weila/.codex/skills/codex-iab-video-recording/SKILL.md",
+  "browser": {
+    "name": "ChatGPT in-app browser",
+    "type": "iab",
+    "browser_id": "2",
+    "application_tab_id": "1"
+  },
+  "method": "Actual skill capture_iab.mjs; actual render_iab.py preflight; verified timestamped raw frames rendered here",
+  "previous_explainer_reused": false,
+  "previous_raw_frames_inspected": true,
+  "recapture_reason": "Complete selection/Analyze/Replay-C/download-preview action chain, consistent current 700-1000 K request and higher-resolution source; earlier originals preserved",
+  "source_screenshot_dimensions": [
+    1921,
+    1081
+  ],
+  "source_padding_crop": [
+    0,
+    0,
+    1749,
+    984
+  ],
+  "crop_reason": "Unused capture-interface padding at right/bottom removed after raw-frame inspection; rendered webpage/sidebar/scrollbar retained",
+  "effective_webpage_crop_dimensions": [
+    1749,
+    984
+  ],
+  "effective_scale_to_export": [
+    1.097770154373928,
+    1.0975609756097562
+  ],
+  "native_1080p_capture_claimed": false,
+  "export_dimensions": [
+    1920,
+    1080
+  ],
+  "export_fps": 30,
+  "source_acquisition_is_native_30fps": false,
+  "duration_s": 195,
+  "silent": true,
+  "system_mouse_pointer_capture": "UNAVAILABLE",
+  "synthetic_cursor_added": false,
+  "native_browser_chrome_capture": false,
+  "webpage_visible_canvas_fraction_clean": 1.0,
+  "minimum_unobscured_webpage_fraction_with_caption": 0.9222222222222223,
+  "permanent_title_banner": false,
+  "commentary_sidebar": false,
+  "presentation_template": false,
+  "closing_url_overlay_seconds": [
+    192,
+    195
+  ],
+  "new_provider_calls": 0,
+  "takes": [
+    {
+      "take": "A1",
+      "manifest": ".local\\browser-demo-capture\\A1\\capture-manifest.json",
+      "manifest_sha256": "cb39e22fee16e7954c8e03639cc1696c428885ffa3d2b4251208d8dd25e70389",
+      "video_interval_s": [
+        0,
+        12
+      ],
+      "source_range_s": [
+        0,
+        12
+      ],
+      "capture_average_fps": 12.302273169149265,
+      "max_sample_gap_s": 0.2586397000001739,
+      "source_dimensions": [
+        [
+          1921,
+          1081
+        ]
+      ],
+      "source_frames_used": 147,
+      "playback_speed": 1
+    },
+    {
+      "take": "A2",
+      "manifest": ".local\\browser-demo-capture\\A2\\capture-manifest.json",
+      "manifest_sha256": "190292bec0d686d274d7d42852ea7e5133ac192fc17af21842f49b201af755eb",
+      "video_interval_s": [
+        12,
+        35
+      ],
+      "source_range_s": [
+        0,
+        23
+      ],
+      "capture_average_fps": 12.164778511294012,
+      "max_sample_gap_s": 0.2738505000006406,
+      "source_dimensions": [
+        [
+          1921,
+          1081
+        ]
+      ],
+      "source_frames_used": 279,
+      "playback_speed": 1
+    },
+    {
+      "take": "B",
+      "manifest": ".local\\browser-demo-capture\\B\\capture-manifest.json",
+      "manifest_sha256": "cb6affaa52b0109434ed399e88291178da9ff4dc688b8f4c357034eef9f30714",
+      "video_interval_s": [
+        35,
+        75
+      ],
+      "source_range_s": [
+        0,
+        40
+      ],
+      "capture_average_fps": 12.446794141466937,
+      "max_sample_gap_s": 0.31613129999954026,
+      "source_dimensions": [
+        [
+          1921,
+          1081
+        ]
+      ],
+      "source_frames_used": 498,
+      "playback_speed": 1
+    },
+    {
+      "take": "B-roots",
+      "manifest": ".local\\browser-demo-capture\\B-roots\\capture-manifest.json",
+      "manifest_sha256": "88318188f3d014977efed102173d31f2288ea5116f99cbec2c9b8d68bfb0e238",
+      "video_interval_s": [
+        75,
+        95
+      ],
+      "source_range_s": [
+        0,
+        20
+      ],
+      "capture_average_fps": 12.104541515384543,
+      "max_sample_gap_s": 0.4185799000002426,
+      "source_dimensions": [
+        [
+          1921,
+          1081
+        ]
+      ],
+      "source_frames_used": 242,
+      "playback_speed": 1
+    },
+    {
+      "take": "C",
+      "manifest": ".local\\browser-demo-capture\\C\\capture-manifest.json",
+      "manifest_sha256": "dfcfa53af09decd8a11f5cefc4502044c27308b1b0b635b133febb4d8590dded",
+      "video_interval_s": [
+        95,
+        135
+      ],
+      "source_range_s": [
+        0,
+        40
+      ],
+      "capture_average_fps": 12.298548064162052,
+      "max_sample_gap_s": 0.39064089999999396,
+      "source_dimensions": [
+        [
+          1921,
+          1081
+        ]
+      ],
+      "source_frames_used": 492,
+      "playback_speed": 1
+    },
+    {
+      "take": "D",
+      "manifest": ".local\\browser-demo-capture\\D\\capture-manifest.json",
+      "manifest_sha256": "efaa0b9358426638b6edec7ea0480c4f07c7a264e13933143091db0dbaa4ed78",
+      "video_interval_s": [
+        135,
+        165
+      ],
+      "source_range_s": [
+        0,
+        30
+      ],
+      "capture_average_fps": 12.514269137443298,
+      "max_sample_gap_s": 0.49093130000028706,
+      "source_dimensions": [
+        [
+          1921,
+          1081
+        ]
+      ],
+      "source_frames_used": 375,
+      "playback_speed": 1
+    },
+    {
+      "take": "E",
+      "manifest": ".local\\browser-demo-capture\\E\\capture-manifest.json",
+      "manifest_sha256": "5931473fa643cb01d5d84ea2f1da115bc393a632c83b03ba2982455d147ffb37",
+      "video_interval_s": [
+        165,
+        190
+      ],
+      "source_range_s": [
+        0,
+        25
+      ],
+      "capture_average_fps": 9.743141014404458,
+      "max_sample_gap_s": 1.8355690999999652,
+      "source_dimensions": [
+        [
+          1921,
+          1081
+        ]
+      ],
+      "source_frames_used": 243,
+      "playback_speed": 1
+    },
+    {
+      "take": "F-ready",
+      "manifest": ".local\\browser-demo-capture\\F-ready\\capture-manifest.json",
+      "manifest_sha256": "60340b14b52a886c527d9bf4434dd422a0a491050e94161baa28c3d926c41481",
+      "video_interval_s": [
+        190,
+        195
+      ],
+      "source_range_s": [
+        0,
+        5
+      ],
+      "capture_average_fps": 6.563890854906513,
+      "max_sample_gap_s": 0.32176960000023236,
+      "source_dimensions": [
+        [
+          1921,
+          1081
+        ]
+      ],
+      "source_frames_used": 32,
+      "playback_speed": 1
+    }
+  ],
+  "actions": [
+    {
+      "take": "A1",
+      "action": "navigate-temperature-explorer",
+      "video_request_s": 2.059,
+      "video_complete_s": 2.926
+    },
+    {
+      "take": "A1",
+      "action": "open-source-group-selector",
+      "video_request_s": 4.011,
+      "video_complete_s": 5.245
+    },
+    {
+      "take": "A1",
+      "action": "select-published-Huang-group",
+      "video_request_s": 6.007,
+      "video_complete_s": 6.354
+    },
+    {
+      "take": "A1",
+      "action": "open-actual-record-selection",
+      "video_request_s": 9.062,
+      "video_complete_s": 9.882
+    },
+    {
+      "take": "A2",
+      "action": "clear-source-selection",
+      "video_request_s": 13.053,
+      "video_complete_s": 14.074
+    },
+    {
+      "take": "A2",
+      "action": "select-source-row-1",
+      "video_request_s": 15.022,
+      "video_complete_s": 15.909
+    },
+    {
+      "take": "A2",
+      "action": "select-source-row-2",
+      "video_request_s": 17.052,
+      "video_complete_s": 17.882
+    },
+    {
+      "take": "A2",
+      "action": "select-source-row-3",
+      "video_request_s": 19.02,
+      "video_complete_s": 19.771
+    },
+    {
+      "take": "A2",
+      "action": "close-three-record-selector",
+      "video_request_s": 21.019,
+      "video_complete_s": 22.172
+    },
+    {
+      "take": "A2",
+      "action": "enter-700K-lower-bound",
+      "video_request_s": 23.074,
+      "video_complete_s": 23.423
+    },
+    {
+      "take": "A2",
+      "action": "enter-1000K-upper-bound",
+      "video_request_s": 25.025,
+      "video_complete_s": 25.345
+    },
+    {
+      "take": "A2",
+      "action": "click-real-Analyze-interval",
+      "video_request_s": 28.069,
+      "video_complete_s": 29.221
+    },
+    {
+      "take": "A2",
+      "action": "scroll-to-generated-curves",
+      "video_request_s": 32.052,
+      "video_complete_s": 33.13
+    },
+    {
+      "take": "B",
+      "action": "show-700K-order",
+      "video_request_s": 40.04,
+      "video_complete_s": 41.177
+    },
+    {
+      "take": "B",
+      "action": "actual-slider-drag-first-step",
+      "video_request_s": 47.058,
+      "video_complete_s": 48.466
+    },
+    {
+      "take": "B",
+      "action": "actual-slider-drag-second-step",
+      "video_request_s": 52.002,
+      "video_complete_s": 53.435
+    },
+    {
+      "take": "B",
+      "action": "actual-slider-drag-to-1000K",
+      "video_request_s": 57.019,
+      "video_complete_s": 58.441
+    },
+    {
+      "take": "B",
+      "action": "click-1000K-and-hold-ranking",
+      "video_request_s": 62.013,
+      "video_complete_s": 63.187
+    },
+    {
+      "take": "B",
+      "action": "return-700K-for-direct-comparison",
+      "video_request_s": 70.009,
+      "video_complete_s": 70.92
+    },
+    {
+      "take": "B-roots",
+      "action": "scroll-to-real-event-cards",
+      "video_request_s": 76.051,
+      "video_complete_s": 77.474
+    },
+    {
+      "take": "B-roots",
+      "action": "inspect-776K-model-event",
+      "video_request_s": 79.054,
+      "video_complete_s": 80.146
+    },
+    {
+      "take": "B-roots",
+      "action": "inspect-818K-model-event",
+      "video_request_s": 84.05,
+      "video_complete_s": 84.841
+    },
+    {
+      "take": "B-roots",
+      "action": "inspect-854K-model-event",
+      "video_request_s": 89.051,
+      "video_complete_s": 89.902
+    },
+    {
+      "take": "B-roots",
+      "action": "read-evidence-limitations",
+      "video_request_s": 92.072,
+      "video_complete_s": 93.252
+    },
+    {
+      "take": "C",
+      "action": "navigate-to-research-Agent",
+      "video_request_s": 96.057,
+      "video_complete_s": 97.115
+    },
+    {
+      "take": "C",
+      "action": "expand-recorded-DeepSeek-interface",
+      "video_request_s": 99.033,
+      "video_complete_s": 100.368
+    },
+    {
+      "take": "C",
+      "action": "click-load-recorded-traces",
+      "video_request_s": 103.004,
+      "video_complete_s": 104.143
+    },
+    {
+      "take": "C",
+      "action": "click-actual-Replay-B",
+      "video_request_s": 108.005,
+      "video_complete_s": 109.028
+    },
+    {
+      "take": "C",
+      "action": "show-provider-and-selected-tool",
+      "video_request_s": 113.013,
+      "video_complete_s": 114.394
+    },
+    {
+      "take": "C",
+      "action": "expand-actual-validated-arguments",
+      "video_request_s": 119.024,
+      "video_complete_s": 119.936
+    },
+    {
+      "take": "C",
+      "action": "expand-actual-scientific-result",
+      "video_request_s": 125.021,
+      "video_complete_s": 125.936
+    },
+    {
+      "take": "C",
+      "action": "show-independent-evidence-verdict",
+      "video_request_s": 130.043,
+      "video_complete_s": 131.279
+    },
+    {
+      "take": "D",
+      "action": "click-visible-Replay-C-control",
+      "video_request_s": 136.04,
+      "video_complete_s": 136.991
+    },
+    {
+      "take": "D",
+      "action": "show-original-humidity-and-lifetime-question",
+      "video_request_s": 138.055,
+      "video_complete_s": 139.397
+    },
+    {
+      "take": "D",
+      "action": "show-model-proposal-and-no-executed-tool",
+      "video_request_s": 146.04,
+      "video_complete_s": 146.883
+    },
+    {
+      "take": "D",
+      "action": "show-independent-constraint-audit",
+      "video_request_s": 154.063,
+      "video_complete_s": 155.295
+    },
+    {
+      "take": "D",
+      "action": "hold-grounded-insufficient-evidence-result",
+      "video_request_s": 159.026,
+      "video_complete_s": 160.011
+    },
+    {
+      "take": "E",
+      "action": "return-to-original-source-evidence",
+      "video_request_s": 166.045,
+      "video_complete_s": 167.119
+    },
+    {
+      "take": "E",
+      "action": "show-real-source-rows-and-parameters",
+      "video_request_s": 170.03,
+      "video_complete_s": 170.935
+    },
+    {
+      "take": "E",
+      "action": "click-Export-and-verify-real-downloaded-file",
+      "video_request_s": 177.044,
+      "video_complete_s": 178.136
+    },
+    {
+      "take": "E",
+      "action": "open-byte-identical-downloaded-JSON-in-IAB",
+      "video_request_s": 182.013,
+      "video_complete_s": 187.168
+    },
+    {
+      "take": "F-ready",
+      "action": "focus-ready-dashboard-heading",
+      "video_request_s": 191.019,
+      "video_complete_s": 192.182
+    }
+  ]
+}

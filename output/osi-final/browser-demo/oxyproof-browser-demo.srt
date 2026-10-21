@@ -1,0 +1,114 @@
+1
+00:00:00,800 --> 00:00:06,000
+OxyProof: a real, evidence-grounded research
+workflow.
+
+2
+00:00:06,300 --> 00:00:11,500
+Select the published Huang source group.
+
+3
+00:00:13,000 --> 00:00:22,000
+Choose source rows 1, 2 and 3.
+
+4
+00:00:23,500 --> 00:00:27,000
+Set the interval to 700-1000 K.
+
+5
+00:00:28,300 --> 00:00:34,000
+Click Analyze. The backend calculates the curves.
+
+6
+00:00:35,300 --> 00:00:40,000
+Published fits, explicit units and evidence
+limits.
+
+7
+00:00:40,500 --> 00:00:46,000
+700 K: source-row order 1 > 2 > 3.
+
+8
+00:00:47,500 --> 00:00:55,000
+Drag the actual slider; ordering changes with
+temperature.
+
+9
+00:00:59,000 --> 00:01:07,000
+1000 K: source-row order 3 > 2 > 1.
+
+10
+00:01:10,300 --> 00:01:14,500
+Return to 700 K for a direct comparison.
+
+11
+00:01:19,000 --> 00:01:24,500
+Inspect the analytical crossing near 776 K.
+
+12
+00:01:25,000 --> 00:01:30,000
+Then inspect the model crossings near 818 K and
+854 K.
+
+13
+00:01:30,300 --> 00:01:34,800
+Calculated fits, not measured crossovers. No
+uncertainty bounds.
+
+14
+00:01:36,000 --> 00:01:42,700
+Open Research Agent and its recorded DeepSeek
+evidence.
+
+15
+00:01:43,300 --> 00:01:49,800
+Load saved genuine API traces. No new inference.
+
+16
+00:01:50,200 --> 00:01:57,500
+Replay B: DeepSeek selected
+analyze_temperature_interval.
+
+17
+00:01:59,300 --> 00:02:06,500
+Inspect validated arguments and the local
+scientific result.
+
+18
+00:02:10,200 --> 00:02:14,800
+Independent auditing controls the scientific
+conclusion.
+
+19
+00:02:16,300 --> 00:02:22,500
+Replay C: 600 C, 10% humidity and 10,000 operating
+hours.
+
+20
+00:02:23,000 --> 00:02:29,300
+The model proposed screening; the independent
+guard checks the requirements.
+
+21
+00:02:30,000 --> 00:02:37,000
+No scientific tool executed. No candidates
+recommended.
+
+22
+00:02:38,000 --> 00:02:44,700
+INSUFFICIENT_EVIDENCE: OxyProof abstains.
+
+23
+00:02:46,000 --> 00:02:54,500
+Return to the source rows, DOI and published fit
+parameters.
+
+24
+00:02:56,500 --> 00:03:01,800
+Click Export JSON to download the actual decision
+report.
+
+25
+00:03:03,000 --> 00:03:09,500
+Inspect a byte-identical local copy of the
+downloaded JSON.

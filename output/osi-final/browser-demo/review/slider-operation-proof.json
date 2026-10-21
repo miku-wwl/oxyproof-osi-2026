@@ -1,0 +1,59 @@
+{
+  "preflight": [
+    {
+      "before": "16",
+      "from": [
+        625,
+        492
+      ],
+      "to": [
+        1556,
+        492
+      ],
+      "after": "76"
+    }
+  ],
+  "recorded_operations": [
+    {
+      "before": "0",
+      "fraction": 0.34,
+      "from": [
+        377,
+        492
+      ],
+      "to": [
+        862,
+        492
+      ],
+      "after": "31"
+    },
+    {
+      "before": "31",
+      "fraction": 0.65,
+      "from": [
+        858,
+        492
+      ],
+      "to": [
+        1305,
+        492
+      ],
+      "after": "60"
+    },
+    {
+      "before": "60",
+      "fraction": 1,
+      "from": [
+        1308,
+        492
+      ],
+      "to": [
+        1804,
+        492
+      ],
+      "after": "92"
+    }
+  ],
+  "method": "Actual IAB tab.drag using freshly observed input bounds; no cursor animation",
+  "system_pointer_captured": false
+}

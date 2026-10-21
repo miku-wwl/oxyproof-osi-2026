@@ -1,0 +1,26 @@
+{
+  "downloaded_file": "C:\\Users\\weila\\Downloads\\oxyproof-audit (2).json",
+  "bytes": 141505,
+  "sha256": "190430d6355326281c501057df5a2167782209768ad88ddd62fd66bad29e224c",
+  "row_ids": [
+    1,
+    2,
+    3
+  ],
+  "interval": [
+    700,
+    1000
+  ],
+  "orders": [
+    [
+      1,
+      2,
+      3
+    ],
+    [
+      3,
+      2,
+      1
+    ]
+  ]
+}

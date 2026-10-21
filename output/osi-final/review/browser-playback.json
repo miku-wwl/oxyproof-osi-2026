@@ -1,0 +1,34 @@
+{
+  "status": "PASS",
+  "review_url": "http://127.0.0.1:8017/review/REVIEW.html",
+  "file": "video/oxyproof-final-subtitled.mp4",
+  "sha256": "62be7bf54248f1955f9257bed5751a3a8a5ba874e5da7bbdbb04777b04fd5301",
+  "browser": "ChatGPT in-app browser",
+  "browser_id": "2",
+  "tab_id": "2",
+  "initial_plain_http_preview": {
+    "start_time": 3.701049,
+    "stalled_at": 135.943998,
+    "readyState": 2,
+    "media_error": null,
+    "seek_reset_to_start": true,
+    "status": "FAILED_PREVIEW_TRANSPORT"
+  },
+  "range_server": {
+    "byte_range_check": "HTTP 206, bytes 0-31/5657769, 32 bytes",
+    "seek_observed_seconds": 130.17032,
+    "forward_progress_seconds": 164.316474,
+    "final_observation": {
+      "currentTime": 215,
+      "duration": 215,
+      "ended": true,
+      "error": null,
+      "paused": true,
+      "readyState": 4,
+      "videoHeight": 1080,
+      "videoWidth": 1920
+    }
+  },
+  "claim": "Actual browser playback and seeking checked across the file; initial transport stall disclosed and resolved. Both entire masters fully FFmpeg decoded. No narration/audio listening claimed.",
+  "recorded_at_utc": "2026-10-21T06:20:27.881Z"
+}

@@ -1,0 +1,496 @@
+{
+  "method": "Actual installed skill capture_iab.mjs; preflight encoded/decoded with render_iab.py; this script composes timestamped source frames with editorial labels and SRT-matched captions",
+  "skill_path": "C:/Users/weila/.codex/skills/codex-iab-video-recording/SKILL.md",
+  "installed_skill_name": "codex-iab-video-recording",
+  "source_browser": {
+    "name": "ChatGPT in-app browser",
+    "type": "iab",
+    "id": "2",
+    "tab_id": "1"
+  },
+  "sources": [
+    {
+      "scene": "scene1",
+      "manifest": ".local\\osi-final-capture\\scene1\\capture-manifest.json",
+      "manifest_sha256": "33cdb4dea5035b54863fee210ea2241f3895a21a01a61ec5c7de2a717c87aa5f",
+      "source_dimensions": [
+        [
+          1441,
+          811
+        ]
+      ],
+      "capture_average_fps": 9.136533799681144,
+      "max_capture_gap_seconds": 0.45750510000006805,
+      "captured_seconds": 25.064209800000068,
+      "edit_range_seconds": [
+        0,
+        25
+      ],
+      "playback_speed": 1,
+      "source_frames": 228,
+      "distinct_images": 1,
+      "events": [
+        {
+          "kind": "ui-step",
+          "label": "show-dashboard-top",
+          "requested_t": 1.0108398000000742,
+          "completed_t": 2.0463668000000763,
+          "source_url": "http://127.0.0.1:8000/"
+        },
+        {
+          "kind": "ui-step",
+          "label": "focus-temperature-explorer",
+          "requested_t": 14.053436200000112,
+          "completed_t": 15.290759600000106,
+          "source_url": "http://127.0.0.1:8000/"
+        },
+        {
+          "kind": "element-click",
+          "label": "explorer-heading",
+          "requested_t": 14.122990300000064,
+          "point": {
+            "height": 818,
+            "width": 1454,
+            "x": 468.6868133544922,
+            "y": 342.6767473220825
+          },
+          "completed_t": 14.422174400000019
+        }
+      ]
+    },
+    {
+      "scene": "scene2a",
+      "manifest": ".local\\osi-final-capture\\scene2a\\capture-manifest.json",
+      "manifest_sha256": "abe929da7e3e8679c73925ce20bbee98e8a6ad02220cb911704ca715e81a2e43",
+      "source_dimensions": [
+        [
+          1441,
+          811
+        ]
+      ],
+      "capture_average_fps": 9.305251378654335,
+      "max_capture_gap_seconds": 0.4683728999999577,
+      "captured_seconds": 35.033981000000026,
+      "edit_range_seconds": [
+        0,
+        35
+      ],
+      "playback_speed": 1,
+      "source_frames": 325,
+      "distinct_images": 11,
+      "events": [
+        {
+          "kind": "ui-step",
+          "label": "700K-conditional-ranking",
+          "requested_t": 7.078299800000037,
+          "completed_t": 8.207067800000077,
+          "source_url": "http://127.0.0.1:8000/"
+        },
+        {
+          "kind": "element-click",
+          "label": "700K",
+          "requested_t": 7.153345500000054,
+          "point": null,
+          "completed_t": 7.455426800000016
+        },
+        {
+          "kind": "ui-step",
+          "label": "move-real-temperature-slider",
+          "requested_t": 15.054179400000022,
+          "completed_t": 16.59150450000004,
+          "source_url": "http://127.0.0.1:8000/"
+        },
+        {
+          "kind": "ui-step",
+          "label": "1000K-reversed-ranking",
+          "requested_t": 24.121790800000074,
+          "completed_t": 25.16957130000007,
+          "source_url": "http://127.0.0.1:8000/"
+        },
+        {
+          "kind": "element-click",
+          "label": "1000K",
+          "requested_t": 24.19106520000007,
+          "point": {
+            "height": 818,
+            "width": 1454,
+            "x": 435.7543869018554,
+            "y": 461.4772262573242
+          },
+          "completed_t": 24.49057280000008
+        }
+      ]
+    },
+    {
+      "scene": "scene2b",
+      "manifest": ".local\\osi-final-capture\\scene2b\\capture-manifest.json",
+      "manifest_sha256": "88c666e4c0b2bc1569b13d55244978032ed902c5d31d9b1dba8c27d5b2c031a4",
+      "source_dimensions": [
+        [
+          1441,
+          811
+        ]
+      ],
+      "capture_average_fps": 10.250226576871224,
+      "max_capture_gap_seconds": 0.5235803000000274,
+      "captured_seconds": 25.072616500000002,
+      "edit_range_seconds": [
+        0,
+        25
+      ],
+      "playback_speed": 1,
+      "source_frames": 256,
+      "distinct_images": 4,
+      "events": [
+        {
+          "kind": "ui-step",
+          "label": "first-analytic-root",
+          "requested_t": 1.0281234000000403,
+          "completed_t": 2.282727900000056,
+          "source_url": "http://127.0.0.1:8000/"
+        },
+        {
+          "kind": "element-click",
+          "label": "776K-root",
+          "requested_t": 1.1115204000000376,
+          "point": null,
+          "completed_t": 1.4198678000000073
+        },
+        {
+          "kind": "ui-step",
+          "label": "second-analytic-root",
+          "requested_t": 8.119740300000062,
+          "completed_t": 9.256362700000055,
+          "source_url": "http://127.0.0.1:8000/"
+        },
+        {
+          "kind": "element-click",
+          "label": "818K-root",
+          "requested_t": 8.228268800000079,
+          "point": {
+            "height": 818,
+            "width": 1454,
+            "x": 586.016357421875,
+            "y": 649.1982011795044
+          },
+          "completed_t": 8.53046100000001
+        },
+        {
+          "kind": "ui-step",
+          "label": "third-analytic-root",
+          "requested_t": 14.05482620000001,
+          "completed_t": 15.237229300000006,
+          "source_url": "http://127.0.0.1:8000/"
+        },
+        {
+          "kind": "element-click",
+          "label": "854K-root",
+          "requested_t": 14.151481600000057,
+          "point": {
+            "height": 818,
+            "width": 1454,
+            "x": 586.016357421875,
+            "y": 649.2044878005981
+          },
+          "completed_t": 14.448209400000051
+        },
+        {
+          "kind": "ui-step",
+          "label": "show-distinct-fit-boundary",
+          "requested_t": 20.064480100000043,
+          "completed_t": 21.49084260000009,
+          "source_url": "http://127.0.0.1:8000/"
+        },
+        {
+          "kind": "element-click",
+          "label": "regime-boundary-not-crossover",
+          "requested_t": 20.162361100000098,
+          "point": {
+            "height": 818,
+            "width": 1454,
+            "x": 1117.6198425292969,
+            "y": 409.2045183181762
+          },
+          "completed_t": 20.46482640000002
+        }
+      ]
+    },
+    {
+      "scene": "scene3a",
+      "manifest": ".local\\osi-final-capture\\scene3a\\capture-manifest.json",
+      "manifest_sha256": "7820a728c58601943bcbf44e6bf4a3d553058d93c689dc753de783de14062577",
+      "source_dimensions": [
+        [
+          1441,
+          811
+        ]
+      ],
+      "capture_average_fps": 10.9361574468645,
+      "max_capture_gap_seconds": 0.47309320000000277,
+      "captured_seconds": 10.058377500000061,
+      "edit_range_seconds": [
+        0,
+        10
+      ],
+      "playback_speed": 1,
+      "source_frames": 109,
+      "distinct_images": 5,
+      "events": [
+        {
+          "kind": "ui-step",
+          "label": "load-read-only-evidence",
+          "requested_t": 2.0449309999999823,
+          "completed_t": 3.344959200000041,
+          "source_url": "http://127.0.0.1:8000/"
+        },
+        {
+          "kind": "element-click",
+          "label": "load-recorded-traces",
+          "requested_t": 2.1187922000000254,
+          "point": {
+            "height": 818,
+            "width": 1454,
+            "x": 407.3863220214844,
+            "y": 456.2120819091797
+          },
+          "completed_t": 2.421888600000064
+        }
+      ]
+    },
+    {
+      "scene": "scene3b",
+      "manifest": ".local\\osi-final-capture\\scene3b\\capture-manifest.json",
+      "manifest_sha256": "084108033976936ec0a0076756674b5b99bef6e8b992b2117156344f7bb67bf6",
+      "source_dimensions": [
+        [
+          1441,
+          811
+        ]
+      ],
+      "capture_average_fps": 9.783374022376364,
+      "max_capture_gap_seconds": 0.5231115000001143,
+      "captured_seconds": 35.05947940000007,
+      "edit_range_seconds": [
+        0,
+        35
+      ],
+      "playback_speed": 1,
+      "source_frames": 342,
+      "distinct_images": 9,
+      "events": [
+        {
+          "kind": "ui-step",
+          "label": "replay-scenario-B-no-inference",
+          "requested_t": 1.0002195000000065,
+          "completed_t": 2.4994689999999244,
+          "source_url": "http://127.0.0.1:8000/"
+        },
+        {
+          "kind": "element-click",
+          "label": "replay-B",
+          "requested_t": 1.0782094999999972,
+          "point": null,
+          "completed_t": 1.3835869999999413
+        },
+        {
+          "kind": "ui-step",
+          "label": "show-actual-provider-and-tool",
+          "requested_t": 5.063998699999996,
+          "completed_t": 6.432881399999955,
+          "source_url": "http://127.0.0.1:8000/"
+        },
+        {
+          "kind": "element-click",
+          "label": "provider-model",
+          "requested_t": 5.2182456999999705,
+          "point": null,
+          "completed_t": 5.539309000000008
+        },
+        {
+          "kind": "ui-step",
+          "label": "expand-validated-arguments",
+          "requested_t": 15.030273099999874,
+          "completed_t": 16.47491149999993,
+          "source_url": "http://127.0.0.1:8000/"
+        },
+        {
+          "kind": "element-click",
+          "label": "validated-arguments",
+          "requested_t": 15.139414499999955,
+          "point": {
+            "height": 818,
+            "width": 1454,
+            "x": 850.4039611816406,
+            "y": 537.1022043228149
+          },
+          "completed_t": 15.479157899999992
+        },
+        {
+          "kind": "ui-step",
+          "label": "expand-deterministic-science",
+          "requested_t": 23.022087300000013,
+          "completed_t": 24.410660399999934,
+          "source_url": "http://127.0.0.1:8000/"
+        },
+        {
+          "kind": "element-click",
+          "label": "scientific-result",
+          "requested_t": 23.099447399999946,
+          "point": {
+            "height": 818,
+            "width": 1454,
+            "x": 850.4039611816406,
+            "y": 732.9797067642212
+          },
+          "completed_t": 23.45885309999995
+        },
+        {
+          "kind": "ui-step",
+          "label": "show-independent-evidence-audit",
+          "requested_t": 29.058745200000004,
+          "completed_t": 30.53744380000001,
+          "source_url": "http://127.0.0.1:8000/"
+        },
+        {
+          "kind": "element-click",
+          "label": "evidence-audit",
+          "requested_t": 29.24481759999995,
+          "point": {
+            "height": 818,
+            "width": 1454,
+            "x": 384.4728126525879,
+            "y": 753.42165184021
+          },
+          "completed_t": 29.593887600000016
+        }
+      ]
+    },
+    {
+      "scene": "scene4",
+      "manifest": ".local\\osi-final-capture\\scene4-final\\capture-manifest.json",
+      "manifest_sha256": "886d2cdeb8ae388a167e7b40ca528d42ffa19f9b1e789f4931f167561cb883c6",
+      "source_dimensions": [
+        [
+          1441,
+          811
+        ]
+      ],
+      "capture_average_fps": 10.495403800290822,
+      "max_capture_gap_seconds": 0.8613400999996799,
+      "captured_seconds": 40.017516999999756,
+      "edit_range_seconds": [
+        0,
+        40
+      ],
+      "playback_speed": 1,
+      "source_frames": 419,
+      "distinct_images": 4,
+      "events": [
+        {
+          "kind": "ui-step",
+          "label": "inspect-model-proposal-and-refusal-origin",
+          "requested_t": 14.073499300000025,
+          "completed_t": 15.438151900000172,
+          "source_url": "http://127.0.0.1:8000/"
+        },
+        {
+          "kind": "element-click",
+          "label": "model-screening-proposal",
+          "requested_t": 14.154387700000079,
+          "point": {
+            "height": 818,
+            "width": 1454,
+            "x": 850.4039611816406,
+            "y": 501.1994352340698
+          },
+          "completed_t": 14.477271400000202
+        },
+        {
+          "kind": "ui-step",
+          "label": "read-zero-candidates-and-independent-audit",
+          "requested_t": 23.059656199999853,
+          "completed_t": 24.230722900000167,
+          "source_url": "http://127.0.0.1:8000/"
+        },
+        {
+          "kind": "ui-step",
+          "label": "focus-unsupported-original-constraints",
+          "requested_t": 31.1085747,
+          "completed_t": 32.49473729999992,
+          "source_url": "http://127.0.0.1:8000/"
+        },
+        {
+          "kind": "element-click",
+          "label": "grounded-abstention",
+          "requested_t": 31.228312300000105,
+          "point": {
+            "height": 818,
+            "width": 1454,
+            "x": 408.4342956542969,
+            "y": 560.0819911956787
+          },
+          "completed_t": 31.541612400000215
+        }
+      ]
+    },
+    {
+      "scene": "scene5",
+      "manifest": ".local\\osi-final-capture\\scene5-final\\capture-manifest.json",
+      "manifest_sha256": "6ab969046ec145f9c33d622a97b30839faebe9e8165d8661801e92a38400d713",
+      "source_dimensions": [
+        [
+          1441,
+          811
+        ]
+      ],
+      "capture_average_fps": 10.676916080357566,
+      "max_capture_gap_seconds": 0.9802491000001332,
+      "captured_seconds": 30.06486120000016,
+      "edit_range_seconds": [
+        0,
+        30
+      ],
+      "playback_speed": 1,
+      "source_frames": 320,
+      "distinct_images": 4,
+      "events": [
+        {
+          "kind": "ui-step",
+          "label": "read-source-checksum-and-units",
+          "requested_t": 12.032263000000269,
+          "completed_t": 13.292495600000024,
+          "source_url": "http://127.0.0.1:8000/"
+        },
+        {
+          "kind": "ui-step",
+          "label": "download-actual-interval-report",
+          "requested_t": 22.016468200000002,
+          "completed_t": 23.6154785000002,
+          "source_url": "http://127.0.0.1:8000/"
+        },
+        {
+          "kind": "element-click",
+          "label": "real-JSON-export",
+          "requested_t": 22.152966400000267,
+          "point": null,
+          "completed_t": 22.488733099999838
+        }
+      ]
+    }
+  ],
+  "total_duration_seconds": 215.0,
+  "export_fps": 30,
+  "native_1080p30_claimed": false,
+  "system_cursor_captured": false,
+  "editing": "Each take trimmed to whole-second duration, 1x speed. Entire viewport aspect-fitted at 1536x864. Editorial header/side rail and 15-second closing card; no UI reconstruction or invented cursor. No music/audio.",
+  "old_video_reused": false,
+  "old_video_reason": "1440x1000 source includes baked captions incompatible with requested clean master; inspected and preserved",
+  "new_provider_calls": 0,
+  "replay_source": "artifacts/deepseek_live_acceptance.json",
+  "replay_sha256": "982aa62af7b8956ba2bcaabad133e0eb990867cac941b2a5a7a8661e16297d59",
+  "budget_ledger_sha256": "8ea7ba015e1a01ce7a1a964b22eaea901fb6c4272a4044f78bd0bf3436b84213",
+  "requested_skill_identified": true,
+  "installed_display_name": "IAB Browser Video",
+  "identity_source": "C:\\Users\\weila\\.codex\\skills\\codex-iab-video-recording\\agents\\openai.yaml",
+  "identity_correction": "UI display name and internal skill ID belong to the same installed package; initial report overlooked the UI configuration."
+}

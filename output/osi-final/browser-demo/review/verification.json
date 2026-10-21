@@ -1,0 +1,102 @@
+{
+  "status": "PASS",
+  "scope": "Video-only technical/evidence checks; visual/manual and browser playback evidence reported separately",
+  "verified_at_utc": "2026-10-21T07:11:31.219202+00:00",
+  "checks": [
+    "Both files: 195 seconds, H.264, 1920x1080, 30 fps, 5850 frames, no audio, complete decode",
+    "25 ordered minimal-English subtitle cues: at most two lines, 50 characters per line, under 20 characters/second",
+    "9 protected old media, PDF, submission copy, replay archives and budget-ledger hashes unchanged",
+    "Actual downloaded JSON and preview byte-identical; rows, units, orders, six conductivity values and three analytical roots match the saved independent decimal reference",
+    "Eight accepted source takes: scheduled actions completed within cuts, manifest hashes valid, playback speed 1x"
+  ],
+  "media": [
+    {
+      "file": "oxyproof-browser-demo-clean.mp4",
+      "bytes": 5656725,
+      "sha256": "bc4f6f41cafb8da90c42ebf271f196a1894c4f429ad3264560de7b0c936bd7c2",
+      "duration_s": 195.0,
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "codec": "h264",
+      "pixel_format": "yuv420p",
+      "fps": "30/1",
+      "frames": 5850,
+      "audio_streams": 0,
+      "full_decode": "PASS"
+    },
+    {
+      "file": "oxyproof-browser-demo-subtitled.mp4",
+      "bytes": 5905298,
+      "sha256": "c005ccba5bfdccb6a6ac90bfc628bd79d04203cd240cdbae1e7cedf244e321d1",
+      "duration_s": 195.0,
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "codec": "h264",
+      "pixel_format": "yuv420p",
+      "fps": "30/1",
+      "frames": 5850,
+      "audio_streams": 0,
+      "full_decode": "PASS"
+    }
+  ],
+  "source_takes": [
+    {
+      "take": "A1",
+      "capture_average_fps": 12.302273169149265,
+      "max_sample_gap_s": 0.2586397000001739,
+      "frames_used": 147
+    },
+    {
+      "take": "A2",
+      "capture_average_fps": 12.164778511294012,
+      "max_sample_gap_s": 0.2738505000006406,
+      "frames_used": 279
+    },
+    {
+      "take": "B",
+      "capture_average_fps": 12.446794141466937,
+      "max_sample_gap_s": 0.31613129999954026,
+      "frames_used": 498
+    },
+    {
+      "take": "B-roots",
+      "capture_average_fps": 12.104541515384543,
+      "max_sample_gap_s": 0.4185799000002426,
+      "frames_used": 242
+    },
+    {
+      "take": "C",
+      "capture_average_fps": 12.298548064162052,
+      "max_sample_gap_s": 0.39064089999999396,
+      "frames_used": 492
+    },
+    {
+      "take": "D",
+      "capture_average_fps": 12.514269137443298,
+      "max_sample_gap_s": 0.49093130000028706,
+      "frames_used": 375
+    },
+    {
+      "take": "E",
+      "capture_average_fps": 9.743141014404458,
+      "max_sample_gap_s": 1.8355690999999652,
+      "frames_used": 243
+    },
+    {
+      "take": "F-ready",
+      "capture_average_fps": 6.563890854906513,
+      "max_sample_gap_s": 0.32176960000023236,
+      "frames_used": 32
+    }
+  ],
+  "export_sha256": "190430d6355326281c501057df5a2167782209768ad88ddd62fd66bad29e224c",
+  "scientific_reference": "artifacts/scientific_acceptance.json",
+  "system_cursor": "UNAVAILABLE",
+  "full_user_request_acceptance": "PARTIAL",
+  "visual_qa_images": 35,
+  "protected_files_unchanged": 9
+}

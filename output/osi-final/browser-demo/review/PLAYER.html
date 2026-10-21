@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en"><meta charset="utf-8"><title>OxyProof — browser-operation demo review</title>
+<style>body{margin:0;background:#0b1520;color:#dfeaf1;font:16px system-ui}main{max-width:1440px;margin:auto;padding:16px}h1{font-size:22px;margin:0 0 8px}p{margin:6px 0 12px;color:#afc0cf}video{width:100%;max-height:76vh;background:black}button,a{background:#173143;color:#e4f7ff;border:1px solid #36576d;border-radius:5px;padding:8px 12px;margin:5px;cursor:pointer}#status{font:14px monospace}nav{display:flex;flex-wrap:wrap}</style>
+<main><h1>OxyProof · genuine browser-operation revision · 03:15</h1>
+<p>Silent master. Actual IAB website operations; historical genuine DeepSeek replay, zero new inference. System mouse pointer and native browser chrome are absent from this API capture.</p>
+<video id="movie" controls preload="auto" playsinline src="../oxyproof-browser-demo-subtitled.mp4"></video>
+<nav><button onclick="movie.currentTime=0;movie.play()">Play from start</button>
+<button onclick="movie.currentTime=42">700 K</button><button onclick="movie.currentTime=64">1000 K</button>
+<button onclick="movie.currentTime=86">Crossings</button><button onclick="movie.currentTime=116">Replay B</button>
+<button onclick="movie.currentTime=156">Replay C guard</button><button onclick="movie.currentTime=178">Export</button>
+<button onclick="movie.currentTime=184">Downloaded JSON</button><button onclick="movie.currentTime=193">Closing URL</button>
+<button onclick="movie.pause()">Pause</button><button onclick="movie.play()">Resume</button></nav>
+<p id="status" aria-live="polite">Loading media metadata…</p>
+<p><a href="../oxyproof-browser-demo-clean.mp4">Clean MP4</a><a href="../oxyproof-browser-demo-subtitled.mp4">Subtitled MP4</a><a href="../oxyproof-browser-demo.srt">SRT</a></p>
+</main><script>
+const movie=document.getElementById('movie');const events=[];
+for(const name of ['loadedmetadata','playing','pause','seeking','seeked','waiting','ended','error'])movie.addEventListener(name,()=>{events.push({event:name,currentTime:movie.currentTime,at:new Date().toISOString()});if(events.length>200)events.shift()});
+setInterval(()=>document.getElementById('status').textContent=JSON.stringify({currentTime:movie.currentTime,duration:movie.duration,paused:movie.paused,ended:movie.ended,readyState:movie.readyState,error:movie.error?{code:movie.error.code,message:movie.error.message}:null}),300);
+</script></html>

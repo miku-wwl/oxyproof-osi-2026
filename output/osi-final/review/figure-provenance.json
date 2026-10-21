@@ -1,0 +1,30 @@
+{
+  "source": "artifacts/temperature_decision_flagship.json",
+  "source_sha256": "af292aa8dc82c7e5aff65284180ca246a61702ef60dabb0b42fd0976360fc349",
+  "dataset": {
+    "dataset_doi": "10.5281/zenodo.18947543",
+    "dataset_record_id": "18947543",
+    "dataset_sha256": "8ec66b131bae79f8520f7cf40e91e2be2541995939bc43b744eaac627f4fad34",
+    "loaded_sha256": "8ec66b131bae79f8520f7cf40e91e2be2541995939bc43b744eaac627f4fad34",
+    "scope": "FULL_DATASET",
+    "row_count": 483,
+    "license": "CC-BY-4.0",
+    "accessed_date": "2026-10-20",
+    "article_url": "https://www.nature.com/articles/s41597-026-07100-x",
+    "dataset_url": "https://zenodo.org/records/18947543",
+    "attribution": "Jang, Seong-Hoon; Kiyohara, Shin; Takamura, Hitoshi; Kumagai, Yu (2026). Charting the Landscape of Oxygen Ion Conductors: A 60-Year Dataset. Zenodo. https://doi.org/10.5281/zenodo.18947543. CC BY 4.0."
+  },
+  "code_version": {
+    "app_version": "0.1.0",
+    "git_base": "66919b8202c6289adb7301f3e7c530ff16c9d0c6",
+    "calculation_source_sha256": "bfae21de3cb91a3fc8cec766b2a1d113cc452ce4f84cdbbdb723ed941404ffa8"
+  },
+  "equation": "sigma(T) = A/T * exp(-Ea/(k_B*T))",
+  "roots_K": [
+    776.4074250510221,
+    817.9098253678244,
+    854.261466339589
+  ],
+  "method": "Archived production curve points; LT and HT plotted separately, no joined fit boundary",
+  "qualification": "Model-derived intersections; no measured crossovers or uncertainty intervals"
+}

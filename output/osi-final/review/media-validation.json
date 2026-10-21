@@ -1,0 +1,316 @@
+{
+  "scope": "Production asset checks, not a full application regression",
+  "media": {
+    "clean": {
+      "status": "PASS",
+      "duration_seconds": 215.0,
+      "width": 1920,
+      "height": 1080,
+      "codec": "h264",
+      "pixel_format": "yuv420p",
+      "color_range": "tv",
+      "fps": "30/1",
+      "frames": 6450,
+      "audio_streams": 0,
+      "full_decode": "PASS",
+      "bytes": 4963670,
+      "sha256": "d6e39ff1588b7e339a6f88f98fe71d27c7293bbc6e327abd148780871b949616"
+    },
+    "subtitled": {
+      "status": "PASS",
+      "duration_seconds": 215.0,
+      "width": 1920,
+      "height": 1080,
+      "codec": "h264",
+      "pixel_format": "yuv420p",
+      "color_range": "tv",
+      "fps": "30/1",
+      "frames": 6450,
+      "audio_streams": 0,
+      "full_decode": "PASS",
+      "bytes": 5657769,
+      "sha256": "62be7bf54248f1955f9257bed5751a3a8a5ba874e5da7bbdbb04777b04fd5301"
+    }
+  },
+  "subtitles": {
+    "status": "PASS",
+    "cues": 40,
+    "max_characters_per_second": 19.55,
+    "last_end_seconds": 214.6,
+    "max_lines": 2,
+    "cue_checks": [
+      {
+        "cue": 1,
+        "start": 0.5,
+        "end": 5.1,
+        "characters_per_second": 15.87
+      },
+      {
+        "cue": 2,
+        "start": 5.3,
+        "end": 10.1,
+        "characters_per_second": 18.96
+      },
+      {
+        "cue": 3,
+        "start": 10.3,
+        "end": 15.1,
+        "characters_per_second": 14.79
+      },
+      {
+        "cue": 4,
+        "start": 15.3,
+        "end": 20.1,
+        "characters_per_second": 17.92
+      },
+      {
+        "cue": 5,
+        "start": 20.3,
+        "end": 24.8,
+        "characters_per_second": 18.89
+      },
+      {
+        "cue": 6,
+        "start": 25.2,
+        "end": 30.8,
+        "characters_per_second": 16.25
+      },
+      {
+        "cue": 7,
+        "start": 31.0,
+        "end": 35.4,
+        "characters_per_second": 15.45
+      },
+      {
+        "cue": 8,
+        "start": 35.6,
+        "end": 39.8,
+        "characters_per_second": 13.33
+      },
+      {
+        "cue": 9,
+        "start": 40.0,
+        "end": 48.7,
+        "characters_per_second": 10.23
+      },
+      {
+        "cue": 10,
+        "start": 49.0,
+        "end": 54.3,
+        "characters_per_second": 11.13
+      },
+      {
+        "cue": 11,
+        "start": 54.5,
+        "end": 59.8,
+        "characters_per_second": 16.6
+      },
+      {
+        "cue": 12,
+        "start": 60.0,
+        "end": 65.1,
+        "characters_per_second": 17.06
+      },
+      {
+        "cue": 13,
+        "start": 65.3,
+        "end": 70.7,
+        "characters_per_second": 15.74
+      },
+      {
+        "cue": 14,
+        "start": 70.9,
+        "end": 76.3,
+        "characters_per_second": 17.04
+      },
+      {
+        "cue": 15,
+        "start": 76.5,
+        "end": 80.7,
+        "characters_per_second": 16.19
+      },
+      {
+        "cue": 16,
+        "start": 80.9,
+        "end": 84.8,
+        "characters_per_second": 18.72
+      },
+      {
+        "cue": 17,
+        "start": 85.3,
+        "end": 90.5,
+        "characters_per_second": 14.62
+      },
+      {
+        "cue": 18,
+        "start": 90.7,
+        "end": 95.7,
+        "characters_per_second": 15.2
+      },
+      {
+        "cue": 19,
+        "start": 95.9,
+        "end": 101.0,
+        "characters_per_second": 15.1
+      },
+      {
+        "cue": 20,
+        "start": 101.2,
+        "end": 106.3,
+        "characters_per_second": 14.71
+      },
+      {
+        "cue": 21,
+        "start": 106.5,
+        "end": 111.5,
+        "characters_per_second": 16.0
+      },
+      {
+        "cue": 22,
+        "start": 111.7,
+        "end": 117.0,
+        "characters_per_second": 16.42
+      },
+      {
+        "cue": 23,
+        "start": 117.2,
+        "end": 123.0,
+        "characters_per_second": 15.17
+      },
+      {
+        "cue": 24,
+        "start": 123.2,
+        "end": 129.6,
+        "characters_per_second": 11.88
+      },
+      {
+        "cue": 25,
+        "start": 130.3,
+        "end": 135.4,
+        "characters_per_second": 15.1
+      },
+      {
+        "cue": 26,
+        "start": 135.6,
+        "end": 140.7,
+        "characters_per_second": 17.06
+      },
+      {
+        "cue": 27,
+        "start": 140.9,
+        "end": 146.0,
+        "characters_per_second": 14.71
+      },
+      {
+        "cue": 28,
+        "start": 146.2,
+        "end": 151.3,
+        "characters_per_second": 16.67
+      },
+      {
+        "cue": 29,
+        "start": 151.5,
+        "end": 156.6,
+        "characters_per_second": 18.24
+      },
+      {
+        "cue": 30,
+        "start": 156.8,
+        "end": 162.0,
+        "characters_per_second": 15.96
+      },
+      {
+        "cue": 31,
+        "start": 162.2,
+        "end": 166.1,
+        "characters_per_second": 18.46
+      },
+      {
+        "cue": 32,
+        "start": 166.3,
+        "end": 169.8,
+        "characters_per_second": 14.86
+      },
+      {
+        "cue": 33,
+        "start": 170.3,
+        "end": 176.0,
+        "characters_per_second": 16.14
+      },
+      {
+        "cue": 34,
+        "start": 176.2,
+        "end": 181.8,
+        "characters_per_second": 16.07
+      },
+      {
+        "cue": 35,
+        "start": 182.0,
+        "end": 188.8,
+        "characters_per_second": 12.35
+      },
+      {
+        "cue": 36,
+        "start": 189.0,
+        "end": 194.6,
+        "characters_per_second": 15.71
+      },
+      {
+        "cue": 37,
+        "start": 194.8,
+        "end": 199.7,
+        "characters_per_second": 17.76
+      },
+      {
+        "cue": 38,
+        "start": 200.3,
+        "end": 205.2,
+        "characters_per_second": 12.45
+      },
+      {
+        "cue": 39,
+        "start": 205.4,
+        "end": 209.8,
+        "characters_per_second": 19.55
+      },
+      {
+        "cue": 40,
+        "start": 210.0,
+        "end": 214.6,
+        "characters_per_second": 18.48
+      }
+    ]
+  },
+  "narration": {
+    "status": "READY",
+    "spoken_words": 456,
+    "words_per_minute_including_pauses": 127.3,
+    "audio_generated": false,
+    "timed_words_identical_to_srt": true
+  },
+  "pdf": {
+    "technical_status": "PASS",
+    "pages": 1,
+    "size": "A4",
+    "sha256": "a713d2c30a0c3acbfa5f633b41ac65290a957bb18a4ebcbb3dcb438cac9f7c75",
+    "visual_review": "See VIDEO_ACCEPTANCE.md and one-page-final.png"
+  },
+  "evidence": {
+    "archive": "PASS",
+    "browser_export": "PASS",
+    "budget_attempts": 3,
+    "budget_unchanged_since_capture": true,
+    "original_media_hashes_preserved": {
+      ".local/demo-phase25/oxyproof-phase2.webm": "e39fe0b000d984748e84782486d889c803b6d6e880e7dcc9c1cc4e48e7cb8c05",
+      "output/pdf/oxyproof-one-page-submission.pdf": "2d695fb59b31530ec9233044bc911da3a5c0574c3372c219e6cab32abda6c959"
+    },
+    "new_provider_requests": 0,
+    "genuine_replay_pytest": "9 passed, 1 existing Starlette/httpx deprecation warning in 0.55s (executed separately this production sprint)",
+    "full_255_12_21_suite_rerun": false
+  },
+  "visual_review": {
+    "status": "PASS",
+    "record": "visual-review.json",
+    "scope": "Representative visual inspection, not every frame or human narration listening; full media decode and actual browser ending separately verified"
+  }
+}
