@@ -1,5 +1,7 @@
 # Phase 2.6 - real research-agent acceptance
 
+**Current Phase 2.6.2:** DeepSeek A/B/C genuine native tool acceptance **VERIFIED, 3 attempted / 3 passed**, with independent physics/constraint checks. [Current DeepSeek acceptance](DEEPSEEK_LIVE_ACCEPTANCE.md) · [explicit recorded demo](DEEPSEEK_AGENT_DEMO.md). Older statuses below are preserved historical snapshots, not the current aggregate status.
+
 **Current Phase 2.6.1 update (October 21):** local Ollama integration exists, but native tool acceptance **FAILED**. Three genuine local inference responses (one primary plus two diagnostics) produced zero native calls. B/C remain NOT_RUN after the systemic stop; cloud calls remain zero. See [Ollama acceptance and current regression](OLLAMA_REAL_AGENT_ACCEPTANCE.md). Everything below is the preserved **historical Phase 2.6** report, including its zero-call status.
 
 Executed **2026-10-21 NZDT**. Entry: clean `main`, HEAD `ff17b2b02e578101952143db8541c06d84ba3ea8`. Earlier Phase 2.5 reports are historical, not current test evidence.

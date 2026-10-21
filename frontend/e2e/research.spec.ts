@@ -235,3 +235,43 @@ test('unconfigured real agent fails without fallback and permits explicit offlin
   await panel.getByRole('button', { name: 'Run research agent' }).click()
   await expect(panel.getByTestId('agent-execution-trace')).toContainText('no model call')
 })
+
+for (const scenario of ['A', 'B', 'C']) {
+  test(`recorded genuine DeepSeek ${scenario} replay makes zero fresh planning requests`, async ({
+    page,
+  }) => {
+    // Genuine archived provider evidence + real Python API. No fresh model inference.
+    let planningPosts = 0
+    page.on('request', (r) => {
+      if (r.method() === 'POST' && r.url().endsWith('/api/research')) planningPosts++
+    })
+    const panel = page.getByRole('region', { name: 'Research Agent execution' })
+    await panel
+      .getByText('Recorded DeepSeek acceptance · zero new inference', { exact: true })
+      .click()
+    await panel.getByRole('button', { name: 'Load recorded DeepSeek traces' }).click()
+    await panel.getByRole('button', { name: `Replay ${scenario}`, exact: true }).click()
+    const notice = panel.getByTestId('recorded-trace-notice')
+    await expect(notice).toContainText('RECORDED_TRACE_REPLAY')
+    await expect(notice).toContainText('No fresh inference request')
+    const trace = panel.getByTestId('agent-execution-trace')
+    await expect(trace).toContainText('REAL_LLM — DeepSeek — deepseek-flash')
+    await expect(trace).toContainText(scenario === 'C' ? 'ABSTAINED' : 'COMPUTED')
+    if (scenario === 'B') await expect(trace).toContainText('SUPPORTED_MODEL_RANK_REVERSAL')
+    if (scenario === 'C') {
+      await expect(trace).toContainText('10,000 operating hours')
+      await expect(trace).toContainText('BOTH_MODEL_PLAN_AND_INDEPENDENT_VALIDATOR')
+      await expect(trace).toContainText('Executed scientific tool: none (validation only)')
+    }
+    const pending = page.waitForEvent('download')
+    await panel.getByRole('button', { name: 'Export agent execution JSON' }).click()
+    const exported = JSON.parse(await fs.readFile((await (await pending).path())!, 'utf8'))
+    expect(exported.presentation_mode).toBe('RECORDED_TRACE_REPLAY')
+    expect(exported.fresh_model_request).toBe(false)
+    expect(exported.execution.execution_trace.response_id).toBeTruthy()
+    expect(planningPosts).toBe(0)
+    await panel.screenshot({
+      path: `../artifacts/browser/deepseek-recorded-${scenario.toLowerCase()}.png`,
+    })
+  })
+}

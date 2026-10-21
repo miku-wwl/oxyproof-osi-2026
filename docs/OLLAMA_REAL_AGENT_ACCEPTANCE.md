@@ -1,5 +1,7 @@
 # Phase 2.6.1 - local Ollama acceptance
 
+**Later Phase 2.6.2 update:** [DeepSeek native A/B/C acceptance passed](DEEPSEEK_LIVE_ACCEPTANCE.md) with 3/3 genuine requests. The Ollama adapter remains; its own failure evidence below is unchanged and was not relabelled as success. No additional Ollama inference occurred in that sprint.
+
 Executed October 21, 2026 NZDT, from clean `main` at `3a470d21f5a610beefe92bb3d81cd2dfaa14862f`. This report supersedes the Phase 2.6 zero-call status, while preserving its historical evidence.
 
 **The native real-Agent objective failed.** The provider integration is implemented and fails closed. Genuine CPU inference returned HTTP 200 three times, but all three responses contained **zero native tool calls**. No local-model scientific tool execution, successful scientific plan, candidate recommendation or provider Response ID was fabricated. No cloud provider was called.

@@ -4,7 +4,7 @@
 
 A local FastAPI + React research workbench. Uses the real [Jang et al. dataset](https://doi.org/10.5281/zenodo.18947543), explicit units and temperature regimes, conditional source-group rankings, abstention, provenance export and an adversarial wrong-equation demonstration. No cloud infrastructure or paid model is needed for deterministic analysis.
 
-Phase 2 adds analytic rank-reversal analysis and the Temperature Decision Explorer. Phase 2.6 adds the research-agent panel and audited execution traces. Phase 2.6.1 adds explicit local Ollama configuration, native tool parsing and bounded CPU inference. **Live local acceptance FAILED:** 3 genuine inference responses (1 primary + 2 diagnostics), 0 native tool calls; B/C withheld after systemic failure. The offline workflow remains working and is clearly labelled as deterministic. See [current Ollama evidence](docs/OLLAMA_REAL_AGENT_ACCEPTANCE.md) and [demo gate](docs/OLLAMA_AGENT_DEMO.md). OpenAI remains a separate optional adapter; no cloud call was made.
+Phase 2 adds analytic rank-reversal analysis and the Temperature Decision Explorer; Phase 2.6 adds bounded research-tool planning and audited execution traces. **Phase 2.6.2: genuine DeepSeek acceptance VERIFIED, exactly 3 requests / 3 independent passes**, with source-backed screening, temperature-aware ordering and scientific abstention. Use explicitly labelled recorded-trace replay for repeatable demos; the paid sprint budget is exhausted. [Current acceptance](docs/DEEPSEEK_LIVE_ACCEPTANCE.md) · [judge demo](docs/DEEPSEEK_AGENT_DEMO.md). Offline analysis remains fully independent of model access. OpenAI and Ollama adapters are preserved; the [earlier Ollama native acceptance failure](docs/OLLAMA_REAL_AGENT_ACCEPTANCE.md) remains historical evidence.
 
 ## Start locally (Windows PowerShell or POSIX)
 
@@ -108,6 +108,7 @@ The **Research Agent execution** panel runs the exact Phase 2.6 screening, Huang
 uv run --offline --no-sync python scripts/accept_real_agent.py
 uv run --offline --no-sync python scripts/validate_v2.py --browser --phase26
 uv run --offline --no-sync python scripts/validate_v2.py --browser --phase261
+uv run --offline --no-sync python scripts/validate_v2.py --browser --phase262
 ```
 
 The second command records separate Phase 2.6 validation logs. Real acceptance requires usable `OPENAI_API_KEY` / `OXYPROOF_LLM_MODEL` configuration and explicit paid-use authorization; the default runner cannot trigger billable requests merely because credentials exist. See the Agent acceptance document before using its live flags.
@@ -135,11 +136,13 @@ Missing crossover metadata abstains, even where values look like sentinel placeh
 
 ## Optional real LLM
 
+DeepSeek uses explicit `OXYPROOF_LLM_PROVIDER=deepseek`, `OXYPROOF_LLM_MODEL=deepseek-flash` and `DEEPSEEK_API_KEY`, through the official `/responses` endpoint. Its three real A/B/C calls passed; no additional request is allowed in this completed sprint. The fixed durable budget prevents replacement processes from bypassing the cap. The Research Agent panel can load/replay these genuine captured traces without credentials or new inference, with `RECORDED_TRACE_REPLAY` labels. See the [acceptance report](docs/DEEPSEEK_LIVE_ACCEPTANCE.md) for exact calls, schema decisions and limits.
+
 Local provider selection is explicit: `OXYPROOF_LLM_PROVIDER=ollama`, `OXYPROOF_LLM_MODEL=phi4-mini:latest`, `OXYPROOF_OLLAMA_BASE_URL=http://127.0.0.1:11434`. No OpenAI key is needed, and there is no cloud fallback. Native tool acceptance currently failed; follow the [Ollama report](docs/OLLAMA_REAL_AGENT_ACCEPTANCE.md) before any further inference. Omitted provider preserves the separate OpenAI configuration below.
 
 The [OpenAI Responses function-calling adapter](https://developers.openai.com/api/docs/guides/function-calling) permits exactly one allowlisted typed plan: `screen_published_records`, `analyze_temperature_interval` or `inspect_scientific_evidence`. An explicit model, 25-second transport timeout, bounded output and no retries are enforced. The independent grammar verifies tool intent and field completeness; a model cannot broaden accepted constraints or introduce code/URLs. Only the goal text is sent. All scientific values, explanations and citations come from deterministic validated outputs, never provider prose.
 
-Set `OPENAI_API_KEY` and `OXYPROOF_LLM_MODEL` in your own environment, then select `REAL_LLM`. Use an available model that supports strict function calling. `.env.example` contains no secret; ignored `.env` may be passed explicitly using uvicorn `--env-file .env`. API failures are `UNAVAILABLE`, never silently labelled as a real LLM result or substituted offline run. Provider transport tests are **mocked contract tests only**, not a live integration result. No credential or billable call was used in this sprint.
+For the separate OpenAI adapter, set `OXYPROOF_LLM_PROVIDER=openai`, `OPENAI_API_KEY` and `OXYPROOF_LLM_MODEL` in your own environment, then select `REAL_LLM` only with appropriate paid-use authorization. `.env.example` contains no secret; ignored `.env` may be passed explicitly using uvicorn `--env-file .env`. API failures are `UNAVAILABLE`, never silently substituted offline. Provider transport unit tests are mocked contracts; genuine DeepSeek evidence is stored separately. No OpenAI call was made in this sprint.
 
 ## Repository and submission
 

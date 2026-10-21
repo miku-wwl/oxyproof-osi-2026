@@ -21,6 +21,22 @@ const trace: ExecutionTrace = {
   provider_metadata: {},
 }
 afterEach(cleanup)
+it('renders the explicitly returned DeepSeek provider identity', () => {
+  // UI_CONTRACT_ONLY: synthetic identity, never live acceptance evidence.
+  render(
+    <ExecutionTraceView
+      trace={{
+        ...trace,
+        model: 'deepseek-flash',
+        response_id: 'SYNTHETIC_DEEPSEEK_RESPONSE',
+        provider_metadata: { provider: 'DeepSeek' },
+      }}
+    />,
+  )
+  expect(screen.getByText(/REAL_LLM — DeepSeek — deepseek-flash/)).toHaveTextContent(
+    'SYNTHETIC_DEEPSEEK_RESPONSE',
+  )
+})
 it('labels local native inference without inventing a provider response ID', () => {
   render(
     <ExecutionTraceView

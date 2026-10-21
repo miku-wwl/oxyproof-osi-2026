@@ -2,6 +2,7 @@
 
 import argparse
 import json
+import os
 import shutil
 import subprocess
 import time
@@ -23,9 +24,14 @@ if __name__ == "__main__":
         action="store_true",
         help="Separate Ollama sprint regression evidence; never activates inference",
     )
+    parser.add_argument(
+        "--phase262", action="store_true", help="DeepSeek sprint regression; no cloud/model calls"
+    )
     args = parser.parse_args()
     logs = ROOT / (
-        ".local/validation-ollama"
+        ".local/validation-deepseek"
+        if args.phase262
+        else ".local/validation-ollama"
         if args.phase261
         else ".local/validation-agent"
         if args.phase26
@@ -103,7 +109,7 @@ if __name__ == "__main__":
                 ["uv", "run", "--offline", "--no-sync", "python", "scripts/browser_e2e.py"],
             )
         )
-    if args.phase26 or args.phase261:
+    if args.phase26 or args.phase261 or args.phase262:
         commands.extend(
             [
                 (
@@ -131,6 +137,15 @@ if __name__ == "__main__":
             ]
         )
     results = []
+    regression_env = dict(os.environ)
+    for name in (
+        "OPENAI_API_KEY",
+        "DEEPSEEK_API_KEY",
+        "OXYPROOF_LLM_MODEL",
+        "OXYPROOF_OLLAMA_BASE_URL",
+    ):
+        regression_env.pop(name, None)
+    regression_env.update(OXYPROOF_LLM_PROVIDER="openai", OXYPROOF_DISABLE_CLOUD="1")
     for name, command in commands:
         started = time.monotonic()
         try:
@@ -142,6 +157,7 @@ if __name__ == "__main__":
                 encoding="utf-8",
                 errors="replace",
                 timeout=300,
+                env=regression_env,
             )
             output = process.stdout + process.stderr
             code = process.returncode
@@ -168,7 +184,9 @@ if __name__ == "__main__":
     (
         ROOT
         / (
-            "artifacts/ollama_regression.json"
+            "artifacts/deepseek_regression.json"
+            if args.phase262
+            else "artifacts/ollama_regression.json"
             if args.phase261
             else "artifacts/real_agent_validation.json"
             if args.phase26

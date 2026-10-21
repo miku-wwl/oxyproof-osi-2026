@@ -118,8 +118,8 @@
   "observations_vs_calculations": "The source provides experimentally derived fit parameters and citations. All displayed target-temperature conductivities are calculations. Proposed measurements are heuristics, not results.",
   "code_version": {
     "app_version": "0.1.0",
-    "git_base": "3a470d21f5a610beefe92bb3d81cd2dfaa14862f",
-    "calculation_source_sha256": "36beba240ad32d80b2c0e7aad13d220c4e3f780d6f19ff51ff64f630e4d9ebb8"
+    "git_base": "66919b8202c6289adb7301f3e7c530ff16c9d0c6",
+    "calculation_source_sha256": "bfae21de3cb91a3fc8cec766b2a1d113cc452ce4f84cdbbdb723ed941404ffa8"
   },
   "warnings": [
     {

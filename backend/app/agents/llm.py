@@ -24,6 +24,11 @@ class LLMError(RuntimeError):
 
 
 def configured() -> bool:
+    if provider() == "deepseek":
+        return bool(
+            os.environ.get("DEEPSEEK_API_KEY")
+            and os.environ.get("OXYPROOF_LLM_MODEL") == "deepseek-flash"
+        )
     if provider() == "ollama":
         try:
             from backend.app.agents.ollama import local_endpoint
@@ -45,12 +50,16 @@ def provider() -> str:
 def call_tools(
     goal: str, classes: list[str], tool_name: str | None = None, *, telemetry: dict | None = None
 ):
+    if provider() == "deepseek":
+        from backend.app.agents.deepseek import call_deepseek
+
+        return call_deepseek(goal, classes, tool_name, telemetry=telemetry)
     if provider() == "ollama":
         from backend.app.agents.ollama import call_ollama
 
         return call_ollama(goal, classes, tool_name, telemetry=telemetry)
     if provider() != "openai":
-        raise LLMError("UNSUPPORTED_PROVIDER: select openai or ollama explicitly")
+        raise LLMError("UNSUPPORTED_PROVIDER: select openai, ollama or deepseek explicitly")
     if not configured():
         raise LLMError("NOT_CONFIGURED: set OPENAI_API_KEY and OXYPROOF_LLM_MODEL")
     model = os.environ["OXYPROOF_LLM_MODEL"]
@@ -93,21 +102,7 @@ def call_tools(
     }
     try:
         # A single bounded call; no automatic retries or silent offline fallback.
-        with httpx.Client(timeout=httpx.Timeout(25, connect=5), follow_redirects=False) as client:
-            with client.stream(
-                "POST",
-                ENDPOINT,
-                headers={"Authorization": "Bearer " + os.environ["OPENAI_API_KEY"]},
-                json=payload,
-            ) as response:
-                if response.status_code != 200:
-                    raise LLMError(f"PROVIDER_HTTP_{response.status_code}: response body withheld")
-                chunks = bytearray()
-                for chunk in response.iter_bytes():
-                    chunks.extend(chunk)
-                    if len(chunks) > 65536:
-                        raise LLMError("OVERSIZED_MODEL_RESPONSE")
-        body = json.loads(chunks)
+        body = post_response(ENDPOINT, payload, os.environ["OPENAI_API_KEY"], timeout=25)
         if not isinstance(body, dict):
             raise LLMError("MALFORMED_MODEL_ENVELOPE")
         if body.get("status") != "completed":
@@ -147,6 +142,30 @@ def call_tools(
     except (httpx.HTTPError, ValueError, KeyError, TypeError, ValidationError) as exc:
         # Provider text may echo user data or credentials; do not expose it.
         raise LLMError(f"MODEL_RESPONSE_FAILED: {type(exc).__name__}") from exc
+
+
+def post_response(
+    endpoint, payload, key, *, timeout, telemetry=None, before_request=None, trust_env=True
+):
+    """Shared single-attempt Responses transport. httpx default transport retries=0; no SDK."""
+    with httpx.Client(
+        timeout=httpx.Timeout(timeout, connect=5), follow_redirects=False, trust_env=trust_env
+    ) as client:
+        if before_request:
+            before_request()
+        with client.stream(
+            "POST", endpoint, headers={"Authorization": "Bearer " + key}, json=payload
+        ) as response:
+            if telemetry is not None:
+                telemetry["http_status"] = response.status_code
+            if response.status_code != 200:
+                raise LLMError(f"PROVIDER_HTTP_{response.status_code}: response body withheld")
+            chunks = bytearray()
+            for chunk in response.iter_bytes():
+                chunks.extend(chunk)
+                if len(chunks) > 65536:
+                    raise LLMError("OVERSIZED_MODEL_RESPONSE")
+    return json.loads(chunks)
 
 
 def plan_with_llm(request: ScreenRequest, classes: list[str], *, telemetry=None):

@@ -1,0 +1,485 @@
+{
+  "phase": "2.6.2",
+  "executed_at_utc": "2026-10-21T05:16:42.864598+00:00",
+  "statuses": {
+    "DEEPSEEK_KEY_STATUS": "PRESENT",
+    "DEEPSEEK_PROVIDER_STATUS": "PASS",
+    "DEEPSEEK_MODEL": "deepseek-flash",
+    "REAL_PROVIDER_REQUESTS_ATTEMPTED": 3,
+    "REAL_PROVIDER_REQUESTS_SUCCEEDED": 3,
+    "REAL_LLM_STATUS": "VERIFIED",
+    "LIVE_SCREENING_STATUS": "PASS",
+    "LIVE_TEMPERATURE_STATUS": "PASS",
+    "LIVE_CONSTRAINT_REFUSAL_STATUS": "PASS",
+    "AGENT_TRACE_STATUS": "PASS",
+    "SCIENTIFIC_INTEGRITY_STATUS": "PASS",
+    "BACKEND_TEST_STATUS": "PASS",
+    "FRONTEND_TEST_STATUS": "PASS",
+    "BROWSER_E2E_STATUS": "PASS",
+    "BENCHMARK_STATUS": "PASS",
+    "SCIENTIFIC_SOFTWARE_READINESS": "GO",
+    "REAL_AGENT_READINESS": "GO",
+    "SUBMISSION_READINESS": "PARTIAL",
+    "SUBMISSION_STATUS": "NOT_SUBMITTED",
+    "SPRINT_STATUS": "PASS",
+    "EVENT_RULES_STATUS": "PARTIAL",
+    "SCIENCE_DATA_STATUS": "VERIFIED_REAL",
+    "OFFLINE_DEMO_STATUS": "PASS",
+    "TEST_STATUS": "PASS"
+  },
+  "entry_git_head": "66919b8202c6289adb7301f3e7c530ff16c9d0c6",
+  "current_git_head": "66919b8202c6289adb7301f3e7c530ff16c9d0c6",
+  "branch": "main",
+  "origin": "git@github.com:miku-wwl/oxyproof-osi-2026.git",
+  "current_code_version": {
+    "app_version": "0.1.0",
+    "git_base": "66919b8202c6289adb7301f3e7c530ff16c9d0c6",
+    "calculation_source_sha256": "bfae21de3cb91a3fc8cec766b2a1d113cc452ce4f84cdbbdb723ed941404ffa8"
+  },
+  "live_capture_code_version": {
+    "app_version": "0.1.0",
+    "git_base": "66919b8202c6289adb7301f3e7c530ff16c9d0c6",
+    "calculation_source_sha256": "4213a7a0ae000488023e16d812e8ed340e320a65ba6c335804fc218991c272cd"
+  },
+  "changed_file_count": 49,
+  "staged_file_count": 0,
+  "changes": [
+    {
+      "path": ".env.example",
+      "bytes": 554,
+      "sha256": "ff14b5ddb8c92048ab19d40fbbe9f07fc077aa84ac8ae7cf23308b72145e9848"
+    },
+    {
+      "path": "README.md",
+      "bytes": 13771,
+      "sha256": "fcb190da9f86689f7ea5e68c21d8b617384746c6ed35d8ba5347878a98ae512b"
+    },
+    {
+      "path": "artifacts/327c_bismuth_bulk.json",
+      "bytes": 11434,
+      "sha256": "e49aaa7028285a354e2e866b300f12d30ce18357c38ba0bff8f124fa0cc74827"
+    },
+    {
+      "path": "artifacts/600c_huang_bulk.json",
+      "bytes": 20000,
+      "sha256": "aa177beae3fdaff322bf320c38c6dfae8a42cf3988d792fcc5704521d22a2d9d"
+    },
+    {
+      "path": "artifacts/827c_cobalt_bulk.json",
+      "bytes": 11552,
+      "sha256": "23c2fb21aef14fcf1d5df2453cc4250c4cf433fce918a70f21107b27f6f582c9"
+    },
+    {
+      "path": "artifacts/ambiguous_regime.json",
+      "bytes": 9438,
+      "sha256": "76f542d514c3007e8ce67571154a1530a1509fbb2813f65f2a24cdf0c8a962c9"
+    },
+    {
+      "path": "artifacts/browser/agent-refusal.png",
+      "bytes": 83043,
+      "sha256": "50f61326bec9b83d7c1365f681983af34fe6df155cba26a59ac171ab9f8d128b"
+    },
+    {
+      "path": "artifacts/browser/agent-screening.png",
+      "bytes": 89794,
+      "sha256": "810012a28d6964e7316c52ed11abf71e31bb02fda30bf88ec667350cd78a8f96"
+    },
+    {
+      "path": "artifacts/browser/agent-temperature.png",
+      "bytes": 109479,
+      "sha256": "ee947a6e0ab5fde83699257b3ffd6def9c311709abadebeee94a2933bd64b9ce"
+    },
+    {
+      "path": "artifacts/browser/deepseek-recorded-a.png",
+      "bytes": 105899,
+      "sha256": "276d90bda5a4a30d44c7d082ca27f7de6ee508fb09f71f4e74d9bfcabdd69751"
+    },
+    {
+      "path": "artifacts/browser/deepseek-recorded-b.png",
+      "bytes": 126143,
+      "sha256": "7c2be3c8089cc906623cdd5301756fb125aa2db8a76e2fb9240f09dacef9c7fb"
+    },
+    {
+      "path": "artifacts/browser/deepseek-recorded-c.png",
+      "bytes": 99684,
+      "sha256": "5c22d5b9d019cdb5cf18aa7c2275a324a059fba1007f6f967edee61229ef6c84"
+    },
+    {
+      "path": "artifacts/browser/humidity-abstention.png",
+      "bytes": 199551,
+      "sha256": "6fbc21c962bce5c04ab1a3821c3a4fe964b81327d5a3cee924ac02db7e4c8df0"
+    },
+    {
+      "path": "artifacts/browser_e2e_results.json",
+      "bytes": 31692,
+      "sha256": "c9d38f5b360f719324b1ba267b595f3c7c7fb1e57e6a099e7b844e213a5eac30"
+    },
+    {
+      "path": "artifacts/deepseek_change_manifest.json",
+      "bytes": null,
+      "sha256": null
+    },
+    {
+      "path": "artifacts/deepseek_http_smoke.json",
+      "bytes": 11645,
+      "sha256": "8ea25af996b705942feede652839da813e25633fb798a2697da649419c669246"
+    },
+    {
+      "path": "artifacts/deepseek_live_acceptance.json",
+      "bytes": 278091,
+      "sha256": "982aa62af7b8956ba2bcaabad133e0eb990867cac941b2a5a7a8661e16297d59"
+    },
+    {
+      "path": "artifacts/deepseek_live_capture_original.json",
+      "bytes": 277258,
+      "sha256": "9663b81b3c9f2864e24550b838fe0c8a6f48329dca899a7e984a770f7c030c38"
+    },
+    {
+      "path": "artifacts/deepseek_preflight.json",
+      "bytes": 21684,
+      "sha256": "c2b87fe68ea7471583aba50017ef494639a62bac2b1b3902356dd2da9f6dc5b7"
+    },
+    {
+      "path": "artifacts/deepseek_regression.json",
+      "bytes": 12221,
+      "sha256": "b6ab18d7427b97ea641d4fec4622f96fd57106ea30aacf76fffada9a6104de1a"
+    },
+    {
+      "path": "artifacts/humidity_refusal_v2.json",
+      "bytes": 6464,
+      "sha256": "9840f7195374f1f1d264b7ff0131796065af498335f86290e14ac9c849e9dafb"
+    },
+    {
+      "path": "artifacts/out_of_range.json",
+      "bytes": 10318,
+      "sha256": "e04dd63f2b7f3d54687295147ae303306fd15676b5589fa64c693ffac3664436"
+    },
+    {
+      "path": "artifacts/rank_reversal_reference_v2.json",
+      "bytes": 8691,
+      "sha256": "8365a4f6e020954a787bb3092dd44ca8fa776987e00145c556fd9b16836a2e89"
+    },
+    {
+      "path": "artifacts/real_agent_acceptance.json",
+      "bytes": 242321,
+      "sha256": "223fd272fa741b6f540dd9f2685dfb2d39499cde388e9addb74ad12d0e3cdb35"
+    },
+    {
+      "path": "artifacts/scientific_acceptance.json",
+      "bytes": 8302,
+      "sha256": "0647a642977145cb48338300d2695872066751dfbdfd0c8a5bc2db198a27fed4"
+    },
+    {
+      "path": "artifacts/scientific_benchmark_v2.json",
+      "bytes": 38792,
+      "sha256": "9836d0d9ea6c958ee9937e3258ad6e976b9bc9b3d13cf602216b245cb271ceac"
+    },
+    {
+      "path": "artifacts/temperature_decision_flagship.json",
+      "bytes": 147004,
+      "sha256": "af292aa8dc82c7e5aff65284180ca246a61702ef60dabb0b42fd0976360fc349"
+    },
+    {
+      "path": "backend/app/agents/deepseek.py",
+      "bytes": 11276,
+      "sha256": "ef3732230c45366588d6f58a31cb42389656191d8038f02b9cbc4944c35e8f3a"
+    },
+    {
+      "path": "backend/app/agents/llm.py",
+      "bytes": 7594,
+      "sha256": "e93069b204a155b9939357ad0848e2f7e6fe2db50138ac1d3e6b154b5c09f60a"
+    },
+    {
+      "path": "backend/app/agents/recorded.py",
+      "bytes": 2454,
+      "sha256": "8112d45f7a5ea8a857d641d8b87a4fcfafd3823e6a95708fd4f7521b09a1ea42"
+    },
+    {
+      "path": "backend/app/agents/trace.py",
+      "bytes": 6115,
+      "sha256": "60c94d4563485c800064b6188b87a361b67e2566f3984626af13d786d27bac01"
+    },
+    {
+      "path": "backend/app/agents/workflow.py",
+      "bytes": 8201,
+      "sha256": "1148dea0a8057692f49c657663e444e16e46cb82a238da5e6c85a4982af37f6e"
+    },
+    {
+      "path": "backend/app/main.py",
+      "bytes": 8950,
+      "sha256": "ed162fa72c77dbb0bb7dbecfa21719b745cc3af6a5b3c43a1becdbcc23043d3a"
+    },
+    {
+      "path": "docs/DEEPSEEK_AGENT_DEMO.md",
+      "bytes": 3948,
+      "sha256": "85670471ad88b00433fad7c8eb40859126e4a7d9661de8eb38206feb4671a8e2"
+    },
+    {
+      "path": "docs/DEEPSEEK_LIVE_ACCEPTANCE.md",
+      "bytes": 15470,
+      "sha256": "4825d650995f2c1ea8f8d3200c4ec3d94d9750eb1df95a8c8e3428a63bc07327"
+    },
+    {
+      "path": "docs/OLLAMA_REAL_AGENT_ACCEPTANCE.md",
+      "bytes": 13998,
+      "sha256": "d84f249b2f8bfcfab1afb04c1e829c4431949bd9335bac9821437e33f3a3a803"
+    },
+    {
+      "path": "docs/REAL_AGENT_ACCEPTANCE.md",
+      "bytes": 12815,
+      "sha256": "f71f740c36105ba097dc29f2d7a86b2a1e7084ea108a428bc174cfa0118b0ebd"
+    },
+    {
+      "path": "docs/REAL_AGENT_DEMO_SCRIPT.md",
+      "bytes": 4515,
+      "sha256": "75cc1da3fac1c805f3aaf0c00949537e1daeb2f3f2a25f001e4406b29ec9fbe8"
+    },
+    {
+      "path": "frontend/e2e/research.spec.ts",
+      "bytes": 14519,
+      "sha256": "56a4656e3bf8a43f96ad4f40fbfb6d106c05729c1c77826016753613243a48f7"
+    },
+    {
+      "path": "frontend/playwright.config.ts",
+      "bytes": 1053,
+      "sha256": "6e7005592c62497bd4bbb0cd53f1aa4ee7f5b86d616d292c9ead64c17ff33302"
+    },
+    {
+      "path": "frontend/src/ResearchAgent.test.tsx",
+      "bytes": 3017,
+      "sha256": "c19e30e4869c507c1deea562a619fcc13899baebf4fc2f54f719f063267da645"
+    },
+    {
+      "path": "frontend/src/ResearchAgent.tsx",
+      "bytes": 10799,
+      "sha256": "d0854c375e696418bdd5405533ca6e788c98721e004b9fa5d77c583e3e28eed8"
+    },
+    {
+      "path": "scripts/accept_deepseek_agent.py",
+      "bytes": 10691,
+      "sha256": "50dba4209423f3402c692123614ac35d82e0e6f75038c81aa88bcdd6e4665713"
+    },
+    {
+      "path": "scripts/browser_e2e.py",
+      "bytes": 1308,
+      "sha256": "4797e5a7ba93038504557f42d4af637a8898239a334f820f9c6f49f53becb0e8"
+    },
+    {
+      "path": "scripts/validate_v2.py",
+      "bytes": 6442,
+      "sha256": "6d5a7727948c2bbabf8a5645e922f6f49e35f64efdee8877e837a9138ea361c3"
+    },
+    {
+      "path": "tests/conftest.py",
+      "bytes": 1155,
+      "sha256": "1f03dc6e54af3726d3007e865a8b0270ab1393ffc7c2e1d1d2a9cbc4132fc7d5"
+    },
+    {
+      "path": "tests/test_deepseek.py",
+      "bytes": 12992,
+      "sha256": "2f8d0e79f68fcf03e2d9c314fed88730f36dda28535eb97fc06b9f49b30b1362"
+    },
+    {
+      "path": "tests/test_ollama.py",
+      "bytes": 13312,
+      "sha256": "37d6e1062fd6029d7eeeebded93eb2cd99cf416a00e4a42e646a40ec0f78a1d0"
+    },
+    {
+      "path": "tests/test_recorded_deepseek.py",
+      "bytes": 2772,
+      "sha256": "a1f57370fbabca83484670b3672ccf09b98fd04e860a27f3de83e89db608944e"
+    }
+  ],
+  "self_hash_policy": "Manifest lists itself; self size/hash omitted to avoid circular hashing.",
+  "protected_files": [
+    {
+      "path": "AGENTS.md",
+      "sha256": "f8fdf3a5f3e997b6a697be78fe44416feb7160c5034c4c1e894aca814b04716b",
+      "git_diff": "UNCHANGED"
+    },
+    {
+      "path": "backend/app/agents/ollama.py",
+      "sha256": "c5af0564495d393343b44c9a3ca79705872de8109ef8cc6bb889ead0ac96889e",
+      "git_diff": "UNCHANGED"
+    },
+    {
+      "path": "backend/app/agents/planner.py",
+      "sha256": "b9a514b21096f81fadf2405541c7f28a72feaccc2df7bcdf0b30de4650d06173",
+      "git_diff": "UNCHANGED"
+    },
+    {
+      "path": "backend/app/schemas.py",
+      "sha256": "e9fe37e961cde7348ea7dd01cb4cc819b29f2ed541fd98ed45088d8edf2d26a7",
+      "git_diff": "UNCHANGED"
+    },
+    {
+      "path": "backend/app/science/decision_schemas.py",
+      "sha256": "7c37d35c91a16e83a96f70d10d63669ada2d0aef01f2b5740c8143a4804b0529",
+      "git_diff": "UNCHANGED"
+    },
+    {
+      "path": "backend/app/science/conductivity.py",
+      "sha256": "120c1846f63a77244154234b0e1979b0ecbfb3a30ca99ca38fdb8db6fd400b2e",
+      "git_diff": "UNCHANGED"
+    },
+    {
+      "path": "backend/app/science/temperature_decisions.py",
+      "sha256": "93bf4843387047c9baa5900968f3988141050d24347143211437bbc8d115fb59",
+      "git_diff": "UNCHANGED"
+    },
+    {
+      "path": "backend/app/data/fixtures/published_subset.csv",
+      "sha256": "6cad9e6cd6ee0cac98f1de979688788b5e3c1bade390da289c3722d46389d214",
+      "git_diff": "UNCHANGED"
+    },
+    {
+      "path": "backend/app/data/fixtures/manifest.json",
+      "sha256": "1bd64fdbcad25ee4883c54097800792081e0fc04f005421a08675dd86204eb90",
+      "git_diff": "UNCHANGED"
+    },
+    {
+      "path": "benchmarks/scientific_cases.json",
+      "sha256": "076ca9310f4afb9c2efbeb3aac15e0a3fb11cc43a2bee3c2f8c4454d008476bd",
+      "git_diff": "UNCHANGED"
+    },
+    {
+      "path": "benchmarks/reference_v2.py",
+      "sha256": "97e4de1ed454e13ad3866e44b1e01a735790c9050410adac197c71a30143f649",
+      "git_diff": "UNCHANGED"
+    },
+    {
+      "path": "benchmarks/evaluate.py",
+      "sha256": "b12cdb711c5cfac95b62a80a90c6915783d0c89e07c7fd1eb869aa4dbee8f702",
+      "git_diff": "UNCHANGED"
+    },
+    {
+      "path": "pyproject.toml",
+      "sha256": "212d669c23b1f9d34949697640f3e48db4c5a5ee7f5d199cc30abd0290378c29",
+      "git_diff": "UNCHANGED"
+    },
+    {
+      "path": "uv.lock",
+      "sha256": "68a61962e9f323c82c8cc79660a12136b2803e8dc6d855aefe8bd44e6a289926",
+      "git_diff": "UNCHANGED"
+    },
+    {
+      "path": "frontend/package.json",
+      "sha256": "70e5838a6b3da31227a1503de0ff6a8d1def1d245cb1cc8f74690accf4877485",
+      "git_diff": "UNCHANGED"
+    },
+    {
+      "path": "frontend/package-lock.json",
+      "sha256": "042895f31250fa53d1d3e3f9754abe8ddc59718e784957e6062c199154c659ec",
+      "git_diff": "UNCHANGED"
+    },
+    {
+      "path": "output/pdf/oxyproof-one-page-submission.pdf",
+      "sha256": "2d695fb59b31530ec9233044bc911da3a5c0574c3372c219e6cab32abda6c959",
+      "git_diff": "UNCHANGED"
+    }
+  ],
+  "protected_media": [
+    {
+      "path": ".local/demo/oxyproof-phase2.webm",
+      "sha256": "3169945007ec4bdf773e7907f2708774a8bc76945c3ad7bd5589f3225dd6b3a3",
+      "hash_matches_prior": true
+    },
+    {
+      "path": ".local/demo-phase25/oxyproof-phase2.webm",
+      "sha256": "e39fe0b000d984748e84782486d889c803b6d6e880e7dcc9c1cc4e48e7cb8c05",
+      "hash_matches_prior": true
+    }
+  ],
+  "validation": {
+    "status": "PASS",
+    "stage_count": 16,
+    "backend_passed": 255,
+    "frontend_passed": 12,
+    "browser_stats": {
+      "startTime": "2026-10-21T05:10:12.652Z",
+      "duration": 30592.326,
+      "expected": 21,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    "benchmark": "49/49",
+    "legacy_guards": "8/8; intentionally unsafe baseline 1/8",
+    "offline_demos": "5/5",
+    "agent_offline_scenarios": "3/3",
+    "independent_science": "3 roots; 6 endpoint values; 6 side checks; 80 Decimal digits",
+    "deepseek_scenarios": "3/3 genuine live PASS",
+    "archived_replay_scenarios": "3/3 actual Chromium/API PASS, zero fresh inference",
+    "mock_evidence": "34 DeepSeek + 37 Ollama transport contracts and synthetic UI labels are not live acceptance."
+  },
+  "request_evidence": {
+    "provider": "DeepSeek",
+    "actual_models": [
+      "deepseek-flash"
+    ],
+    "requests_attempted": 3,
+    "requests_succeeded": 3,
+    "other_provider_requests": 0,
+    "automatic_retries": 0,
+    "input_tokens": 3431,
+    "output_tokens": 397,
+    "total_tokens": 3828,
+    "cached_input_tokens": 1792,
+    "ledger_sha256": "8ea7ba015e1a01ce7a1a964b22eaea901fb6c4272a4044f78bd0bf3436b84213",
+    "ledger_location": ".local/deepseek-phase262-budget.json",
+    "budget_exhausted": true,
+    "capture_identity_usage_and_science_unchanged_after_telemetry_correction": true
+  },
+  "scientific_source": {
+    "dataset_doi": "10.5281/zenodo.18947543",
+    "dataset_record_id": "18947543",
+    "dataset_sha256": "8ec66b131bae79f8520f7cf40e91e2be2541995939bc43b744eaac627f4fad34",
+    "loaded_sha256": "8ec66b131bae79f8520f7cf40e91e2be2541995939bc43b744eaac627f4fad34",
+    "scope": "FULL_DATASET",
+    "row_count": 483,
+    "license": "CC-BY-4.0",
+    "accessed_date": "2026-10-20",
+    "article_url": "https://www.nature.com/articles/s41597-026-07100-x",
+    "dataset_url": "https://zenodo.org/records/18947543",
+    "attribution": "Jang, Seong-Hoon; Kiyohara, Shin; Takamura, Hitoshi; Kumagai, Yu (2026). Charting the Landscape of Oxygen Ion Conductors: A 60-Year Dataset. Zenodo. https://doi.org/10.5281/zenodo.18947543. CC BY 4.0."
+  },
+  "security_scan": {
+    "status": "PASS",
+    "scope": "Exact current credential exclusion from changed text files and validation logs, plus three credential/private-key patterns; not a universal security audit.",
+    "files_scanned": 41
+  },
+  "public_actions": {
+    "committed": false,
+    "pushed": false,
+    "tagged": false,
+    "deployed": false,
+    "uploaded": false,
+    "submitted": false
+  },
+  "system_changes": {
+    "permanent_windows_environment_modified": false,
+    "ollama_startup_changed": false,
+    "models_downloaded": 0,
+    "other_provider_inference_requests": 0
+  },
+  "handover_service": {
+    "url": "http://127.0.0.1:8000",
+    "pid": 37268,
+    "cloud_disabled": true,
+    "provider_keys_in_service": false,
+    "actual_http_checks": "6/6 PASS; no additional model requests"
+  },
+  "limitations": [
+    "Three bounded cases do not establish general LLM accuracy.",
+    "Dataset-derived conditional comparisons, not experimental discovery or verified durability.",
+    "Original source conditions and uncertainty remain unverified.",
+    "Live capture and final replay/telemetry code fingerprints differ; original capture preserved and science/IDs/usage independently checked unchanged.",
+    "Registration/Slack rules/pre-event eligibility remain human gates."
+  ],
+  "temporary_issues": [
+    "Formatting findings fixed before billing.",
+    "Premature log reads before files existed did not affect running validation.",
+    "Provider planning placeholder corrected after capture; original byte-preserved, no extra requests.",
+    "A read-only memory excerpt hit Windows console Unicode encoding; escaped output succeeded, application/tests unaffected."
+  ]
+}

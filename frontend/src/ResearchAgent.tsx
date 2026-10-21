@@ -40,7 +40,7 @@ export function ExecutionTraceView({ trace }: { trace: ExecutionTrace }) {
           <dt>2 · Planning and model</dt>
           <dd>
             {trace.planning_source === 'REAL_LLM'
-              ? `REAL_LLM — ${String(trace.provider_metadata.provider ?? 'Provider plan received')} — ${trace.model ?? 'model unavailable'} · ${trace.local_invocation_id ? `Local invocation: ${trace.local_invocation_id}` : (trace.response_id ?? 'response ID unavailable')}`
+              ? `REAL_LLM — ${String(trace.provider_metadata.provider ?? 'Provider plan received')} — ${trace.model ?? 'model unavailable'} · ${[trace.response_id ? `Provider response: ${trace.response_id}` : '', trace.local_invocation_id ? `Local invocation: ${trace.local_invocation_id}` : ''].filter(Boolean).join(' · ')}`
               : 'Offline deterministic coverage grammar · no model call'}
           </dd>
         </div>
@@ -53,6 +53,11 @@ export function ExecutionTraceView({ trace }: { trace: ExecutionTrace }) {
             {trace.tool_agreement == null ? 'not applicable' : String(trace.tool_agreement)}
           </dd>
           {trace.refusal_origin && <dd>Refusal origin: {trace.refusal_origin}</dd>}
+          <dd>
+            Executed scientific tool:{' '}
+            {trace.executed_scientific_tool ??
+              (trace.execution_status === 'ABSTAINED' ? 'none (validation only)' : trace.tool_name)}
+          </dd>
         </div>
       </dl>
       <details>
@@ -101,9 +106,38 @@ export default function ResearchAgent({
   const [execution, setExecution] = useState<AgentResponse | null>(null)
   const [busy, setBusy] = useState(false)
   const [error, setError] = useState('')
+  const [recorded, setRecorded] = useState<{ scenario: string; execution: AgentResponse }[]>([])
+  const [recordedAt, setRecordedAt] = useState('')
+  const [replayNotice, setReplayNotice] = useState('')
   function clear() {
     setExecution(null)
     setError('')
+    setReplayNotice('')
+  }
+  function replay(run: { scenario: string; execution: AgentResponse }, timestamp: string) {
+    setError('')
+    setGoal(run.execution.execution_trace.research_question)
+    setExecution(run.execution)
+    setReplayNotice(
+      `RECORDED_TRACE_REPLAY · DeepSeek · captured ${timestamp} · scenario ${run.scenario}. No fresh inference request. Runtime controls above apply only to future runs.`,
+    )
+  }
+  async function loadRecorded() {
+    clear()
+    setBusy(true)
+    try {
+      const archive = await api<{
+        recorded_at_utc: string
+        runs: { scenario: string; execution: AgentResponse }[]
+      }>('/api/research/recorded-deepseek')
+      setRecorded(archive.runs)
+      setRecordedAt(archive.recorded_at_utc)
+      replay(archive.runs[0], archive.recorded_at_utc)
+    } catch {
+      setError('Recorded DeepSeek acceptance evidence is unavailable. No model request was made.')
+    } finally {
+      setBusy(false)
+    }
   }
   async function run() {
     clear()
@@ -231,7 +265,26 @@ export default function ResearchAgent({
       )}
       {execution ? (
         <>
-          <button className="export" onClick={() => downloadReport(execution)}>
+          {replayNotice && (
+            <p role="status" className="verdict" data-testid="recorded-trace-notice">
+              {replayNotice}
+            </p>
+          )}
+          <button
+            className="export"
+            onClick={() =>
+              downloadReport(
+                replayNotice
+                  ? {
+                      presentation_mode: 'RECORDED_TRACE_REPLAY',
+                      fresh_model_request: false,
+                      recorded_at_utc: recordedAt,
+                      execution,
+                    }
+                  : execution,
+              )
+            }
+          >
             <ArrowDownToLine size={16} />
             Export agent execution JSON
           </button>
@@ -240,6 +293,23 @@ export default function ResearchAgent({
       ) : (
         !busy && !error && <p>No agent planning has run. No model execution is implied.</p>
       )}
+      <details>
+        <summary>Recorded DeepSeek acceptance · zero new inference</summary>
+        <p>
+          Replay captured genuine model executions. This reads stored evidence and makes no new
+          model request.
+        </p>
+        <button className="export" disabled={busy} onClick={() => void loadRecorded()}>
+          Load recorded DeepSeek traces
+        </button>
+        <div className="agent-presets">
+          {recorded.map((run) => (
+            <button key={run.scenario} disabled={busy} onClick={() => replay(run, recordedAt)}>
+              Replay {run.scenario}
+            </button>
+          ))}
+        </div>
+      </details>
     </section>
   )
 }

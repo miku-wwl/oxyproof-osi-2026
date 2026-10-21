@@ -1,0 +1,265 @@
+{
+  "executed_at_utc": "2026-10-21T05:13:47.928208+00:00",
+  "fresh_model_requests": 0,
+  "code_version": {
+    "app_version": "0.1.0",
+    "git_base": "66919b8202c6289adb7301f3e7c530ff16c9d0c6",
+    "calculation_source_sha256": "bfae21de3cb91a3fc8cec766b2a1d113cc452ce4f84cdbbdb723ed941404ffa8"
+  },
+  "checks": [
+    {
+      "name": "health",
+      "status": "PASS",
+      "http_status": 200,
+      "configuration_status": "NOT_CONFIGURED",
+      "note": "Handover service is offline/replay only, no keys inherited and cloud disabled; captured live acceptance is separate."
+    },
+    {
+      "name": "offline_A",
+      "status": "PASS",
+      "http_status": 200,
+      "execution_trace": {
+        "research_question": "Find promising published bulk oxygen-ion conductors around 600 degrees Celsius, show their conductivity estimates, and tell me what evidence supports the comparison.",
+        "runtime_mode": "OFFLINE_DETERMINISTIC",
+        "planning_source": "OFFLINE_DETERMINISTIC",
+        "model": null,
+        "response_id": null,
+        "local_invocation_id": null,
+        "model_selected_tool": null,
+        "deterministically_expected_tool": "screen_published_records",
+        "tool_agreement": null,
+        "executed_scientific_tool": "screen_published_records",
+        "refusal_origin": null,
+        "tool_name": "screen_published_records",
+        "tool_selection": "DETERMINISTIC_SELECTED",
+        "validated_arguments": {
+          "temperature_k": 873.15,
+          "conductivity_type": "bulk",
+          "material_class": null,
+          "formula_query": null,
+          "row_ids": [
+            1,
+            2,
+            3
+          ],
+          "allow_extrapolation": false,
+          "top_n": 5
+        },
+        "execution_status": "COMPUTED",
+        "scientific_result": {
+          "status": "CALCULATED_WITH_WARNINGS",
+          "source_scope": "FULL_DATASET",
+          "candidates": 3,
+          "comparison_groups": 1,
+          "sample_calculations": [
+            {
+              "row_id": 3,
+              "comparison_group": "10.1111/j.1151-2916.1998.tb02662.x | bulk | two-probe AC | 600 - 1100 K",
+              "group_rank": 1,
+              "regime": "LT",
+              "warning_codes": [
+                "MISSING_CONDITIONS",
+                "NEAR_TRANSITION"
+              ],
+              "conductivity": {
+                "value": 0.020449815317164905,
+                "unit": "S/cm"
+              },
+              "source_doi": "10.1111/j.1151-2916.1998.tb02662.x"
+            },
+            {
+              "row_id": 2,
+              "comparison_group": "10.1111/j.1151-2916.1998.tb02662.x | bulk | two-probe AC | 600 - 1100 K",
+              "group_rank": 2,
+              "regime": "HT",
+              "warning_codes": [
+                "MISSING_CONDITIONS"
+              ],
+              "conductivity": {
+                "value": 0.017943081052340545,
+                "unit": "S/cm"
+              },
+              "source_doi": "10.1111/j.1151-2916.1998.tb02662.x"
+            },
+            {
+              "row_id": 1,
+              "comparison_group": "10.1111/j.1151-2916.1998.tb02662.x | bulk | two-probe AC | 600 - 1100 K",
+              "group_rank": 3,
+              "regime": "HT",
+              "warning_codes": [
+                "MISSING_CONDITIONS"
+              ],
+              "conductivity": {
+                "value": 0.013243811986442946,
+                "unit": "S/cm"
+              },
+              "source_doi": "10.1111/j.1151-2916.1998.tb02662.x"
+            }
+          ]
+        },
+        "evidence_verdicts": [
+          "SUPPORTED_CONDITIONAL_COMPARISON"
+        ],
+        "grounded_explanation": [
+          "Calculated 3 displayed candidates in 1 conditional source groups. There is no global ranking across experiments.",
+          "The source provides experimentally derived fit parameters and citations. All displayed target-temperature conductivities are calculations. Proposed measurements are heuristics, not results.",
+          "Atmosphere, preparation, density and fit uncertainty are not established here; group ranks are conditional model calculations.",
+          "Around is interpreted as a nominal point temperature, not an interval or uncertainty range.",
+          "Row 3: NEAR_TRANSITION: Within 5 K of T*: review heuristic, not a validated uncertainty bound.",
+          "Proposed action: verify original-source atmosphere, preparation, density and conductivity type; obtain evidence for every unresolved requirement before making a material recommendation. No experiment was executed."
+        ],
+        "explanation_source": "DETERMINISTIC_VALIDATED_RESULTS",
+        "provider_metadata": {}
+      }
+    },
+    {
+      "name": "offline_B",
+      "status": "PASS",
+      "http_status": 200,
+      "execution_trace": {
+        "research_question": "How does the ranking of the three comparable Huang materials change from 700 K to 1000 K? Explain the change using their published activation energies.",
+        "runtime_mode": "OFFLINE_DETERMINISTIC",
+        "planning_source": "OFFLINE_DETERMINISTIC",
+        "model": null,
+        "response_id": null,
+        "local_invocation_id": null,
+        "model_selected_tool": null,
+        "deterministically_expected_tool": "analyze_temperature_interval",
+        "tool_agreement": null,
+        "executed_scientific_tool": "analyze_temperature_interval",
+        "refusal_origin": null,
+        "tool_name": "analyze_temperature_interval",
+        "tool_selection": "DETERMINISTIC_SELECTED",
+        "validated_arguments": {
+          "temperature_min_k": 700.0,
+          "temperature_max_k": 1000.0,
+          "row_ids": [
+            1,
+            2,
+            3
+          ],
+          "comparison_group": "10.1111/j.1151-2916.1998.tb02662.x | bulk | two-probe AC | 600 - 1100 K",
+          "conductivity_type": "bulk",
+          "evidence_policy": "MEASURED_ONLY",
+          "points": 81
+        },
+        "execution_status": "COMPUTED",
+        "scientific_result": {
+          "status": "CALCULATED_WITH_WARNINGS",
+          "source_scope": "FULL_DATASET",
+          "selected_rankings": [
+            {
+              "temperature_k": 700.0,
+              "ordering": [
+                1,
+                2,
+                3
+              ],
+              "status": "SUPPORTED_CONDITIONAL_COMPARISON"
+            },
+            {
+              "temperature_k": 1000.0,
+              "ordering": [
+                3,
+                2,
+                1
+              ],
+              "status": "SUPPORTED_CONDITIONAL_COMPARISON"
+            }
+          ],
+          "continuous_crossings_k": [
+            776.4074250510221,
+            817.9098253678244,
+            854.261466339589
+          ]
+        },
+        "evidence_verdicts": [
+          "SUPPORTED_CONDITIONAL_COMPARISON",
+          "SUPPORTED_MODEL_RANK_REVERSAL",
+          "REGIME_BOUNDARY_REVIEW"
+        ],
+        "grounded_explanation": [
+          "At 700 K, conditional model order (row IDs): 1 > 2 > 3. Equality uses numerical tolerance only.",
+          "At 1000 K, conditional model order (row IDs): 3 > 2 > 1. Equality uses numerical tolerance only.",
+          "Ordering depends on activation-energy differences and prefactor ratios within each valid regime. Regime-boundary events are reviewed separately from continuous roots.",
+          "The curated dataset does not establish humidity tolerance, phase stability, lifetime, cost, toxicity or sample-to-sample uncertainty. No material was discovered or measured by this tool.",
+          "Model-derived crossover temperatures; uncertainty bounds unavailable; experimental confirmation required.",
+          "Row 1: curated Ea=772 meV, EaHT=634 meV; source DOI 10.1111/j.1151-2916.1998.tb02662.x. Prefactor ratios and regime selection also affect the order.",
+          "Row 2: curated Ea=996 meV, EaHT=673 meV; source DOI 10.1111/j.1151-2916.1998.tb02662.x. Prefactor ratios and regime selection also affect the order.",
+          "Row 3: curated Ea=1118 meV, EaHT=780 meV; source DOI 10.1111/j.1151-2916.1998.tb02662.x. Prefactor ratios and regime selection also affect the order.",
+          "Review original atmosphere, preparation and density and verify bulk versus total separation.",
+          "Repeat conductivity measurements bracketing reported transitions and predicted fixed-regime crossings. These are bounded proposals; no experiment was executed."
+        ],
+        "explanation_source": "DETERMINISTIC_VALIDATED_RESULTS",
+        "provider_metadata": {}
+      }
+    },
+    {
+      "name": "offline_C",
+      "status": "PASS",
+      "http_status": 200,
+      "execution_trace": {
+        "research_question": "Find oxygen-ion conductors at 600 \u00b0C that survive 10% humidity and remain stable for 10,000 operating hours.",
+        "runtime_mode": "OFFLINE_DETERMINISTIC",
+        "planning_source": "OFFLINE_DETERMINISTIC",
+        "model": null,
+        "response_id": null,
+        "local_invocation_id": null,
+        "model_selected_tool": null,
+        "deterministically_expected_tool": "screen_published_records",
+        "tool_agreement": null,
+        "executed_scientific_tool": null,
+        "refusal_origin": "INDEPENDENT_VALIDATOR",
+        "tool_name": "screen_published_records",
+        "tool_selection": "DETERMINISTIC_SELECTED",
+        "validated_arguments": {},
+        "execution_status": "ABSTAINED",
+        "scientific_result": {
+          "status": "INSUFFICIENT_EVIDENCE",
+          "source_scope": "FULL_DATASET",
+          "candidates": 0,
+          "comparison_groups": 0,
+          "sample_calculations": []
+        },
+        "evidence_verdicts": [
+          "UNVERIFIED_CONSTRAINTS"
+        ],
+        "grounded_explanation": [
+          "No complete recommendation: unresolved constraints, conflicting parameters or insufficient source evidence prevent a supported comparison.",
+          "PLAN_REJECTED: UNVERIFIED_CONSTRAINTS: unsupported text: that survive 10% humidity and remain stable for 10,000 operating hours",
+          "UNVERIFIED_CONSTRAINTS: UNVERIFIED_CONSTRAINTS: unsupported text: that survive 10% humidity and remain stable for 10,000 operating hours",
+          "Proposed measurement: measure ionic conductivity and stability before, during and after exposure to the requested water-vapor fraction at the operating temperature; document exposure duration and sample preparation. No experiment was executed."
+        ],
+        "explanation_source": "DETERMINISTIC_VALIDATED_RESULTS",
+        "provider_metadata": {}
+      }
+    },
+    {
+      "name": "captured_deepseek",
+      "status": "PASS",
+      "http_status": 200,
+      "presentation_mode": "RECORDED_TRACE_REPLAY",
+      "capture_ids": [
+        "19c61523-1de3-4224-bb62-d27c3b5e9855",
+        "8555b7b9-84f2-4553-b7ec-0041482bc9aa",
+        "36ab33a0-d258-4190-a5d4-4d867fd4fe0f"
+      ]
+    },
+    {
+      "name": "fresh_cloud_disabled",
+      "status": "PASS",
+      "http_status": 503,
+      "response": {
+        "detail": {
+          "runtime_mode": "UNAVAILABLE",
+          "code": "LLM_UNAVAILABLE",
+          "message": "CLOUD_DISABLED: regression mode",
+          "fallback": "Select OFFLINE_DETERMINISTIC explicitly"
+        }
+      },
+      "fresh_model_requests": 0
+    }
+  ],
+  "status": "PASS",
+  "budget_ledger_unchanged": true
+}

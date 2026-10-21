@@ -163,6 +163,11 @@ def run_research(request: AgentRequest, repository: Repository, *, provider_meta
     compact = execution_trace(
         result, expected, question=request.goal, model_selected=True, provider_metadata=telemetry
     )
+    if request.mode == "REAL_LLM":
+        # Provider planning starts before scientific execution. Replace its initial
+        # placeholder only after the independently audited result exists.
+        telemetry["executed_scientific_tool"] = compact.executed_scientific_tool
+        compact.provider_metadata = telemetry
     if hasattr(result, "execution_trace"):
         result.execution_trace = compact
     return {

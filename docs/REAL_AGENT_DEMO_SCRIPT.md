@@ -1,5 +1,7 @@
 # Phase 2.6 research-agent demonstration
 
+**Current demo:** genuine DeepSeek acceptance is now verified; use [the explicitly recorded DeepSeek demo](DEEPSEEK_AGENT_DEMO.md) alongside the offline steps below. The three-request budget is spent; no fresh call is required for replay.
+
 **Phase 2.6.1 update:** the offline steps remain valid; local Ollama native acceptance failed. See [current demo gate](OLLAMA_AGENT_DEMO.md). The zero-call statements below describe the historical Phase 2.6 execution, not the later three local inference requests. No successful live-model footage exists.
 
 Prepared October 21, 2026 NZDT. **Current mode: OFFLINE_DETERMINISTIC; live model NOT_CONFIGURED, zero real calls.** Do not describe the current demonstration as successful live AI planning. The model adapter and contracts are implemented; genuine live acceptance remains outstanding.

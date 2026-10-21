@@ -94,6 +94,8 @@
     "webServer": {
       "env": {
         "OPENAI_API_KEY": "",
+        "DEEPSEEK_API_KEY": "",
+        "OXYPROOF_DISABLE_CLOUD": "1",
         "OXYPROOF_LLM_MODEL": "",
         "OXYPROOF_LLM_PROVIDER": "openai",
         "OXYPROOF_OLLAMA_BASE_URL": ""
@@ -128,12 +130,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 1345,
+                  "duration": 1161,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-21T04:19:56.392Z",
+                  "startTime": "2026-10-21T05:10:15.516Z",
                   "annotations": [],
                   "attachments": [
                     {
@@ -168,12 +170,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 914,
+                  "duration": 951,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-21T04:19:58.401Z",
+                  "startTime": "2026-10-21T05:10:17.250Z",
                   "annotations": [],
                   "attachments": [
                     {
@@ -208,12 +210,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 916,
+                  "duration": 946,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-21T04:19:59.413Z",
+                  "startTime": "2026-10-21T05:10:18.300Z",
                   "annotations": [],
                   "attachments": [
                     {
@@ -248,12 +250,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 1013,
+                  "duration": 1004,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-21T04:20:00.400Z",
+                  "startTime": "2026-10-21T05:10:19.333Z",
                   "annotations": [],
                   "attachments": [
                     {
@@ -288,12 +290,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 1282,
+                  "duration": 1274,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-21T04:20:01.512Z",
+                  "startTime": "2026-10-21T05:10:20.425Z",
                   "annotations": [],
                   "attachments": [
                     {
@@ -328,12 +330,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 1423,
+                  "duration": 1520,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-21T04:20:02.903Z",
+                  "startTime": "2026-10-21T05:10:21.818Z",
                   "annotations": [],
                   "attachments": [
                     {
@@ -368,12 +370,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 912,
+                  "duration": 934,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-21T04:20:04.435Z",
+                  "startTime": "2026-10-21T05:10:23.439Z",
                   "annotations": [],
                   "attachments": [
                     {
@@ -408,12 +410,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 904,
+                  "duration": 1016,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-21T04:20:05.446Z",
+                  "startTime": "2026-10-21T05:10:24.475Z",
                   "annotations": [],
                   "attachments": [
                     {
@@ -448,12 +450,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 922,
+                  "duration": 930,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-21T04:20:06.459Z",
+                  "startTime": "2026-10-21T05:10:25.601Z",
                   "annotations": [],
                   "attachments": [
                     {
@@ -488,12 +490,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 911,
+                  "duration": 790,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-21T04:20:07.448Z",
+                  "startTime": "2026-10-21T05:10:26.620Z",
                   "annotations": [],
                   "attachments": [
                     {
@@ -528,12 +530,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 941,
+                  "duration": 936,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-21T04:20:08.423Z",
+                  "startTime": "2026-10-21T05:10:27.465Z",
                   "annotations": [],
                   "attachments": [
                     {
@@ -568,12 +570,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 1152,
+                  "duration": 1224,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-21T04:20:09.463Z",
+                  "startTime": "2026-10-21T05:10:28.475Z",
                   "annotations": [],
                   "attachments": [
                     {
@@ -608,12 +610,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 962,
+                  "duration": 990,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-21T04:20:10.715Z",
+                  "startTime": "2026-10-21T05:10:29.803Z",
                   "annotations": [],
                   "attachments": [
                     {
@@ -648,12 +650,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 651,
+                  "duration": 685,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-21T04:20:11.745Z",
+                  "startTime": "2026-10-21T05:10:30.863Z",
                   "annotations": [],
                   "attachments": [
                     {
@@ -688,12 +690,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 1174,
+                  "duration": 1187,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-21T04:20:12.440Z",
+                  "startTime": "2026-10-21T05:10:31.603Z",
                   "annotations": [],
                   "attachments": [
                     {
@@ -728,12 +730,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 1177,
+                  "duration": 1156,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-21T04:20:13.723Z",
+                  "startTime": "2026-10-21T05:10:32.888Z",
                   "annotations": [],
                   "attachments": [
                     {
@@ -768,12 +770,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 1010,
+                  "duration": 1093,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-21T04:20:14.985Z",
+                  "startTime": "2026-10-21T05:10:34.145Z",
                   "annotations": [],
                   "attachments": [
                     {
@@ -808,12 +810,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 1043,
+                  "duration": 1251,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-21T04:20:16.079Z",
+                  "startTime": "2026-10-21T05:10:35.318Z",
                   "annotations": [],
                   "attachments": [
                     {
@@ -831,15 +833,135 @@
           "file": "research.spec.ts",
           "line": 222,
           "column": 1
+        },
+        {
+          "title": "recorded genuine DeepSeek A replay makes zero fresh planning requests",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1567,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-21T05:10:36.684Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "D:\\workshop\\oct\\oxyproof-osi-2026\\.local\\e2e-results\\research-recorded-genuine--23e7b-ero-fresh-planning-requests\\trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "cdcdb9c009151254af97-e186dff6c1a5b02f753c",
+          "file": "research.spec.ts",
+          "line": 240,
+          "column": 3
+        },
+        {
+          "title": "recorded genuine DeepSeek B replay makes zero fresh planning requests",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1676,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-21T05:10:38.372Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "D:\\workshop\\oct\\oxyproof-osi-2026\\.local\\e2e-results\\research-recorded-genuine--b18c4-ero-fresh-planning-requests\\trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "cdcdb9c009151254af97-3d5a51bd8a41c6de45ff",
+          "file": "research.spec.ts",
+          "line": 240,
+          "column": 3
+        },
+        {
+          "title": "recorded genuine DeepSeek C replay makes zero fresh planning requests",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1546,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-21T05:10:40.199Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "D:\\workshop\\oct\\oxyproof-osi-2026\\.local\\e2e-results\\research-recorded-genuine--5b6ec-ero-fresh-planning-requests\\trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "cdcdb9c009151254af97-bb625f424815a09d4b21",
+          "file": "research.spec.ts",
+          "line": 240,
+          "column": 3
         }
       ]
     }
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-10-21T04:19:53.561Z",
-    "duration": 25231.271,
-    "expected": 18,
+    "startTime": "2026-10-21T05:10:12.652Z",
+    "duration": 30592.326,
+    "expected": 21,
     "skipped": 0,
     "unexpected": 0,
     "flaky": 0

@@ -19,6 +19,8 @@ export default defineConfig({
     // Regression cannot inherit billable provider configuration.
     env: {
       OPENAI_API_KEY: '',
+      DEEPSEEK_API_KEY: '',
+      OXYPROOF_DISABLE_CLOUD: '1',
       OXYPROOF_LLM_MODEL: '',
       OXYPROOF_LLM_PROVIDER: 'openai',
       OXYPROOF_OLLAMA_BASE_URL: '',

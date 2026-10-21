@@ -8,6 +8,7 @@ from fastapi.responses import FileResponse, JSONResponse
 from fastapi.staticfiles import StaticFiles
 
 from backend.app.agents.llm import LLMError, configured, provider
+from backend.app.agents.recorded import recorded_deepseek
 from backend.app.agents.workflow import run_research, run_temperature
 from backend.app.data.ingest import ROOT, DataError, Repository
 from backend.app.reports.audit import calculate_record, code_version, group_key, screen
@@ -143,6 +144,14 @@ def temperature_decisions(request: TemperatureRequest):
 @app.post("/api/research", response_model=AgentExecution)
 def research(request: AgentRequest):
     return guarded_workflow(request.mode, lambda: run_research(request, repo_or_503()))
+
+
+@app.get("/api/research/recorded-deepseek")
+def captured_deepseek():
+    try:
+        return recorded_deepseek()
+    except (OSError, ValueError, KeyError, TypeError) as exc:
+        raise HTTPException(404, "RECORDED_DEEPSEEK_EVIDENCE_UNAVAILABLE") from exc
 
 
 def guarded_workflow(mode, operation):

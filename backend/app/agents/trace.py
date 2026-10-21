@@ -110,7 +110,7 @@ def execution_trace(
         model_selected_tool=selected,
         deterministically_expected_tool=tool_name,
         tool_agreement=selected == tool_name if selected else None,
-        executed_scientific_tool=tool_name,
+        executed_scientific_tool=tool_name if status != "ABSTAINED" else None,
         refusal_origin=(
             "BOTH_MODEL_PLAN_AND_INDEPENDENT_VALIDATOR"
             if metadata.get("raw_model_arguments", {}).get("unsupported_constraints")

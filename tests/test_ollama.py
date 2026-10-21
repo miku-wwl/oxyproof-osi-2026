@@ -115,7 +115,9 @@ def test_native_tool_workflow_without_provider_id(repo, monkeypatch, name):
     assert trace.response_id is None and UUID(trace.local_invocation_id)
     assert trace.provider_metadata["provider"] == "Ollama Local"
     assert trace.model_selected_tool == trace.deterministically_expected_tool == tool
-    assert trace.tool_agreement and trace.executed_scientific_tool == tool
+    assert trace.tool_agreement and trace.executed_scientific_tool == (
+        None if name == "C" else tool
+    )
     assert "INVENTED_PROSE" not in trace.model_dump_json()
     assert len(requests) == 1
     payload = json.loads(requests[0].content)

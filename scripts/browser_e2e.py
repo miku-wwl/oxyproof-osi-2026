@@ -15,6 +15,8 @@ if __name__ == "__main__":
     env = dict(os.environ, PLAYWRIGHT_BROWSERS_PATH=str(ROOT / ".local/ms-playwright"))
     # Real model acceptance uses the explicitly authorized CLI, never this regression suite.
     env.pop("OPENAI_API_KEY", None)
+    env.pop("DEEPSEEK_API_KEY", None)
+    env["OXYPROOF_DISABLE_CLOUD"] = "1"
     env.pop("OXYPROOF_LLM_MODEL", None)
     env["OXYPROOF_LLM_PROVIDER"] = "openai"
     env.pop("OXYPROOF_OLLAMA_BASE_URL", None)
