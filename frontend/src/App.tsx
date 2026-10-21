@@ -15,6 +15,7 @@ import {
 import { api, downloadReport, scientific } from './api'
 import { ComparisonPlot, TemperaturePlot } from './Plots'
 import TemperatureExplorer from './TemperatureExplorer'
+import ResearchAgent, { ExecutionTraceView } from './ResearchAgent'
 import type {
   Adversarial,
   Calculation,
@@ -294,6 +295,12 @@ export default function App() {
         </section>
 
         <TemperatureExplorer catalog={catalog} mode={request.mode} onTrace={setDecisionTrace} />
+        <ResearchAgent
+          mode={request.mode}
+          onModeChange={(mode) => setRequest({ ...request, mode })}
+          available={!!catalog}
+          providerStatus={health?.real_llm_status ?? 'checking'}
+        />
 
         <section className="request-card">
           <div className="section-heading">
@@ -455,6 +462,12 @@ export default function App() {
           </div>
         </section>
 
+        {report?.execution_trace && (
+          <details className="card">
+            <summary>Screening execution trace</summary>
+            <ExecutionTraceView trace={report.execution_trace} />
+          </details>
+        )}
         {error && (
           <div role="alert" className="error">
             <CircleAlert size={18} />

@@ -77,6 +77,10 @@ test('flagship reversal, plot and slider use backend values', async ({ page }) =
   await page.getByRole('button', { name: '1000 K', exact: true }).click()
   await page.locator('.curve-legend').scrollIntoViewIfNeeded()
   await page.screenshot({ path: '../artifacts/browser/temperature-explorer.png', fullPage: false })
+  await page.getByText('Temperature analysis execution trace', { exact: true }).click()
+  const trace = page.locator('.temperature-explorer').getByTestId('agent-execution-trace')
+  await expect(trace).toContainText('analyze_temperature_interval')
+  await expect(trace).toContainText('no model call')
 })
 
 test('exact regime boundary withholds its row', async ({ page }) => {
@@ -163,4 +167,71 @@ test('API failure injection is displayed without candidates', async ({ page }) =
   await page.getByRole('button', { name: 'Run screening', exact: true }).click()
   await expect(page.getByRole('alert')).toContainText('E2E_FAILURE_INJECTION')
   await expect(page.locator('tbody')).toHaveCount(0)
+})
+
+test('offline agent screening shows an actual audited execution and export', async ({ page }) => {
+  const panel = page.getByRole('region', { name: 'Research Agent execution' })
+  await panel.getByRole('button', { name: 'Run research agent' }).click()
+  const trace = panel.getByTestId('agent-execution-trace')
+  await expect(trace).toContainText('COMPUTED')
+  await expect(trace).toContainText('screen_published_records')
+  await expect(trace).toContainText('no model call')
+  const pending = page.waitForEvent('download')
+  await panel.getByRole('button', { name: 'Export agent execution JSON' }).click()
+  const exported = JSON.parse(await fs.readFile((await (await pending).path())!, 'utf8'))
+  expect(exported.runtime_mode).toBe('OFFLINE_DETERMINISTIC')
+  expect(exported.result.resolved_plan.temperature_k).toBe(873.15)
+  expect(exported.result.candidates.map((c: { row_id: number }) => c.row_id)).toEqual([3, 2, 1])
+  expect(exported.execution_trace.response_id).toBeNull()
+  expect(exported.execution_trace.validated_arguments).toEqual(exported.validated_arguments)
+  await panel.screenshot({ path: '../artifacts/browser/agent-screening.png' })
+})
+
+test('offline agent selects Huang interval by its explicit named source selection', async ({
+  page,
+}) => {
+  const panel = page.getByRole('region', { name: 'Research Agent execution' })
+  await panel.getByRole('button', { name: 'Huang interval question' }).click()
+  await panel.getByLabel('Agent source row IDs').fill('')
+  const response = page.waitForResponse((r) => r.url().endsWith('/api/research'))
+  await panel.getByRole('button', { name: 'Run research agent' }).click()
+  const result = (await (await response).json()).result
+  expect(result.selected_rankings.map((p: { ordering: number[] }) => p.ordering)).toEqual([
+    [1, 2, 3],
+    [3, 2, 1],
+  ])
+  const trace = panel.getByTestId('agent-execution-trace')
+  await expect(trace).toContainText('analyze_temperature_interval')
+  await expect(trace).toContainText('772 meV')
+  await expect(trace).toContainText('uncertainty bounds unavailable')
+  await panel.screenshot({ path: '../artifacts/browser/agent-temperature.png' })
+})
+
+test('offline agent preserves humidity and lifetime in its refusal', async ({ page }) => {
+  const panel = page.getByRole('region', { name: 'Research Agent execution' })
+  await panel.getByRole('button', { name: 'Humidity and lifetime question' }).click()
+  await panel.getByRole('button', { name: 'Run research agent' }).click()
+  const trace = panel.getByTestId('agent-execution-trace')
+  await expect(trace).toContainText('ABSTAINED')
+  await expect(trace).toContainText('UNVERIFIED_CONSTRAINTS')
+  await expect(trace).toContainText('10,000 operating hours')
+  await expect(trace).toContainText('humidity')
+  await panel.screenshot({ path: '../artifacts/browser/agent-refusal.png' })
+})
+
+test('unconfigured real agent fails without fallback and permits explicit offline run', async ({
+  page,
+}) => {
+  expect((await (await page.request.get('/api/health')).json()).real_llm_status).toBe(
+    'NOT_CONFIGURED',
+  )
+  const panel = page.getByRole('region', { name: 'Research Agent execution' })
+  await panel.getByLabel('Agent runtime').selectOption('REAL_LLM')
+  await panel.getByRole('button', { name: 'Run research agent' }).click()
+  await expect(panel.getByRole('alert')).toContainText('UNAVAILABLE')
+  await expect(panel.getByRole('alert')).toContainText('NOT_CONFIGURED')
+  await expect(panel.getByTestId('agent-execution-trace')).toHaveCount(0)
+  await panel.getByLabel('Agent runtime').selectOption('OFFLINE_DETERMINISTIC')
+  await panel.getByRole('button', { name: 'Run research agent' }).click()
+  await expect(panel.getByTestId('agent-execution-trace')).toContainText('no model call')
 })

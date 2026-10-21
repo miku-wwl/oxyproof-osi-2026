@@ -139,6 +139,39 @@ class SourceInfo(Contract):
     attribution: str
 
 
+class ExecutionTrace(Contract):
+    research_question: str
+    runtime_mode: Literal["OFFLINE_DETERMINISTIC", "REAL_LLM"]
+    planning_source: Literal["OFFLINE_DETERMINISTIC", "REAL_LLM"]
+    model: str | None = None
+    response_id: str | None = None
+    tool_name: str
+    tool_selection: Literal["MODEL_SELECTED", "FIXED_ENDPOINT", "DETERMINISTIC_SELECTED"]
+    validated_arguments: dict
+    execution_status: Literal["COMPUTED", "ABSTAINED", "EVIDENCE_ONLY"]
+    scientific_result: dict
+    evidence_verdicts: list[str]
+    grounded_explanation: list[str]
+    explanation_source: Literal["DETERMINISTIC_VALIDATED_RESULTS"] = (
+        "DETERMINISTIC_VALIDATED_RESULTS"
+    )
+    provider_metadata: dict = Field(default_factory=dict)
+
+    @model_validator(mode="after")
+    def honest_runtime_evidence(self):
+        if self.planning_source != self.runtime_mode:
+            raise ValueError("Planning source must match the execution runtime")
+        if self.runtime_mode == "REAL_LLM" and (not self.model or not self.response_id):
+            raise ValueError("Real planning trace requires model and provider response identity")
+        if self.runtime_mode == "OFFLINE_DETERMINISTIC" and (
+            self.model or self.response_id or self.provider_metadata
+        ):
+            raise ValueError("Offline trace cannot claim provider execution")
+        if self.tool_selection == "MODEL_SELECTED" and self.runtime_mode != "REAL_LLM":
+            raise ValueError("Only a provider execution can claim model-selected tools")
+        return self
+
+
 class ComparisonGroup(Contract):
     id: str
     source_doi: str
@@ -152,6 +185,7 @@ class ComparisonGroup(Contract):
 
 class AuditReport(Contract):
     schema_version: str = "1.0"
+    execution_trace: ExecutionTrace | None = None
     status: Literal["CALCULATED_WITH_WARNINGS", "INSUFFICIENT_EVIDENCE"]
     research_request: ScreenRequest
     resolved_plan: ResolvedPlan | None

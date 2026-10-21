@@ -1,4 +1,27 @@
 export type Mode = 'OFFLINE_DETERMINISTIC' | 'REAL_LLM'
+export type ExecutionTrace = {
+  research_question: string
+  runtime_mode: Mode
+  planning_source: Mode
+  model: string | null
+  response_id: string | null
+  tool_name: string
+  tool_selection: string
+  validated_arguments: Record<string, unknown>
+  execution_status: 'COMPUTED' | 'ABSTAINED' | 'EVIDENCE_ONLY'
+  scientific_result: Record<string, unknown>
+  evidence_verdicts: string[]
+  grounded_explanation: string[]
+  explanation_source: string
+  provider_metadata: Record<string, unknown>
+}
+export type AgentResponse = {
+  runtime_mode: Mode
+  tool_name: string
+  validated_arguments: Record<string, unknown>
+  execution_trace: ExecutionTrace
+  result: unknown
+}
 export type Warning = { code: string; message: string }
 export type Quantity = { value: number; unit: string }
 export type Source = {
@@ -43,6 +66,7 @@ export type Calculation = {
   observations_vs_calculations: string
 }
 export type Report = {
+  execution_trace?: ExecutionTrace | null
   next_scientific_actions?: string[]
   status: string
   research_request: Request
@@ -114,6 +138,7 @@ export type DecisionPoint = {
   excluded: { row_id: number; reasons: string[] }[]
 }
 export type TemperatureReport = {
+  execution_trace?: ExecutionTrace | null
   crossover_qualification: string
   trace: { step: string; outcome: string; detail: string }[]
   status: string

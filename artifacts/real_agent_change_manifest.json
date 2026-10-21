@@ -1,0 +1,339 @@
+{
+  "phase": "2.6",
+  "prepared_at_utc": "2026-10-21T03:37:59.174449+00:00",
+  "entry_head": "ff17b2b02e578101952143db8541c06d84ba3ea8",
+  "current_head": "ff17b2b02e578101952143db8541c06d84ba3ea8",
+  "branch": "main",
+  "entry_worktree": "CLEAN",
+  "staged_files": 0,
+  "changed_file_count": 44,
+  "changed_files": [
+    {
+      "status": " M",
+      "path": "README.md",
+      "bytes": 12417,
+      "sha256": "d48b13b4ba41e18d3ec8623fe5151ecc0036932f8da23af67492f6bbf74b95f0"
+    },
+    {
+      "status": " M",
+      "path": "artifacts/327c_bismuth_bulk.json",
+      "bytes": 11179,
+      "sha256": "b5688602dc0edd4025b2e52f21af5ff600c3d251ae83c73802d17de44a30fc0e"
+    },
+    {
+      "status": " M",
+      "path": "artifacts/600c_huang_bulk.json",
+      "bytes": 19745,
+      "sha256": "6e10886a018e0b8a8d4b43c14d0b9dc0c40831192f9403a671692815ffa9d986"
+    },
+    {
+      "status": " M",
+      "path": "artifacts/827c_cobalt_bulk.json",
+      "bytes": 11297,
+      "sha256": "eb87606b279caa542ffd4d3a9ac7bd0c631a39451543ba3b081faae469c5a982"
+    },
+    {
+      "status": " M",
+      "path": "artifacts/ambiguous_regime.json",
+      "bytes": 9205,
+      "sha256": "21143a1674becf2f29de29047eb7a1f32b9818ec14b5b720e26de5370d394648"
+    },
+    {
+      "status": " M",
+      "path": "artifacts/browser/humidity-abstention.png",
+      "bytes": 196990,
+      "sha256": "5293f7d580bcb705054d7942de093ea02e23a53e987a68522edd62d38deef3d6"
+    },
+    {
+      "status": " M",
+      "path": "artifacts/browser_e2e_results.json",
+      "bytes": 27416,
+      "sha256": "8d67adf245e62d4dcc268b5be28b00b6971fe5cc6e97559a2c1566184d98ca4f"
+    },
+    {
+      "status": " M",
+      "path": "artifacts/humidity_refusal_v2.json",
+      "bytes": 6212,
+      "sha256": "57a15afb33812e173e9379cae277427cdb7fdee225f6391c4123cbf1fec76345"
+    },
+    {
+      "status": " M",
+      "path": "artifacts/out_of_range.json",
+      "bytes": 10085,
+      "sha256": "2d67e6419a0c279d58941a98db2fe5e4b36219059ba49a21b91a4679f85ba35f"
+    },
+    {
+      "status": " M",
+      "path": "artifacts/rank_reversal_reference_v2.json",
+      "bytes": 8691,
+      "sha256": "3a084abf24d3cebb3863ea9ae7ec8aac31b99afaae7da61a6607a593804959ec"
+    },
+    {
+      "status": " M",
+      "path": "artifacts/scientific_acceptance.json",
+      "bytes": 8302,
+      "sha256": "996a9fb076ddcde3b780b0bf63def07f4e146f84ad35e4fe387a8624496249f4"
+    },
+    {
+      "status": " M",
+      "path": "artifacts/scientific_benchmark_v2.json",
+      "bytes": 38792,
+      "sha256": "3fe5f735254947e57ada6e43cf930c047b6996b75c4f062c67bfc060cced15ba"
+    },
+    {
+      "status": " M",
+      "path": "artifacts/temperature_decision_flagship.json",
+      "bytes": 146741,
+      "sha256": "8e9e99bed6012e6b1e78cf93a6c3204d660eb94eba2d4cf57810d7f536e069cf"
+    },
+    {
+      "status": " M",
+      "path": "backend/app/agents/llm.py",
+      "bytes": 6062,
+      "sha256": "348da5645ce9304af248f6549b4e59b5439d11d820974e0ca7e53b729eb044a7"
+    },
+    {
+      "status": " M",
+      "path": "backend/app/agents/planner.py",
+      "bytes": 9310,
+      "sha256": "b9a514b21096f81fadf2405541c7f28a72feaccc2df7bcdf0b30de4650d06173"
+    },
+    {
+      "status": " M",
+      "path": "backend/app/agents/workflow.py",
+      "bytes": 7094,
+      "sha256": "d0b601c16bce8c219ded3b61c6d6f0b74b8cb403983f398e8f268c2c08ae6953"
+    },
+    {
+      "status": " M",
+      "path": "backend/app/main.py",
+      "bytes": 8585,
+      "sha256": "a76c4c9d6abc4986231f864faf2882bb515d6b6042c45b65077d297161f7ec21"
+    },
+    {
+      "status": " M",
+      "path": "backend/app/reports/audit.py",
+      "bytes": 15224,
+      "sha256": "f8ddfdef2d899de11acdc6ac00bd7dd532f3cf65779dc8dd0cda96982c3c86cb"
+    },
+    {
+      "status": " M",
+      "path": "backend/app/schemas.py",
+      "bytes": 7249,
+      "sha256": "c8d82d90ce0451a1bc2fa5ec1a4952110453f6878befdbda597991761b17aaac"
+    },
+    {
+      "status": " M",
+      "path": "backend/app/science/decision_schemas.py",
+      "bytes": 7282,
+      "sha256": "7c37d35c91a16e83a96f70d10d63669ada2d0aef01f2b5740c8143a4804b0529"
+    },
+    {
+      "status": " M",
+      "path": "backend/app/science/temperature_decisions.py",
+      "bytes": 22229,
+      "sha256": "a325b9c3a57e6b454b7899d4e678c6e0fe19d29bd1516cd20cffcb5e5f605d05"
+    },
+    {
+      "status": " M",
+      "path": "docs/REQUEST_GRAMMAR.md",
+      "bytes": 5533,
+      "sha256": "2c7961b9b835befdff8de5e34c68c98b9f317daa6a6a26a5e1d3c9ed1cc8888c"
+    },
+    {
+      "status": " M",
+      "path": "frontend/e2e/research.spec.ts",
+      "bytes": 12370,
+      "sha256": "9e29bf350b08b9433a1ac3d3a2bc605d58fc06b64a716b1b41dd3fdf92bbcd41"
+    },
+    {
+      "status": " M",
+      "path": "frontend/playwright.config.ts",
+      "bytes": 898,
+      "sha256": "0a5990886a8ba45ca6d2c4c6375a59bdfd26ca9e5a392a8dd31ee7165d1f0066"
+    },
+    {
+      "status": " M",
+      "path": "frontend/src/App.tsx",
+      "bytes": 31818,
+      "sha256": "cce8c8591e92a4385ccb3a3b539ca71c52678754e88fc864bdeea77287637bcb"
+    },
+    {
+      "status": " M",
+      "path": "frontend/src/TemperatureExplorer.tsx",
+      "bytes": 21417,
+      "sha256": "b458f730d09575a8d49e7e5c3eabe5465690074c5362b832a6c3f75495ec998c"
+    },
+    {
+      "status": " M",
+      "path": "frontend/src/style.css",
+      "bytes": 27861,
+      "sha256": "563f8d46a00f3ec1967e91740f8a056c19fb9d02a9c128b0bfcc9ba9672a6c83"
+    },
+    {
+      "status": " M",
+      "path": "frontend/src/types.ts",
+      "bytes": 4843,
+      "sha256": "9f4b10b786127cc3e38242dc8cf0d18274e6544e553237922fee2a3d975b48c7"
+    },
+    {
+      "status": " M",
+      "path": "scripts/browser_e2e.py",
+      "bytes": 1140,
+      "sha256": "3ec57b3b528029682f0da580480835d92b9094af49b0ac94775c055f0f8fc0e5"
+    },
+    {
+      "status": " M",
+      "path": "scripts/validate_v2.py",
+      "bytes": 5430,
+      "sha256": "4467f50bd23d4cf11b5dcfa969d55cc9b0f49aaa3f800e89b87df78819beb55e"
+    },
+    {
+      "status": "??",
+      "path": "artifacts/browser/agent-refusal.png",
+      "bytes": 74463,
+      "sha256": "071c208c34f7355c8373e79e7c5dd59bd7a6097c83dd8736efaf72415c14113c"
+    },
+    {
+      "status": "??",
+      "path": "artifacts/browser/agent-screening.png",
+      "bytes": 82802,
+      "sha256": "1a0f078d86f0e9d53fd4974906b110dac97d549c1c44488342f49563a5d694ab"
+    },
+    {
+      "status": "??",
+      "path": "artifacts/browser/agent-temperature.png",
+      "bytes": 102374,
+      "sha256": "6612728b6c9d14ca0afa5eeffc8631b0df542e84540677d43f02341546a1850d"
+    },
+    {
+      "status": "??",
+      "path": "artifacts/real_agent_acceptance.json",
+      "bytes": 240529,
+      "sha256": "5bd36650e0f8ae1578e8b74117a6e1acbd28cabd1122146559b2d2fc90e51e77"
+    },
+    {
+      "status": "??",
+      "path": "artifacts/real_agent_change_manifest.json",
+      "bytes": 10410,
+      "sha256": null
+    },
+    {
+      "status": "??",
+      "path": "artifacts/real_agent_http_smoke.json",
+      "bytes": 13026,
+      "sha256": "e695e8d666aac461e0f9a5e811fec4ba28717ca8a7a48342aa8cb4e23a6560cd"
+    },
+    {
+      "status": "??",
+      "path": "artifacts/real_agent_validation.json",
+      "bytes": 15201,
+      "sha256": "bcf10345be9aa2c052d2af25bcd6a7f60c88708bfc6fcbdcca94baac3fc6efb2"
+    },
+    {
+      "status": "??",
+      "path": "backend/app/agents/trace.py",
+      "bytes": 5227,
+      "sha256": "7219a4bea08c30d61fe9ae2124ec3649c80ad9d8b737b2a5eb0ea54779fdb54a"
+    },
+    {
+      "status": "??",
+      "path": "docs/REAL_AGENT_ACCEPTANCE.md",
+      "bytes": 11988,
+      "sha256": "e2ea2cbd70edf61b2bb97ff8e4bf5c1098578782d08a75d7f75b2af6998a6929"
+    },
+    {
+      "status": "??",
+      "path": "docs/REAL_AGENT_DEMO_SCRIPT.md",
+      "bytes": 3969,
+      "sha256": "5c7f80e8a3417c881cfd937c83242766d4b8ed3964bdc38fbcf4d9c4a53ab230"
+    },
+    {
+      "status": "??",
+      "path": "frontend/src/ResearchAgent.test.tsx",
+      "bytes": 1925,
+      "sha256": "7f64b944d427e334ff55f8b698222fc3dce792b57a266f6071746e096fea9604"
+    },
+    {
+      "status": "??",
+      "path": "frontend/src/ResearchAgent.tsx",
+      "bytes": 7584,
+      "sha256": "46699e124488e0f0a5ba8607535ef691b63a60c62a69a6614a6ff7b1f3533580"
+    },
+    {
+      "status": "??",
+      "path": "scripts/accept_real_agent.py",
+      "bytes": 8864,
+      "sha256": "23b5fd0ab797fd525c36b56b6252033c018749e86bb3aa34a4785349971ee453"
+    },
+    {
+      "status": "??",
+      "path": "tests/test_real_agent_acceptance.py",
+      "bytes": 11778,
+      "sha256": "d20fe7a92f6c6ecdd4d01d00aea4fc7aeb6e84bd01d8fff14305630a4a18f17c"
+    }
+  ],
+  "code_version": {
+    "app_version": "0.1.0",
+    "git_base": "ff17b2b02e578101952143db8541c06d84ba3ea8",
+    "calculation_source_sha256": "8ef09808461bdd153bd440bd96fc8f83389652d6d06864dea5b56058f60727ef"
+  },
+  "protected_paths_unchanged": [
+    "AGENTS.md",
+    "PROJECT_BRIEF.md",
+    "PROMPT_01_CODEX.md",
+    "uv.lock",
+    "frontend/package-lock.json",
+    "backend/app/data/fixtures/published_subset.csv",
+    "backend/app/data/fixtures/manifest.json",
+    "benchmarks/evaluate.py",
+    "benchmarks/scientific_cases.json",
+    "benchmarks/reference_v2.py",
+    "backend/app/science/conductivity.py",
+    "output/pdf/oxyproof-one-page-submission.pdf"
+  ],
+  "preserved_ignored_media": [
+    {
+      "path": ".local/demo/oxyproof-phase2.webm",
+      "sha256": "3169945007ec4bdf773e7907f2708774a8bc76945c3ad7bd5589f3225dd6b3a3"
+    },
+    {
+      "path": ".local/demo-phase25/oxyproof-phase2.webm",
+      "sha256": "e39fe0b000d984748e84782486d889c803b6d6e880e7dcc9c1cc4e48e7cb8c05"
+    }
+  ],
+  "scientific_math": "Conductivity calculator, independent reference, frozen corpus and educational guards unchanged; interval engine adds explicit named-selection checks and trace only.",
+  "verification": {
+    "backend_passed": 175,
+    "backend_failed": 0,
+    "backend_skipped": 0,
+    "backend_warnings": 1,
+    "frontend_component_passed": 10,
+    "browser_passed": 18,
+    "browser_failed": 0,
+    "browser_skipped": 0,
+    "scientific_benchmark_passed": 49,
+    "offline_agent_scenarios_passed": 3,
+    "live_provider_requests": 0,
+    "live_scenarios": "NOT_RUN"
+  },
+  "secret_pattern_scan": {
+    "status": "PASS",
+    "project_text_files": 150,
+    "browser_traces": 18,
+    "trace_text_entries": 169,
+    "findings": [],
+    "limit": "Known token/private-key patterns only, not a full security audit"
+  },
+  "public_actions": {
+    "commit": false,
+    "push": false,
+    "publish": false,
+    "deploy": false,
+    "upload": false,
+    "register": false,
+    "submit": false,
+    "paid_model_call": false
+  },
+  "hash_policy": "Working-tree byte hashes; self-hash omitted to avoid recursion. Git line-ending normalization can change bytes at a future commit."
+}

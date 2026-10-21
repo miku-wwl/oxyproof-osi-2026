@@ -8,6 +8,7 @@ import itertools
 import math
 
 from backend.app.agents.planner import PlanError, interpret
+from backend.app.agents.trace import execution_trace
 from backend.app.data.ingest import Repository
 from backend.app.reports.audit import calculate_record, code_version, group_key, warn
 from backend.app.schemas import Quantity, Record, TraceStep
@@ -188,6 +189,18 @@ def analyze_temperature_interval(
     try:
         if parsed.plan.unsupported_constraints:
             raise PlanError("; ".join(parsed.plan.unsupported_constraints))
+        if parsed.row_ids and sorted(request.row_ids) != parsed.row_ids:
+            raise PlanError(
+                "CONFLICTING_RECORD_SELECTION: named Huang demonstration requires rows 1, 2, 3"
+            )
+        if parsed.row_ids and any(
+            i not in repository.by_id
+            or repository.by_id[i].source_doi != "10.1111/j.1151-2916.1998.tb02662.x"
+            for i in parsed.row_ids
+        ):
+            raise PlanError(
+                "ROWS_NOT_LOADED: named comparison requires its verified published rows"
+            )
         if parsed.plan.formula_query or parsed.plan.material_class:
             raise PlanError(
                 "UNVERIFIED_CONSTRAINTS: interval tool selects exact source groups or row IDs; use structured record selection"
@@ -477,4 +490,5 @@ def analyze_temperature_interval(
         report.trace.append(
             TraceStep(step="validate_or_abstain", outcome=exc.code, detail=str(exc))
         )
+    report.execution_trace = execution_trace(report, "analyze_temperature_interval")
     return report

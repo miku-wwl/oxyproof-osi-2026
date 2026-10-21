@@ -1,0 +1,354 @@
+{
+  "executed_at_utc": "2026-10-21T03:33:08.331724+00:00",
+  "status": "PASS",
+  "checks": [
+    {
+      "name": "lock",
+      "command": [
+        "uv",
+        "lock",
+        "--check",
+        "--offline"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.047,
+      "log_path": ".local/validation-agent/lock.txt",
+      "output": "Resolved 31 packages in 3ms\n"
+    },
+    {
+      "name": "backend_lint",
+      "command": [
+        "uv",
+        "run",
+        "--offline",
+        "--no-sync",
+        "python",
+        "-m",
+        "ruff",
+        "check",
+        "backend",
+        "scripts",
+        "tests",
+        "benchmarks"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.219,
+      "log_path": ".local/validation-agent/backend_lint.txt",
+      "output": "All checks passed!\n"
+    },
+    {
+      "name": "backend_format",
+      "command": [
+        "uv",
+        "run",
+        "--offline",
+        "--no-sync",
+        "python",
+        "-m",
+        "ruff",
+        "format",
+        "--check",
+        "backend",
+        "scripts",
+        "tests",
+        "benchmarks"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.187,
+      "log_path": ".local/validation-agent/backend_format.txt",
+      "output": "48 files already formatted\n"
+    },
+    {
+      "name": "pytest",
+      "command": [
+        "uv",
+        "run",
+        "--offline",
+        "--no-sync",
+        "python",
+        "-m",
+        "pytest",
+        "-q"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 16.516,
+      "log_path": ".local/validation-agent/pytest.txt",
+      "output": "........................................................................ [ 41%]\n........................................................................ [ 82%]\n...............................                                          [100%]\n============================== warnings summary ===============================\n.venv\\Lib\\site-packages\\fastapi\\testclient.py:1\n  D:\\workshop\\oct\\oxyproof-osi-2026\\.venv\\Lib\\site-packages\\fastapi\\testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.\n    from starlette.testclient import TestClient as TestClient  # noqa\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n175 passed, 1 warning in 10.03s\n"
+    },
+    {
+      "name": "frontend_build",
+      "command": [
+        "node",
+        "D:\\node\\node_modules\\npm\\bin\\npm-cli.js",
+        "run",
+        "build",
+        "--prefix",
+        "frontend"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 7.812,
+      "log_path": ".local/validation-agent/frontend_build.txt",
+      "output": "vite v7.3.7 building client environment for production...\ntransforming...\n\u2713 1583 modules transformed.\nrendering chunks...\ncomputing gzip size...\ndist/index.html                   0.56 kB \u2502 gzip:  0.36 kB\ndist/assets/index-DURsp6Hw.css   21.86 kB \u2502 gzip:  5.53 kB\ndist/assets/index-NV-Z8u57.js   266.90 kB \u2502 gzip: 83.04 kB\n\u2713 built in 3.05s\nnpm notice run oxyproof-dashboard@0.1.0 build\nnpm notice run tsc -b && vite build\n"
+    },
+    {
+      "name": "frontend_lint",
+      "command": [
+        "node",
+        "D:\\node\\node_modules\\npm\\bin\\npm-cli.js",
+        "run",
+        "lint",
+        "--prefix",
+        "frontend"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 3.938,
+      "log_path": ".local/validation-agent/frontend_lint.txt",
+      "output": "npm notice run oxyproof-dashboard@0.1.0 lint\nnpm notice run eslint . --max-warnings 0\n"
+    },
+    {
+      "name": "frontend_components",
+      "command": [
+        "node",
+        "D:\\node\\node_modules\\npm\\bin\\npm-cli.js",
+        "run",
+        "test",
+        "--prefix",
+        "frontend"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 4.484,
+      "log_path": ".local/validation-agent/frontend_components.txt",
+      "output": "\n RUN  v4.1.12 D:/workshop/oct/oxyproof-osi-2026/frontend\n\n\n Test Files  2 passed (2)\n      Tests  10 passed (10)\n   Start at  16:32:26\n   Duration  2.84s (transform 411ms, setup 439ms, import 704ms, tests 1.25s, environment 1.67s)\n\nnpm notice run oxyproof-dashboard@0.1.0 test\nnpm notice run vitest run\n"
+    },
+    {
+      "name": "reference_values",
+      "command": [
+        "uv",
+        "run",
+        "--offline",
+        "--no-sync",
+        "python",
+        "scripts/reference_values.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.156,
+      "log_path": ".local/validation-agent/reference_values.txt",
+      "output": "row=1 T=700 K regime=LT sigma=0.00152279771377997559372401061591251744494792292758364133882343 S/cm\nrow=1 T=873.15 K regime=HT sigma=0.0132438119864429252018004584050147634342673100201495858553654 S/cm\nrow=39 T=1100 K regime=SINGLE sigma=0.155737064991434737163014555255747584306281178016217708267326 S/cm\nrow=483 T=600 K regime=SINGLE sigma=0.0290520689988645706478882348521822121429195069173796920000169 S/cm\n"
+    },
+    {
+      "name": "legacy_demo",
+      "command": [
+        "uv",
+        "run",
+        "--offline",
+        "--no-sync",
+        "python",
+        "scripts/demo.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.891,
+      "log_path": ".local/validation-agent/legacy_demo.txt",
+      "output": "{\"case\": \"600c_huang_bulk\", \"status\": \"CALCULATED_WITH_WARNINGS\", \"candidates\": 3, \"excluded\": 0, \"mode\": \"OFFLINE_DETERMINISTIC\"}\n{\"case\": \"827c_cobalt_bulk\", \"status\": \"CALCULATED_WITH_WARNINGS\", \"candidates\": 1, \"excluded\": 0, \"mode\": \"OFFLINE_DETERMINISTIC\"}\n{\"case\": \"327c_bismuth_bulk\", \"status\": \"CALCULATED_WITH_WARNINGS\", \"candidates\": 1, \"excluded\": 0, \"mode\": \"OFFLINE_DETERMINISTIC\"}\n{\"case\": \"ambiguous_regime\", \"status\": \"INSUFFICIENT_EVIDENCE\", \"candidates\": 0, \"excluded\": 1, \"mode\": \"OFFLINE_DETERMINISTIC\"}\n{\"case\": \"out_of_range\", \"status\": \"INSUFFICIENT_EVIDENCE\", \"candidates\": 0, \"excluded\": 1, \"mode\": \"OFFLINE_DETERMINISTIC\"}\nOFFLINE_DEMO=PASS cases=5 real_published_fixture=true network_calls=0\n"
+    },
+    {
+      "name": "legacy_guards",
+      "command": [
+        "uv",
+        "run",
+        "--offline",
+        "--no-sync",
+        "python",
+        "benchmarks/evaluate.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.984,
+      "log_path": ".local/validation-agent/legacy_guards.txt",
+      "output": "MEASURED guard_cases=8 baseline_correct=1 audited_correct=8\n"
+    },
+    {
+      "name": "scientific_benchmark",
+      "command": [
+        "uv",
+        "run",
+        "--offline",
+        "--no-sync",
+        "python",
+        "benchmarks/evaluate_v2.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 2.922,
+      "log_path": ".local/validation-agent/scientific_benchmark.txt",
+      "output": "SCIENTIFIC_BENCHMARK_V2 cases=49 passed=49 failed=0 live_model_calls=0\n"
+    },
+    {
+      "name": "phase2_demo",
+      "command": [
+        "uv",
+        "run",
+        "--offline",
+        "--no-sync",
+        "python",
+        "scripts/phase2_demo.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.75,
+      "log_path": ".local/validation-agent/phase2_demo.txt",
+      "output": "PHASE2_OFFLINE_DEMO=PASS scope=FULL_DATASET rows=483 selected_orders=1>2>3;3>2>1 continuous_model_crossings=3\n"
+    },
+    {
+      "name": "data_inspection",
+      "command": [
+        "uv",
+        "run",
+        "--offline",
+        "--no-sync",
+        "python",
+        "scripts/inspect_data.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 1.375,
+      "log_path": ".local/validation-agent/data_inspection.txt",
+      "output": "INSPECTED_REAL rows=483 columns=34 source_dois=84\n"
+    },
+    {
+      "name": "browser_e2e",
+      "command": [
+        "uv",
+        "run",
+        "--offline",
+        "--no-sync",
+        "python",
+        "scripts/browser_e2e.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 24.297,
+      "log_path": ".local/validation-agent/browser_e2e.txt",
+      "output": "\nRunning 18 tests using 1 worker\n\n  ok  1 e2e\\research.spec.ts:14:1 \u203a default screening uses real API calculations (1.1s)\n  ok  2 e2e\\research.spec.ts:21:1 \u203a generated goal follows temperature controls (850ms)\n  ok  3 e2e\\research.spec.ts:30:1 \u203a generated goal follows conductivity type (887ms)\n  ok  4 e2e\\research.spec.ts:39:1 \u203a manual contradictions are reported (834ms)\n  ok  5 e2e\\research.spec.ts:50:1 \u203a humidity constraint abstains visibly (1.2s)\n  ok  6 e2e\\research.spec.ts:62:1 \u203a flagship reversal, plot and slider use backend values (1.3s)\n  ok  7 e2e\\research.spec.ts:86:1 \u203a exact regime boundary withholds its row (902ms)\n  ok  8 e2e\\research.spec.ts:93:1 \u203a continuous root displays a numerical tie rather than a strict winner (957ms)\n  ok  9 e2e\\research.spec.ts:100:1 \u203a wrong-formula audit retains dimensional rejection (866ms)\n  ok 10 e2e\\research.spec.ts:106:1 \u203a out-of-range refusal (747ms)\n  ok 11 e2e\\research.spec.ts:112:1 \u203a source DOI navigation is inspectable (955ms)\n  ok 12 e2e\\research.spec.ts:124:1 \u203a export contains real interval provenance and results (1.2s)\n  ok 13 e2e\\research.spec.ts:147:1 \u203a responsive mobile viewport has no horizontal overflow (893ms)\n  ok 14 e2e\\research.spec.ts:158:1 \u203a API failure injection is displayed without candidates (668ms)\n  ok 15 e2e\\research.spec.ts:172:1 \u203a offline agent screening shows an actual audited execution and export (1.1s)\n  ok 16 e2e\\research.spec.ts:190:1 \u203a offline agent selects Huang interval by its explicit named source selection (1.1s)\n  ok 17 e2e\\research.spec.ts:210:1 \u203a offline agent preserves humidity and lifetime in its refusal (974ms)\n  ok 18 e2e\\research.spec.ts:222:1 \u203a unconfigured real agent fails without fallback and permits explicit offline run (893ms)\n\n  18 passed (23.2s)\n[WebServer] INFO:     Started server process [55704]\n[WebServer] INFO:     Waiting for application startup.\n[WebServer] INFO:     Application startup complete.\n[WebServer] INFO:     Uvicorn running on http://127.0.0.1:8011 (Press CTRL+C to quit)\n(node:30752) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.\n(Use `node --trace-warnings ...` to show where the warning was created)\n"
+    },
+    {
+      "name": "agent_acceptance",
+      "command": [
+        "uv",
+        "run",
+        "--offline",
+        "--no-sync",
+        "python",
+        "scripts/accept_real_agent.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 6.438,
+      "log_path": ".local/validation-agent/agent_acceptance.txt",
+      "output": "REAL_AGENT_STATUS=NOT_CONFIGURED real_requests=0 offline_scenarios=3/3 live_scenarios=NOT_RUN,NOT_RUN,NOT_RUN\n"
+    },
+    {
+      "name": "independent_science",
+      "command": [
+        "uv",
+        "run",
+        "--offline",
+        "--no-sync",
+        "python",
+        "scripts/verify_final_science.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.671,
+      "log_path": ".local/validation-agent/independent_science.txt",
+      "output": "FINAL_SCIENCE=PASS roots=3 endpoint_values=6 precision=80 independent_side_checks=6\n"
+    }
+  ],
+  "note": "Local Windows execution; no live model, external deployment or statistically representative benchmark.",
+  "phase": "2.6",
+  "client_date": "2026-10-21",
+  "client_timezone": "Pacific/Auckland",
+  "code_version": {
+    "app_version": "0.1.0",
+    "git_base": "ff17b2b02e578101952143db8541c06d84ba3ea8",
+    "calculation_source_sha256": "8ef09808461bdd153bd440bd96fc8f83389652d6d06864dea5b56058f60727ef"
+  },
+  "summary": {
+    "backend_passed": 175,
+    "backend_failed": 0,
+    "backend_skipped": 0,
+    "backend_warnings": 1,
+    "frontend_component_passed": 10,
+    "browser_passed": 18,
+    "browser_failed": 0,
+    "browser_skipped": 0,
+    "scientific_benchmark_passed": 49,
+    "offline_agent_scenarios_passed": 3,
+    "live_provider_requests": 0,
+    "live_scenarios": "NOT_RUN"
+  },
+  "environment": {
+    "platform": "Windows-11-10.0.26200-SP0",
+    "python": "3.12.13 (main, May 10 2026, 19:35:37) [MSC v.1944 64 bit (AMD64)]",
+    "node": "v26.5.0",
+    "uv": "uv 0.11.16 (135a36367 2026-05-21 x86_64-pc-windows-msvc)"
+  },
+  "post_pipeline_browser": {
+    "exit_code": 0,
+    "command": [
+      "uv",
+      "run",
+      "--offline",
+      "--no-sync",
+      "python",
+      "scripts/browser_e2e.py"
+    ],
+    "stats": {
+      "startTime": "2026-10-21T03:34:41.220Z",
+      "duration": 22224.772999999997,
+      "expected": 18,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    "reason": "Final isolated browser suite rerun after clearing provider configuration and asserting NOT_CONFIGURED before the unavailable-mode test."
+  },
+  "additional_evidence": {
+    "http_smoke": "artifacts/real_agent_http_smoke.json",
+    "screenshots": [
+      "artifacts/browser/agent-screening.png",
+      "artifacts/browser/agent-temperature.png",
+      "artifacts/browser/agent-refusal.png"
+    ],
+    "visual_review": "Actual screenshots inspected; mode, refusal, source parameters and explanation legible"
+  },
+  "integrity": {
+    "protected_paths_unchanged": [
+      "AGENTS.md",
+      "PROJECT_BRIEF.md",
+      "PROMPT_01_CODEX.md",
+      "uv.lock",
+      "frontend/package-lock.json",
+      "backend/app/data/fixtures/published_subset.csv",
+      "backend/app/data/fixtures/manifest.json",
+      "benchmarks/evaluate.py",
+      "benchmarks/scientific_cases.json",
+      "benchmarks/reference_v2.py",
+      "backend/app/science/conductivity.py",
+      "output/pdf/oxyproof-one-page-submission.pdf"
+    ],
+    "original_videos_preserved": true,
+    "secret_pattern_scan": {
+      "status": "PASS",
+      "project_text_files": 150,
+      "browser_traces": 18,
+      "trace_text_entries": 169,
+      "findings": [],
+      "limit": "Known token/private-key patterns only, not a full security audit"
+    }
+  },
+  "resolved_temporary_failures": [
+    "Reference harness assumed HT for row 3 at 873.15 K; corrected independent regime selection using CSV T*. Production was correct.",
+    "Numeric comma splitting in unresolved spans caused two runner-control failures: 172 passed, 2 failed. Commas now retained, final 175 passed.",
+    "Early fixed offline 3/3 stdout replaced by computed count and failure exit.",
+    "Ruff import ordering fixed."
+  ],
+  "limits": [
+    "No live model or paid request; mocked provider contracts are not live evidence.",
+    "Existing article/sample-condition/uncertainty limitations persist.",
+    "Original Phase2.5 media/PDF preserved; no new Agent video recorded.",
+    "Event rules/Slack/eligibility not reverified."
+  ]
+}

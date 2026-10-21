@@ -5,7 +5,9 @@ from typing import Literal
 from pydantic import Field, FiniteFloat, field_validator
 
 from backend.app.schemas import (
+    AuditReport,
     Contract,
+    ExecutionTrace,
     Mode,
     Quantity,
     Record,
@@ -22,6 +24,16 @@ class IntervalGoalPlan(Contract):
     temperature_unit: Literal["C", "K"]
     conductivity_type: Literal["bulk", "total"] | None
     unsupported_constraints: list[str] = Field(max_length=20)
+    row_ids: list[int] | None = Field(default=None, max_length=12)
+
+    @field_validator("row_ids")
+    @classmethod
+    def distinct_rows(cls, value):
+        if value is not None and (
+            len(set(value)) != len(value) or any(i < 1 or i > 483 for i in value)
+        ):
+            raise ValueError("row_ids must be distinct published row indices 1..483")
+        return value
 
 
 class EvidenceGoalPlan(Contract):
@@ -135,6 +147,7 @@ class RejectedCrossover(Contract):
 
 class TemperatureReport(Contract):
     schema_version: str = "2.0"
+    execution_trace: ExecutionTrace | None = None
     status: str
     evidence_verdicts: list[str]
     research_request: TemperatureRequest
@@ -175,3 +188,18 @@ class TemperatureReport(Contract):
     next_scientific_actions: list[str] = Field(default_factory=list)
     review_required: bool = True
     observations_vs_calculations: str = "Published fitted parameters; all curves and rankings are model computations, not new observations. No validated uncertainty interval or stability guarantee."
+
+
+class AgentExecution(Contract):
+    schema_version: str
+    runtime_mode: Literal["OFFLINE_DETERMINISTIC", "REAL_LLM"]
+    tool_name: Literal[
+        "screen_published_records", "analyze_temperature_interval", "inspect_scientific_evidence"
+    ]
+    model: str | None
+    response_id: str | None
+    research_question: str
+    validated_arguments: dict
+    execution_trace: ExecutionTrace
+    states: list[str]
+    result: AuditReport | TemperatureReport | dict

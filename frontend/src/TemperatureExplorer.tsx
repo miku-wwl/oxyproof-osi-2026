@@ -2,6 +2,7 @@ import { useRef, useState } from 'react'
 import { ArrowDownToLine, ArrowRight, CircleAlert, Thermometer, LoaderCircle } from 'lucide-react'
 import { api, downloadReport, scientific } from './api'
 import type { Catalog, DecisionPoint, Mode, TemperatureReport } from './types'
+import { ExecutionTraceView } from './ResearchAgent'
 
 const colors = [
   '#167c78',
@@ -522,6 +523,12 @@ export default function TemperatureExplorer({
               </article>
             ))}
           </div>
+          {report.execution_trace && (
+            <details className="interval-details">
+              <summary>Temperature analysis execution trace</summary>
+              <ExecutionTraceView trace={report.execution_trace} />
+            </details>
+          )}
           <div className="decision-interpretation">
             <h3>Evidence interpretation & next scientific action</h3>
             {report.interpretation.map((p, i) => (

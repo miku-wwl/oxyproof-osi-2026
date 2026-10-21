@@ -92,6 +92,10 @@
     "version": "1.64.1",
     "workers": 1,
     "webServer": {
+      "env": {
+        "OPENAI_API_KEY": "",
+        "OXYPROOF_LLM_MODEL": ""
+      },
       "command": "uv run --offline --no-sync python -m uvicorn backend.app.main:app --host 127.0.0.1 --port 8011",
       "cwd": "D:\\workshop\\oct\\oxyproof-osi-2026",
       "url": "http://127.0.0.1:8011/api/health",
@@ -122,12 +126,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 1569,
+                  "duration": 1105,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-20T08:20:16.014Z",
+                  "startTime": "2026-10-21T03:34:42.955Z",
                   "annotations": [],
                   "attachments": [
                     {
@@ -162,12 +166,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 1062,
+                  "duration": 880,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-20T08:20:18.243Z",
+                  "startTime": "2026-10-21T03:34:44.635Z",
                   "annotations": [],
                   "attachments": [
                     {
@@ -202,12 +206,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 1040,
+                  "duration": 801,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-20T08:20:19.420Z",
+                  "startTime": "2026-10-21T03:34:45.601Z",
                   "annotations": [],
                   "attachments": [
                     {
@@ -242,12 +246,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 1223,
+                  "duration": 1000,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-20T08:20:20.562Z",
+                  "startTime": "2026-10-21T03:34:46.466Z",
                   "annotations": [],
                   "attachments": [
                     {
@@ -282,12 +286,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 1469,
+                  "duration": 1131,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-20T08:20:21.886Z",
+                  "startTime": "2026-10-21T03:34:47.546Z",
                   "annotations": [],
                   "attachments": [
                     {
@@ -322,12 +326,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 1543,
+                  "duration": 1389,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-20T08:20:23.462Z",
+                  "startTime": "2026-10-21T03:34:48.791Z",
                   "annotations": [],
                   "attachments": [
                     {
@@ -362,12 +366,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 1063,
+                  "duration": 938,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-20T08:20:25.120Z",
+                  "startTime": "2026-10-21T03:34:50.272Z",
                   "annotations": [],
                   "attachments": [
                     {
@@ -383,7 +387,7 @@
           ],
           "id": "cdcdb9c009151254af97-e61d62adcd53d580f2d4",
           "file": "research.spec.ts",
-          "line": 82,
+          "line": 86,
           "column": 1
         },
         {
@@ -402,12 +406,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 1071,
+                  "duration": 872,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-20T08:20:26.305Z",
+                  "startTime": "2026-10-21T03:34:51.293Z",
                   "annotations": [],
                   "attachments": [
                     {
@@ -423,7 +427,7 @@
           ],
           "id": "cdcdb9c009151254af97-e765fa5bf4a7e8b57951",
           "file": "research.spec.ts",
-          "line": 89,
+          "line": 93,
           "column": 1
         },
         {
@@ -442,12 +446,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 1185,
+                  "duration": 808,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-20T08:20:27.488Z",
+                  "startTime": "2026-10-21T03:34:52.249Z",
                   "annotations": [],
                   "attachments": [
                     {
@@ -463,7 +467,7 @@
           ],
           "id": "cdcdb9c009151254af97-d33bdc7d678e54b451fa",
           "file": "research.spec.ts",
-          "line": 96,
+          "line": 100,
           "column": 1
         },
         {
@@ -482,12 +486,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 1017,
+                  "duration": 747,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-20T08:20:28.758Z",
+                  "startTime": "2026-10-21T03:34:53.122Z",
                   "annotations": [],
                   "attachments": [
                     {
@@ -503,7 +507,7 @@
           ],
           "id": "cdcdb9c009151254af97-347056ada9502e6e6350",
           "file": "research.spec.ts",
-          "line": 102,
+          "line": 106,
           "column": 1
         },
         {
@@ -522,12 +526,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 1072,
+                  "duration": 861,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-20T08:20:29.847Z",
+                  "startTime": "2026-10-21T03:34:53.922Z",
                   "annotations": [],
                   "attachments": [
                     {
@@ -543,7 +547,7 @@
           ],
           "id": "cdcdb9c009151254af97-2ec46a0ac0f801b629b1",
           "file": "research.spec.ts",
-          "line": 108,
+          "line": 112,
           "column": 1
         },
         {
@@ -562,12 +566,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 1310,
+                  "duration": 1113,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-20T08:20:31.004Z",
+                  "startTime": "2026-10-21T03:34:54.844Z",
                   "annotations": [],
                   "attachments": [
                     {
@@ -583,7 +587,7 @@
           ],
           "id": "cdcdb9c009151254af97-d96d3462064e31caf074",
           "file": "research.spec.ts",
-          "line": 120,
+          "line": 124,
           "column": 1
         },
         {
@@ -602,12 +606,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 1081,
+                  "duration": 848,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-20T08:20:32.435Z",
+                  "startTime": "2026-10-21T03:34:56.049Z",
                   "annotations": [],
                   "attachments": [
                     {
@@ -623,7 +627,7 @@
           ],
           "id": "cdcdb9c009151254af97-f24caa15cc5ce8766da8",
           "file": "research.spec.ts",
-          "line": 143,
+          "line": 147,
           "column": 1
         },
         {
@@ -642,12 +646,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 782,
+                  "duration": 601,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-20T08:20:33.597Z",
+                  "startTime": "2026-10-21T03:34:56.956Z",
                   "annotations": [],
                   "attachments": [
                     {
@@ -663,7 +667,167 @@
           ],
           "id": "cdcdb9c009151254af97-0b825ce3ef9ae199b49e",
           "file": "research.spec.ts",
-          "line": 154,
+          "line": 158,
+          "column": 1
+        },
+        {
+          "title": "offline agent screening shows an actual audited execution and export",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1074,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-21T03:34:57.599Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "D:\\workshop\\oct\\oxyproof-osi-2026\\.local\\e2e-results\\research-offline-agent-scr-eff60-udited-execution-and-export\\trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "cdcdb9c009151254af97-2eb4901d5d363466d8dd",
+          "file": "research.spec.ts",
+          "line": 172,
+          "column": 1
+        },
+        {
+          "title": "offline agent selects Huang interval by its explicit named source selection",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1164,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-21T03:34:58.782Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "D:\\workshop\\oct\\oxyproof-osi-2026\\.local\\e2e-results\\research-offline-agent-sel-d9501-icit-named-source-selection\\trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "cdcdb9c009151254af97-de92fe1d45a9a50089c8",
+          "file": "research.spec.ts",
+          "line": 190,
+          "column": 1
+        },
+        {
+          "title": "offline agent preserves humidity and lifetime in its refusal",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 991,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-21T03:35:00.028Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "D:\\workshop\\oct\\oxyproof-osi-2026\\.local\\e2e-results\\research-offline-agent-pre-23b42-and-lifetime-in-its-refusal\\trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "cdcdb9c009151254af97-dba0b97fa221b051cf93",
+          "file": "research.spec.ts",
+          "line": 210,
+          "column": 1
+        },
+        {
+          "title": "unconfigured real agent fails without fallback and permits explicit offline run",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 972,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-21T03:35:01.091Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "D:\\workshop\\oct\\oxyproof-osi-2026\\.local\\e2e-results\\research-unconfigured-real-2581b-ermits-explicit-offline-run\\trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "cdcdb9c009151254af97-76fb200e6c0f3fac91de",
+          "file": "research.spec.ts",
+          "line": 222,
           "column": 1
         }
       ]
@@ -671,9 +835,9 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-10-20T08:20:13.037Z",
-    "duration": 23062.542999999998,
-    "expected": 14,
+    "startTime": "2026-10-21T03:34:41.220Z",
+    "duration": 22224.772999999997,
+    "expected": 18,
     "skipped": 0,
     "unexpected": 0,
     "flaky": 0

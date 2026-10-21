@@ -13,6 +13,9 @@ if __name__ == "__main__":
     parser.add_argument("--record", action="store_true", help="Capture the separate captioned demo")
     args = parser.parse_args()
     env = dict(os.environ, PLAYWRIGHT_BROWSERS_PATH=str(ROOT / ".local/ms-playwright"))
+    # Real model acceptance uses the explicitly authorized CLI, never this regression suite.
+    env.pop("OPENAI_API_KEY", None)
+    env.pop("OXYPROOF_LLM_MODEL", None)
     cli = ROOT / "frontend/node_modules/playwright/cli.js"
     if args.install:
         subprocess.run(["node", str(cli), "install", "chromium"], env=env, check=True, timeout=300)

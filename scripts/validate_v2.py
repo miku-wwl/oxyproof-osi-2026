@@ -13,8 +13,13 @@ ROOT = Path(__file__).resolve().parents[1]
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--browser", action="store_true")
+    parser.add_argument(
+        "--phase26",
+        action="store_true",
+        help="Write separate Phase 2.6 evidence and run agent acceptance",
+    )
     args = parser.parse_args()
-    logs = ROOT / ".local/validation-v2"
+    logs = ROOT / (".local/validation-agent" if args.phase26 else ".local/validation-v2")
     logs.mkdir(parents=True, exist_ok=True)
     npm = Path(shutil.which("npm") or "npm").resolve()
     npm_cli = (
@@ -87,6 +92,33 @@ if __name__ == "__main__":
                 ["uv", "run", "--offline", "--no-sync", "python", "scripts/browser_e2e.py"],
             )
         )
+    if args.phase26:
+        commands.extend(
+            [
+                (
+                    "agent_acceptance",
+                    [
+                        "uv",
+                        "run",
+                        "--offline",
+                        "--no-sync",
+                        "python",
+                        "scripts/accept_real_agent.py",
+                    ],
+                ),
+                (
+                    "independent_science",
+                    [
+                        "uv",
+                        "run",
+                        "--offline",
+                        "--no-sync",
+                        "python",
+                        "scripts/verify_final_science.py",
+                    ],
+                ),
+            ]
+        )
     results = []
     for name, command in commands:
         started = time.monotonic()
@@ -122,8 +154,13 @@ if __name__ == "__main__":
         "checks": results,
         "note": "Local Windows execution; no live model, external deployment or statistically representative benchmark.",
     }
-    (ROOT / "artifacts/phase2_validation.json").write_text(
-        json.dumps(result, indent=2) + "\n", encoding="utf-8"
-    )
+    (
+        ROOT
+        / (
+            "artifacts/real_agent_validation.json"
+            if args.phase26
+            else "artifacts/phase2_validation.json"
+        )
+    ).write_text(json.dumps(result, indent=2) + "\n", encoding="utf-8")
     print("PHASE2_VALIDATION=" + result["status"])
     raise SystemExit(result["status"] != "PASS")

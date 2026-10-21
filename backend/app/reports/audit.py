@@ -11,6 +11,7 @@ from backend.app.agents.planner import (
     resolve_plan,
     validate_model_coverage,
 )
+from backend.app.agents.trace import execution_trace
 from backend.app.data.ingest import ROOT, Repository
 from backend.app.schemas import (
     AuditReport,
@@ -314,7 +315,7 @@ def screen(request: ScreenRequest, repository: Repository, *, model_plan=None) -
             detail="Includes raw source fields, row IDs, units, code fingerprint, warnings and proposed measurement advice.",
         )
     )
-    return AuditReport(
+    report = AuditReport(
         status="CALCULATED_WITH_WARNINGS" if candidates else "INSUFFICIENT_EVIDENCE",
         research_request=request,
         resolved_plan=plan,
@@ -347,3 +348,12 @@ def screen(request: ScreenRequest, repository: Repository, *, model_plan=None) -
             else "Proposed action: verify original-source atmosphere, preparation, density and conductivity type; obtain evidence for every unresolved requirement before making a material recommendation. No experiment was executed."
         ],
     )
+    if any(s.field == "nominal_temperature" for s in coverage.recognized):
+        report.warnings.append(
+            warn(
+                "NOMINAL_TEMPERATURE",
+                "Around is interpreted as a nominal point temperature, not an interval or uncertainty range.",
+            )
+        )
+    report.execution_trace = execution_trace(report, "screen_published_records")
+    return report

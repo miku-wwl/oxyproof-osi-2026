@@ -1,5 +1,59 @@
 {
   "schema_version": "1.0",
+  "execution_trace": {
+    "research_question": "Screen bulk conductivity at 1100 K",
+    "runtime_mode": "OFFLINE_DETERMINISTIC",
+    "planning_source": "OFFLINE_DETERMINISTIC",
+    "model": null,
+    "response_id": null,
+    "tool_name": "screen_published_records",
+    "tool_selection": "DETERMINISTIC_SELECTED",
+    "validated_arguments": {
+      "temperature_k": 1100.0,
+      "conductivity_type": "bulk",
+      "material_class": null,
+      "formula_query": null,
+      "row_ids": [
+        39
+      ],
+      "allow_extrapolation": false,
+      "top_n": 5
+    },
+    "execution_status": "COMPUTED",
+    "scientific_result": {
+      "status": "CALCULATED_WITH_WARNINGS",
+      "source_scope": "REAL_PUBLISHED_FIXTURE",
+      "candidates": 1,
+      "comparison_groups": 1,
+      "sample_calculations": [
+        {
+          "row_id": 39,
+          "comparison_group": "10.1016/S0167-2738(00)00770-0 | bulk | four-probe AC | 1000 - 1300 K",
+          "group_rank": 1,
+          "regime": "SINGLE",
+          "warning_codes": [
+            "MISSING_CONDITIONS"
+          ],
+          "conductivity": {
+            "value": 0.155737064991435,
+            "unit": "S/cm"
+          },
+          "source_doi": "10.1016/S0167-2738(00)00770-0"
+        }
+      ]
+    },
+    "evidence_verdicts": [
+      "SUPPORTED_CONDITIONAL_COMPARISON"
+    ],
+    "grounded_explanation": [
+      "Calculated 1 displayed candidates in 1 conditional source groups. There is no global ranking across experiments.",
+      "The source provides experimentally derived fit parameters and citations. All displayed target-temperature conductivities are calculations. Proposed measurements are heuristics, not results.",
+      "Atmosphere, preparation, density and fit uncertainty are not established here; group ranks are conditional model calculations.",
+      "Proposed action: verify original-source atmosphere, preparation, density and conductivity type; obtain evidence for every unresolved requirement before making a material recommendation. No experiment was executed."
+    ],
+    "explanation_source": "DETERMINISTIC_VALIDATED_RESULTS",
+    "provider_metadata": {}
+  },
   "status": "CALCULATED_WITH_WARNINGS",
   "research_request": {
     "goal": "Screen bulk conductivity at 1100 K",
@@ -58,8 +112,8 @@
   "observations_vs_calculations": "The source provides experimentally derived fit parameters and citations. All displayed target-temperature conductivities are calculations. Proposed measurements are heuristics, not results.",
   "code_version": {
     "app_version": "0.1.0",
-    "git_base": "c9e72efa8f1a6bd77c80031c0e5208154393dc72",
-    "calculation_source_sha256": "160ce307253a8d811b75c329d030d2042d2a444cdb3ba8106bfd1cbb15427d7b"
+    "git_base": "ff17b2b02e578101952143db8541c06d84ba3ea8",
+    "calculation_source_sha256": "8ef09808461bdd153bd440bd96fc8f83389652d6d06864dea5b56058f60727ef"
   },
   "warnings": [
     {
@@ -214,7 +268,7 @@
   "excluded": [],
   "matched_count": 1,
   "request_coverage": {
-    "grammar_version": "2.0",
+    "grammar_version": "2.6",
     "recognized": [
       {
         "start": 0,

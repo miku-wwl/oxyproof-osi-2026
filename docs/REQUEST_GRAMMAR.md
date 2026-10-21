@@ -1,5 +1,22 @@
 # Research request contract v2
 
+## Phase 2.6 additions (2026-10-21)
+
+The current grammar reports `grammar_version=2.6`. It additionally recognizes `degrees Celsius` / `degrees Kelvin`, the two presentation requests in the Phase 2.6 screening example, and the interval question below. This is a bounded compositional extension, not permission to discard unfamiliar clauses.
+
+```
+Find promising published bulk oxygen-ion conductors around 600 degrees Celsius, show their conductivity estimates, and tell me what evidence supports the comparison.
+How does the ranking of the three comparable Huang materials change from 700 K to 1000 K? Explain the change using their published activation energies.
+```
+
+`Around` means the explicitly named **nominal point temperature**, not a tolerance/interval or uncertainty range; the response warns about that interpretation. `Promising` requests conditional descending conductivity within provisional source groups, with no performance threshold or guarantee. `Published` selects the existing curated-data scope, not a new literature search.
+
+The exact named demonstration **three comparable Huang materials** resolves to source rows **1, 2, 3**, the previously defined flagship. It does not select any arbitrary three of the many Huang records. Model interval plans must explicitly propose those IDs; the independent validator checks them against the request, loaded DOI and exact comparison group. Ordinary “Huang materials” remains unresolved. Structured row IDs conflicting with this named selection abstain. Interval model schemas add nullable `row_ids`; old no-selection requests remain compatible.
+
+Unknown suffixes, humidity, lifetime, cycling, conditions and conflicting temperatures remain rejected. Numeric punctuation in unverified requirements, such as `10,000 operating hours`, is preserved. A model's own refusal prose is also untrusted: on an independently covered request it becomes a typed `MODEL_PLAN_CONFLICT` with provider prose withheld. Actual user constraints remain visible in independent request coverage.
+
+Every request still follows the contracts below. See `REAL_AGENT_ACCEPTANCE.md` for current execution evidence and the limits of unconfigured live integration.
+
 Offline mode is a conservative English coverage grammar, not a language model. REAL_LLM uses the same independent coverage boundary: a model cannot declare an unfamiliar requirement satisfied. Unknown clauses produce `UNVERIFIED_CONSTRAINTS` with exact unresolved offsets/text in `request_coverage`. This deliberately sacrifices open-ended phrasing for completeness of supported requests.
 
 Supported screening examples:

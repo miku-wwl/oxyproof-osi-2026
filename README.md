@@ -4,7 +4,7 @@
 
 A local FastAPI + React research workbench. Uses the real [Jang et al. dataset](https://doi.org/10.5281/zenodo.18947543), explicit units and temperature regimes, conditional source-group rankings, abstention, provenance export and an adversarial wrong-equation demonstration. No cloud infrastructure or paid model is needed for deterministic analysis.
 
-Phase 2 adds analytic rank-reversal analysis, a Temperature Decision Explorer and fail-closed request coverage. The optional `REAL_LLM` planner remains **NOT_CONFIGURED / not live-verified**. `OFFLINE_DETERMINISTIC` is a bounded grammar/state machine, not an LLM. Genuine Chromium E2E is now available and executed; the original sprint's browser limitation is historical. See [Phase 2 handover](docs/PHASE2_HANDOVER.md) for current evidence and [initial validation](docs/VALIDATION.md) for the earlier sprint.
+Phase 2 adds analytic rank-reversal analysis and the Temperature Decision Explorer. Phase 2.6 adds a research-agent execution panel, seven-part audited trace, bounded natural-question support and an explicitly authorized live-acceptance runner. The optional `REAL_LLM` planner remains **NOT_CONFIGURED / not live-verified; 0 real provider calls**. `OFFLINE_DETERMINISTIC` is a bounded grammar/state machine, not an LLM. See [current Agent acceptance](docs/REAL_AGENT_ACCEPTANCE.md) and [demo script](docs/REAL_AGENT_DEMO_SCRIPT.md); earlier validation/handover documents are historical.
 
 ## Start locally (Windows PowerShell or POSIX)
 
@@ -102,6 +102,15 @@ Swagger contracts: http://127.0.0.1:8000/docs. Other routes: `/api/health`, `/ap
 
 New typed endpoint: `POST /api/temperature-decisions` with `{"row_ids":[1,2,3],"temperature_min":600,"temperature_max":1100,"temperature_unit":"K","selected_temperatures":[700,1000]}`. Generic bounded tool selection: `POST /api/research` with `{"goal":"Compare bulk conductors between 600 K and 1100 K","row_ids":[1,2,3]}`. The same route supports single-temperature screening and `Inspect scientific evidence row 1`.
 
+The **Research Agent execution** panel runs the exact Phase 2.6 screening, Huang interval and humidity/lifetime questions. Every result shows the selected tool, validated arguments, evidence verdict and deterministic grounded explanation, with JSON export. Unknown additions still abstain. `Around` is a disclosed nominal point; the named Huang demo means rows 1–3. To run current acceptance without any provider call:
+
+```sh
+uv run --offline --no-sync python scripts/accept_real_agent.py
+uv run --offline --no-sync python scripts/validate_v2.py --browser --phase26
+```
+
+The second command records separate Phase 2.6 validation logs. Real acceptance requires usable `OPENAI_API_KEY` / `OXYPROOF_LLM_MODEL` configuration and explicit paid-use authorization; the default runner cannot trigger billable requests merely because credentials exist. See the Agent acceptance document before using its live flags.
+
 For frontend editing: run the API plus `npm run dev --prefix frontend` in a second terminal (Vite proxies `/api` to loopback:8000). Production serves built assets from the API origin. No external fonts or chart service are used.
 
 ## Scientific contract and source rights
@@ -135,4 +144,4 @@ Set `OPENAI_API_KEY` and `OXYPROOF_LLM_MODEL` in your own environment, then sele
 
 Public 2026 deadline: **October 23, 2026 at 13:00 NZDT** per [2026 agenda](https://llmhackathon.github.io/agenda/), checked October 20. Final submission mechanism, registration and pre-event-work eligibility need human/Slack confirmation. The historical submission page is not the 2026 authority. [Submission checklist](docs/SUBMISSION_CHECKLIST.md) · [write-up draft](docs/ONE_PAGE_DRAFT.md).
 
-At the start of final acceptance, local and remote `main` both contained `c9e72efa8f1a6bd77c80031c0e5208154393dc72` (read-only remote check on October 20). Earlier handovers describe historical states. Phase 2.5 acceptance changes remain local; this sprint performs no commit, push, deployment or submission. [Final release gate](docs/RELEASE_GATE.md) · [scientific acceptance](docs/SCIENTIFIC_ACCEPTANCE.md) · [final validation](docs/FINAL_VALIDATION.md) · [one-page owner review copy](docs/FINAL_SUBMISSION_COPY.md).
+At Phase 2.6 entry on October 21, local `main` was clean at `ff17b2b02e578101952143db8541c06d84ba3ea8`; earlier handovers/manifests describe their historical snapshots. Current Agent changes remain local; this sprint performs no commit, push, deployment, upload or submission. [Agent acceptance](docs/REAL_AGENT_ACCEPTANCE.md) · [prior release gate](docs/RELEASE_GATE.md) · [scientific acceptance](docs/SCIENTIFIC_ACCEPTANCE.md) · [one-page owner review copy](docs/FINAL_SUBMISSION_COPY.md).

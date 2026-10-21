@@ -7,7 +7,7 @@ from dataclasses import dataclass
 from backend.app.schemas import GoalPlan, RequestCoverage, ResolvedPlan, ScreenRequest, TextSpan
 from backend.app.science.conductivity import ScienceError, to_kelvin
 
-TEMP = r"(?<![\w.])(-?\d+(?:\.\d+)?)\s*(?:°\s*|deg\s*)?(Celsius|Kelvin|C|K)\b"
+TEMP = r"(?<![\w.])(-?\d+(?:\.\d+)?)\s*(?:°\s*|degrees?\s+|deg\s*)?(Celsius|Kelvin|C|K)\b"
 
 
 class PlanError(ValueError):
@@ -21,6 +21,7 @@ class Interpretation:
     plan: GoalPlan
     coverage: RequestCoverage
     interval: tuple[float, str, float, str] | None = None
+    row_ids: list[int] | None = None
 
 
 def interpret(goal: str, classes: list[str], *, interval: bool = False) -> Interpretation:
@@ -43,6 +44,22 @@ def interpret(goal: str, classes: list[str], *, interval: bool = False) -> Inter
 
     problems = []
     bounds = None
+    # Explicit presentation semantics, not evidence that any performance threshold holds.
+    claim(r"\baround(?=\s+" + TEMP + r")", "nominal_temperature")
+    claim(r"\bpromising\b", "conditional_screening_order")
+    claim(r"\bshow their conductivity estimates\b", "presentation")
+    claim(r"\btell me what evidence supports the comparison\b", "presentation")
+    claim(r"\bHow does the ranking of\b", "interval_action")
+    claim(r"\bExplain the change using their (?:published )?activation energies\b", "presentation")
+    claim(r"\bpublished\b", "published_data_scope")
+    named = (
+        claim(r"\b(?:the\s+)?three comparable Huang materials\b", "named_selection")
+        if interval
+        else []
+    )
+    if len(named) > 1:
+        problems.append("CONFLICTING_RECORD_SELECTION: specify the named comparison once")
+    claim(r"\bchange(?=\s+from\b)", "interval_action")
     if interval:
         ranges = claim(
             r"\b(?:between|from)\s+" + TEMP + r"\s+(?:and|to)\s+" + TEMP, "temperature_interval"
@@ -90,6 +107,8 @@ def interpret(goal: str, classes: list[str], *, interval: bool = False) -> Inter
         )
     claim(r"\b(?:at|with|and|for|the|please|class)\b", "connector")
     residue = "".join(masked)
+    # Preserve numeric punctuation in unresolved requirements, such as 10,000 hours.
+    unknown_token = r"(?:[^\s.,;:!?]|(?<=\d),(?=\d))+"
     unresolved = [
         TextSpan(
             start=m.start(),
@@ -97,7 +116,7 @@ def interpret(goal: str, classes: list[str], *, interval: bool = False) -> Inter
             text=goal[m.start() : m.end()],
             field="UNVERIFIED_CONSTRAINTS",
         )
-        for m in re.finditer(r"[^\s.,;:!?]+(?:\s+[^\s.,;:!?]+)*", residue)
+        for m in re.finditer(unknown_token + r"(?:\s+" + unknown_token + r")*", residue)
     ]
     if unresolved:
         problems.append(
@@ -115,11 +134,13 @@ def interpret(goal: str, classes: list[str], *, interval: bool = False) -> Inter
     return Interpretation(
         plan,
         RequestCoverage(
+            grammar_version="2.6",
             recognized=sorted(recognized, key=lambda s: s.start),
             unresolved=unresolved,
             complete=not problems,
         ),
         bounds,
+        [1, 2, 3] if named else None,
     )
 
 
@@ -132,7 +153,9 @@ def validate_model_coverage(goal: str, proposed: GoalPlan, classes: list[str]) -
     if independent.unsupported_constraints:
         raise PlanError("; ".join(independent.unsupported_constraints))
     if proposed.unsupported_constraints:
-        raise PlanError("UNVERIFIED_CONSTRAINTS: " + "; ".join(proposed.unsupported_constraints))
+        raise PlanError(
+            "MODEL_PLAN_CONFLICT: model flags unsupported requirements on an independently covered request; provider prose withheld"
+        )
     for field in ("temperature", "conductivity_type", "material_class", "formula_query"):
         actual, model = getattr(independent, field), getattr(proposed, field)
         if field == "temperature" and actual is not None and model is not None:

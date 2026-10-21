@@ -18,8 +18,8 @@
   },
   "code_version": {
     "app_version": "0.1.0",
-    "git_base": "c9e72efa8f1a6bd77c80031c0e5208154393dc72",
-    "calculation_source_sha256": "160ce307253a8d811b75c329d030d2042d2a444cdb3ba8106bfd1cbb15427d7b"
+    "git_base": "ff17b2b02e578101952143db8541c06d84ba3ea8",
+    "calculation_source_sha256": "8ef09808461bdd153bd440bd96fc8f83389652d6d06864dea5b56058f60727ef"
   },
   "runtime_mode": "OFFLINE_DETERMINISTIC",
   "real_model_calls": 0,

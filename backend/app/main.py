@@ -13,7 +13,12 @@ from backend.app.data.ingest import ROOT, DataError, Repository
 from backend.app.reports.audit import calculate_record, code_version, group_key, screen
 from backend.app.schemas import AuditReport, ScreenRequest
 from backend.app.science.conductivity import ScienceError, to_kelvin, wrong_equation_demo
-from backend.app.science.decision_schemas import AgentRequest, TemperatureReport, TemperatureRequest
+from backend.app.science.decision_schemas import (
+    AgentExecution,
+    AgentRequest,
+    TemperatureReport,
+    TemperatureRequest,
+)
 
 app = FastAPI(
     title="OxyProof",
@@ -134,7 +139,7 @@ def temperature_decisions(request: TemperatureRequest):
     return guarded_workflow(request.mode, lambda: run_temperature(request, repo_or_503()))
 
 
-@app.post("/api/research")
+@app.post("/api/research", response_model=AgentExecution)
 def research(request: AgentRequest):
     return guarded_workflow(request.mode, lambda: run_research(request, repo_or_503()))
 

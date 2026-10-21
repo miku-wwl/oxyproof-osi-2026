@@ -1,5 +1,34 @@
 {
   "schema_version": "1.0",
+  "execution_trace": {
+    "research_question": "Find bulk conductors at 600 C that survive 10% humidity",
+    "runtime_mode": "OFFLINE_DETERMINISTIC",
+    "planning_source": "OFFLINE_DETERMINISTIC",
+    "model": null,
+    "response_id": null,
+    "tool_name": "screen_published_records",
+    "tool_selection": "DETERMINISTIC_SELECTED",
+    "validated_arguments": {},
+    "execution_status": "ABSTAINED",
+    "scientific_result": {
+      "status": "INSUFFICIENT_EVIDENCE",
+      "source_scope": "FULL_DATASET",
+      "candidates": 0,
+      "comparison_groups": 0,
+      "sample_calculations": []
+    },
+    "evidence_verdicts": [
+      "UNVERIFIED_CONSTRAINTS"
+    ],
+    "grounded_explanation": [
+      "No complete recommendation: unresolved constraints, conflicting parameters or insufficient source evidence prevent a supported comparison.",
+      "PLAN_REJECTED: UNVERIFIED_CONSTRAINTS: unsupported text: that survive 10% humidity",
+      "UNVERIFIED_CONSTRAINTS: UNVERIFIED_CONSTRAINTS: unsupported text: that survive 10% humidity",
+      "Proposed measurement: measure ionic conductivity and stability before, during and after exposure to the requested water-vapor fraction at the operating temperature; document exposure duration and sample preparation. No experiment was executed."
+    ],
+    "explanation_source": "DETERMINISTIC_VALIDATED_RESULTS",
+    "provider_metadata": {}
+  },
   "status": "INSUFFICIENT_EVIDENCE",
   "research_request": {
     "goal": "Find bulk conductors at 600 C that survive 10% humidity",
@@ -45,8 +74,8 @@
   "observations_vs_calculations": "The source provides experimentally derived fit parameters and citations. All displayed target-temperature conductivities are calculations. Proposed measurements are heuristics, not results.",
   "code_version": {
     "app_version": "0.1.0",
-    "git_base": "c9e72efa8f1a6bd77c80031c0e5208154393dc72",
-    "calculation_source_sha256": "160ce307253a8d811b75c329d030d2042d2a444cdb3ba8106bfd1cbb15427d7b"
+    "git_base": "ff17b2b02e578101952143db8541c06d84ba3ea8",
+    "calculation_source_sha256": "8ef09808461bdd153bd440bd96fc8f83389652d6d06864dea5b56058f60727ef"
   },
   "warnings": [
     {
@@ -89,7 +118,7 @@
   "excluded": [],
   "matched_count": 0,
   "request_coverage": {
-    "grammar_version": "2.0",
+    "grammar_version": "2.6",
     "recognized": [
       {
         "start": 0,

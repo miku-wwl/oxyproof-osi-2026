@@ -1,5 +1,76 @@
 {
   "schema_version": "2.0",
+  "execution_trace": {
+    "research_question": "Compare bulk conductors between 600 K and 1100 K with source provenance",
+    "runtime_mode": "OFFLINE_DETERMINISTIC",
+    "planning_source": "OFFLINE_DETERMINISTIC",
+    "model": null,
+    "response_id": null,
+    "tool_name": "analyze_temperature_interval",
+    "tool_selection": "DETERMINISTIC_SELECTED",
+    "validated_arguments": {
+      "temperature_min_k": 600,
+      "temperature_max_k": 1100,
+      "row_ids": [
+        1,
+        2,
+        3
+      ],
+      "comparison_group": "10.1111/j.1151-2916.1998.tb02662.x | bulk | two-probe AC | 600 - 1100 K",
+      "conductivity_type": "bulk",
+      "evidence_policy": "MEASURED_ONLY",
+      "points": 81
+    },
+    "execution_status": "COMPUTED",
+    "scientific_result": {
+      "status": "CALCULATED_WITH_WARNINGS",
+      "source_scope": "FULL_DATASET",
+      "selected_rankings": [
+        {
+          "temperature_k": 700.0,
+          "ordering": [
+            1,
+            2,
+            3
+          ],
+          "status": "SUPPORTED_CONDITIONAL_COMPARISON"
+        },
+        {
+          "temperature_k": 1000.0,
+          "ordering": [
+            3,
+            2,
+            1
+          ],
+          "status": "SUPPORTED_CONDITIONAL_COMPARISON"
+        }
+      ],
+      "continuous_crossings_k": [
+        776.4074250510221,
+        817.9098253678244,
+        854.261466339589
+      ]
+    },
+    "evidence_verdicts": [
+      "SUPPORTED_CONDITIONAL_COMPARISON",
+      "SUPPORTED_MODEL_RANK_REVERSAL",
+      "REGIME_BOUNDARY_REVIEW"
+    ],
+    "grounded_explanation": [
+      "At 700 K, conditional model order (row IDs): 1 > 2 > 3. Equality uses numerical tolerance only.",
+      "At 1000 K, conditional model order (row IDs): 3 > 2 > 1. Equality uses numerical tolerance only.",
+      "Ordering depends on activation-energy differences and prefactor ratios within each valid regime. Regime-boundary events are reviewed separately from continuous roots.",
+      "The curated dataset does not establish humidity tolerance, phase stability, lifetime, cost, toxicity or sample-to-sample uncertainty. No material was discovered or measured by this tool.",
+      "Model-derived crossover temperatures; uncertainty bounds unavailable; experimental confirmation required.",
+      "Row 1: curated Ea=772 meV, EaHT=634 meV; source DOI 10.1111/j.1151-2916.1998.tb02662.x. Prefactor ratios and regime selection also affect the order.",
+      "Row 2: curated Ea=996 meV, EaHT=673 meV; source DOI 10.1111/j.1151-2916.1998.tb02662.x. Prefactor ratios and regime selection also affect the order.",
+      "Row 3: curated Ea=1118 meV, EaHT=780 meV; source DOI 10.1111/j.1151-2916.1998.tb02662.x. Prefactor ratios and regime selection also affect the order.",
+      "Review original atmosphere, preparation and density and verify bulk versus total separation.",
+      "Repeat conductivity measurements bracketing reported transitions and predicted fixed-regime crossings. These are bounded proposals; no experiment was executed."
+    ],
+    "explanation_source": "DETERMINISTIC_VALIDATED_RESULTS",
+    "provider_metadata": {}
+  },
   "status": "CALCULATED_WITH_WARNINGS",
   "evidence_verdicts": [
     "SUPPORTED_CONDITIONAL_COMPARISON",
@@ -41,7 +112,7 @@
     "points": 81
   },
   "request_coverage": {
-    "grammar_version": "2.0",
+    "grammar_version": "2.6",
     "recognized": [
       {
         "start": 0,
@@ -109,8 +180,8 @@
   },
   "code_version": {
     "app_version": "0.1.0",
-    "git_base": "c9e72efa8f1a6bd77c80031c0e5208154393dc72",
-    "calculation_source_sha256": "160ce307253a8d811b75c329d030d2042d2a444cdb3ba8106bfd1cbb15427d7b"
+    "git_base": "ff17b2b02e578101952143db8541c06d84ba3ea8",
+    "calculation_source_sha256": "8ef09808461bdd153bd440bd96fc8f83389652d6d06864dea5b56058f60727ef"
   },
   "equation": "sigma(T) = A/T * exp(-Ea/(k_B*T))",
   "crossover_qualification": "Model-derived crossover temperatures; uncertainty bounds unavailable; experimental confirmation required.",
