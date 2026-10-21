@@ -24,6 +24,10 @@ def test_real_flagship_independent_ordering_and_math(repo):
         TemperatureRequest(row_ids=[1, 2, 3], selected_temperatures=[700, 1000]), repo
     )
     assert report.status == "CALCULATED_WITH_WARNINGS"
+    assert report.crossover_qualification == (
+        "Model-derived crossover temperatures; uncertainty bounds unavailable; "
+        "experimental confirmation required."
+    )
     assert [p.ordering for p in report.selected_rankings] == [[1, 2, 3], [3, 2, 1]]
     for p, suffix in zip(report.selected_rankings, ["", "HT"], strict=True):
         for value in p.values:

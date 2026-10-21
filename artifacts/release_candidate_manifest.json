@@ -1,0 +1,1122 @@
+{
+  "release_candidate_status": "CONDITIONAL_GO",
+  "review_status": "READY_FOR_OWNER_REVIEW",
+  "submission_status": "NOT_SUBMITTED",
+  "prepared_at_utc": "2026-10-20T08:32:19.383157+00:00",
+  "entry_git_head": "c9e72efa8f1a6bd77c80031c0e5208154393dc72",
+  "current_git_head": "c9e72efa8f1a6bd77c80031c0e5208154393dc72",
+  "branch": "main",
+  "initial_worktree": "CLEAN",
+  "staged_files": 0,
+  "changed_file_count": 52,
+  "changed_files": [
+    {
+      "status": " M",
+      "path": "README.md"
+    },
+    {
+      "status": " M",
+      "path": "THIRD_PARTY_NOTICES.md"
+    },
+    {
+      "status": " M",
+      "path": "artifacts/327c_bismuth_bulk.json"
+    },
+    {
+      "status": " M",
+      "path": "artifacts/600c_huang_bulk.json"
+    },
+    {
+      "status": " M",
+      "path": "artifacts/827c_cobalt_bulk.json"
+    },
+    {
+      "status": " M",
+      "path": "artifacts/ambiguous_regime.json"
+    },
+    {
+      "status": " M",
+      "path": "artifacts/browser/humidity-abstention.png"
+    },
+    {
+      "status": " M",
+      "path": "artifacts/browser/mobile-explorer.png"
+    },
+    {
+      "status": " M",
+      "path": "artifacts/browser/temperature-explorer.png"
+    },
+    {
+      "status": " M",
+      "path": "artifacts/browser_e2e_results.json"
+    },
+    {
+      "status": " M",
+      "path": "artifacts/demo_video_validation.json"
+    },
+    {
+      "status": " M",
+      "path": "artifacts/humidity_refusal_v2.json"
+    },
+    {
+      "status": " M",
+      "path": "artifacts/out_of_range.json"
+    },
+    {
+      "status": " M",
+      "path": "artifacts/phase2_validation.json"
+    },
+    {
+      "status": " M",
+      "path": "artifacts/rank_reversal_reference_v2.json"
+    },
+    {
+      "status": " M",
+      "path": "artifacts/scientific_benchmark_v2.json"
+    },
+    {
+      "status": " M",
+      "path": "artifacts/source_verification_v2.json"
+    },
+    {
+      "status": " M",
+      "path": "artifacts/temperature_decision_flagship.json"
+    },
+    {
+      "status": " M",
+      "path": "backend/app/science/decision_schemas.py"
+    },
+    {
+      "status": " M",
+      "path": "docs/DEMO_SCRIPT_V2.md"
+    },
+    {
+      "status": " M",
+      "path": "docs/NOVELTY_AND_LIMITATIONS.md"
+    },
+    {
+      "status": " M",
+      "path": "frontend/e2e/demo.capture.ts"
+    },
+    {
+      "status": " M",
+      "path": "frontend/e2e/research.spec.ts"
+    },
+    {
+      "status": " M",
+      "path": "frontend/playwright.config.ts"
+    },
+    {
+      "status": " M",
+      "path": "frontend/src/TemperatureExplorer.tsx"
+    },
+    {
+      "status": " M",
+      "path": "frontend/src/types.ts"
+    },
+    {
+      "status": " M",
+      "path": "scripts/verify_demo.py"
+    },
+    {
+      "status": " M",
+      "path": "tests/test_api.py"
+    },
+    {
+      "status": " M",
+      "path": "tests/test_data.py"
+    },
+    {
+      "status": " M",
+      "path": "tests/test_request_integrity.py"
+    },
+    {
+      "status": " M",
+      "path": "tests/test_temperature_decisions.py"
+    },
+    {
+      "status": "??",
+      "path": "THIRD_PARTY_RUNTIME_LICENSES.txt"
+    },
+    {
+      "status": "??",
+      "path": "artifacts/final_demo_validation.json"
+    },
+    {
+      "status": "??",
+      "path": "artifacts/final_http_decision.json"
+    },
+    {
+      "status": "??",
+      "path": "artifacts/final_validation.json"
+    },
+    {
+      "status": "??",
+      "path": "artifacts/license_inventory.json"
+    },
+    {
+      "status": "??",
+      "path": "artifacts/pdf_acceptance.json"
+    },
+    {
+      "status": "??",
+      "path": "artifacts/primary_source_acceptance.json"
+    },
+    {
+      "status": "??",
+      "path": "artifacts/real_llm_acceptance.json"
+    },
+    {
+      "status": "??",
+      "path": "artifacts/release_candidate_manifest.json"
+    },
+    {
+      "status": "??",
+      "path": "artifacts/repository_access_acceptance.json"
+    },
+    {
+      "status": "??",
+      "path": "artifacts/scientific_acceptance.json"
+    },
+    {
+      "status": "??",
+      "path": "docs/FINAL_DEMO_REVIEW.md"
+    },
+    {
+      "status": "??",
+      "path": "docs/FINAL_SUBMISSION_COPY.md"
+    },
+    {
+      "status": "??",
+      "path": "docs/FINAL_VALIDATION.md"
+    },
+    {
+      "status": "??",
+      "path": "docs/JUDGE_CLAIMS_AUDIT.md"
+    },
+    {
+      "status": "??",
+      "path": "docs/PHASE2_5_HANDOVER.md"
+    },
+    {
+      "status": "??",
+      "path": "docs/RELEASE_GATE.md"
+    },
+    {
+      "status": "??",
+      "path": "docs/SCIENTIFIC_ACCEPTANCE.md"
+    },
+    {
+      "status": "??",
+      "path": "output/pdf/oxyproof-one-page-submission.pdf"
+    },
+    {
+      "status": "??",
+      "path": "scripts/build_submission_pdf.py"
+    },
+    {
+      "status": "??",
+      "path": "scripts/verify_final_science.py"
+    }
+  ],
+  "code_version": {
+    "app_version": "0.1.0",
+    "git_base": "c9e72efa8f1a6bd77c80031c0e5208154393dc72",
+    "calculation_source_sha256": "160ce307253a8d811b75c329d030d2042d2a444cdb3ba8106bfd1cbb15427d7b"
+  },
+  "repository_url": "https://github.com/miku-wwl/oxyproof-osi-2026",
+  "read_only_repository_evidence": "artifacts/repository_access_acceptance.json",
+  "remote_main_sha_at_read_check": "c9e72efa8f1a6bd77c80031c0e5208154393dc72",
+  "remote_configuration_preserved": true,
+  "required_documents": [
+    "docs/SCIENTIFIC_ACCEPTANCE.md",
+    "docs/FINAL_VALIDATION.md",
+    "docs/JUDGE_CLAIMS_AUDIT.md",
+    "docs/FINAL_SUBMISSION_COPY.md",
+    "docs/FINAL_DEMO_REVIEW.md",
+    "docs/RELEASE_GATE.md",
+    "docs/PHASE2_5_HANDOVER.md"
+  ],
+  "required_artifacts": [
+    "artifacts/final_validation.json",
+    "artifacts/real_llm_acceptance.json",
+    "artifacts/release_candidate_manifest.json"
+  ],
+  "gates": [
+    {
+      "category": "SCIENCE",
+      "status": "PARTIAL",
+      "evidence": "docs/SCIENTIFIC_ACCEPTANCE.md",
+      "remaining_problem": "Original full methods/Table 3 and row conditions/uncertainties not verified",
+      "owner_action": "Preserve conditional claims; obtain full text before stronger claims"
+    },
+    {
+      "category": "SECURITY",
+      "status": "PASS",
+      "evidence": "artifacts/final_validation.json",
+      "remaining_problem": "Pattern scan is bounded, not a security certification",
+      "owner_action": null
+    },
+    {
+      "category": "AGENT",
+      "status": "PARTIAL",
+      "evidence": "artifacts/real_llm_acceptance.json",
+      "remaining_problem": "No live model configuration; exact free-text A/B exceed grammar",
+      "owner_action": "Provide key/model and paid-use permission only if live acceptance desired"
+    },
+    {
+      "category": "DATA",
+      "status": "PASS",
+      "evidence": "artifacts/scientific_acceptance.json",
+      "remaining_problem": "Full cache ignored; fixture visibly partial",
+      "owner_action": null
+    },
+    {
+      "category": "BENCHMARK",
+      "status": "PASS",
+      "evidence": "artifacts/scientific_benchmark_v2.json",
+      "remaining_problem": "49 targeted partly synthetic cases, not representative accuracy",
+      "owner_action": null
+    },
+    {
+      "category": "FRONTEND",
+      "status": "PASS",
+      "evidence": "artifacts/final_validation.json",
+      "remaining_problem": "Component HTTP mocked; local runtime",
+      "owner_action": null
+    },
+    {
+      "category": "BROWSER",
+      "status": "PASS",
+      "evidence": "artifacts/browser_e2e_results.json",
+      "remaining_problem": "Chromium/Windows; one synthetic 503 injection",
+      "owner_action": null
+    },
+    {
+      "category": "DEMO",
+      "status": "PASS",
+      "evidence": "docs/FINAL_DEMO_REVIEW.md",
+      "remaining_problem": "Silent WebM, no public link",
+      "owner_action": "Review full playback and current organizer format requirements"
+    },
+    {
+      "category": "DOCUMENTATION",
+      "status": "PASS",
+      "evidence": "docs/PHASE2_5_HANDOVER.md",
+      "remaining_problem": "Earlier handovers historical; final docs supersede status claims",
+      "owner_action": null
+    },
+    {
+      "category": "ELIGIBILITY",
+      "status": "BLOCKED",
+      "evidence": "docs/RELEASE_GATE.md",
+      "remaining_problem": "Registration, team and October 20 pre-event-work eligibility unverified",
+      "owner_action": "Confirm with organizer/attendee communication"
+    },
+    {
+      "category": "SUBMISSION",
+      "status": "BLOCKED",
+      "evidence": "docs/RELEASE_GATE.md",
+      "remaining_problem": "No latest authenticated Slack/form confirmation or public-action approval",
+      "owner_action": "Approve reviewed public actions, obtain video link, submit and retain receipt"
+    }
+  ],
+  "release_files": [
+    {
+      "path": ".env.example",
+      "bytes": 192,
+      "sha256": "f1b50406d927a53a384cd20e4ebdd72cead62eb20ab8b7841d8994b42866c4a8"
+    },
+    {
+      "path": ".gitignore",
+      "bytes": 183,
+      "sha256": "9b388713c54b1145a5461fb87770235c0e0c5c1a52ce9bdb86c71c3f12fa83b5"
+    },
+    {
+      "path": ".python-version",
+      "bytes": 5,
+      "sha256": "7b55f8e67b5623c4bef3fa691288da9437d79d3aba156de48d481db32ac7d16d"
+    },
+    {
+      "path": "AGENTS.md",
+      "bytes": 13388,
+      "sha256": "f8fdf3a5f3e997b6a697be78fe44416feb7160c5034c4c1e894aca814b04716b"
+    },
+    {
+      "path": "LICENSE",
+      "bytes": 1078,
+      "sha256": "6296c9b95c95d8dec4160eeab2387fa32e58073c8baee9a1c7ea0f853dc65b72"
+    },
+    {
+      "path": "PROJECT_BRIEF.md",
+      "bytes": 1645,
+      "sha256": "00a2a3acb9459c9ab8199a01ef512b3849676b606db6108143813208c4aadcfa"
+    },
+    {
+      "path": "PROMPT_01_CODEX.md",
+      "bytes": 10553,
+      "sha256": "ae2cb4aab1852e5cff93ab2aad8744535d3ff80e08b8101f6ff194d4259b63bc"
+    },
+    {
+      "path": "README.md",
+      "bytes": 11449,
+      "sha256": "5ed10df4e5a4b797eb75cffff17542e3ec75f010098b1946d1c921d96acf3170"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES.md",
+      "bytes": 1602,
+      "sha256": "e730eac9dfe8b8e1248fe5891232674541e507322c1d0443bc9b0543f51f0aae"
+    },
+    {
+      "path": "THIRD_PARTY_RUNTIME_LICENSES.txt",
+      "bytes": 4527,
+      "sha256": "9621431b7b664c840e9ca52243098dab8c9b7cfc6ac8a55f4733010b8e931363"
+    },
+    {
+      "path": "artifacts/327c_bismuth_bulk.json",
+      "bytes": 8987,
+      "sha256": "ed346b50c94a6db9f43741a02d39a7356540ec3aa3f9aaa5c3845261335cafce"
+    },
+    {
+      "path": "artifacts/600c_huang_bulk.json",
+      "bytes": 16446,
+      "sha256": "075846c367c276847ebaabfc3ab7a1950a4e8a3af922401bbb4edd617da39359"
+    },
+    {
+      "path": "artifacts/827c_cobalt_bulk.json",
+      "bytes": 9093,
+      "sha256": "240831d6abc9ca0e36172e58c97c10b03849cd8f109b3a9591090c0b81fba80b"
+    },
+    {
+      "path": "artifacts/ambiguous_regime.json",
+      "bytes": 7785,
+      "sha256": "60b668765014aa62e3b83bed1156e188fd8cd705ac8d0be1e7c77d646375c6e0"
+    },
+    {
+      "path": "artifacts/benchmark.json",
+      "bytes": 7760,
+      "sha256": "4e2652f62dd87643ed6792160dbb2f127daf93c1186a3d822502fdb25e2ea94e"
+    },
+    {
+      "path": "artifacts/browser/humidity-abstention.png",
+      "bytes": 160966,
+      "sha256": "7f0feacfeca384deb279f3e3ede5b67d34c37e40b3cb2cb4b25faf5e10deaf9b"
+    },
+    {
+      "path": "artifacts/browser/mobile-explorer.png",
+      "bytes": 36111,
+      "sha256": "878b75e5cf32a66dbd1742a6b99647b0e60ff03d0bf89f294fafa1f0efd78047"
+    },
+    {
+      "path": "artifacts/browser/temperature-explorer.png",
+      "bytes": 115931,
+      "sha256": "4056063b8687c43c7b389ee3bacdb06bde23a18a7fa8e180b787dadf1ac6d634"
+    },
+    {
+      "path": "artifacts/browser_e2e_results.json",
+      "bytes": 21828,
+      "sha256": "1724bcff4db2634fb72c1ba5d784856b0480eaf0eb9fd9ce9c1e6755cd245474"
+    },
+    {
+      "path": "artifacts/change_manifest.json",
+      "bytes": 2741,
+      "sha256": "c4806ea5b20d441651be7ac50aeb2e0f50020911fa4411121470af57b2377d63"
+    },
+    {
+      "path": "artifacts/dataset_inspection.json",
+      "bytes": 7147,
+      "sha256": "27c5c75360bcc7e3fd96c6268e5b713764a1a9b2e7bbd65fda1294d3d95f2e34"
+    },
+    {
+      "path": "artifacts/demo_video_validation.json",
+      "bytes": 4043,
+      "sha256": "26ff3f56306b542a7c7dc10e2f0326843edc369f3a43804706c0ca01ab892c97"
+    },
+    {
+      "path": "artifacts/final_demo_validation.json",
+      "bytes": 4185,
+      "sha256": "ecc657141adf02641e8def72699b06f2bf9d046778635bed799ec01b3a63c4b1"
+    },
+    {
+      "path": "artifacts/final_http_decision.json",
+      "bytes": 142830,
+      "sha256": "d0d88858f80cf7fbfdc93c77ecb6fc89714bca8140a75cae0101d9d08399dc29"
+    },
+    {
+      "path": "artifacts/final_integrity_v2.json",
+      "bytes": 768,
+      "sha256": "62d20d874863285ebe5af120b28999d697f6664b773d3177847b9678985fa1b7"
+    },
+    {
+      "path": "artifacts/final_validation.json",
+      "bytes": 21402,
+      "sha256": "023e209d22915b4183d43ebc732a310484c9f7e58cb94af10e793e7be6649cd4"
+    },
+    {
+      "path": "artifacts/http_smoke.json",
+      "bytes": 870,
+      "sha256": "9c1608a4eaeef832fa59ef4938869c0aef53d524814a5a3464e63e1ec23a4920"
+    },
+    {
+      "path": "artifacts/humidity_refusal_v2.json",
+      "bytes": 4791,
+      "sha256": "b5ec405a11da3463b1884d8498c7fc9e02991ceca74c5e437ca5b70a5eee5dc2"
+    },
+    {
+      "path": "artifacts/license_inventory.json",
+      "bytes": 55913,
+      "sha256": "a12f9f56508a4d06eb62161ed2ce40fda1bcba74637f16ad382f2764926b2dea"
+    },
+    {
+      "path": "artifacts/out_of_range.json",
+      "bytes": 8666,
+      "sha256": "40eaea18fc6486e84a7642f4c28030ee13e75a872ed10523aa6d885cc46c8293"
+    },
+    {
+      "path": "artifacts/pdf_acceptance.json",
+      "bytes": 658,
+      "sha256": "8627405e4b72acde88c774fe558a8d763767c85157bcbc64248a9bf5804b59c0"
+    },
+    {
+      "path": "artifacts/phase2_change_manifest.json",
+      "bytes": 2989,
+      "sha256": "ecd7905b297eaec34fdf84101b53e4b431cd61778cbc76be5a9d37f4f1cba951"
+    },
+    {
+      "path": "artifacts/phase2_http_smoke.json",
+      "bytes": 2041,
+      "sha256": "66e34f163cc70bb8ef602706b2da8bd6f1d0c9fc5a49623e8a958b36367ae0be"
+    },
+    {
+      "path": "artifacts/phase2_validation.json",
+      "bytes": 10267,
+      "sha256": "0841b1bfb9f43d5b57150476e8f18cff57ee84f89c3f2d27d89f135c8f7573ce"
+    },
+    {
+      "path": "artifacts/primary_source_acceptance.json",
+      "bytes": 1855,
+      "sha256": "713be2b8b0fc26867317c353064a70c696a26d7739dfe571344f47287a3d9e18"
+    },
+    {
+      "path": "artifacts/rank_reversal_reference_v2.json",
+      "bytes": 8691,
+      "sha256": "07382f7dae6c8e24eac5d1b0946be6359de6516f70d87cbbcafff7fdc9c7c83c"
+    },
+    {
+      "path": "artifacts/real_llm_acceptance.json",
+      "bytes": 5861,
+      "sha256": "6a6a1b65972498ab102da7bcba9cd45a56d3d0931b14964e3efba857b89174de"
+    },
+    {
+      "path": "artifacts/real_llm_status_v2.json",
+      "bytes": 191,
+      "sha256": "f08e7ebe4cf54ca6af3d3a3b59866612bb9afef05e4921ea206a62ea0fee338f"
+    },
+    {
+      "path": "artifacts/reference_values.json",
+      "bytes": 2404,
+      "sha256": "85eee21154c932522183f42ac0104165d552abf57870936c47e1575d4b9cba37"
+    },
+    {
+      "path": "artifacts/release_candidate_manifest.json",
+      "bytes": 3,
+      "sha256": null
+    },
+    {
+      "path": "artifacts/repository_access_acceptance.json",
+      "bytes": 288,
+      "sha256": "f3242a3a993eab4d115fd6f200a1cbef613dcf489e4cc2d741c87c36d055985e"
+    },
+    {
+      "path": "artifacts/scientific_acceptance.json",
+      "bytes": 8302,
+      "sha256": "c5167e1d9763e3d457df2fb7d2b3ed5b7b714c0e734c597664abf901d6d6f0db"
+    },
+    {
+      "path": "artifacts/scientific_benchmark_v2.json",
+      "bytes": 38792,
+      "sha256": "5890fd4a0b4fb43b6a8f2c978b21047ea40f3545ba56fee1bba78ca6e4f909bf"
+    },
+    {
+      "path": "artifacts/source_verification_v2.json",
+      "bytes": 1465,
+      "sha256": "ec23ddbfed1585ccdafe3180955feb395d48d058cd173d62b1c4046ab0a0d53c"
+    },
+    {
+      "path": "artifacts/temperature_decision_flagship.json",
+      "bytes": 143542,
+      "sha256": "a9a0b22c724c0ad919539f07fe14923ad4c9f9b393e22618d7b0407d342d89b1"
+    },
+    {
+      "path": "backend/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "backend/app/__init__.py",
+      "bytes": 22,
+      "sha256": "91447944015cec709e8aa7655f7e9d64e1e4508e7023a57fe3746911c0fc6fed"
+    },
+    {
+      "path": "backend/app/agents/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "backend/app/agents/llm.py",
+      "bytes": 4840,
+      "sha256": "613eae72a3b185a0175111ee95b9331972169a9b770b52653c40a9aa62910b50"
+    },
+    {
+      "path": "backend/app/agents/planner.py",
+      "bytes": 8078,
+      "sha256": "741208c2fcce8e198b56c032069454d4fffdf5542d78945286abdc3e237e5cac"
+    },
+    {
+      "path": "backend/app/agents/workflow.py",
+      "bytes": 5627,
+      "sha256": "08d58e9fbe5bd015e164c82ed093153df5936be3d1a9989f6bedad63944be2ed"
+    },
+    {
+      "path": "backend/app/data/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "backend/app/data/fixtures/manifest.json",
+      "bytes": 1968,
+      "sha256": "1bd64fdbcad25ee4883c54097800792081e0fc04f005421a08675dd86204eb90"
+    },
+    {
+      "path": "backend/app/data/fixtures/published_subset.csv",
+      "bytes": 6938,
+      "sha256": "6cad9e6cd6ee0cac98f1de979688788b5e3c1bade390da289c3722d46389d214"
+    },
+    {
+      "path": "backend/app/data/ingest.py",
+      "bytes": 3606,
+      "sha256": "694d4b133d0272fb0363083ec8777e758463e5fcd7c1d9a46058bb0cb8af4e90"
+    },
+    {
+      "path": "backend/app/main.py",
+      "bytes": 8517,
+      "sha256": "9a0dd3c06f803b9dc069b1efc4fd671931633d63b9db07dbc049acf33a0bb46d"
+    },
+    {
+      "path": "backend/app/reports/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "backend/app/reports/audit.py",
+      "bytes": 14771,
+      "sha256": "dae912b9606d56f2ab461407ddf01a7755be1855f247fea116f68b65b463807f"
+    },
+    {
+      "path": "backend/app/schemas.py",
+      "bytes": 5646,
+      "sha256": "9c0ee83899ccf758f8c3d0568fc3c645ff546956bb3c051c0741db923f8f415c"
+    },
+    {
+      "path": "backend/app/science/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "backend/app/science/conductivity.py",
+      "bytes": 5880,
+      "sha256": "120c1846f63a77244154234b0e1979b0ecbfb3a30ca99ca38fdb8db6fd400b2e"
+    },
+    {
+      "path": "backend/app/science/decision_schemas.py",
+      "bytes": 6343,
+      "sha256": "199a88410f0d79d1634f2e4eb490239e19c4a39fb441ae9c1e0adbcce0768dfa"
+    },
+    {
+      "path": "backend/app/science/temperature_decisions.py",
+      "bytes": 21541,
+      "sha256": "986c57670ce4506149ef679821e80fdcd02a1a00ae63eea1f1fbf2f637da8fb0"
+    },
+    {
+      "path": "benchmarks/README.md",
+      "bytes": 1355,
+      "sha256": "d71d51b8b66cab1f45df8f670ce101bd26cb5b12236976fcafca6f6ed7fbfa70"
+    },
+    {
+      "path": "benchmarks/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "benchmarks/build_cases_v2.py",
+      "bytes": 8810,
+      "sha256": "39e2f695715601ee7fec660403593ae3717993d12e9c9a017f7c3987e27ca20d"
+    },
+    {
+      "path": "benchmarks/evaluate.py",
+      "bytes": 5401,
+      "sha256": "b12cdb711c5cfac95b62a80a90c6915783d0c89e07c7fd1eb869aa4dbee8f702"
+    },
+    {
+      "path": "benchmarks/evaluate_v2.py",
+      "bytes": 8359,
+      "sha256": "d77f045d92fdbbe43416e4616b61fb3129dc8a78c6f951939d65de0f2abe906b"
+    },
+    {
+      "path": "benchmarks/reference_v2.py",
+      "bytes": 1970,
+      "sha256": "97e4de1ed454e13ad3866e44b1e01a735790c9050410adac197c71a30143f649"
+    },
+    {
+      "path": "benchmarks/scientific_cases.json",
+      "bytes": 26193,
+      "sha256": "076ca9310f4afb9c2efbeb3aac15e0a3fb11cc43a2bee3c2f8c4454d008476bd"
+    },
+    {
+      "path": "docs/COMPETITION_RULES.md",
+      "bytes": 2978,
+      "sha256": "cfab8ec182139d707e7b3ac4e66bac34747511aa5b5e1b060605b93f38015a6c"
+    },
+    {
+      "path": "docs/DECISIONS.md",
+      "bytes": 2609,
+      "sha256": "b19d29a7d39f5d64093b64f504516fc79bb2712a8e249d6315b6edaa2021d973"
+    },
+    {
+      "path": "docs/DEMO_SCRIPT.md",
+      "bytes": 3572,
+      "sha256": "09357a27da6f8e96a480c24aaeebf735c95f2b4e55345b8654b1b2c8dfa0f0aa"
+    },
+    {
+      "path": "docs/DEMO_SCRIPT_V2.md",
+      "bytes": 3164,
+      "sha256": "4edc790aa3c0e55eaa44a27b7150c77fb80dc8ef6cb61158a6629239558b53b7"
+    },
+    {
+      "path": "docs/EVALUATION_V2.md",
+      "bytes": 3518,
+      "sha256": "7e5a8dbe553a6dd5eedf2c0c99771549f5a8a39d73badc98d05b0b558405b71f"
+    },
+    {
+      "path": "docs/FINAL_DEMO_REVIEW.md",
+      "bytes": 4125,
+      "sha256": "d353e2f45f7fc011cc7ae2977591cdfe6d6708f285cd25eb792a3594cac5e6be"
+    },
+    {
+      "path": "docs/FINAL_SUBMISSION_COPY.md",
+      "bytes": 3669,
+      "sha256": "bb493f2c1e29ddfc49aab37e8dba4a683d036c4a7402eed2d76275def2d30b84"
+    },
+    {
+      "path": "docs/FINAL_VALIDATION.md",
+      "bytes": 8269,
+      "sha256": "d187ef745156ff57276b54a183452bc31a672de48be4c5eb1f1ba51463c8587b"
+    },
+    {
+      "path": "docs/JUDGE_CLAIMS_AUDIT.md",
+      "bytes": 4299,
+      "sha256": "ff6cd6b6dd4d2927f3c293db3b9af61768bfbadc9943de26cb08bf66ee1c9621"
+    },
+    {
+      "path": "docs/JUDGE_SCORECARD.md",
+      "bytes": 1806,
+      "sha256": "c09551e3f6217490888166d6b9be65633a90ae7e4eb3183681f9b8fc8ddff3b6"
+    },
+    {
+      "path": "docs/NOVELTY_AND_LIMITATIONS.md",
+      "bytes": 2712,
+      "sha256": "0bd4a52478f5569174efe443f3763d91b7d95b403a3d6145a1b0ff817d28119d"
+    },
+    {
+      "path": "docs/ONE_PAGE_DRAFT.md",
+      "bytes": 3108,
+      "sha256": "68345f470bd1a0fbdac5c19968d7874cf05764eb2f3cb8a3d36ec2791d9fd07d"
+    },
+    {
+      "path": "docs/ONE_PAGE_SUBMISSION_V2.md",
+      "bytes": 2812,
+      "sha256": "e9e8bfbc0405c1ec9b9cacede8023d503faa57f69f8d6209dd3483484aac9e64"
+    },
+    {
+      "path": "docs/PHASE2_5_HANDOVER.md",
+      "bytes": 14111,
+      "sha256": "35ac20fdef24f69173514bb9b6c0dfb9e44fd7fd17167d13d16c1cdf8c047fac"
+    },
+    {
+      "path": "docs/PHASE2_HANDOVER.md",
+      "bytes": 19006,
+      "sha256": "5167f30e8b4f615b9a3c41e3d88878fee8d329612ae16d974a620b1c340f0741"
+    },
+    {
+      "path": "docs/PROJECT_BRIEF.md",
+      "bytes": 1645,
+      "sha256": "00a2a3acb9459c9ab8199a01ef512b3849676b606db6108143813208c4aadcfa"
+    },
+    {
+      "path": "docs/RELEASE_GATE.md",
+      "bytes": 4731,
+      "sha256": "828b4c80abf30457a0a95f4927c82c065a68411d6677b70def889206a73c0a31"
+    },
+    {
+      "path": "docs/REQUEST_GRAMMAR.md",
+      "bytes": 3331,
+      "sha256": "b2d25b20cdf5a59f71939a5e2182d5fa8c394311b2bdb7b065881e3926dc2872"
+    },
+    {
+      "path": "docs/SCIENCE_ASSUMPTIONS.md",
+      "bytes": 4403,
+      "sha256": "effde6d4bc005b42a18acb37a8bd0f8c06921311e4f4340f92309340753243e8"
+    },
+    {
+      "path": "docs/SCIENTIFIC_ACCEPTANCE.md",
+      "bytes": 7900,
+      "sha256": "b4f33312b31074fa1aff7dda6024e590a8ee0b51367092bbdef657cddcdba0f1"
+    },
+    {
+      "path": "docs/SOURCES.md",
+      "bytes": 5211,
+      "sha256": "a7e8c95c6a9e505ea35c74c6ba0f0503f78ab0ac2efd2f13dc4862a0f9dad5f8"
+    },
+    {
+      "path": "docs/SPRINT_HANDOVER.md",
+      "bytes": 5887,
+      "sha256": "bedb607af22833c827eb4e323f8aa35e0e719911c2dff56f1c6960b6d591d140"
+    },
+    {
+      "path": "docs/SUBMISSION_CHECKLIST.md",
+      "bytes": 1309,
+      "sha256": "05b95e494e888249bbcfeaf6470e7b28c23839845b2c4b52f2424c1e2d13c0f8"
+    },
+    {
+      "path": "docs/SUBMISSION_CHECKLIST_V2.md",
+      "bytes": 1569,
+      "sha256": "e974e10e3ec54d8bd9090c5678432b5d90940f6f593ac217ca6fa8624ecef8ae"
+    },
+    {
+      "path": "docs/TEMPERATURE_DECISIONS.md",
+      "bytes": 4294,
+      "sha256": "f06cbe36e2bdd806c066889c5160546f247f53e52bcceb45bfc99044ef6647c4"
+    },
+    {
+      "path": "docs/VALIDATION.md",
+      "bytes": 6325,
+      "sha256": "cc7bd3b84dbeafeb3896ae61cfda3a0679beeebdf63ee67e836ceceb93f9b78e"
+    },
+    {
+      "path": "frontend/.npmrc",
+      "bytes": 37,
+      "sha256": "3a951f66e7e0f3e2dd1832473a871357c4a507b51100636b73bcf6ff0dd78b6c"
+    },
+    {
+      "path": "frontend/.prettierrc.json",
+      "bytes": 64,
+      "sha256": "cddea3c5baf43c7e3f0f0ea2cd17e25cbaf931f895ec23498fde84bd021824e9"
+    },
+    {
+      "path": "frontend/demo.config.ts",
+      "bytes": 389,
+      "sha256": "a208a84f7f1131028e1e94b3a29f36ccb284dc8025d50920ee2134937ac49017"
+    },
+    {
+      "path": "frontend/e2e/demo.capture.ts",
+      "bytes": 6217,
+      "sha256": "21b22346b43f656e1da4f5467b07f682109da38606d918ab265929ce27623af6"
+    },
+    {
+      "path": "frontend/e2e/research.spec.ts",
+      "bytes": 8318,
+      "sha256": "104506089f0d9f865f3fb07b02b8ddbeb35069be5955e662ffaceccacd8c5f45"
+    },
+    {
+      "path": "frontend/eslint.config.js",
+      "bytes": 468,
+      "sha256": "fca7c2238b556d4d58213678cf6d2696dfc067f578e2ab2155ebce57e2903e20"
+    },
+    {
+      "path": "frontend/index.html",
+      "bytes": 457,
+      "sha256": "be50ee404ccd0cbb905190327be5029bf69360fa5e132660452ee5db184d8363"
+    },
+    {
+      "path": "frontend/package-lock.json",
+      "bytes": 160360,
+      "sha256": "042895f31250fa53d1d3e3f9754abe8ddc59718e784957e6062c199154c659ec"
+    },
+    {
+      "path": "frontend/package.json",
+      "bytes": 896,
+      "sha256": "70e5838a6b3da31227a1503de0ff6a8d1def1d245cb1cc8f74690accf4877485"
+    },
+    {
+      "path": "frontend/playwright.config.ts",
+      "bytes": 775,
+      "sha256": "6d60768d70acbf56eaf8e6ae3960039a60e316f83d7883c301039579efbf44a3"
+    },
+    {
+      "path": "frontend/src/App.test.tsx",
+      "bytes": 8747,
+      "sha256": "bcb731b1ab256d614a928f0d67a36a14d562b09eba81b88fddc69b5ff5d13ab4"
+    },
+    {
+      "path": "frontend/src/App.tsx",
+      "bytes": 31291,
+      "sha256": "8540d320edef199b8fe3201f4d00076254c6c2f535bad89795f8e40e956a15b9"
+    },
+    {
+      "path": "frontend/src/Plots.tsx",
+      "bytes": 3596,
+      "sha256": "3b4bd0322b29966d2fedeba165153e083ec02a19fef41581ed1d2863b99e6e02"
+    },
+    {
+      "path": "frontend/src/TemperatureExplorer.tsx",
+      "bytes": 21100,
+      "sha256": "c084ad5c885c94dad7339d0b9be07693d5f0e2023790a36162ef247592a16f0b"
+    },
+    {
+      "path": "frontend/src/api.ts",
+      "bytes": 793,
+      "sha256": "2faac9d0ba9e0eeae06dc75453212634ecf2c8eb664b4a0dca7768d4c38ca327"
+    },
+    {
+      "path": "frontend/src/main.tsx",
+      "bytes": 232,
+      "sha256": "c0a22e9061e3583eceb100144d8b8f5bd490ea4963d25703fe1dbc12a1bf315b"
+    },
+    {
+      "path": "frontend/src/style.css",
+      "bytes": 26868,
+      "sha256": "7c71d17ef24e164eb9656e2000a9cdfa711440c5f548ae4fcfe5e141d65c4e58"
+    },
+    {
+      "path": "frontend/src/test-setup.ts",
+      "bytes": 42,
+      "sha256": "977afde26bba6a51325908cd7713cbfdc87d18f06b78b237c8f364c44864b7de"
+    },
+    {
+      "path": "frontend/src/types.ts",
+      "bytes": 4092,
+      "sha256": "7f3367d738aaac5b81c1d97781d8a688fdc6a2e8d365476ec34a05f59445d74e"
+    },
+    {
+      "path": "frontend/tsconfig.json",
+      "bytes": 453,
+      "sha256": "6634cf32e7cf93fe5dc594f5e3a5a9577c641ff62fd32ef2ca2341a5ddf6e9f7"
+    },
+    {
+      "path": "frontend/vite.config.ts",
+      "bytes": 318,
+      "sha256": "35921481971cf20dfeff0c6ec70ef5cde7acc10e82f854205c42e7e518d9043d"
+    },
+    {
+      "path": "output/pdf/oxyproof-one-page-submission.pdf",
+      "bytes": 5357,
+      "sha256": "2d695fb59b31530ec9233044bc911da3a5c0574c3372c219e6cab32abda6c959"
+    },
+    {
+      "path": "pyproject.toml",
+      "bytes": 578,
+      "sha256": "212d669c23b1f9d34949697640f3e48db4c5a5ee7f5d199cc30abd0290378c29"
+    },
+    {
+      "path": "scripts/browser_e2e.py",
+      "bytes": 971,
+      "sha256": "49d9d9e73c19d85bbefe11895cb53a1dad9827cca8adb6c7ee567080c9f433ee"
+    },
+    {
+      "path": "scripts/build_fixture.py",
+      "bytes": 2419,
+      "sha256": "4ab18456c0ac11b8ee20a25c766852f728f94b2cb13282682a1a38e655f4f26e"
+    },
+    {
+      "path": "scripts/build_submission_pdf.py",
+      "bytes": 3742,
+      "sha256": "a82a435f1ebf428fb40a6ff7bdf499e2cdf4198e1249c71133d8716c63ca198f"
+    },
+    {
+      "path": "scripts/demo.py",
+      "bytes": 1813,
+      "sha256": "5c5e76cc059e1d30dcc892b49a51c37356b0c789bfb631d7033074cd08046292"
+    },
+    {
+      "path": "scripts/fetch_data.py",
+      "bytes": 2141,
+      "sha256": "4280f3a63461b6df9ac44c650d021ef01f2df8aabedd34b1ab204d12aec3074b"
+    },
+    {
+      "path": "scripts/inspect_data.py",
+      "bytes": 2017,
+      "sha256": "853c59c13416ff9e4a9a0cc210b101fc2ffa536d4458ac03eafac45e93cc76c6"
+    },
+    {
+      "path": "scripts/phase2_demo.py",
+      "bytes": 3841,
+      "sha256": "781d0dbc1f2dc258558db314ce1bc6e6b6683a86dec257a752319762bcbc4095"
+    },
+    {
+      "path": "scripts/reference_values.py",
+      "bytes": 2646,
+      "sha256": "159ac93837930a15a412baa83651bdde8dfa265052cb77e4b384b4f62f0bdca8"
+    },
+    {
+      "path": "scripts/smoke.py",
+      "bytes": 3183,
+      "sha256": "a86d2fdec2c8851223c5bfd2819b7c57864d5caf360109651357698627397e03"
+    },
+    {
+      "path": "scripts/start.py",
+      "bytes": 2075,
+      "sha256": "71614d1c39d11c432f346e9f96277d0eec71acb306233dfff17e5a5eb0cc07f7"
+    },
+    {
+      "path": "scripts/validate_v2.py",
+      "bytes": 4325,
+      "sha256": "554b3022f8a73ef07e48e3d3c08f4bc89e6a6057120163052a01a6b8b2ca8af2"
+    },
+    {
+      "path": "scripts/verify_demo.py",
+      "bytes": 3983,
+      "sha256": "05ac54907d8f9b600acdf2124bf77b810a04a0f5514a13fc2e2afff65994e01e"
+    },
+    {
+      "path": "scripts/verify_final_science.py",
+      "bytes": 5808,
+      "sha256": "26abe758944d351227fe361e2f173196c490f475dae682b4b66e0170add345f5"
+    },
+    {
+      "path": "scripts/verify_sources_v2.py",
+      "bytes": 2383,
+      "sha256": "ca0997b436dbb4f341ecef255b15603e5e6aff29516ff3856e60f143b7e4b1ca"
+    },
+    {
+      "path": "tests/conftest.py",
+      "bytes": 520,
+      "sha256": "2d01f5f5bf4472184c348aaad59c6b2a0feaf9352413c0e715d935d240bf821a"
+    },
+    {
+      "path": "tests/test_agent_workflow.py",
+      "bytes": 5883,
+      "sha256": "16a5e26667bf8d5ce701f96fe8f0934b9903188513e0b8475e894ffcabdfc90d"
+    },
+    {
+      "path": "tests/test_api.py",
+      "bytes": 4288,
+      "sha256": "e6e7f51ce120e6e5b9cb85b54275cd51db718837d38167374a6ec30b3321dcb2"
+    },
+    {
+      "path": "tests/test_data.py",
+      "bytes": 3323,
+      "sha256": "4bacf205f9bf8c55dbea6ba482852c842c1660e53e0bc43b693b696fbacc4b07"
+    },
+    {
+      "path": "tests/test_llm_adapter.py",
+      "bytes": 3622,
+      "sha256": "4fbe07328ab8794b31692eee2ca97c0d9a82624497124ee5fc3b3d060966fa60"
+    },
+    {
+      "path": "tests/test_request_integrity.py",
+      "bytes": 3649,
+      "sha256": "4651edd884e3bd4a0f9b429ccca37ef7594046d8244787c7bd9af4259ed56059"
+    },
+    {
+      "path": "tests/test_science.py",
+      "bytes": 4538,
+      "sha256": "5dba179b566b69a7b3b1e61c9c36d4ef7d08e134c82dabf32a95a4f37727d86e"
+    },
+    {
+      "path": "tests/test_temperature_decisions.py",
+      "bytes": 9293,
+      "sha256": "43b700215dc6ef83db895045c96bd8ee7b26f362775ccc5964a7203b6fc94338"
+    },
+    {
+      "path": "tests/test_workflow.py",
+      "bytes": 3988,
+      "sha256": "f58b83752c5da9ec2a583f9d0d90a4a8da97e1a671fe4dd5486d950a7dcd453a"
+    },
+    {
+      "path": "uv.lock",
+      "bytes": 73318,
+      "sha256": "68a61962e9f323c82c8cc79660a12136b2803e8dc6d855aefe8bd44e6a289926"
+    }
+  ],
+  "manifest_hash_policy": "Manifest lists itself with null hash to avoid recursive hashing; all other entries are exact working-tree byte hashes. Git may normalize line endings at commit; review again then.",
+  "local_assets_not_queued_for_publication": [
+    {
+      "path": ".local/demo/oxyproof-phase2.webm",
+      "bytes": 31017276,
+      "sha256": "3169945007ec4bdf773e7907f2708774a8bc76945c3ad7bd5589f3225dd6b3a3",
+      "role": "Preserved original; historical presentation",
+      "ignored": true
+    },
+    {
+      "path": ".local/demo-phase25/oxyproof-phase2.webm",
+      "bytes": 31169101,
+      "sha256": "e39fe0b000d984748e84782486d889c803b6d6e880e7dcc9c1cc4e48e7cb8c05",
+      "role": "Accepted updated local video; publication requires approval",
+      "ignored": true
+    },
+    {
+      "path": ".local/demo-phase25/exported-decision.json",
+      "bytes": 138032,
+      "sha256": "94a17cf2ba52fe0e6c881fcb9d8ba5e0ccafed2ac45f7f5ee54870fdd8ecfa0b",
+      "role": "Actual browser export",
+      "ignored": true
+    },
+    {
+      "path": ".local/datasets/oxygen_ion_conductor_dataset.csv",
+      "bytes": 122657,
+      "sha256": "8ec66b131bae79f8520f7cf40e91e2be2541995939bc43b744eaac627f4fad34",
+      "role": "Pinned full dataset; retrieve on setup",
+      "ignored": true
+    }
+  ],
+  "security_and_integrity": {
+    "current_audit_reports_verified": 8,
+    "new_video_export_code_and_raw_records_match": true,
+    "protected_paths_unchanged": [
+      "AGENTS.md",
+      "PROJECT_BRIEF.md",
+      "PROMPT_01_CODEX.md",
+      "uv.lock",
+      "frontend/package-lock.json",
+      "backend/app/data/fixtures/published_subset.csv",
+      "backend/app/data/fixtures/manifest.json",
+      "benchmarks/evaluate.py",
+      "benchmarks/scientific_cases.json"
+    ],
+    "secret_pattern_scan": {
+      "status": "PASS",
+      "project_text_files": 139,
+      "trace_archives": 15,
+      "trace_text_entries": 146,
+      "findings": [],
+      "limit": "Known token/private-key patterns; not a full security audit"
+    },
+    "post_pipeline_lint": "All checks passed!",
+    "post_pipeline_format": "45 files already formatted",
+    "diff_whitespace": "PASS"
+  },
+  "oversized_release_files_over_5mb": [],
+  "excluded_ignored_content": [
+    ".local browser binaries, traces, full CSV, videos and source HTML",
+    "Python environments",
+    "frontend node_modules and dist",
+    "No credentials or article full text included"
+  ],
+  "warnings": [
+    "No full experimental comparability or uncertainty claim",
+    "No live model acceptance or arbitrary free-language understanding",
+    "No registration/Slack/pre-event eligibility confirmation",
+    "Local media/PDF readiness is not public release or submission"
+  ],
+  "public_actions_executed_by_this_sprint": {
+    "commit": false,
+    "push": false,
+    "tag": false,
+    "publish": false,
+    "deploy": false,
+    "register": false,
+    "upload": false,
+    "paid_llm_call": false,
+    "submit": false
+  }
+}

@@ -1,5 +1,6 @@
 """Verify local no-voice capture metadata and extract scenes for human visual review."""
 
+import argparse
 import hashlib
 import json
 import re
@@ -9,7 +10,11 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 
 if __name__ == "__main__":
-    video = ROOT / ".local/demo/oxyproof-phase2.webm"
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--phase25", action="store_true")
+    args = parser.parse_args()
+    directory = ROOT / (".local/demo-phase25" if args.phase25 else ".local/demo")
+    video = directory / "oxyproof-phase2.webm"
     binary = next((ROOT / ".local/ms-playwright").glob("ffmpeg-*/ffmpeg-win64.exe"))
     probe = subprocess.run(
         [str(binary), "-hide_banner", "-i", str(video)], capture_output=True, text=True, timeout=30
@@ -22,8 +27,10 @@ if __name__ == "__main__":
     duration = hours * 3600 + minutes * 60 + seconds
     assert 180 <= duration <= 240 and "1440x1000" in text and "Video: vp9" in text
     assert "Audio:" not in text
-    log = json.loads((ROOT / ".local/demo/scene-log.json").read_text(encoding="utf-8"))
-    frame_dir = ROOT / ".local/demo/frames"
+    fps = re.search(r"(\d+(?:\.\d+)?) fps", text)
+    assert fps and float(fps.group(1)) == 25
+    log = json.loads((directory / "scene-log.json").read_text(encoding="utf-8"))
+    frame_dir = directory / "frames"
     frame_dir.mkdir(exist_ok=True)
     frames = []
     for scene in log["scenes"]:
@@ -54,7 +61,33 @@ if __name__ == "__main__":
                 "caption": scene["caption"],
             }
         )
-    exported = json.loads((ROOT / ".local/demo/exported-decision.json").read_text(encoding="utf-8"))
+    target = frame_dir / "end.png"
+    subprocess.run(
+        [
+            str(binary),
+            "-y",
+            "-hide_banner",
+            "-loglevel",
+            "error",
+            "-ss",
+            str(duration - 2),
+            "-i",
+            str(video),
+            "-frames:v",
+            "1",
+            str(target),
+        ],
+        check=True,
+        timeout=30,
+    )
+    frames.append(
+        {
+            "position_s": duration - 2,
+            "path": target.relative_to(ROOT).as_posix(),
+            "caption": "Near-end continuity check",
+        }
+    )
+    exported = json.loads((directory / "exported-decision.json").read_text(encoding="utf-8"))
     result = {
         "status": "METADATA_AND_SCENE_EXTRACTION_PASS",
         "video_path": video.relative_to(ROOT).as_posix(),
@@ -63,6 +96,7 @@ if __name__ == "__main__":
         "duration_seconds": duration,
         "resolution": "1440x1000",
         "codec": "VP9/WebM",
+        "frame_rate_fps": float(fps.group(1)),
         "audio_streams": 0,
         "runtime_mode": log["runtime_mode"],
         "source_scope": log["source_scope"],
@@ -70,9 +104,14 @@ if __name__ == "__main__":
         "frames": frames,
         "visual_review": "See PHASE2_HANDOVER.md for actually inspected frames; extraction alone is not visual acceptance.",
     }
-    (ROOT / "artifacts/demo_video_validation.json").write_text(
-        json.dumps(result, indent=2) + "\n", encoding="utf-8"
-    )
+    (
+        ROOT
+        / (
+            "artifacts/final_demo_validation.json"
+            if args.phase25
+            else "artifacts/demo_video_validation.json"
+        )
+    ).write_text(json.dumps(result, indent=2) + "\n", encoding="utf-8")
     print(
         f"DEMO_VIDEO_METADATA=PASS duration_s={duration} resolution=1440x1000 audio_streams=0 frames_extracted={len(frames)}"
     )

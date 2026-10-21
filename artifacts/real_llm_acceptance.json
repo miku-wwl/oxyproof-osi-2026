@@ -1,0 +1,209 @@
+{
+  "status": "NOT_CONFIGURED",
+  "checked_at_utc": "2026-10-20T08:19:00.984429+00:00",
+  "supported_provider": "OpenAI Responses",
+  "key_present": false,
+  "model_present": false,
+  "dotenv_file_present": false,
+  "provider_calls": 0,
+  "paid_usage": false,
+  "live_traces": [],
+  "scenarios": [
+    {
+      "scenario": "A",
+      "request": "Find published bulk oxygen-ion conductors with promising model-derived conductivity at 600 \u00b0C. Give me the source evidence and limitations.",
+      "live_status": "NOT_RUN",
+      "independent_coverage": {
+        "grammar_version": "2.0",
+        "recognized": [
+          {
+            "start": 0,
+            "end": 4,
+            "text": "Find",
+            "field": "action"
+          },
+          {
+            "start": 15,
+            "end": 19,
+            "text": "bulk",
+            "field": "conductivity_type"
+          },
+          {
+            "start": 20,
+            "end": 41,
+            "text": "oxygen-ion conductors",
+            "field": "domain"
+          },
+          {
+            "start": 42,
+            "end": 46,
+            "text": "with",
+            "field": "connector"
+          },
+          {
+            "start": 71,
+            "end": 83,
+            "text": "conductivity",
+            "field": "domain"
+          },
+          {
+            "start": 84,
+            "end": 86,
+            "text": "at",
+            "field": "connector"
+          },
+          {
+            "start": 87,
+            "end": 93,
+            "text": "600 \u00b0C",
+            "field": "temperature"
+          },
+          {
+            "start": 103,
+            "end": 106,
+            "text": "the",
+            "field": "connector"
+          },
+          {
+            "start": 113,
+            "end": 122,
+            "text": " evidence",
+            "field": "presentation"
+          },
+          {
+            "start": 123,
+            "end": 126,
+            "text": "and",
+            "field": "connector"
+          }
+        ],
+        "unresolved": [
+          {
+            "start": 5,
+            "end": 70,
+            "text": "published bulk oxygen-ion conductors with promising model-derived",
+            "field": "UNVERIFIED_CONSTRAINTS"
+          },
+          {
+            "start": 95,
+            "end": 138,
+            "text": "Give me the source evidence and limitations",
+            "field": "UNVERIFIED_CONSTRAINTS"
+          }
+        ],
+        "complete": false
+      }
+    },
+    {
+      "scenario": "B",
+      "request": "Compare the published oxygen-ion conductor candidates across 700\u20131000 K. Tell me whether the best-ranked candidate changes and explain why.",
+      "live_status": "NOT_RUN",
+      "independent_coverage": {
+        "grammar_version": "2.0",
+        "recognized": [
+          {
+            "start": 0,
+            "end": 7,
+            "text": "Compare",
+            "field": "action"
+          },
+          {
+            "start": 8,
+            "end": 11,
+            "text": "the",
+            "field": "connector"
+          },
+          {
+            "start": 65,
+            "end": 71,
+            "text": "1000 K",
+            "field": "temperature"
+          },
+          {
+            "start": 89,
+            "end": 92,
+            "text": "the",
+            "field": "connector"
+          },
+          {
+            "start": 123,
+            "end": 126,
+            "text": "and",
+            "field": "connector"
+          }
+        ],
+        "unresolved": [
+          {
+            "start": 12,
+            "end": 65,
+            "text": "published oxygen-ion conductor candidates across 700\u2013",
+            "field": "UNVERIFIED_CONSTRAINTS"
+          },
+          {
+            "start": 73,
+            "end": 138,
+            "text": "Tell me whether the best-ranked candidate changes and explain why",
+            "field": "UNVERIFIED_CONSTRAINTS"
+          }
+        ],
+        "complete": false
+      }
+    },
+    {
+      "scenario": "C",
+      "request": "Find bulk conductors at 600 \u00b0C that survive 10% humidity and remain phase-stable during long-term cycling.",
+      "live_status": "NOT_RUN",
+      "independent_coverage": {
+        "grammar_version": "2.0",
+        "recognized": [
+          {
+            "start": 0,
+            "end": 4,
+            "text": "Find",
+            "field": "action"
+          },
+          {
+            "start": 5,
+            "end": 9,
+            "text": "bulk",
+            "field": "conductivity_type"
+          },
+          {
+            "start": 10,
+            "end": 20,
+            "text": "conductors",
+            "field": "domain"
+          },
+          {
+            "start": 21,
+            "end": 23,
+            "text": "at",
+            "field": "connector"
+          },
+          {
+            "start": 24,
+            "end": 30,
+            "text": "600 \u00b0C",
+            "field": "temperature"
+          },
+          {
+            "start": 57,
+            "end": 60,
+            "text": "and",
+            "field": "connector"
+          }
+        ],
+        "unresolved": [
+          {
+            "start": 31,
+            "end": 105,
+            "text": "that survive 10% humidity and remain phase-stable during long-term cycling",
+            "field": "UNVERIFIED_CONSTRAINTS"
+          }
+        ],
+        "complete": false
+      }
+    }
+  ],
+  "note": "No usable key/model configuration. No live response IDs, token usage, model results or acceptance invented. Existing mocked transports are contract tests only. Exact A/B wording also exceeds current independent grammar; supported guided requests work, unfamiliar prose abstains."
+}

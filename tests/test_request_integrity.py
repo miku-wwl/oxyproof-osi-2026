@@ -17,6 +17,7 @@ from tests.test_llm_adapter import install_transport, valid_body
         "at oxygen partial pressure 0.2 atm",
         "with a 10 year lifetime",
         "with cycling durability",
+        "that remain phase-stable during long-term cycling",
         "with feasible synthesis",
         "under $10 per kg",
         "without toxicity",

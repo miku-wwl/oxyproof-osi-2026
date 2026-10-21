@@ -1,0 +1,576 @@
+{
+  "phase": "2.5",
+  "status": "PASS",
+  "release_readiness": "CONDITIONAL_GO",
+  "executed_at_utc": "2026-10-20T08:28:49.902678+00:00",
+  "git": {
+    "head": "c9e72efa8f1a6bd77c80031c0e5208154393dc72",
+    "branch": "main",
+    "initial_worktree": "CLEAN",
+    "commit_push_publish_deploy_submit_performed": false
+  },
+  "environment": {
+    "os": "Windows-11-10.0.26200-SP0",
+    "system_python": "3.13.9",
+    "application_python": "3.12.13 (main, May 10 2026, 19:35:37) [MSC v.1944 64 bit (AMD64)]",
+    "uv": "0.11.16",
+    "node": "26.5.0",
+    "npm": "12.0.1",
+    "playwright": "1.64.1",
+    "chromium": "156.0.8078.4"
+  },
+  "backend": {
+    "passed": 145,
+    "failed": 0,
+    "skipped": 0,
+    "warnings": 1,
+    "duration_seconds": 10.58
+  },
+  "frontend": {
+    "component_passed": 8,
+    "component_fetch": "MOCK_CONTRACT_ONLY",
+    "build": "PASS",
+    "lint": "PASS"
+  },
+  "browser": {
+    "startTime": "2026-10-20T08:20:13.037Z",
+    "duration": 23062.542999999998,
+    "expected": 14,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "browser_trace_count": 14,
+  "benchmarks": {
+    "scientific_selected_cases": 49,
+    "passed": 49,
+    "failed": 0,
+    "real_model_calls": 0,
+    "representative_accuracy": false,
+    "legacy_educational_guards": {
+      "cases": 8,
+      "unsafe_baseline_passed": 1,
+      "audited_passed": 8
+    }
+  },
+  "dataset": {
+    "status": "VERIFIED",
+    "scope": "FULL_DATASET",
+    "rows": 483,
+    "columns": 34,
+    "distinct_formula_strings": 452,
+    "source_dois": 84,
+    "sha256": "8ec66b131bae79f8520f7cf40e91e2be2541995939bc43b744eaac627f4fad34",
+    "fresh_fetch": "VERIFIED_REAL via scripts/fetch_data.py --force",
+    "fixture_rows": 24,
+    "fixture_and_manifest_unchanged": true
+  },
+  "scientific_acceptance": {
+    "status": "PASS",
+    "source_status": "PARTIAL",
+    "reference_artifact": "artifacts/scientific_acceptance.json",
+    "roots_independently_checked": 3,
+    "endpoint_values_checked": 6,
+    "primary_full_methods": "NOT_VERIFIED",
+    "uncertainty_intervals": "UNAVAILABLE"
+  },
+  "bootstrap": {
+    "full_start": "PASS ready on loopback after locked sync, fresh npm ci and build",
+    "offline_start": "PASS fresh owned server on port 8000",
+    "fresh_cached_python_environment": "PASS .local/repro-venv, locked offline install, phase2_demo PASS",
+    "fresh_operating_system": "NOT_RUN",
+    "posix": "NOT_RUN"
+  },
+  "demo": {
+    "offline_cases": 5,
+    "http_smoke_checks": 6,
+    "additional_http_interval": "PASS artifacts/final_http_decision.json",
+    "new_video": "artifacts/final_demo_validation.json",
+    "duration_seconds": 204.76,
+    "original_video_preserved": true,
+    "video_test": "1 passed",
+    "pdf": "artifacts/pdf_acceptance.json",
+    "pdf_pages": 1
+  },
+  "real_llm": {
+    "status": "NOT_CONFIGURED",
+    "checked_at_utc": "2026-10-20T08:19:00.984429+00:00",
+    "supported_provider": "OpenAI Responses",
+    "key_present": false,
+    "model_present": false,
+    "dotenv_file_present": false,
+    "provider_calls": 0,
+    "paid_usage": false,
+    "live_traces": [],
+    "scenarios": [
+      {
+        "scenario": "A",
+        "request": "Find published bulk oxygen-ion conductors with promising model-derived conductivity at 600 \u00b0C. Give me the source evidence and limitations.",
+        "live_status": "NOT_RUN",
+        "independent_coverage": {
+          "grammar_version": "2.0",
+          "recognized": [
+            {
+              "start": 0,
+              "end": 4,
+              "text": "Find",
+              "field": "action"
+            },
+            {
+              "start": 15,
+              "end": 19,
+              "text": "bulk",
+              "field": "conductivity_type"
+            },
+            {
+              "start": 20,
+              "end": 41,
+              "text": "oxygen-ion conductors",
+              "field": "domain"
+            },
+            {
+              "start": 42,
+              "end": 46,
+              "text": "with",
+              "field": "connector"
+            },
+            {
+              "start": 71,
+              "end": 83,
+              "text": "conductivity",
+              "field": "domain"
+            },
+            {
+              "start": 84,
+              "end": 86,
+              "text": "at",
+              "field": "connector"
+            },
+            {
+              "start": 87,
+              "end": 93,
+              "text": "600 \u00b0C",
+              "field": "temperature"
+            },
+            {
+              "start": 103,
+              "end": 106,
+              "text": "the",
+              "field": "connector"
+            },
+            {
+              "start": 113,
+              "end": 122,
+              "text": " evidence",
+              "field": "presentation"
+            },
+            {
+              "start": 123,
+              "end": 126,
+              "text": "and",
+              "field": "connector"
+            }
+          ],
+          "unresolved": [
+            {
+              "start": 5,
+              "end": 70,
+              "text": "published bulk oxygen-ion conductors with promising model-derived",
+              "field": "UNVERIFIED_CONSTRAINTS"
+            },
+            {
+              "start": 95,
+              "end": 138,
+              "text": "Give me the source evidence and limitations",
+              "field": "UNVERIFIED_CONSTRAINTS"
+            }
+          ],
+          "complete": false
+        }
+      },
+      {
+        "scenario": "B",
+        "request": "Compare the published oxygen-ion conductor candidates across 700\u20131000 K. Tell me whether the best-ranked candidate changes and explain why.",
+        "live_status": "NOT_RUN",
+        "independent_coverage": {
+          "grammar_version": "2.0",
+          "recognized": [
+            {
+              "start": 0,
+              "end": 7,
+              "text": "Compare",
+              "field": "action"
+            },
+            {
+              "start": 8,
+              "end": 11,
+              "text": "the",
+              "field": "connector"
+            },
+            {
+              "start": 65,
+              "end": 71,
+              "text": "1000 K",
+              "field": "temperature"
+            },
+            {
+              "start": 89,
+              "end": 92,
+              "text": "the",
+              "field": "connector"
+            },
+            {
+              "start": 123,
+              "end": 126,
+              "text": "and",
+              "field": "connector"
+            }
+          ],
+          "unresolved": [
+            {
+              "start": 12,
+              "end": 65,
+              "text": "published oxygen-ion conductor candidates across 700\u2013",
+              "field": "UNVERIFIED_CONSTRAINTS"
+            },
+            {
+              "start": 73,
+              "end": 138,
+              "text": "Tell me whether the best-ranked candidate changes and explain why",
+              "field": "UNVERIFIED_CONSTRAINTS"
+            }
+          ],
+          "complete": false
+        }
+      },
+      {
+        "scenario": "C",
+        "request": "Find bulk conductors at 600 \u00b0C that survive 10% humidity and remain phase-stable during long-term cycling.",
+        "live_status": "NOT_RUN",
+        "independent_coverage": {
+          "grammar_version": "2.0",
+          "recognized": [
+            {
+              "start": 0,
+              "end": 4,
+              "text": "Find",
+              "field": "action"
+            },
+            {
+              "start": 5,
+              "end": 9,
+              "text": "bulk",
+              "field": "conductivity_type"
+            },
+            {
+              "start": 10,
+              "end": 20,
+              "text": "conductors",
+              "field": "domain"
+            },
+            {
+              "start": 21,
+              "end": 23,
+              "text": "at",
+              "field": "connector"
+            },
+            {
+              "start": 24,
+              "end": 30,
+              "text": "600 \u00b0C",
+              "field": "temperature"
+            },
+            {
+              "start": 57,
+              "end": 60,
+              "text": "and",
+              "field": "connector"
+            }
+          ],
+          "unresolved": [
+            {
+              "start": 31,
+              "end": 105,
+              "text": "that survive 10% humidity and remain phase-stable during long-term cycling",
+              "field": "UNVERIFIED_CONSTRAINTS"
+            }
+          ],
+          "complete": false
+        }
+      }
+    ],
+    "note": "No usable key/model configuration. No live response IDs, token usage, model results or acceptance invented. Existing mocked transports are contract tests only. Exact A/B wording also exceeds current independent grammar; supported guided requests work, unfamiliar prose abstains."
+  },
+  "warnings": [
+    "Starlette TestClient/httpx deprecation (1 pytest warning)",
+    "Playwright NO_COLOR/FORCE_COLOR environment warning",
+    "npm allowScripts blocked esbuild postinstall; build succeeded without policy change",
+    "Optional PDF installation hardlink-to-copy fallback",
+    "Poppler Symbol display-font warning; actual rendered page visually passed"
+  ],
+  "temporary_resolved_failure": "Optional PDF helper initial Ruff closure warning fixed by explicit list binding; all final lint/format checks pass.",
+  "commands": [
+    {
+      "name": "lock",
+      "command": [
+        "uv",
+        "lock",
+        "--check",
+        "--offline"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.062,
+      "log_path": ".local/validation-v2/lock.txt",
+      "output": "Resolved 31 packages in 2ms\n"
+    },
+    {
+      "name": "backend_lint",
+      "command": [
+        "uv",
+        "run",
+        "--offline",
+        "--no-sync",
+        "python",
+        "-m",
+        "ruff",
+        "check",
+        "backend",
+        "scripts",
+        "tests",
+        "benchmarks"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.266,
+      "log_path": ".local/validation-v2/backend_lint.txt",
+      "output": "All checks passed!\n"
+    },
+    {
+      "name": "backend_format",
+      "command": [
+        "uv",
+        "run",
+        "--offline",
+        "--no-sync",
+        "python",
+        "-m",
+        "ruff",
+        "format",
+        "--check",
+        "backend",
+        "scripts",
+        "tests",
+        "benchmarks"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.25,
+      "log_path": ".local/validation-v2/backend_format.txt",
+      "output": "44 files already formatted\n"
+    },
+    {
+      "name": "pytest",
+      "command": [
+        "uv",
+        "run",
+        "--offline",
+        "--no-sync",
+        "python",
+        "-m",
+        "pytest",
+        "-q"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 17.609,
+      "log_path": ".local/validation-v2/pytest.txt",
+      "output": "........................................................................ [ 49%]\n........................................................................ [ 99%]\n.                                                                        [100%]\n============================== warnings summary ===============================\n.venv\\Lib\\site-packages\\fastapi\\testclient.py:1\n  D:\\workshop\\oct\\oxyproof-osi-2026\\.venv\\Lib\\site-packages\\fastapi\\testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.\n    from starlette.testclient import TestClient as TestClient  # noqa\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n145 passed, 1 warning in 10.58s\n"
+    },
+    {
+      "name": "frontend_build",
+      "command": [
+        "node",
+        "D:\\node\\node_modules\\npm\\bin\\npm-cli.js",
+        "run",
+        "build",
+        "--prefix",
+        "frontend"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 10.719,
+      "log_path": ".local/validation-v2/frontend_build.txt",
+      "output": "vite v7.3.7 building client environment for production...\ntransforming...\n\u2713 1582 modules transformed.\nrendering chunks...\ncomputing gzip size...\ndist/index.html                   0.56 kB \u2502 gzip:  0.36 kB\ndist/assets/index-B8fTsnef.css   21.13 kB \u2502 gzip:  5.37 kB\ndist/assets/index-atYEAU_g.js   260.95 kB \u2502 gzip: 81.59 kB\n\u2713 built in 4.54s\nnpm notice run oxyproof-dashboard@0.1.0 build\nnpm notice run tsc -b && vite build\n"
+    },
+    {
+      "name": "frontend_lint",
+      "command": [
+        "node",
+        "D:\\node\\node_modules\\npm\\bin\\npm-cli.js",
+        "run",
+        "lint",
+        "--prefix",
+        "frontend"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 4.625,
+      "log_path": ".local/validation-v2/frontend_lint.txt",
+      "output": "npm notice run oxyproof-dashboard@0.1.0 lint\nnpm notice run eslint . --max-warnings 0\n"
+    },
+    {
+      "name": "frontend_components",
+      "command": [
+        "node",
+        "D:\\node\\node_modules\\npm\\bin\\npm-cli.js",
+        "run",
+        "test",
+        "--prefix",
+        "frontend"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 6.266,
+      "log_path": ".local/validation-v2/frontend_components.txt",
+      "output": "\n RUN  v4.1.12 D:/workshop/oct/oxyproof-osi-2026/frontend\n\n\n Test Files  1 passed (1)\n      Tests  8 passed (8)\n   Start at  21:19:57\n   Duration  4.28s (transform 353ms, setup 300ms, import 537ms, tests 1.75s, environment 1.28s)\n\nnpm notice run oxyproof-dashboard@0.1.0 test\nnpm notice run vitest run\n"
+    },
+    {
+      "name": "reference_values",
+      "command": [
+        "uv",
+        "run",
+        "--offline",
+        "--no-sync",
+        "python",
+        "scripts/reference_values.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.219,
+      "log_path": ".local/validation-v2/reference_values.txt",
+      "output": "row=1 T=700 K regime=LT sigma=0.00152279771377997559372401061591251744494792292758364133882343 S/cm\nrow=1 T=873.15 K regime=HT sigma=0.0132438119864429252018004584050147634342673100201495858553654 S/cm\nrow=39 T=1100 K regime=SINGLE sigma=0.155737064991434737163014555255747584306281178016217708267326 S/cm\nrow=483 T=600 K regime=SINGLE sigma=0.0290520689988645706478882348521822121429195069173796920000169 S/cm\n"
+    },
+    {
+      "name": "legacy_demo",
+      "command": [
+        "uv",
+        "run",
+        "--offline",
+        "--no-sync",
+        "python",
+        "scripts/demo.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 1.125,
+      "log_path": ".local/validation-v2/legacy_demo.txt",
+      "output": "{\"case\": \"600c_huang_bulk\", \"status\": \"CALCULATED_WITH_WARNINGS\", \"candidates\": 3, \"excluded\": 0, \"mode\": \"OFFLINE_DETERMINISTIC\"}\n{\"case\": \"827c_cobalt_bulk\", \"status\": \"CALCULATED_WITH_WARNINGS\", \"candidates\": 1, \"excluded\": 0, \"mode\": \"OFFLINE_DETERMINISTIC\"}\n{\"case\": \"327c_bismuth_bulk\", \"status\": \"CALCULATED_WITH_WARNINGS\", \"candidates\": 1, \"excluded\": 0, \"mode\": \"OFFLINE_DETERMINISTIC\"}\n{\"case\": \"ambiguous_regime\", \"status\": \"INSUFFICIENT_EVIDENCE\", \"candidates\": 0, \"excluded\": 1, \"mode\": \"OFFLINE_DETERMINISTIC\"}\n{\"case\": \"out_of_range\", \"status\": \"INSUFFICIENT_EVIDENCE\", \"candidates\": 0, \"excluded\": 1, \"mode\": \"OFFLINE_DETERMINISTIC\"}\nOFFLINE_DEMO=PASS cases=5 real_published_fixture=true network_calls=0\n"
+    },
+    {
+      "name": "legacy_guards",
+      "command": [
+        "uv",
+        "run",
+        "--offline",
+        "--no-sync",
+        "python",
+        "benchmarks/evaluate.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 1.265,
+      "log_path": ".local/validation-v2/legacy_guards.txt",
+      "output": "MEASURED guard_cases=8 baseline_correct=1 audited_correct=8\n"
+    },
+    {
+      "name": "scientific_benchmark",
+      "command": [
+        "uv",
+        "run",
+        "--offline",
+        "--no-sync",
+        "python",
+        "benchmarks/evaluate_v2.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 3.953,
+      "log_path": ".local/validation-v2/scientific_benchmark.txt",
+      "output": "SCIENTIFIC_BENCHMARK_V2 cases=49 passed=49 failed=0 live_model_calls=0\n"
+    },
+    {
+      "name": "phase2_demo",
+      "command": [
+        "uv",
+        "run",
+        "--offline",
+        "--no-sync",
+        "python",
+        "scripts/phase2_demo.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 1.094,
+      "log_path": ".local/validation-v2/phase2_demo.txt",
+      "output": "PHASE2_OFFLINE_DEMO=PASS scope=FULL_DATASET rows=483 selected_orders=1>2>3;3>2>1 continuous_model_crossings=3\n"
+    },
+    {
+      "name": "data_inspection",
+      "command": [
+        "uv",
+        "run",
+        "--offline",
+        "--no-sync",
+        "python",
+        "scripts/inspect_data.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 2.188,
+      "log_path": ".local/validation-v2/data_inspection.txt",
+      "output": "INSPECTED_REAL rows=483 columns=34 source_dois=84\n"
+    },
+    {
+      "name": "browser_e2e",
+      "command": [
+        "uv",
+        "run",
+        "--offline",
+        "--no-sync",
+        "python",
+        "scripts/browser_e2e.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 24.5,
+      "log_path": ".local/validation-v2/browser_e2e.txt",
+      "output": "\nRunning 14 tests using 1 worker\n\n  ok  1 e2e\\research.spec.ts:14:1 \u203a default screening uses real API calculations (1.6s)\n  ok  2 e2e\\research.spec.ts:21:1 \u203a generated goal follows temperature controls (1.1s)\n  ok  3 e2e\\research.spec.ts:30:1 \u203a generated goal follows conductivity type (1.0s)\n  ok  4 e2e\\research.spec.ts:39:1 \u203a manual contradictions are reported (1.2s)\n  ok  5 e2e\\research.spec.ts:50:1 \u203a humidity constraint abstains visibly (1.5s)\n  ok  6 e2e\\research.spec.ts:62:1 \u203a flagship reversal, plot and slider use backend values (1.5s)\n  ok  7 e2e\\research.spec.ts:82:1 \u203a exact regime boundary withholds its row (1.1s)\n  ok  8 e2e\\research.spec.ts:89:1 \u203a continuous root displays a numerical tie rather than a strict winner (1.1s)\n  ok  9 e2e\\research.spec.ts:96:1 \u203a wrong-formula audit retains dimensional rejection (1.2s)\n  ok 10 e2e\\research.spec.ts:102:1 \u203a out-of-range refusal (1.0s)\n  ok 11 e2e\\research.spec.ts:108:1 \u203a source DOI navigation is inspectable (1.1s)\n  ok 12 e2e\\research.spec.ts:120:1 \u203a export contains real interval provenance and results (1.3s)\n  ok 13 e2e\\research.spec.ts:143:1 \u203a responsive mobile viewport has no horizontal overflow (1.1s)\n  ok 14 e2e\\research.spec.ts:154:1 \u203a API failure injection is displayed without candidates (782ms)\n\n  14 passed (23.1s)\n[WebServer] INFO:     Started server process [47280]\n[WebServer] INFO:     Waiting for application startup.\n[WebServer] INFO:     Application startup complete.\n[WebServer] INFO:     Uvicorn running on http://127.0.0.1:8011 (Press CTRL+C to quit)\n(node:45568) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.\n(Use `node --trace-warnings ...` to show where the warning was created)\n"
+    }
+  ],
+  "limitations": [
+    "No live LLM or paid calls; exact free-prose scenarios A/B fail closed under current independent grammar.",
+    "No independently inspected original Table 3/full methods or sample-specific conditions/uncertainties.",
+    "Registration, Slack, pre-event eligibility and submission process unverified.",
+    "Representative video frames inspected; no frame-by-frame/audio listening claim.",
+    "Windows/Chromium local execution only, no public deployment."
+  ],
+  "submission_status": "NOT_SUBMITTED",
+  "code_version": {
+    "app_version": "0.1.0",
+    "git_base": "c9e72efa8f1a6bd77c80031c0e5208154393dc72",
+    "calculation_source_sha256": "160ce307253a8d811b75c329d030d2042d2a444cdb3ba8106bfd1cbb15427d7b"
+  },
+  "integrity": {
+    "current_audit_reports_verified": 8,
+    "new_video_export_code_and_raw_records_match": true,
+    "protected_paths_unchanged": [
+      "AGENTS.md",
+      "PROJECT_BRIEF.md",
+      "PROMPT_01_CODEX.md",
+      "uv.lock",
+      "frontend/package-lock.json",
+      "backend/app/data/fixtures/published_subset.csv",
+      "backend/app/data/fixtures/manifest.json",
+      "benchmarks/evaluate.py",
+      "benchmarks/scientific_cases.json"
+    ],
+    "secret_pattern_scan": {
+      "status": "PASS",
+      "project_text_files": 139,
+      "trace_archives": 15,
+      "trace_text_entries": 146,
+      "findings": [],
+      "limit": "Known token/private-key patterns; not a full security audit"
+    },
+    "post_pipeline_lint": "All checks passed!",
+    "post_pipeline_format": "45 files already formatted",
+    "diff_whitespace": "PASS"
+  }
+}

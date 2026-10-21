@@ -13,4 +13,6 @@ Target: 3–4 minutes. Use a fresh browser at the local API root. Select OFFLINE
 
 Research interpretation: ordering reverses because prefactor ratios and activation-energy differences interact with temperature and selected regimes. The common source and fitted ranges support a conditional comparison. Atmosphere, preparation, density and parameter uncertainty remain unverified. Re-measure near predicted roots and T*, retaining bulk/grain-boundary separation. No new material was discovered.
 
+Final acceptance qualification: **Model-derived crossover temperatures; uncertainty bounds unavailable; experimental confirmation required.** Public crossing captions use approximately 776, 818 and 854 K; full numeric coordinates survive technical JSON. The original abstract and bibliographic record were inspected in Phase 2.5; full original methods/Table 3 remain unverified. The accepted updated video is separate under `.local/demo-phase25/`; the original recording is preserved.
+
 Reproduce data artifacts: `uv run --offline --no-sync python scripts/phase2_demo.py`. Genuine browser capture: `uv run --offline --no-sync python scripts/browser_e2e.py --record` after building assets and installing Chromium. The capture uses live local API results and clearly identified caption overlays; no voice, fabricated model responses or external article figures.

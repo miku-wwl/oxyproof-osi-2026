@@ -51,10 +51,10 @@ test('record captioned scientific demonstration', async ({ page }) => {
   await page.locator('.events-grid').evaluate((el) => el.scrollIntoView({ block: 'start' }))
   const roots = report.events
     .filter((e: { exact_continuous_crossing: boolean }) => e.exact_continuous_crossing)
-    .map((e: { temperature_k: number }) => e.temperature_k.toFixed(2))
+    .map((e: { temperature_k: number }) => e.temperature_k.toFixed(0))
     .join(', ')
   await caption(
-    `Continuous model crossings: ${roots} K. Each is checked inside BOTH measured ranges and fixed regimes. Published T* boundaries are separate events.`,
+    `Model-derived crossings: approximately ${roots} K. Uncertainty bounds unavailable; experimental confirmation required. Published T* boundaries are separate events.`,
     22,
   )
   await page.locator('.regime-event').first().getByRole('button').click()
@@ -105,9 +105,13 @@ test('record captioned scientific demonstration', async ({ page }) => {
     'Our contribution is the auditable workflow on published evidence. No new material, experiment, validated uncertainty interval or humidity guarantee is claimed.',
     12,
   )
-  const output = path.resolve(import.meta.dirname, '../../.local/demo')
+  const output = path.resolve(
+    import.meta.dirname,
+    '../../.local',
+    process.env.OXYPROOF_DEMO_NAME ?? 'demo',
+  )
   await fs.mkdir(output, { recursive: true })
-  await fs.writeFile(path.join(output,'exported-decision.json'),JSON.stringify(exported,null,2))
+  await fs.writeFile(path.join(output, 'exported-decision.json'), JSON.stringify(exported, null, 2))
   await fs.writeFile(
     path.join(output, 'scene-log.json'),
     JSON.stringify(

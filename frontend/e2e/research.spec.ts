@@ -119,6 +119,10 @@ test('source DOI navigation is inspectable', async ({ page }) => {
 
 test('export contains real interval provenance and results', async ({ page }) => {
   await flagship(page)
+  await expect(page.getByTestId('crossover-qualification')).toContainText(
+    'Model-derived crossover temperatures; uncertainty bounds unavailable; experimental confirmation required.',
+  )
+  await expect(page.locator('.continuous-event h4').first()).toContainText('≈ 776 K')
   const pending = page.waitForEvent('download')
   await page.getByRole('button', { name: 'Export decision JSON' }).click()
   const download = await pending
@@ -129,6 +133,11 @@ test('export contains real interval provenance and results', async ({ page }) =>
     [3, 2, 1],
   ])
   expect(report.code_version.calculation_source_sha256).toHaveLength(64)
+  expect(report.crossover_qualification).toContain('uncertainty bounds unavailable')
+  expect(
+    report.events.find((e: { exact_continuous_crossing: boolean }) => e.exact_continuous_crossing)
+      .temperature_k,
+  ).toBeCloseTo(776.407425051, 8)
 })
 
 test('responsive mobile viewport has no horizontal overflow', async ({ page }) => {

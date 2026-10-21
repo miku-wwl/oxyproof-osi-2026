@@ -69,3 +69,23 @@ def test_missing_identity_rejected():
     writer.writerow(rows[0])
     with pytest.raises(DataError, match="MISSING_IDENTITY"):
         parse_csv(out.getvalue().encode(), columns, [1])
+
+
+def test_missing_full_file_explicitly_labels_fixture(monkeypatch, tmp_path):
+    import backend.app.data.ingest as module
+
+    monkeypatch.setattr(module, "FULL_PATH", tmp_path / "absent.csv")
+    result = module.Repository()
+    assert result.source.scope == "REAL_PUBLISHED_FIXTURE"
+    assert result.source.row_count == 24
+    assert result.source.loaded_sha256 != result.source.dataset_sha256
+
+
+def test_corrupt_full_file_never_silently_uses_fixture(monkeypatch, tmp_path):
+    import backend.app.data.ingest as module
+
+    path = tmp_path / "corrupt.csv"
+    path.write_bytes(b"invalid published data")
+    monkeypatch.setattr(module, "FULL_PATH", path)
+    with pytest.raises(DataError, match="CHECKSUM_MISMATCH"):
+        module.Repository()

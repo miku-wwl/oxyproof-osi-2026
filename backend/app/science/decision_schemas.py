@@ -148,6 +148,7 @@ class TemperatureReport(Contract):
     source: SourceInfo
     code_version: dict[str, str]
     equation: str = "sigma(T) = A/T * exp(-Ea/(k_B*T))"
+    crossover_qualification: str = "Model-derived crossover temperatures; uncertainty bounds unavailable; experimental confirmation required."
     ratio_equation: str = (
         "ln(sigma_i/sigma_j) = ln(A_i)-ln(A_j) - (Ea_i-Ea_j)/(1000*k_B*T); Ea in meV"
     )

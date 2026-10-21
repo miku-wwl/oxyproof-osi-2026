@@ -1,0 +1,8 @@
+{
+  "checked_at_utc": "2026-10-20T08:28:42.686397+00:00",
+  "transport": "Unauthenticated GitHub public REST GET; no Authorization header",
+  "url": "https://github.com/miku-wwl/oxyproof-osi-2026",
+  "private": false,
+  "default_branch": "main",
+  "status": "PUBLICLY_READABLE"
+}

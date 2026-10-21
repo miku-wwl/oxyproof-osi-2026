@@ -1,5 +1,5 @@
 {
-  "accessed_at_utc": "2026-10-19T22:48:57.237267+00:00",
+  "accessed_at_utc": "2026-10-20T08:14:24.081277+00:00",
   "sources": [
     {
       "name": "agenda_2026",
@@ -15,7 +15,7 @@
       "status": "DIRECTLY_RETRIEVED",
       "http_status": 200,
       "bytes": 567312,
-      "sha256": "b60ed121c65286cecf652f1e1e372736e10ceaefebd643e5fe287147ac1032d9"
+      "sha256": "a0f46c3a9ba88c65b892e7dcd76d1b6a910213d2032b98074d88c6feecb9c418"
     },
     {
       "name": "units_table",
@@ -23,7 +23,7 @@
       "status": "DIRECTLY_RETRIEVED",
       "http_status": 200,
       "bytes": 167355,
-      "sha256": "9a63246b2e7dacbe17519025507b2ef3763364bb8b4b6fa78b3b615351827fa8"
+      "sha256": "97d591ae1a322b60fdc5ca9d2c0e40c897b50a71217fcc3d28c10ae80a380134"
     },
     {
       "name": "zenodo_metadata",
@@ -31,7 +31,7 @@
       "status": "DIRECTLY_RETRIEVED",
       "http_status": 200,
       "bytes": 5072,
-      "sha256": "7002604bbb8d08af2b6be9e0e5816e79a688d42b14b7ae20e24f1466ea046c2f",
+      "sha256": "6d7b38dc4637e430da7dbf931d6770dc2d84f703422a6be876a9ec4abf1991c7",
       "license": {
         "id": "cc-by-4.0"
       },

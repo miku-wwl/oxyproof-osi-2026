@@ -146,7 +146,8 @@ function DecisionPlot({ report, point }: { report: TemperatureReport; point: Dec
               stroke="#253b36"
             />
             <title>
-              Continuous model crossing {e.row_ids.join('/')} at {e.temperature_k.toFixed(4)} K
+              Continuous model crossing {e.row_ids.join('/')} at approximately{' '}
+              {e.temperature_k.toFixed(0)} K
             </title>
           </g>
         ))}
@@ -362,6 +363,10 @@ export default function TemperatureExplorer({
       )}
       {report && (
         <div className="decision-output">
+          <p className="verdict" data-testid="crossover-qualification">
+            {report.crossover_qualification} Event headings round to the nearest kelvin for
+            presentation; full numerical values remain in exported JSON and technical details.
+          </p>
           <div className={`verdict ${report.status === 'INSUFFICIENT_EVIDENCE' ? 'abstain' : ''}`}>
             <div>
               <strong>{report.evidence_verdicts.join(' · ').replaceAll('_', ' ')}</strong>
@@ -496,7 +501,7 @@ export default function TemperatureExplorer({
                   {event.exact_continuous_crossing ? 'CONTINUOUS MODEL CROSSING' : 'REGIME REVIEW'}
                 </span>
                 <h4>
-                  {event.temperature_k.toFixed(4)} K · rows {event.row_ids.join(' / ')}
+                  ≈ {event.temperature_k.toFixed(0)} K · rows {event.row_ids.join(' / ')}
                 </h4>
                 <strong>{event.kind.replaceAll('_', ' ')}</strong>
                 <p>{event.explanation}</p>

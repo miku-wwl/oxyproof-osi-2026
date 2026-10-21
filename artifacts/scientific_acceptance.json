@@ -1,0 +1,260 @@
+{
+  "status": "PASS",
+  "executed_at_utc": "2026-10-20T08:23:18.962875+00:00",
+  "method": "Independent 80-digit Decimal SI arithmetic; exact CSV strings; 40/80 digit stability; no production calculator/constants/regime selector in reference functions",
+  "dataset_sha256": "8ec66b131bae79f8520f7cf40e91e2be2541995939bc43b744eaac627f4fad34",
+  "row_count": 483,
+  "column_count": 34,
+  "source_doi": "10.1111/j.1151-2916.1998.tb02662.x",
+  "source_records": {
+    "1": {
+      "Reference": "Huang et al., J. Am. Ceram. Soc., 81, 2565 (1998).",
+      "DOI": "10.1111/j.1151-2916.1998.tb02662.x",
+      "Year": "1998",
+      "Class": "Perovskites",
+      "Formula": "La0.95Sr0.05Ga0.95Mg0.05O2.95",
+      "Parsed_Formula_SiteA1": "La",
+      "Parsed_Formula_nSiteA1": "0.95",
+      "Parsed_Formula_SiteA2": "Sr",
+      "Parsed_Formula_nSiteA2": "0.05",
+      "Parsed_Formula_SiteA3": "",
+      "Parsed_Formula_nSiteA3": "",
+      "Parsed_Formula_SiteB1": "Ga",
+      "Parsed_Formula_nSiteB1": "0.95",
+      "Parsed_Formula_SiteB2": "Mg",
+      "Parsed_Formula_nSiteB2": "0.05",
+      "Parsed_Formula_SiteB3": "",
+      "Parsed_Formula_nSiteB3": "",
+      "Parsed_Formula_SiteC1": "",
+      "Parsed_Formula_nSiteC1": "",
+      "Parsed_Formula_SiteC2": "",
+      "Parsed_Formula_nSiteC2": "",
+      "Parsed_Formula_O": "O",
+      "Parsed_Formula_nO": "2.95",
+      "Delta_O": "-0.016666667",
+      "Ea": "772",
+      "A": "385385.727",
+      "EaHT": "634",
+      "AHT": "52785.93227",
+      "T*": "805.5450205",
+      "Type_of_conductivity": "bulk",
+      "Measurement_temperature_range": "600 - 1100 K",
+      "Measurement": "two-probe AC",
+      "Source": "Table 3",
+      "Plot type": "-"
+    },
+    "2": {
+      "Reference": "Huang et al., J. Am. Ceram. Soc., 81, 2565 (1998).",
+      "DOI": "10.1111/j.1151-2916.1998.tb02662.x",
+      "Year": "1998",
+      "Class": "Perovskites",
+      "Formula": "La0.95Sr0.05Ga0.9Mg0.1O2.925",
+      "Parsed_Formula_SiteA1": "La",
+      "Parsed_Formula_nSiteA1": "0.95",
+      "Parsed_Formula_SiteA2": "Sr",
+      "Parsed_Formula_nSiteA2": "0.05",
+      "Parsed_Formula_SiteA3": "",
+      "Parsed_Formula_nSiteA3": "",
+      "Parsed_Formula_SiteB1": "Ga",
+      "Parsed_Formula_nSiteB1": "0.9",
+      "Parsed_Formula_SiteB2": "Mg",
+      "Parsed_Formula_nSiteB2": "0.1",
+      "Parsed_Formula_SiteB3": "",
+      "Parsed_Formula_nSiteB3": "",
+      "Parsed_Formula_SiteC1": "",
+      "Parsed_Formula_nSiteC1": "",
+      "Parsed_Formula_SiteC2": "",
+      "Parsed_Formula_nSiteC2": "",
+      "Parsed_Formula_O": "O",
+      "Parsed_Formula_nO": "2.925",
+      "Delta_O": "-0.025",
+      "Ea": "996",
+      "A": "10962599.59",
+      "EaHT": "673",
+      "AHT": "120090.3914",
+      "T*": "830.3631709",
+      "Type_of_conductivity": "bulk",
+      "Measurement_temperature_range": "600 - 1100 K",
+      "Measurement": "two-probe AC",
+      "Source": "Table 3",
+      "Plot type": "-"
+    },
+    "3": {
+      "Reference": "Huang et al., J. Am. Ceram. Soc., 81, 2565 (1998).",
+      "DOI": "10.1111/j.1151-2916.1998.tb02662.x",
+      "Year": "1998",
+      "Class": "Perovskites",
+      "Formula": "La0.95Sr0.05Ga0.85Mg0.15O2.9",
+      "Parsed_Formula_SiteA1": "La",
+      "Parsed_Formula_nSiteA1": "0.95",
+      "Parsed_Formula_SiteA2": "Sr",
+      "Parsed_Formula_nSiteA2": "0.05",
+      "Parsed_Formula_SiteA3": "",
+      "Parsed_Formula_nSiteA3": "",
+      "Parsed_Formula_SiteB1": "Ga",
+      "Parsed_Formula_nSiteB1": "0.85",
+      "Parsed_Formula_SiteB2": "Mg",
+      "Parsed_Formula_nSiteB2": "0.15",
+      "Parsed_Formula_SiteB3": "",
+      "Parsed_Formula_nSiteB3": "",
+      "Parsed_Formula_SiteC1": "",
+      "Parsed_Formula_nSiteC1": "",
+      "Parsed_Formula_SiteC2": "",
+      "Parsed_Formula_nSiteC2": "",
+      "Parsed_Formula_O": "O",
+      "Parsed_Formula_nO": "2.9",
+      "Delta_O": "-0.033333333",
+      "Ea": "1118",
+      "A": "50677875.87",
+      "EaHT": "780",
+      "AHT": "572632.8272",
+      "T*": "874.9335546",
+      "Type_of_conductivity": "bulk",
+      "Measurement_temperature_range": "600 - 1100 K",
+      "Measurement": "two-probe AC",
+      "Source": "Table 3",
+      "Plot type": "-"
+    }
+  },
+  "parameter_evidence_class": "VERIFIED_FROM_CURATED_DATASET",
+  "original_full_text_conditions": "NOT_VERIFIED",
+  "equation": "sigma=A/T*exp(-Ea_J/(k_B_SI*T)); root=(Ea_i_J-Ea_j_J)/(k_B_SI*ln(A_i/A_j))",
+  "units": {
+    "Ea_csv": "meV",
+    "Ea_reference": "J per carrier",
+    "A": "K S/cm",
+    "T": "K",
+    "sigma": "S/cm"
+  },
+  "roots": [
+    {
+      "row_ids": [
+        1,
+        2
+      ],
+      "regimes": [
+        "LT",
+        "LT"
+      ],
+      "root_k_decimal_80_digits": "776.40742505102221575501402657933122388641806954260105994031144171780032883638039",
+      "production_root_k": 776.4074250510221,
+      "common_fixed_regime_interval_k": [
+        600,
+        805.5450205
+      ],
+      "order_at_root_minus_1_k": [
+        1,
+        2,
+        3
+      ],
+      "order_at_root_plus_1_k": [
+        2,
+        1,
+        3
+      ],
+      "relative_sigma_difference_at_root": "0E-27",
+      "precision_40_vs_80_stable": true
+    },
+    {
+      "row_ids": [
+        1,
+        3
+      ],
+      "regimes": [
+        "HT",
+        "LT"
+      ],
+      "root_k_decimal_80_digits": "817.90982536782453898635200168192489224225092626200147438023330504752855712515744",
+      "production_root_k": 817.9098253678244,
+      "common_fixed_regime_interval_k": [
+        805.5450205,
+        874.9335546
+      ],
+      "order_at_root_minus_1_k": [
+        2,
+        1,
+        3
+      ],
+      "order_at_root_plus_1_k": [
+        2,
+        3,
+        1
+      ],
+      "relative_sigma_difference_at_root": "0E-27",
+      "precision_40_vs_80_stable": true
+    },
+    {
+      "row_ids": [
+        2,
+        3
+      ],
+      "regimes": [
+        "HT",
+        "LT"
+      ],
+      "root_k_decimal_80_digits": "854.26146633958921159406087084779258383354860063435473161860384578621091587661545",
+      "production_root_k": 854.261466339589,
+      "common_fixed_regime_interval_k": [
+        830.3631709,
+        874.9335546
+      ],
+      "order_at_root_minus_1_k": [
+        2,
+        3,
+        1
+      ],
+      "order_at_root_plus_1_k": [
+        3,
+        2,
+        1
+      ],
+      "relative_sigma_difference_at_root": "0E-27",
+      "precision_40_vs_80_stable": true
+    }
+  ],
+  "endpoints": [
+    {
+      "row_id": 1,
+      "temperature_k": 700.0,
+      "regime": "LT",
+      "sigma_s_cm_decimal": "0.0015227977137799755937240106159125174449479229275836413388233773391737410630851657"
+    },
+    {
+      "row_id": 2,
+      "temperature_k": 700.0,
+      "regime": "LT",
+      "sigma_s_cm_decimal": "0.0010566499147050424949424468523454536424002756567769583411464581029096908518057153"
+    },
+    {
+      "row_id": 3,
+      "temperature_k": 700.0,
+      "regime": "LT",
+      "sigma_s_cm_decimal": "0.00064636023937838749115597952129868021399989171346913507160867963636843675264605183"
+    },
+    {
+      "row_id": 3,
+      "temperature_k": 1000.0,
+      "regime": "HT",
+      "sigma_s_cm_decimal": "0.067119584065909815244002546517616319110611486200434860888607416394389856168941289"
+    },
+    {
+      "row_id": 2,
+      "temperature_k": 1000.0,
+      "regime": "HT",
+      "sigma_s_cm_decimal": "0.048723394960367674189915106740762654423714897053878866287699833441388837304539348"
+    },
+    {
+      "row_id": 1,
+      "temperature_k": 1000.0,
+      "regime": "HT",
+      "sigma_s_cm_decimal": "0.033674319386466094990527667878764714861954769792846638123718800419280965668565531"
+    }
+  ],
+  "code_version": {
+    "app_version": "0.1.0",
+    "git_base": "c9e72efa8f1a6bd77c80031c0e5208154393dc72",
+    "calculation_source_sha256": "160ce307253a8d811b75c329d030d2042d2a444cdb3ba8106bfd1cbb15427d7b"
+  },
+  "qualification": "Model-derived crossover temperatures; uncertainty bounds unavailable; experimental confirmation required.",
+  "interpretation": "Conditional model comparison, not experimental superiority; no uncertainty bounds or measured crossings."
+}

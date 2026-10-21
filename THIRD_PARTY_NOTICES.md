@@ -7,3 +7,5 @@ The unchanged published-data fixture is CC BY 4.0: Jang, Seong-Hoon; Kiyohara, S
 The Nature article has separate rights (CC BY-NC-ND 4.0 per the first sprint's direct source inspection). No article figures or article text are redistributed. Original source paper DOIs remain citations, not a grant of rights over those papers.
 
 Installed third-party Python and npm packages retain their own license files. Exact versions are in `uv.lock` and `frontend/package-lock.json`; the application does not claim ownership of those dependencies. No third-party media, music, external fonts or stock figures are bundled.
+
+Final acceptance inventory: `artifacts/license_inventory.json` records 30 installed Python distributions and 271 installed npm lock entries, with license metadata/files. Optional PDF-rendering tools live in a separate ignored environment. `THIRD_PARTY_RUNTIME_LICENSES.txt` preserves the notices for React, React DOM, Scheduler and Lucide used by the frontend bundle. It must accompany any future distribution of built assets. No dependency is relicensed by OxyProof.

@@ -1,0 +1,11 @@
+{
+  "path": "output/pdf/oxyproof-one-page-submission.pdf",
+  "page_count": 1,
+  "text_extraction": "PASS",
+  "visual_review": "PASS - actual Poppler-rendered page inspected: readable, one page, no clipping, overlap or missing glyphs",
+  "source": "docs/FINAL_SUBMISSION_COPY.md",
+  "renderer": "ReportLab 5.0.1; pypdf 6.21.1; Poppler PNG review required",
+  "pdf_sha256": "2d695fb59b31530ec9233044bc911da3a5c0574c3372c219e6cab32abda6c959",
+  "source_sha256": "bb493f2c1e29ddfc49aab37e8dba4a683d036c4a7402eed2d76275def2d30b84",
+  "render_warning": "Poppler: No display font for 'Symbol'; no missing symbols or layout defects seen in actual page"
+}

@@ -1,0 +1,46 @@
+{
+  "retrievals": [
+    {
+      "name": "original_doi",
+      "url": "https://doi.org/10.1111/j.1151-2916.1998.tb02662.x",
+      "accessed_at_utc": "2026-10-20T08:17:38.531760+00:00",
+      "status": "FAILED",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "name": "original_pdf",
+      "url": "https://ceramics.onlinelibrary.wiley.com/doi/pdf/10.1111/j.1151-2916.1998.tb02662.x",
+      "accessed_at_utc": "2026-10-20T08:17:38.966641+00:00",
+      "status": "FAILED",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "name": "author_repository",
+      "url": "https://scholarcommons.sc.edu/emec_facpub/82/",
+      "accessed_at_utc": "2026-10-20T08:17:39.014756+00:00",
+      "http_status": 200,
+      "final_url": "https://scholarcommons.sc.edu/emec_facpub/82/",
+      "bytes": 28424,
+      "sha256": "ead7bdfb5cac30556eac6aadeb0e9182e0af1e6d7d89456624c822cfedde69e9",
+      "status": "RETRIEVED"
+    },
+    {
+      "name": "legacy_submission",
+      "url": "https://llmhackathon.github.io/submission/",
+      "accessed_at_utc": "2026-10-20T08:17:39.676967+00:00",
+      "http_status": 200,
+      "final_url": "https://llmhackathon.github.io/submission/",
+      "bytes": 16584,
+      "sha256": "7291c18a7ee70d93ccec3fc30594abe983faca3972e334bdd9b5c75eea869c94",
+      "status": "RETRIEVED"
+    }
+  ],
+  "web_reader_primary_abstract": {
+    "status": "VERIFIED_FROM_PRIMARY_SOURCE",
+    "url": "https://ceramics.onlinelibrary.wiley.com/doi/abs/10.1111/j.1151-2916.1998.tb02662.x",
+    "access_date": "2026-10-20 NZDT",
+    "scope": "Publisher abstract and bibliographic information only; requested PDF redirected to abstract; no Table 3/full methods inspected."
+  },
+  "row_specific_conditions": "NOT_VERIFIED",
+  "slack": "NOT_CHECKED_NO_AUTHENTICATED_ATTENDEE_ACCESS_AVAILABLE"
+}

@@ -114,6 +114,7 @@ export type DecisionPoint = {
   excluded: { row_id: number; reasons: string[] }[]
 }
 export type TemperatureReport = {
+  crossover_qualification: string
   trace: { step: string; outcome: string; detail: string }[]
   status: string
   evidence_verdicts: string[]

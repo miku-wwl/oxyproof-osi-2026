@@ -92,3 +92,27 @@ def test_adversarial_endpoint(client):
 
 def test_unknown_api_route_is_not_spa_html(client):
     assert client.get("/api/nonexistent").status_code == 404
+
+
+def test_unavailable_data_returns_explicit_503(client, monkeypatch):
+    import backend.app.main as module
+    from backend.app.data.ingest import DataError
+
+    def unavailable():
+        raise DataError("CHECKSUM_MISMATCH")
+
+    monkeypatch.setattr(module, "repository", unavailable)
+    response = client.post("/api/screen", json={"row_ids": [1, 2, 3]})
+    assert response.status_code == 503
+    assert response.json()["detail"]["runtime_mode"] == "UNAVAILABLE"
+    assert response.json()["detail"]["code"] == "DATA_UNAVAILABLE"
+
+
+def test_provider_failure_never_becomes_offline_success(client, monkeypatch):
+    from tests.test_llm_adapter import install_transport
+
+    install_transport(monkeypatch, {"secret": "DO_NOT_ECHO"}, status=401)
+    response = client.post("/api/screen", json={"mode": "REAL_LLM"})
+    assert response.status_code == 503
+    assert response.json()["detail"]["runtime_mode"] == "UNAVAILABLE"
+    assert "PROVIDER_HTTP_401" in response.text and "DO_NOT_ECHO" not in response.text

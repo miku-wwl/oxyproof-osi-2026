@@ -1,0 +1,83 @@
+{
+  "status": "METADATA_AND_SCENE_EXTRACTION_PASS",
+  "video_path": ".local/demo-phase25/oxyproof-phase2.webm",
+  "video_sha256": "e39fe0b000d984748e84782486d889c803b6d6e880e7dcc9c1cc4e48e7cb8c05",
+  "bytes": 31169101,
+  "duration_seconds": 204.76,
+  "resolution": "1440x1000",
+  "codec": "VP9/WebM",
+  "frame_rate_fps": 25.0,
+  "audio_streams": 0,
+  "runtime_mode": "OFFLINE_DETERMINISTIC",
+  "source_scope": "FULL_DATASET",
+  "capture_code_version": {
+    "app_version": "0.1.0",
+    "git_base": "c9e72efa8f1a6bd77c80031c0e5208154393dc72",
+    "calculation_source_sha256": "160ce307253a8d811b75c329d030d2042d2a444cdb3ba8106bfd1cbb15427d7b"
+  },
+  "frames": [
+    {
+      "position_s": 4.75,
+      "path": ".local/demo-phase25/frames/scene-01.png",
+      "caption": "OxyProof \u2014 When the best material changes, can your AI explain why? A decision at one temperature does not establish the choice across an operating range."
+    },
+    {
+      "position_s": 20.192,
+      "path": ".local/demo-phase25/frames/scene-02.png",
+      "caption": "Published evidence: three bulk records from the same report and method, measured over 600\u20131100 K. Curves use original fitted parameters and explicit units."
+    },
+    {
+      "position_s": 38.296,
+      "path": ".local/demo-phase25/frames/scene-03.png",
+      "caption": "At 700 K, row 1 leads: 1 > 2 > 3. These are conditional model calculations from low-temperature fits, not new experimental observations."
+    },
+    {
+      "position_s": 58.463,
+      "path": ".local/demo-phase25/frames/scene-04.png",
+      "caption": "At 1000 K, row 3 leads: 3 > 2 > 1. Higher activation energy can be offset by a larger prefactor; selected high-temperature regimes matter."
+    },
+    {
+      "position_s": 78.555,
+      "path": ".local/demo-phase25/frames/scene-05.png",
+      "caption": "Model-derived crossings: approximately 776, 818, 854 K. Uncertainty bounds unavailable; experimental confirmation required. Published T* boundaries are separate events."
+    },
+    {
+      "position_s": 100.711,
+      "path": ".local/demo-phase25/frames/scene-06.png",
+      "caption": "At a published T*, the affected row is withheld. Fitted branches are not assumed continuous. The \u00b15 K neighborhood is a review heuristic, not uncertainty."
+    },
+    {
+      "position_s": 119.412,
+      "path": ".local/demo-phase25/frames/scene-07.png",
+      "caption": "Reusing this dataset\u2019s A without 1/T yields K\u00b7S/cm, not conductivity. This educational counterexample does not accuse a specific source paper."
+    },
+    {
+      "position_s": 140.005,
+      "path": ".local/demo-phase25/frames/scene-08.png",
+      "caption": "A humidity requirement cannot disappear silently: UNVERIFIED_CONSTRAINTS. OxyProof abstains and proposes controlled humidity exposure and conductivity measurements."
+    },
+    {
+      "position_s": 162.704,
+      "path": ".local/demo-phase25/frames/scene-09.png",
+      "caption": "Export: dataset/source DOIs, raw row IDs, formulas, parameters, units, regimes, evidence verdicts and code fingerprint. Runtime: OFFLINE_DETERMINISTIC."
+    },
+    {
+      "position_s": 184.763,
+      "path": ".local/demo-phase25/frames/scene-10.png",
+      "caption": "Our contribution is the auditable workflow on published evidence. No new material, experiment, validated uncertainty interval or humidity guarantee is claimed."
+    },
+    {
+      "position_s": 202.76,
+      "path": ".local/demo-phase25/frames/end.png",
+      "caption": "Near-end continuity check"
+    }
+  ],
+  "visual_review": {
+    "status": "PASS",
+    "reviewer": "Coding assistant visual inspection",
+    "inspected": "All ten extracted scene frames plus near-end frame in this sprint",
+    "limits": "Representative-frame review, not frame-by-frame decoding or human listening; no audio stream",
+    "findings": "Readable captions and key scientific evidence; no visible secrets, browser error/empty panels; actual UI/API calculations. Final updated video uses rounded roots and explicit uncertainty/experimental-confirmation caption."
+  },
+  "acceptance_status": "PASS"
+}

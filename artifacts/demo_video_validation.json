@@ -6,6 +6,7 @@
   "duration_seconds": 204.4,
   "resolution": "1440x1000",
   "codec": "VP9/WebM",
+  "frame_rate_fps": 25.0,
   "audio_streams": 0,
   "runtime_mode": "OFFLINE_DETERMINISTIC",
   "source_scope": "FULL_DATASET",
@@ -64,14 +65,19 @@
       "position_s": 184.386,
       "path": ".local/demo/frames/scene-10.png",
       "caption": "Our contribution is the auditable workflow on published evidence. No new material, experiment, validated uncertainty interval or humidity guarantee is claimed."
+    },
+    {
+      "position_s": 202.4,
+      "path": ".local/demo/frames/end.png",
+      "caption": "Near-end continuity check"
     }
   ],
   "visual_review": {
-    "status": "PASS_REPRESENTATIVE_FRAMES",
-    "reviewer": "assistant via view_image",
-    "reviewed_scene_frames": 10,
-    "additional_tail_frame": ".local/demo/frames/end-202.png",
-    "scope": "All ten scene snapshots and near-end frame; not continuous human playback or listening",
-    "reviewed_at_utc": "2026-10-19T23:11:40.169859+00:00"
-  }
+    "status": "PASS",
+    "reviewer": "Coding assistant visual inspection",
+    "inspected": "All ten extracted scene frames plus near-end frame in this sprint",
+    "limits": "Representative-frame review, not frame-by-frame decoding or human listening; no audio stream",
+    "findings": "Original preserved and inspected; historical version with higher precision headings, superseded for presentation by updated separate capture."
+  },
+  "acceptance_status": "PARTIAL_SUPERSEDED_FOR_PRESENTATION"
 }

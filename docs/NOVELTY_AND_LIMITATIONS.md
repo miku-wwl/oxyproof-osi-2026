@@ -12,4 +12,4 @@ The v2 benchmark is 49 hand-selected cases, partly synthetic and overlapping wit
 
 Original software is MIT under the owner's Phase 2 license request; data remain CC BY 4.0 and article rights remain separate. No article figures, source full text, credentials or browser binaries are redistributed by the project.
 
-Development timeline: initial MVP and this Phase 2 started October 20, 2026 NZDT. The initial MVP was pushed with owner approval; Phase 2 changes are local. Do not represent this as engineering performed only during October 21–22. Pre-existing-work eligibility, registration, final submission channel and any public action need human confirmation.
+Development timeline: initial MVP and Phase 2 started October 20, 2026 NZDT. At Phase 2.5 entry, local and remote main both contained c9e72ef; the final acceptance changes remain local. Do not represent this as engineering performed only during October 21–22. Pre-existing-work eligibility, registration, final submission channel and any new public action need human confirmation.

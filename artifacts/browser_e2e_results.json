@@ -61,7 +61,7 @@
             "height": 1000
           },
           "screenshot": "only-on-failure",
-          "trace": "retain-on-failure"
+          "trace": "on"
         },
         "dependencies": [],
         "ignoreSnapshots": false,
@@ -122,14 +122,20 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 1380,
+                  "duration": 1569,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-19T23:01:33.679Z",
+                  "startTime": "2026-10-20T08:20:16.014Z",
                   "annotations": [],
-                  "attachments": []
+                  "attachments": [
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "D:\\workshop\\oct\\oxyproof-osi-2026\\.local\\e2e-results\\research-default-screening-uses-real-API-calculations\\trace.zip"
+                    }
+                  ]
                 }
               ],
               "status": "expected"
@@ -156,14 +162,20 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 858,
+                  "duration": 1062,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-19T23:01:35.867Z",
+                  "startTime": "2026-10-20T08:20:18.243Z",
                   "annotations": [],
-                  "attachments": []
+                  "attachments": [
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "D:\\workshop\\oct\\oxyproof-osi-2026\\.local\\e2e-results\\research-generated-goal-follows-temperature-controls\\trace.zip"
+                    }
+                  ]
                 }
               ],
               "status": "expected"
@@ -190,14 +202,20 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 837,
+                  "duration": 1040,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-19T23:01:36.748Z",
+                  "startTime": "2026-10-20T08:20:19.420Z",
                   "annotations": [],
-                  "attachments": []
+                  "attachments": [
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "D:\\workshop\\oct\\oxyproof-osi-2026\\.local\\e2e-results\\research-generated-goal-follows-conductivity-type\\trace.zip"
+                    }
+                  ]
                 }
               ],
               "status": "expected"
@@ -224,14 +242,20 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 798,
+                  "duration": 1223,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-19T23:01:37.605Z",
+                  "startTime": "2026-10-20T08:20:20.562Z",
                   "annotations": [],
-                  "attachments": []
+                  "attachments": [
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "D:\\workshop\\oct\\oxyproof-osi-2026\\.local\\e2e-results\\research-manual-contradictions-are-reported\\trace.zip"
+                    }
+                  ]
                 }
               ],
               "status": "expected"
@@ -258,14 +282,20 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 1033,
+                  "duration": 1469,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-19T23:01:38.425Z",
+                  "startTime": "2026-10-20T08:20:21.886Z",
                   "annotations": [],
-                  "attachments": []
+                  "attachments": [
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "D:\\workshop\\oct\\oxyproof-osi-2026\\.local\\e2e-results\\research-humidity-constraint-abstains-visibly\\trace.zip"
+                    }
+                  ]
                 }
               ],
               "status": "expected"
@@ -292,14 +322,20 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 1247,
+                  "duration": 1543,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-19T23:01:39.476Z",
+                  "startTime": "2026-10-20T08:20:23.462Z",
                   "annotations": [],
-                  "attachments": []
+                  "attachments": [
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "D:\\workshop\\oct\\oxyproof-osi-2026\\.local\\e2e-results\\research-flagship-reversal-30775-d-slider-use-backend-values\\trace.zip"
+                    }
+                  ]
                 }
               ],
               "status": "expected"
@@ -326,14 +362,20 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 876,
+                  "duration": 1063,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-19T23:01:40.745Z",
+                  "startTime": "2026-10-20T08:20:25.120Z",
                   "annotations": [],
-                  "attachments": []
+                  "attachments": [
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "D:\\workshop\\oct\\oxyproof-osi-2026\\.local\\e2e-results\\research-exact-regime-boundary-withholds-its-row\\trace.zip"
+                    }
+                  ]
                 }
               ],
               "status": "expected"
@@ -360,14 +402,20 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 924,
+                  "duration": 1071,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-19T23:01:41.645Z",
+                  "startTime": "2026-10-20T08:20:26.305Z",
                   "annotations": [],
-                  "attachments": []
+                  "attachments": [
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "D:\\workshop\\oct\\oxyproof-osi-2026\\.local\\e2e-results\\research-continuous-root-d-47c39-rather-than-a-strict-winner\\trace.zip"
+                    }
+                  ]
                 }
               ],
               "status": "expected"
@@ -394,14 +442,20 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 1007,
+                  "duration": 1185,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-19T23:01:42.589Z",
+                  "startTime": "2026-10-20T08:20:27.488Z",
                   "annotations": [],
-                  "attachments": []
+                  "attachments": [
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "D:\\workshop\\oct\\oxyproof-osi-2026\\.local\\e2e-results\\research-wrong-formula-audit-retains-dimensional-rejection\\trace.zip"
+                    }
+                  ]
                 }
               ],
               "status": "expected"
@@ -428,14 +482,20 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 960,
+                  "duration": 1017,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-19T23:01:43.610Z",
+                  "startTime": "2026-10-20T08:20:28.758Z",
                   "annotations": [],
-                  "attachments": []
+                  "attachments": [
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "D:\\workshop\\oct\\oxyproof-osi-2026\\.local\\e2e-results\\research-out-of-range-refusal\\trace.zip"
+                    }
+                  ]
                 }
               ],
               "status": "expected"
@@ -462,14 +522,20 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 918,
+                  "duration": 1072,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-19T23:01:44.592Z",
+                  "startTime": "2026-10-20T08:20:29.847Z",
                   "annotations": [],
-                  "attachments": []
+                  "attachments": [
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "D:\\workshop\\oct\\oxyproof-osi-2026\\.local\\e2e-results\\research-source-DOI-navigation-is-inspectable\\trace.zip"
+                    }
+                  ]
                 }
               ],
               "status": "expected"
@@ -496,14 +562,20 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 1168,
+                  "duration": 1310,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-19T23:01:45.537Z",
+                  "startTime": "2026-10-20T08:20:31.004Z",
                   "annotations": [],
-                  "attachments": []
+                  "attachments": [
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "D:\\workshop\\oct\\oxyproof-osi-2026\\.local\\e2e-results\\research-export-contains-r-5b537-rval-provenance-and-results\\trace.zip"
+                    }
+                  ]
                 }
               ],
               "status": "expected"
@@ -530,14 +602,20 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 952,
+                  "duration": 1081,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-19T23:01:46.724Z",
+                  "startTime": "2026-10-20T08:20:32.435Z",
                   "annotations": [],
-                  "attachments": []
+                  "attachments": [
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "D:\\workshop\\oct\\oxyproof-osi-2026\\.local\\e2e-results\\research-responsive-mobile-298f6--has-no-horizontal-overflow\\trace.zip"
+                    }
+                  ]
                 }
               ],
               "status": "expected"
@@ -545,7 +623,7 @@
           ],
           "id": "cdcdb9c009151254af97-f24caa15cc5ce8766da8",
           "file": "research.spec.ts",
-          "line": 134,
+          "line": 143,
           "column": 1
         },
         {
@@ -564,14 +642,20 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 696,
+                  "duration": 782,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-19T23:01:47.694Z",
+                  "startTime": "2026-10-20T08:20:33.597Z",
                   "annotations": [],
-                  "attachments": []
+                  "attachments": [
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "D:\\workshop\\oct\\oxyproof-osi-2026\\.local\\e2e-results\\research-API-failure-injec-a6458-isplayed-without-candidates\\trace.zip"
+                    }
+                  ]
                 }
               ],
               "status": "expected"
@@ -579,7 +663,7 @@
           ],
           "id": "cdcdb9c009151254af97-0b825ce3ef9ae199b49e",
           "file": "research.spec.ts",
-          "line": 145,
+          "line": 154,
           "column": 1
         }
       ]
@@ -587,8 +671,8 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-10-19T23:01:30.844Z",
-    "duration": 19027.18,
+    "startTime": "2026-10-20T08:20:13.037Z",
+    "duration": 23062.542999999998,
     "expected": 14,
     "skipped": 0,
     "unexpected": 0,
