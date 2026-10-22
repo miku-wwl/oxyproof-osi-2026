@@ -1,0 +1,59 @@
+{
+  "source_audio_file": "20261022_123813.m4a",
+  "source_audio_sha256": "e3a516cbadc13e5438ef91cb553101ca50cd713712b5ba4d1592d55b64a6f4ed",
+  "source_audio_duration_s": 189.130667,
+  "source_sample_rate": 48000,
+  "source_channels": 2,
+  "video_duration_s": 195,
+  "video_speed_changed": false,
+  "video_reencoded": false,
+  "voice_speed_or_pitch_changed": false,
+  "voice_synthesized": false,
+  "pause_insertion_source_time_s": 185.55,
+  "pause_added_s": 4.65,
+  "quiet_interval_source_s": [
+    185.285521,
+    185.808521
+  ],
+  "quiet_detection_threshold_db": -48,
+  "ending_source_speech_end_approx_s": 188.653292,
+  "ending_output_speech_end_approx_s": 193.303292,
+  "alignment_method": "Preserve main narration timing; add a pause at the measured quiet gap before the early closing line, then pad to 195 s. No word edits or retiming of body narration.",
+  "alignment_qualification": "Local ASR has recognition/timestamp errors and was used only as an approximate chapter aid; not a certified transcript or manual listening.",
+  "processing": [
+    "70 Hz high-pass",
+    "two-pass dynamic loudness normalization: -16 LUFS / -1.5 dBTP",
+    "20 ms opening fade and 300 ms ending fade in tail silence",
+    "AAC 192 kb/s stereo at 48 kHz"
+  ],
+  "first_pass_measurement": {
+    "input_i": "-30.08",
+    "input_tp": "-5.59",
+    "input_lra": "6.70",
+    "input_thresh": "-40.81",
+    "output_i": "-17.07",
+    "output_tp": "-1.50",
+    "output_lra": "4.50",
+    "output_thresh": "-27.73",
+    "normalization_type": "dynamic",
+    "target_offset": "1.07"
+  },
+  "second_pass_measurement": {
+    "input_i": "-30.08",
+    "input_tp": "-5.59",
+    "input_lra": "6.70",
+    "input_thresh": "-40.81",
+    "output_i": "-16.42",
+    "output_tp": "-1.50",
+    "output_lra": "4.10",
+    "output_thresh": "-27.07",
+    "normalization_type": "dynamic",
+    "target_offset": "0.42"
+  },
+  "subtitle_policy": "Original concise action-summary subtitles retained, not a verbatim transcript of simplified narration.",
+  "protected_inputs": 539,
+  "new_browser_actions": 0,
+  "new_science_model_calls": 0,
+  "local_asr": "whisper.cpp v1.8.4 / base.en-q5_1, CPU; no audio upload",
+  "raw_recording_in_public_output": false
+}

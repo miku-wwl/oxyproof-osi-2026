@@ -1,0 +1,63 @@
+{
+  "technical_status": "PASS",
+  "outputs": [
+    {
+      "file": "oxyproof-browser-demo-final-clean-narrated.mp4",
+      "bytes": 17301371,
+      "sha256": "1ba038f6a424d63a8dc79ade98ce7fd03e5c72c6bc599396d2802d1c9939530d",
+      "duration_s": 195.0,
+      "width": 1920,
+      "height": 1080,
+      "fps": 30,
+      "video_frames": 5850,
+      "audio_codec": "aac",
+      "audio_sample_rate": 48000,
+      "audio_channels": 2,
+      "video_stream_copy_hash": "SHA256=802f835f2ca627965c26d05afa7ec4554c6140f6f79aedf83297df9e1df49da1",
+      "video_payload_unchanged": true,
+      "audio_start_s": 0.0,
+      "audio_duration_s": 195.0,
+      "audio_payload_matches_aligned_master": true,
+      "full_audio_video_decode": "PASS"
+    },
+    {
+      "file": "oxyproof-browser-demo-final-subtitled-narrated.mp4",
+      "bytes": 17993178,
+      "sha256": "50049b6e146ec8ee68d8d6ca1f45b776f28ee616e0a451f070abbd0e24f4f412",
+      "duration_s": 195.0,
+      "width": 1920,
+      "height": 1080,
+      "fps": 30,
+      "video_frames": 5850,
+      "audio_codec": "aac",
+      "audio_sample_rate": 48000,
+      "audio_channels": 2,
+      "video_stream_copy_hash": "SHA256=cd02186aa7475790f2a80bd202a20f97e48d5dde9f1e3b4577ec54e86f448fa2",
+      "video_payload_unchanged": true,
+      "audio_start_s": 0.0,
+      "audio_duration_s": 195.0,
+      "audio_payload_matches_aligned_master": true,
+      "full_audio_video_decode": "PASS"
+    }
+  ],
+  "final_audio_loudness": {
+    "input_i": "-16.47",
+    "input_tp": "-0.55",
+    "input_lra": "4.10",
+    "input_thresh": "-27.13",
+    "output_i": "-16.32",
+    "output_tp": "-1.50",
+    "output_lra": "4.10",
+    "output_thresh": "-26.97",
+    "normalization_type": "dynamic",
+    "target_offset": "0.32"
+  },
+  "protected_inputs_unchanged": 539,
+  "video_visual_review": "Inherited validated final-polish frames; entire video payload hash identical",
+  "manual_audio_listening": "NOT_RUN: tool runtime does not support audio input; no human-listening claim",
+  "alignment_status": "Approximate chapter match, preserved speech speed, closing pause aligned to final dashboard",
+  "subtitle_status": "Unchanged original action-summary captions",
+  "application_tests": "NOT_RUN: media-only mix",
+  "new_browser_actions": 0,
+  "new_science_model_calls": 0
+}
